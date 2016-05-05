@@ -52,4 +52,9 @@ class Job extends Model
 	{
 		$this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d',$date);
 	}
+
+	public function companies()
+	{
+		return $this->belongsTo('App\Company');
+	}
 }
