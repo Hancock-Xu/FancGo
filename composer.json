@@ -10,10 +10,11 @@
         "twbs/bootstrap": "^3.3",
         "barryvdh/laravel-ide-helper": "^2.1",
         "behat/behat": "v3.1.0",
-        "doctrine/dbal":"2.3",
+        "doctrine/dbal":">=2.3",
         "michelf/php-markdown": "^1.6",
         "michelf/php-smartypants": "1.6.0-beta1",
-        "illuminate/html": "^5.0"
+        "illuminate/html": "^5.0",
+        "overtrue/laravel-wechat": "~3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

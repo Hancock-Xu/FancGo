@@ -148,6 +148,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Illuminate\Html\HtmlServiceProvider::class,
+        Overtrue\LaravelWechat\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -204,6 +205,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Illuminate\Html\FormFacade::class,
+        'Wechat' => Overtrue\LaravelWechat\Facade::class,
     ],
 
 ];
