@@ -7,7 +7,6 @@
 		<div class="form-group">
 			{!! Form::label('job_title','Job title:') !!}
 			{!! Form::text('job_title',null, ['class'=>'form-control']) !!}
-			@if()
 
 		</div>
 
