@@ -35,7 +35,7 @@
 			{!! Form::text('industry',null,['class'=>'form-control']) !!}
 		</div>
 
-		<div class="form-group">
+		<div class="dropdown">
 			{!! Form::label('job_status_type','Job status:') !!}
 			{!! Form::select('job_status_type',[
 			'Actors',
