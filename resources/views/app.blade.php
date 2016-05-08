@@ -26,6 +26,10 @@
 		</div>
 
 		<div class="container">
+			@include('site.docHeader')
+		</div>
+
+		<div class="container">
 			<section class="content">
 				<div class="pad group">
 					@section('content')
