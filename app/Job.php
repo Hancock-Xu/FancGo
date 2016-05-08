@@ -42,7 +42,7 @@ class Job extends Model
 		'responsibility',
 		'eduction_require',
 		'years_work_experience',
-		'salary_and_welfare',
+		'salary_and_other_welfare',
 		'job_status_type',
 		'industry',
 		'published_at'

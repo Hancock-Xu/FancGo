@@ -5,38 +5,33 @@
 	<hr>
 	{!! Form::open(['url'=>'/jobs/store']) !!}
 		<div class="form-group">
-			{!! Form::label('job_title','Job title:') !!}
+			{!! Form::label('job_title','Job Title:') !!}
 			{!! Form::text('job_title',null, ['class'=>'form-control']) !!}
 
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('responsibility','Job responsibility:') !!}
+			{!! Form::label('responsibility','Job Responsibility:') !!}
 			{!! Form::textarea('responsibility',null, ['class'=>'form-control']) !!}
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('eduction_require','Eduction require:') !!}
+			{!! Form::label('eduction_require','Eduction Require:') !!}
 			{!! Form::text('eduction_require',null,['class'=>'form-control']) !!}
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('years_work_experience','Years experience require:') !!}
+			{!! Form::label('years_work_experience','Years Experience Require:') !!}
 			{!! Form::text('years_work_experience',null,['class'=>'form-control']) !!}
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('salary_and_other_welfare','Salary&welfare:') !!}
+			{!! Form::label('salary_and_other_welfare','Salary&Welfare:') !!}
 			{!! Form::textarea('salary_and_other_welfare',null,['class'=>'form-control']) !!}
 		</div>
 
-		<div class="form-group">
-			{!! Form::label('industry','Industry:') !!}
-			{!! Form::text('industry',null,['class'=>'form-control']) !!}
-		</div>
-
 		<div class="dropdown">
-			{!! Form::label('job_status_type','Job status:') !!}
+			{!! Form::label('job_status_type','Job Status:') !!}
 			{!! Form::select('job_status_type',[
 			'Actors',
 			'English Teaching',
@@ -62,7 +57,7 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('published_at','Published at:') !!}
+			{!! Form::label('published_at','Published At:') !!}
 			{!! Form::input('date', 'published_at', date('Y-m-d'), ['class'=>'form-control']) !!}
 		</div>
 		<div class="form-group">
