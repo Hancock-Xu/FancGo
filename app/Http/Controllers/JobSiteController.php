@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Job;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 
-class JobController extends Controller
+class JobSiteController extends Controller
 {
 	/**
 	 * Display a listing of the resource.
@@ -103,4 +103,3 @@ class JobController extends Controller
 		//
 	}
 }
-

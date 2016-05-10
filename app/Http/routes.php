@@ -14,29 +14,30 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/about', 'BasicSiteInfoController@about');
-
+//Route::get('/about', 'BasicSiteInfoController@about');
+//
 Route::get('/', 'BasicSiteInfoController@index');
+//
+Route::get('/jobs','JobSiteController@index');
+//
+Route::get('/jobs/create','JobSiteController@create');
+//
+Route::get('/jobs/{id}', 'JobSiteController@showJobById');
+Route::post('/jobs/store','JobSiteController@store');
 
-Route::get('/jobs','JobController@index');
-
-Route::get('/jobs/create','JobController@create');
-
-//Route::get('/jobs/{slug}', 'JobController@showJobs');
-
-Route::get('/jobs/{id}', 'JobController@showJobById');
-Route::post('/jobs/store','JobController@store');
+Route::get('/jobs','JobSiteController@index');
 
 //login
 
-Route::get('/auth/login','AuthController@getLogin');
-Route::post('/auth/login','AuthController@postLogin');
-Route::get('/auth/logout','AuthController@getLogout');
+Route::get('/auth/login','Auth\AuthController@getLogin');
+Route::post('/auth/login','Auth\AuthController@postLogin');
+Route::get('/auth/logout','Auth\AuthController@getLogout');
 
 
 Route::get('admin',function(){
 	return redirect('/admin/jobs');
 });
+
 Route::group([
 	'namespace'=>'Admin',
 	'middleware'=>'auth'], function(){
