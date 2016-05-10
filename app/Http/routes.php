@@ -14,24 +14,18 @@
 use Illuminate\Support\Facades\Route;
 
 
-//Route::get('/about', 'BasicSiteInfoController@about');
-//
-Route::get('/', 'BasicSiteInfoController@index');
-//
-Route::get('/jobs','JobSiteController@index');
-//
-Route::get('/jobs/create','JobSiteController@create');
-//
-Route::get('/jobs/{id}', 'JobSiteController@showJobById');
-Route::post('/jobs/store','JobSiteController@store');
+Route::get('/about', 'BasicSiteInfoController@about');
 
-Route::get('/jobs','JobSiteController@index');
+Route::get('/', 'BasicSiteInfoController@index');
 
 //login
 
 Route::get('/auth/login','Auth\AuthController@getLogin');
 Route::post('/auth/login','Auth\AuthController@postLogin');
 Route::get('/auth/logout','Auth\AuthController@getLogout');
+
+Route::get('/auth/register','Auth\AuthController@getRegister');
+Route::post('/auth/register','Auth\AuthController@postRegister');
 
 
 Route::get('admin',function(){
