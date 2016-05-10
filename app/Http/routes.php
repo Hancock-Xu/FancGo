@@ -26,3 +26,21 @@ Route::get('/jobs/create','JobController@create');
 
 Route::get('/jobs/{id}', 'JobController@showJobById');
 Route::post('/jobs/store','JobController@store');
+
+//login
+
+Route::get('/auth/login','AuthController@getLogin');
+Route::post('/auth/login','AuthController@postLogin');
+Route::get('/auth/logout','AuthController@getLogout');
+
+
+Route::get('admin',function(){
+	return redirect('/admin/jobs');
+});
+Route::group([
+	'namespace'=>'Admin',
+	'middleware'=>'auth'], function(){
+	Route::resource('admin/jobs','JobController');
+
+	Route::get('/auth/upload','UploadController@index');
+});
