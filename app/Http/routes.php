@@ -14,16 +14,9 @@
 use Illuminate\Support\Facades\Route;
 
 
-//Route::get('/about', 'BasicSiteInfoController@about');
-//
+Route::get('/about', 'BasicSiteInfoController@about');
+
 Route::get('/', 'BasicSiteInfoController@index');
-//
-Route::get('/jobs','JobSiteController@index');
-//
-Route::get('/jobs/create','JobSiteController@create');
-//
-Route::get('/jobs/{id}', 'JobSiteController@showJobById');
-Route::post('/jobs/store','JobSiteController@store');
 
 Route::get('/jobs','JobSiteController@index');
 
@@ -42,6 +35,10 @@ Route::group([
 	'namespace'=>'Admin',
 	'middleware'=>'auth'], function(){
 	Route::resource('admin/jobs','JobController');
-
+	Route::get('/jobs','JobController@index');
+	Route::get('/jobs/create','JobSiteController@create');
+//
+	Route::get('/jobs/{id}', 'JobSiteController@showJobById');
+	Route::post('/jobs/store','JobSiteController@store');
 	Route::get('/auth/upload','UploadController@index');
 });
