@@ -17,7 +17,7 @@
 							<div class="form-group">
 								<label class="col-md-4 control-label">Name</label>
 								<div class="col-md-6">
-									<input type="text" class="form-control" name="name" value="{{old('email')}}" autofocus>
+									<input type="text" class="form-control" name="name" autofocus>
 								</div>
 							</div>
 
@@ -39,7 +39,7 @@
 							<div class="form-group">
 								<label class="col-md-4 control-label">Password Confirmation</label>
 								<div class="col-md-6">
-									<input type="password" class="form-control" name="password">
+									<input type="password" class="form-control" name="password_confirmation">
 								</div>
 							</div>
 
