@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * App\User
@@ -41,12 +41,16 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\User whereUnionid($value)
  * @mixin \Eloquent
  */
-class User extends Model
+class User extends Authenticatable
 {
 	protected $fillable = [
 		'name',
 		'email',
 		'password',
 		];
+	
+	protected $hidden = [
+		'password','remember_token',
+	];
 
 }

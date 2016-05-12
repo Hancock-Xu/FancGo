@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Job;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Carbon\Carbon;
 class JobController extends Controller
 {
 	/**
