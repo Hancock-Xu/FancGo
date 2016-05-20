@@ -16,23 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/about', 'BasicSiteInfoController@about');
 
-Route::get('/', 'BasicSiteInfoController@index');
-//
-//Route::get('/jobs','JobSiteController@index');
-//Route::get('/jobs/create','JobSiteController@create');
-//Route::get('/jobs/{id}','JobSiteController@showJobById');
-//Route::post('/jobs/store','JobSiteController@store');
-//login
-
-
-
 Route::get('/auth/login','Auth\AuthController@getLogin');
 Route::post('/auth/login','Auth\AuthController@postLogin');
+Route::get('/auth/logout','Auth\AuthController@getLogout');
 
 Route::get('/auth/register','Auth\AuthController@getRegister');
 Route::post('/auth/register','Auth\AuthController@postRegister');
-
-Route::get('/auth/logout','Auth\AuthController@getLogout');
 
 Route::get('admin',function(){
 	return redirect('/admin/jobs');
@@ -49,4 +38,6 @@ Route::group([
 	Route::get('/jobs/{id}', 'JobController@showJobById');
 	Route::post('/jobs/store','JobController@store');
 	Route::get('/auth/upload','UploadController@index');
+
+	Route::get('/', 'BasicSiteInfoController@index');
 });

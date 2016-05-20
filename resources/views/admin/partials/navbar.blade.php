@@ -5,7 +5,7 @@
 			<a href="/admin/jobs">Jobs</a>
 		</li>
 		<li @if(Request::is('admin/company*')) class="active" @endif>
-			<a href="/admin/companies">Uploads</a>
+			<a href="/admin/companies">Company</a>
 		</li>
 		<li @if(Request::is('admin/upload*')) class="active" @endif>
 			<a href="/admin/upload">Uploads</a>

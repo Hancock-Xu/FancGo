@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers;
+use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\User;
 
@@ -16,9 +16,6 @@ class BasicSiteInfoController extends Controller
      */
     public function index()
     {
-//        return view('welcome');
-        $post = User::all();
-        dd($post);
         return view('welcome');
     }
 
