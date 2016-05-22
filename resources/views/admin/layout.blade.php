@@ -5,11 +5,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{{ config('blog.title') }} Admin</title>
+	<title>{{ config('blog.title') }} </title>
 
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="data:text/css;charset=utf-8,"
+	      data-href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" id="bs-theme-stylesheet">
+	<link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../packages/patch.css">
+	<link rel="stylesheet" href="../packages/doc.min.css">
+
 	@yield('styles')
 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1, user-scalable=no">
         <!--[if lt IE 9]>
 	<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -18,7 +27,9 @@
 <body>
 
 {{-- Navigation Bar --}}
-<nav class="navbar navbar-default">
+
+
+<nav class="navbar navbar-static-top bs-docs-nav">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
@@ -37,8 +48,8 @@
 
 @yield('content')
 
-<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 @yield('scripts')
 

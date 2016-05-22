@@ -1,15 +1,16 @@
 <ul class="nav navbar-nav">
 	<li><a href="/">Home</a></li>
 	@if(Auth::check())
+
 		<li @if(Request::is('admin/job*')) class="active" @endif>
 			<a href="/admin/jobs">Jobs</a>
 		</li>
 		<li @if(Request::is('admin/company*')) class="active" @endif>
-			<a href="/admin/companies">Company</a>
+			<a href="/admin/companies">Companies</a>
 		</li>
-		<li @if(Request::is('admin/upload*')) class="active" @endif>
-			<a href="/admin/upload">Uploads</a>
-		</li>
+		{{--<li @if(Request::is('admin/upload*')) class="active" @endif>--}}
+			{{--<a href="/admin/upload">Uploads</a>--}}
+		{{--</li>--}}
 		<li @if(Request::is('admin/jobs/create')) class="active" @endif>
 			<a href="/admin/jobs/create">Post Job</a>
 		</li>

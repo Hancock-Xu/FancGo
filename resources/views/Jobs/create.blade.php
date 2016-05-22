@@ -1,9 +1,11 @@
-@extends('app')
+@extends('admin.layout')
 
 @section('content')
-	<h1>Create New Job</h1>
-	<hr>
-	{!! Form::open(['url'=>'/jobs/store']) !!}
+
+	<div class="container">
+		<h1>Create New Job</h1>
+		<hr>
+		{!! Form::open(['url'=>'/jobs/store']) !!}
 		<div class="form-group">
 			{!! Form::label('job_title','Job Title:') !!}
 			{!! Form::text('job_title',null, ['class'=>'form-control']) !!}
@@ -63,17 +65,18 @@
 		<div class="form-group">
 			{!! Form::submit('Publish Job',['class'=>'btn btn-success form-control']) !!}
 		</div>
-	{!! Form::close() !!}
+		{!! Form::close() !!}
 
-	@if($errors->any())
-		<ul class="alert alert-danger">
-			@foreach($errors->all() as $error)
-				<div class="container">
-					<li>{{ $error }}</li>
-				</div>
+		@if($errors->any())
+			<ul class="alert alert-danger">
+				@foreach($errors->all() as $error)
+					<div class="container">
+						<li>{{ $error }}</li>
+					</div>
 
-			@endforeach
-		</ul>
-	@endif
+				@endforeach
+			</ul>
+		@endif
 
+	</div>
 @stop
