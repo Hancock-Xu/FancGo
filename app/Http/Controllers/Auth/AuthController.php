@@ -28,9 +28,11 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectPath = '/jobs';
 
     protected $loginPath = '/auth/login';
+    
+    protected $redirectAfterLogout = '/';
 
     protected $guard = 'web';
 
@@ -42,6 +44,7 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
+//        $this->middleware($this->guestMiddleware());
     }
 
     /**
@@ -57,7 +60,7 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
-//            'password_confirmation' => 'same:password',
+            'password_confirmation' => 'required|min:6',
         ]);
     }
 
@@ -72,7 +75,7 @@ class AuthController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => password_hash($data['password'],PASSWORD_BCRYPT),
         ]);
     }
 }
