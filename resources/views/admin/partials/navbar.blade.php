@@ -11,8 +11,8 @@
 		{{--<li @if(Request::is('admin/upload*')) class="active" @endif>--}}
 			{{--<a href="/admin/upload">Uploads</a>--}}
 		{{--</li>--}}
-		<li @if(Request::is('admin/jobs/create')) class="active" @endif>
-			<a href="/admin/jobs/create">Post Job</a>
+		<li @if(Request::is('/jobs/create')) class="active" @endif>
+			<a href="/jobs/create">Post Job</a>
 		</li>
 	@endif
 </ul>

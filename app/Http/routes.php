@@ -13,7 +13,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-
+Route::get('/', 'Admin\BasicSiteInfoController@index');
 Route::get('/about', 'BasicSiteInfoController@about');
 
 Route::get('/auth/login','Auth\AuthController@getLogin');
@@ -39,5 +39,5 @@ Route::group([
 	Route::post('/jobs/store','JobController@store');
 	Route::get('/auth/upload','UploadController@index');
 
-	Route::get('/', 'BasicSiteInfoController@index');
+
 });
