@@ -11,7 +11,6 @@
 |
 */
 
-use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'Admin\BasicSiteInfoController@index');
 Route::get('/about', 'BasicSiteInfoController@about');
