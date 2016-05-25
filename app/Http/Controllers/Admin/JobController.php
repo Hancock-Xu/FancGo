@@ -22,17 +22,6 @@ class JobController extends Controller
 		/**/
 	}
 
-	public function showJobById($identify)
-	{
-		$job = Job::whereId($identify)->firstOrFail();
-		if ($job) {
-//            abort('404');
-			return view('Jobs.detail', compact('job'));
-		}else{
-			return view('not_found');
-		}
-	}
-
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -54,7 +43,7 @@ class JobController extends Controller
 	{
 		$input = $request->all();
 		Job::create($input);
-		return redirect('/jobs');
+		return redirect('/job');
 		//
 	}
 
@@ -66,7 +55,13 @@ class JobController extends Controller
 	 */
 	public function show($id)
 	{
-		//
+		$job = Job::whereId($id)->firstOrFail();
+		if ($job) {
+//            abort('404');
+			return view('Jobs.detail', compact('job'));
+		}else{
+			return view('not_found');
+		}
 	}
 
 	/**

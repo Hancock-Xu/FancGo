@@ -29,14 +29,8 @@ Route::get('admin',function(){
 Route::group([
 	'namespace'=>'Admin',
 	'middleware'=>'auth'], function(){
-	Route::resource('admin/jobs','JobController');
-	Route::get('/jobs','JobController@index');
-	Route::get('/jobs/create','JobController@create');
-
-
-	Route::get('/jobs/{id}', 'JobController@showJobById');
-	Route::post('/jobs/store','JobController@store');
+	Route::resource('job','JobController');
+	Route::resource('company','' );
 	Route::get('/auth/upload','UploadController@index');
-
 
 });

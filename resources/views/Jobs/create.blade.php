@@ -5,7 +5,7 @@
 	<div class="container">
 		<h1>Create New Job</h1>
 		<hr>
-		{!! Form::open(['url'=>'/jobs/store']) !!}
+		{!! Form::open(['url'=>'/job']) !!}
 		<div class="form-group">
 			{!! Form::label('job_title','Job Title:') !!}
 			{!! Form::text('job_title',null, ['class'=>'form-control']) !!}

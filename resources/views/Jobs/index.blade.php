@@ -14,7 +14,7 @@
 				<div class="container">
 					<article>
 						<h3 class="job_title">
-							<a href="{{ action('Admin\JobController@showJobById',[$job->id]) }}">{{$job->job_title}}</a>
+							<a href="{{ action('Admin\JobController@show',[$job->id]) }}">{{$job->job_title}}</a>
 						</h3>
 
 						<div class="job_published_at">
