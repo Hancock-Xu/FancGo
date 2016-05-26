@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCompanyJobsTable extends Migration
+class CreateUserCompanyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,16 @@ class CreateCompanyJobsTable extends Migration
      */
     public function up()
     {
-        Schema::create('company_job', function (Blueprint $table) {
+        Schema::create('user_company', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
 
             $table->integer('company_id')->unsigned()->index();
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
-            $table->integer('job_id')->unsigned()->index();
-            $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('jobs')->onDelete('cascade');
         });
+        //
     }
 
     /**
@@ -30,6 +31,6 @@ class CreateCompanyJobsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('company_job');
+        Schema::drop('user_company');
     }
 }

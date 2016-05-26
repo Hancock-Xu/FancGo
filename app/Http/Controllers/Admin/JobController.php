@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Job;
-use App\Http\Requests;
+use App\Http\Requests\JobStoreRequest;
+use App\Http\Requests\JobUpdateRequest;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
+use Illuminate\Pagination\Paginator;
+
 class JobController extends Controller
 {
 	/**
@@ -39,7 +42,7 @@ class JobController extends Controller
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(Requests\StoreJobRequest $request)
+	public function store(JobStoreRequest $request)
 	{
 		$input = $request->all();
 		Job::create($input);
@@ -72,6 +75,12 @@ class JobController extends Controller
 	 */
 	public function edit($id)
 	{
+		$job = Job::whereId($id)->firstOrFail();
+		if ($job){
+			return view('Jobs.edit',compact($job));
+		}else {
+			return view('not_found');
+		}
 		//
 	}
 
@@ -82,9 +91,18 @@ class JobController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(Request $request, $id)
+	public function update(JobUpdateRequest $request, $id)
 	{
-		//
+		$job = Job::firstOrFail($id);
+
+		foreach (array_keys($this->fields) as $field){
+			
+		}
+	}
+
+	public function conditionalSearch(Request $request)
+	{
+		
 	}
 
 	/**
