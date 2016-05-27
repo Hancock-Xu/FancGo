@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Carbon\Carbon;
 use App\Company;
+
 
 class CompanyController extends Controller
 {
@@ -17,7 +18,8 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+        $companies = Company::where('published_at','<=', Carbon::now())->orderBy('published_ar','desc')->paginate(config('companies.posts_per_page'));
+        return view('Company.index',compact($companies));
     }
 
     /**
@@ -27,7 +29,8 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        return view('Company.create_company');
+        
     }
 
     /**

@@ -35,7 +35,7 @@ class JobController extends Controller
 	 */
 	public function create()
 	{
-		$user = \Auth::user();
+//		$user = \Auth::user();
 //		if ()
 
 

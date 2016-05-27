@@ -22,15 +22,10 @@ Route::get('/auth/logout','Auth\AuthController@getLogout');
 Route::get('/auth/register','Auth\AuthController@getRegister');
 Route::post('/auth/register','Auth\AuthController@postRegister');
 
-Route::get('admin',function(){
-	return redirect('/admin/jobs');
-});
-//
 Route::group([
 	'namespace'=>'Admin',
 	'middleware'=>'auth'], function(){
 	Route::resource('job','JobController');
-	Route::resource('company','' );
+	Route::resource('company','CompanyController');
 	Route::get('/auth/upload','UploadController@index');
-
 });
