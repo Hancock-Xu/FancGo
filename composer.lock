@@ -1228,16 +1228,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.2.32",
+            "version": "v5.2.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "f688217113f70b01d0e127da9035195415812bef"
+                "reference": "6a26f3bb6a6e00c53654a661221643ad1b98e146"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/f688217113f70b01d0e127da9035195415812bef",
-                "reference": "f688217113f70b01d0e127da9035195415812bef",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/6a26f3bb6a6e00c53654a661221643ad1b98e146",
+                "reference": "6a26f3bb6a6e00c53654a661221643ad1b98e146",
                 "shasum": ""
             },
             "require": {
@@ -1353,7 +1353,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-05-17 13:24:40"
+            "time": "2016-05-26 21:59:46"
         },
         {
             "name": "league/flysystem",
@@ -1858,16 +1858,16 @@
         },
         {
             "name": "overtrue/wechat",
-            "version": "3.0.18",
+            "version": "3.0.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/wechat.git",
-                "reference": "86ef345dacce039cbf4e1e00133c4f8ea49bfce8"
+                "reference": "ab27301379590c596713b70f0bfb4be22e0f4c11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/wechat/zipball/86ef345dacce039cbf4e1e00133c4f8ea49bfce8",
-                "reference": "86ef345dacce039cbf4e1e00133c4f8ea49bfce8",
+                "url": "https://api.github.com/repos/overtrue/wechat/zipball/ab27301379590c596713b70f0bfb4be22e0f4c11",
+                "reference": "ab27301379590c596713b70f0bfb4be22e0f4c11",
                 "shasum": ""
             },
             "require": {
@@ -1911,7 +1911,7 @@
                 "weixin",
                 "weixin-sdk"
             ],
-            "time": "2016-05-20 09:33:35"
+            "time": "2016-05-25 12:33:18"
         },
         {
             "name": "paragonie/random_compat",

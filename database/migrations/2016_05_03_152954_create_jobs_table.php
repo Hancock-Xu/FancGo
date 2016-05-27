@@ -16,6 +16,12 @@ class CreateJobsTable extends Migration
             $table->increments('id');
             $table->timestamps();
 
+            /*
+             * company外键
+             */
+            $table->integer('company_id')->unsigned();
+            $table->foreign('company_id')->references('id')->on('companies');
+
             $table->string('job_title',50);
             $table->text('responsibility');
             $table->string('eduction_require')->nullable()->default(null);

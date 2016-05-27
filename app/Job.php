@@ -31,6 +31,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Job whereIndustry($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Job wherePublishedAt($value)
  * @mixin \Eloquent
+ * @property-read \App\Company $companies
  */
 class Job extends Model
 {
@@ -53,8 +54,8 @@ class Job extends Model
 		$this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d',$date);
 	}
 
-	public function companies()
-	{
-		return $this->belongsTo('App\Company');
-	}
+//	public function companies()
+//	{
+//		return $this->belongsTo('App\Company');
+//	}
 }

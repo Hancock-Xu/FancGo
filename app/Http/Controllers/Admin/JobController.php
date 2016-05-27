@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Company;
+use App\User;
 use Illuminate\Http\Request;
 use App\Job;
 use App\Http\Requests\JobStoreRequest;
@@ -9,6 +11,7 @@ use App\Http\Requests\JobUpdateRequest;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Auth;
 
 class JobController extends Controller
 {
@@ -32,6 +35,10 @@ class JobController extends Controller
 	 */
 	public function create()
 	{
+		$user = \Auth::user();
+//		if ()
+
+
 		return view('Jobs.create');
 		//
 	}
