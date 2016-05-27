@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
+use App\Http\Requests\CompanyStoreRequest;
 use Carbon\Carbon;
 use App\Company;
 
@@ -39,9 +39,11 @@ class CompanyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CompanyStoreRequest $request)
     {
-        //
+        $inputs = $request->all();
+        Company::create($inputs);
+        return redirect('/company');
     }
 
     /**
@@ -52,7 +54,13 @@ class CompanyController extends Controller
      */
     public function show($id)
     {
-        //
+        $company = Company::find($id)->firstOrFail();
+        if ($company){
+            return view('Company.detail',$company);
+        }else{
+            return view('not_found');
+        }
+
     }
 
     /**
