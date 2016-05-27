@@ -20,7 +20,7 @@ class CreateJobsTable extends Migration
              * company外键
              */
             $table->integer('company_id')->unsigned();
-            $table->foreign('company_id')->references('id')->on('companies');
+
 
             $table->string('job_title',50);
             $table->text('responsibility');
@@ -31,6 +31,10 @@ class CreateJobsTable extends Migration
             $table->string('industry', 50)->nullable()->default(null);
 
             $table->timestamp('published_at')->nullable();
+        });
+        
+        Schema::table('jobs', function (Blueprint $table){
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
         });
     }
 

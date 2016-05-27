@@ -15,13 +15,8 @@ class CreateCompaniesTable extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            
-            /*
-             * user外键
-             */
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
 
+            $table->integer('user_id')->unsigned();
             
             $table->string('name',50);
             /*
@@ -43,6 +38,15 @@ class CreateCompaniesTable extends Migration
             $table->string('email', 50);
             $table->string('phone_number',11);
             $table->timestamp('published_at')->nullable();
+        });
+        
+        Schema::table('companies', function (Blueprint $table){
+
+            /*
+             * user外键
+             */
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
