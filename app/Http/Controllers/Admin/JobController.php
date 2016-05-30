@@ -67,7 +67,6 @@ class JobController extends Controller
 	{
 		$job = Job::whereId($id)->firstOrFail();
 		if ($job) {
-//            abort('404');
 			return view('Jobs.detail', compact('job'));
 		}else{
 			return view('not_found');
