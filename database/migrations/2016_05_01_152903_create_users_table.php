@@ -15,6 +15,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            
 
             $table->string('email',50)->unique();
             $table->string('password',60);
@@ -32,6 +33,7 @@ class CreateUsersTable extends Migration
             $table->string('province',50)->nullable()->default(null);
             $table->string('unionid')->nullable()->default(null);
         });
+        
     }
 
     /**

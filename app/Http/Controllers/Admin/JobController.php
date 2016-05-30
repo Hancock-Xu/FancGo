@@ -35,12 +35,13 @@ class JobController extends Controller
 	 */
 	public function create()
 	{
-//		$user = \Auth::user();
-//		if ()
+		$user = \Auth::user();
 
-
-		return view('Jobs.create');
-		//
+		if (!$user->company){
+			return redirect('/company/create');
+		}else{
+			return view('Jobs.create');
+		}
 	}
 
 	/**
@@ -54,7 +55,6 @@ class JobController extends Controller
 		$input = $request->all();
 		Job::create($input);
 		return redirect('/job');
-		//
 	}
 
 	/**
