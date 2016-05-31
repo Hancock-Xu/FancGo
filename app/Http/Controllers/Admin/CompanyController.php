@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CompanyStoreRequest;
 use Carbon\Carbon;
 use App\Company;
+use Illuminate\Support\Facades\Auth;
 
 
 class CompanyController extends Controller
@@ -18,8 +19,8 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies = Company::where('published_at','<=', Carbon::now())->orderBy('published_ar','desc')->paginate(config('companies.posts_per_page'));
-        return view('Company.index',compact($companies));
+        $companies = Company::where('published_at','<=', Carbon::now())->orderBy('published_at','desc')->paginate(config('companies.posts_per_page'));
+        return view('Company.index',compact('companies'));
     }
 
     /**
@@ -29,8 +30,8 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('Company.create_company');
-        
+        $user = \Auth::user();
+        return view('Company.create_company',['user'=>$user]);
     }
 
     /**
@@ -39,7 +40,7 @@ class CompanyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CompanyStoreRequest $request)
+    public function store(Request $request)
     {
         $inputs = $request->all();
         Company::create($inputs);

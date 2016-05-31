@@ -40,10 +40,31 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Company wherePhoneNumber($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Company wherePublishedAt($value)
  * @mixin \Eloquent
+ * @property integer $user_id
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Job[] $jobs
+ * @property-read \App\User $user
+ * @method static \Illuminate\Database\Query\Builder|\App\Company whereUserId($value)
  */
 class Company extends Model
 {
     //
+
+	protected $fillable = [
+		'name',
+		'user_id',
+		'business_license_name',
+		'resume_email',
+		'logo_url',
+		'website',
+		'certificate_url',
+		'description',
+		'scale',
+		'location',
+		'industry',
+		'email',
+		'phone_number',
+		'published_at'
+	];
 
 	public function jobs()
 	{

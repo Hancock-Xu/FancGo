@@ -9,8 +9,8 @@
 		
 		{!! Form::open(['url'=>'/company']) !!}
 		<div class="form-group">
-			{!! Form::label('company_name','Company Name') !!}
-			{!! Form::text('company_name',null, ['class'=>'form-control']) !!}
+			{!! Form::label('name','Company Name') !!}
+			{!! Form::text('name',null, ['class'=>'form-control']) !!}
 		</div>
 		
 		<div class="form-group">
@@ -76,8 +76,20 @@
 
 
 		<div class="form-group">
-			{!! Form::submit('Publish Job',['class'=>'btn btn-success form-control']) !!}
+			{!! Form::hidden('user_id',$user->id) !!}
 		</div>
+
+		<div class="form-group">
+			{!! Form::label('published_at','Published At:') !!}
+			{!! Form::input('date', 'published_at', date('Y-m-d'), ['class'=>'form-control']) !!}
+		</div>
+
+		<div class="form-group">
+			{!! Form::submit('Publish Company',['class'=>'btn btn-success form-control']) !!}
+		</div>
+
+		
+
 		{!! Form::close() !!}
 
 

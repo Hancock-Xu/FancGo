@@ -32,6 +32,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Job wherePublishedAt($value)
  * @mixin \Eloquent
  * @property-read \App\Company $companies
+ * @property integer $company_id
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereCompanyId($value)
  */
 class Job extends Model
 {
