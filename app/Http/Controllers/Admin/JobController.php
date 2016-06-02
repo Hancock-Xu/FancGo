@@ -29,7 +29,8 @@ class JobController extends Controller
 	}
 
 	/**
-	 * Show the form for creating a new resource.
+	 * 当user不拥有company的时候,重定向到创建company的页面
+	 * 当user拥有company的时候,定想到拥有company实例的创建job的页面
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
@@ -40,7 +41,8 @@ class JobController extends Controller
 		if (!$user->company){
 			return redirect('/company/create');
 		}else{
-			return view('Jobs.create');
+			$company = $user->company;
+			return view('Jobs.create',compact('company'));
 		}
 	}
 

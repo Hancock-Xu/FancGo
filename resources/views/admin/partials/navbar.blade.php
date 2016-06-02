@@ -6,7 +6,7 @@
 			<a href="/job">Jobs</a>
 		</li>
 		<li @if(Request::is('admin/company*')) class="active" @endif>
-			<a href="/admin/companies">Companies</a>
+			<a href="/company">Companies</a>
 		</li>
 		{{--<li @if(Request::is('admin/upload*')) class="active" @endif>--}}
 			{{--<a href="/admin/upload">Uploads</a>--}}
