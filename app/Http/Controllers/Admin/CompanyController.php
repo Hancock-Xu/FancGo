@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CompanyStoreRequest;
 use Carbon\Carbon;
@@ -31,7 +32,18 @@ class CompanyController extends Controller
     public function create()
     {
         $user = \Auth::user();
-        return view('Company.create_company',['user'=>$user]);
+        if (!$user->company()){
+            return view('Company.create_company',['user'=>$user]);
+        }else{
+            
+            $company = $user->company();
+            return view('Company.detail',compact('company'));
+            
+            /*
+             * TODO:创建已经注册公司的提醒页面。
+             */
+        }
+
     }
 
     /**
@@ -43,8 +55,14 @@ class CompanyController extends Controller
     public function store(Request $request)
     {
         $inputs = $request->all();
-        Company::create($inputs);
-        return redirect('/company');
+        $user = \Auth::user();
+        $company = $user->company();
+
+        if (!$company) {
+            $company = Company::create($inputs);
+        }
+
+        return view('Company.detail',['company'=>$company]);
     }
 
     /**
