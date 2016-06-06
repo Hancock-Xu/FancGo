@@ -30,7 +30,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Query\Builder|\App\User wherePassword($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereRememberToken($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User wherePassportNumber($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User wherePhoneNumber($value)
+ * @method static \Illu¡minate\Database\Query\Builder|\App\User wherePhoneNumber($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereOpenid($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereName($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereGender($value)

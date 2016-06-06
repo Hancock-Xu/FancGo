@@ -32,11 +32,11 @@ class CompanyController extends Controller
     public function create()
     {
         $user = \Auth::user();
-        if (!$user->company()){
+        if (!$user->company){
             return view('Company.create_company',['user'=>$user]);
         }else{
             
-            $company = $user->company();
+            $company = $user->company;
             return view('Company.detail',compact('company'));
             
             /*
@@ -56,13 +56,13 @@ class CompanyController extends Controller
     {
         $inputs = $request->all();
         $user = \Auth::user();
-        $company = $user->company();
+        $company = $user->company;
 
         if (!$company) {
             $company = Company::create($inputs);
         }
 
-        return view('Company.detail',['company'=>$company]);
+        return view('Jobs.create',['company'=>$company]);
     }
 
     /**

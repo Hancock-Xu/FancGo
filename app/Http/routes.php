@@ -12,6 +12,8 @@
 */
 
 
+use Illuminate\Routing\Router;
+
 Route::get('/', 'Admin\BasicSiteInfoController@index');
 Route::get('/about', 'BasicSiteInfoController@about');
 
@@ -27,5 +29,6 @@ Route::group([
 	'middleware'=>'auth'], function(){
 	Route::resource('job','JobController');
 	Route::resource('company','CompanyController');
+	Route::resource('apartment','ApartmentController');
 	Route::get('/auth/upload','UploadController@index');
 });

@@ -62,6 +62,14 @@
 			{!! Form::label('published_at','Published At:') !!}
 			{!! Form::input('date', 'published_at', date('Y-m-d'), ['class'=>'form-control']) !!}
 		</div>
+		
+		{{--<div class="form-group">--}}
+			{{--{!! Form::label('job_image','Job image') !!}--}}
+			{{--{!! Form::file('job_image') !!}--}}
+			{{--<hr>--}}
+		{{--</div>--}}
+
+
 		<div class="form-group">
 			{!! Form::submit('Publish Job',['class'=>'btn btn-success form-control']) !!}
 		</div>
