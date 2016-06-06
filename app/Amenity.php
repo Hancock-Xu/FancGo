@@ -20,4 +20,11 @@ use Illuminate\Database\Eloquent\Model;
 class Amenity extends Model
 {
     //
+	public $fillable = [
+		'name'
+	];
+
+	public function apartment(){
+		return $this->belongsToMany('App\Apartment');
+	}
 }

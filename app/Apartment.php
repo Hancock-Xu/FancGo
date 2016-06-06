@@ -70,8 +70,11 @@ class Apartment extends Model
 	/**
 	 * @return boolean
 	 */
-	public function company()
-	{
+	public function company(){
 		return $this->belongsTo('App\Company');
+	}
+
+	public function amenity(){
+		return $this->belongsToMany('App\Amenity');
 	}
 }
