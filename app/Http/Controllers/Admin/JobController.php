@@ -2,16 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Company;
-use App\User;
 use Illuminate\Http\Request;
 use App\Job;
 use App\Http\Requests\JobStoreRequest;
-use App\Http\Requests\JobUpdateRequest;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
-use Illuminate\Pagination\Paginator;
-use Illuminate\Support\Facades\Auth;
 
 class JobController extends Controller
 {
@@ -99,13 +94,13 @@ class JobController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(JobUpdateRequest $request, $id)
+	public function update(JobStoreRequest $request, $id)
 	{
-		$job = Job::firstOrFail($id);
-
-		foreach (array_keys($this->fields) as $field){
-			
-		}
+//		$job = Job::firstOrFail($id);
+//
+//		foreach (array_keys($this->fields) as $field){
+//			
+//		}
 	}
 
 	public function conditionalSearch(Request $request)
