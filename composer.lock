@@ -1357,16 +1357,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.22",
+            "version": "1.0.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "bd73a91703969a2d20ab4bfbf971d6c2cbe36612"
+                "reference": "9aca859a303fdca30370f42b8c611d9cf0dedf4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/bd73a91703969a2d20ab4bfbf971d6c2cbe36612",
-                "reference": "bd73a91703969a2d20ab4bfbf971d6c2cbe36612",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/9aca859a303fdca30370f42b8c611d9cf0dedf4b",
+                "reference": "9aca859a303fdca30370f42b8c611d9cf0dedf4b",
                 "shasum": ""
             },
             "require": {
@@ -1436,7 +1436,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2016-04-28 06:53:12"
+            "time": "2016-06-03 19:11:39"
         },
         {
             "name": "michelf/php-markdown",
@@ -1808,16 +1808,16 @@
         },
         {
             "name": "overtrue/socialite",
-            "version": "1.0.10",
+            "version": "1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/socialite.git",
-                "reference": "4aeba2eab5ed9f40fb03b45360200a5a6a1fb676"
+                "reference": "7acf12b2e6b574ff9ad660624e46888a095411b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/socialite/zipball/4aeba2eab5ed9f40fb03b45360200a5a6a1fb676",
-                "reference": "4aeba2eab5ed9f40fb03b45360200a5a6a1fb676",
+                "url": "https://api.github.com/repos/overtrue/socialite/zipball/7acf12b2e6b574ff9ad660624e46888a095411b3",
+                "reference": "7acf12b2e6b574ff9ad660624e46888a095411b3",
                 "shasum": ""
             },
             "require": {
@@ -1854,20 +1854,20 @@
                 "wechat",
                 "weibo"
             ],
-            "time": "2016-03-27 09:02:11"
+            "time": "2016-06-02 10:04:51"
         },
         {
             "name": "overtrue/wechat",
-            "version": "3.0.19",
+            "version": "3.0.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/overtrue/wechat.git",
-                "reference": "ab27301379590c596713b70f0bfb4be22e0f4c11"
+                "reference": "fd85b555ed2a807461d427cac721aa24713b7ee0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/wechat/zipball/ab27301379590c596713b70f0bfb4be22e0f4c11",
-                "reference": "ab27301379590c596713b70f0bfb4be22e0f4c11",
+                "url": "https://api.github.com/repos/overtrue/wechat/zipball/fd85b555ed2a807461d427cac721aa24713b7ee0",
+                "reference": "fd85b555ed2a807461d427cac721aa24713b7ee0",
                 "shasum": ""
             },
             "require": {
@@ -1911,7 +1911,7 @@
                 "weixin",
                 "weixin-sdk"
             ],
-            "time": "2016-05-25 12:33:18"
+            "time": "2016-06-02 09:56:15"
         },
         {
             "name": "paragonie/random_compat",

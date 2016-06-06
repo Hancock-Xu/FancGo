@@ -1,5 +1,5 @@
 <ul class="nav navbar-nav">
-	<li><a href="/">Home</a></li>
+	{{--<li><a href="/">Home</a></li>--}}
 	@if(Auth::check())
 
 		<li @if(Request::is('/job')) class="active" @endif>
@@ -7,6 +7,10 @@
 		</li>
 		<li @if(Request::is('admin/company*')) class="active" @endif>
 			<a href="/company">Companies</a>
+		</li>
+
+		<li @if(Request::is('admin/apartment*')) class="active" @endif>
+			<a href="/apartment">Apartments</a>
 		</li>
 		{{--<li @if(Request::is('admin/upload*')) class="active" @endif>--}}
 			{{--<a href="/admin/upload">Uploads</a>--}}
@@ -29,6 +33,12 @@
 				<span class="caret"></span>
 			</a>
 			<ul class="dropdown-menu" role="menu">
+				<li>
+					<a href="{{action('Admin\JobController@create')}}">Post job</a>
+				</li>
+				<li>
+					<a href="{{action('Admin\ApartmentController@create')}}">Post apartment</a>
+				</li>
 				<li>
 					<a href="{{ action('Auth\AuthController@getLogout') }}">Logout</a>
 				</li>

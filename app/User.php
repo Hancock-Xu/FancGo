@@ -41,6 +41,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Query\Builder|\App\User whereUnionid($value)
  * @mixin \Eloquent
  * @property-read \App\Company $company
+ * @method static \Illuminate\Database\Query\Builder|\App\User wherePhoneNumber($value)
  */
 class User extends Authenticatable
 {

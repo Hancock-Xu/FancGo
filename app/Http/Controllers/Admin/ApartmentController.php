@@ -17,7 +17,7 @@ class ApartmentController extends Controller
      */
     public function index()
     {
-        $apartments = Apartment::where('published_at','<=',Carbon::now())->orderBy('published_at','desc')->pageinate(config('apartment.posts_per_page'));
+        $apartments = Apartment::where('published_at','<=',Carbon::now())->orderBy('published_at','desc')->paginate(config('apartment.posts_per_page'));
         return view('Apartment.index',compact('apartments'));
     }
 
@@ -28,7 +28,7 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('Apartment.create');
     }
 
     /**

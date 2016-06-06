@@ -16,6 +16,9 @@ class CreateApartmentsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->integer('company_id')->unsigned()->nullable();
+            
             $table->string('name',50);
             $table->string('description',500);
             $table->enum('rent_type', ['shared_apartment','entire_rent']);
@@ -25,9 +28,21 @@ class CreateApartmentsTable extends Migration
             $table->integer('size')->unsigned();
             $table->string('location/district',20);
             $table->string('nearest_mtr_station',10);
-            $table->enum('condition',['no smoking','no pets','no kids']);
+            $table->enum('condition',['no smoking','no pets','no kids'])->nullable();
             $table->integer('price')->unsigned();
-
+            $table->timestamp('published_at')->nullable();
+        });
+        
+        Schema::table('apartments', function (Blueprint $table) {
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+            
+            $table->foreign('company_id')
+                ->references('id')
+                ->on('companies')
+                ->onDelete('cascade');
         });
     }
 
