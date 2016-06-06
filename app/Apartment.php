@@ -43,7 +43,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read \App\Company $company
  * @method static \Illuminate\Database\Query\Builder|\App\Apartment whereUserId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Apartment whereCompanyId($value)
-// * @method static \Illuminate\Database\Query\Builder|\App\Apartment whereLocation/district($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Apartment wherePublishedAt($value)
  */
 class Apartment extends Model
