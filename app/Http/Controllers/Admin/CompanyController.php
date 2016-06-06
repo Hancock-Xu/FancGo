@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-use Illuminate\View\View;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CompanyStoreRequest;
 use Carbon\Carbon;
 use App\Company;
-use Illuminate\Support\Facades\Auth;
 
 
 class CompanyController extends Controller
@@ -52,7 +49,7 @@ class CompanyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CompanyStoreRequest $request)
     {
         $inputs = $request->all();
         $user = \Auth::user();
@@ -100,7 +97,7 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CompanyStoreRequest $request, $id)
     {
         //
     }

@@ -88,11 +88,22 @@
 			{!! Form::submit('Publish Company',['class'=>'btn btn-success form-control']) !!}
 		</div>
 
-		
-
 		{!! Form::close() !!}
 
+		@if($errors->any())
+			<ul class="alert alert-danger">
+				@foreach($errors->all() as $error)
+					<div class="container">
+						<ul>
+							<li>
+								{{ $error }}
+							</li>
+						</ul>
+					</div>
 
+				@endforeach
+			</ul>
+		@endif
 
 
 	</div>
