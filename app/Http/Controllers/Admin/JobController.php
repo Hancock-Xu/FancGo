@@ -96,11 +96,12 @@ class JobController extends Controller
 	 */
 	public function update(JobStoreRequest $request, $id)
 	{
-//		$job = Job::firstOrFail($id);
-//
-//		foreach (array_keys($this->fields) as $field){
-//			
-//		}
+		$job = Job::firstOrFail($id);
+		$input = $request->all();
+
+		$job->fill($input)->save();
+	
+		return redirect()->back();
 	}
 
 	public function conditionalSearch(Request $request)

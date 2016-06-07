@@ -30,13 +30,13 @@ class CompanyStoreRequest extends Request
         return [
             'name'=>'required',
             'business_license_name'=>'required',
-            'resume_email'=>'required',
+            'resume_email'=>'required|email',
             'logo_url'=>'required',
             'description'=>'required',
             'scale'=>'required',
             'location'=>'required',
             'industry'=>'required',
-            'email'=>'required',
+            'email'=>'required|email',
             'phone_number'=>'required'
             
         ];
