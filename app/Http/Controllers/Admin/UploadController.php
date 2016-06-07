@@ -9,5 +9,12 @@ use App\Http\Controllers\Controller;
 
 class UploadController extends Controller
 {
-    //
+    public function upload(Request $request)
+    {
+    }
+
+	public function delete($id)
+	{
+
+	}
 }
