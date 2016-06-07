@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Job;
 use App\Http\Requests\JobStoreRequest;
 use App\Http\Controllers\Controller;
@@ -104,10 +103,10 @@ class JobController extends Controller
 		return redirect()->back();
 	}
 
-	public function conditionalSearch(Request $request)
-	{
-		
-	}
+//	public function conditionalSearch(Request $request)
+//	{
+//		
+//	}
 
 	/**
 	 * Remove the specified resource from storage.

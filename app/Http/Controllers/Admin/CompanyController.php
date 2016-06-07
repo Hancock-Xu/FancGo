@@ -87,7 +87,12 @@ class CompanyController extends Controller
      */
     public function edit($id)
     {
-        //
+        $company = Company::findOrFail($id);
+        if ($company){
+            return view('Company.edit',['company'=>$company]);
+        }else{
+            return view('not_found');
+        }
     }
 
     /**
@@ -99,7 +104,11 @@ class CompanyController extends Controller
      */
     public function update(CompanyStoreRequest $request, $id)
     {
-        //
+        $company = Company::findOrFail($id);
+        $input = $request->all();
+        $company->fill($input)->save();
+        
+        return redirect()->back();
     }
 
     /**
@@ -110,6 +119,9 @@ class CompanyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $company = Company::findOrFail($id);
+        $company->delete();
+
+        return redirect()->back();
     }
 }
