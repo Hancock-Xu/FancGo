@@ -2,6 +2,8 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Http\Request;
+
 class CompanyStoreRequest extends Request
 {
     /**
@@ -24,6 +26,8 @@ class CompanyStoreRequest extends Request
         return [
             'name'=>'required',
             'business_license_name'=>'required',
+            'company_logo_avatar'=>'required|image',
+            'company_license_img'=>'image',
             'resume_email'=>'required|email',
             'description'=>'required',
             'scale'=>'required',
@@ -31,7 +35,6 @@ class CompanyStoreRequest extends Request
             'industry'=>'required',
             'email'=>'required|email',
             'phone_number'=>'required'
-            
         ];
     }
 }

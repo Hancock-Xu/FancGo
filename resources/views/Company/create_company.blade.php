@@ -24,6 +24,11 @@
 		</div>
 
 		<div class="form-group">
+			{!! Form::label('company_license_img', 'Upload company license') !!}
+			{!! Form::file('company_license_img') !!}
+		</div>
+
+		<div class="form-group">
 			{!! Form::label('resume_email','Resume email') !!}
 			{!! Form::text('resume_email',null, ['class'=>'form-control']) !!}
 		</div>

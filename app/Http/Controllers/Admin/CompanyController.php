@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CompanyStoreRequest;
 use Carbon\Carbon;
 use App\Company;
+use Auth;
+use App\Http\Requests;
+use Storage;
 
 
 class CompanyController extends Controller
@@ -54,12 +57,40 @@ class CompanyController extends Controller
         /**
          * 处理上传的公司logo,营业执照图片等
          */
+
+        
         $inputs = $request->all();
         $user = \Auth::user();
         $company = $user->company;
 
         if (!$company) {
             $company = Company::create($inputs);
+
+            $company_logo_avatar = $request->file('company_logo_avatar');
+            $company_license_img = $request->file('company_license_img');
+
+            if ($company_logo_avatar){
+
+                $file_name = 'company_logo_avatar'.'.'.$company_logo_avatar->getClientOriginalExtension();
+                $save_path = 'companies/'.$company->id.'/'.$file_name;
+
+                Storage::disk('local')->put($save_path, file_get_contents($company_logo_avatar->getRealPath()));
+
+                $company->logo_url = $save_path;
+
+            }
+
+            if ($company_license_img){
+
+                $file_name = 'company_license_img'.'.'.$company_license_img->getClientOriginalExtension();
+                $save_path = 'companies/'.$company->id.'/'.$file_name;
+
+                Storage::disk('local')->put($save_path, file_get_contents($company_license_img->getRealPath()));
+
+                $company->certificate_url = $save_path;
+            }
+
+            $company->save();
         }
 
         return view('Jobs.create',['company'=>$company]);
