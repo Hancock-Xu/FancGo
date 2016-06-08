@@ -59,7 +59,9 @@ class CompanyController extends Controller
          * 处理上传的公司logo,营业执照图片等
          */
 
-        
+        /**
+         * TODO:处理companystorerequest的validate内容
+         */
         $inputs = $request->all();
         $user = \Auth::user();
         $company = $user->company;
