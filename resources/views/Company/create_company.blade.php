@@ -7,7 +7,7 @@
 		<h1>Create Company</h1>
 		<hr>
 		
-		{!! Form::open(['url'=>'/company']) !!}
+		{!! Form::open(['url'=>'/company', 'files'=>true]) !!}
 		<div class="form-group">
 			{!! Form::label('name','Company Name') !!}
 			{!! Form::text('name',null, ['class'=>'form-control']) !!}
@@ -16,6 +16,11 @@
 		<div class="form-group">
 			{!! Form::label('business_license_name','Company registered name') !!}
 			{!! Form::text('business_license_name',null,['class'=>'form-control']) !!}
+		</div>
+
+		<div class="form-group">
+			{!! Form::label('company_logo_avatar','Upload company logo') !!}
+			{!! Form::file('company_logo_avatar') !!}
 		</div>
 
 		<div class="form-group">

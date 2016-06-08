@@ -2,8 +2,6 @@
 
 namespace App\Http\Requests;
 
-use App\Company;
-
 class CompanyStoreRequest extends Request
 {
     /**
@@ -13,11 +11,7 @@ class CompanyStoreRequest extends Request
      */
     public function authorize()
     {
-        /*
-         * 判断该company是否为当前用户所有
-         */
-        $companyId = $this->route('company');
-        return Company::where('id',$companyId)->where('user_id',\Auth::id())->exists();
+        return true;
     }
 
     /**
@@ -31,7 +25,6 @@ class CompanyStoreRequest extends Request
             'name'=>'required',
             'business_license_name'=>'required',
             'resume_email'=>'required|email',
-            'logo_url'=>'required',
             'description'=>'required',
             'scale'=>'required',
             'location'=>'required',

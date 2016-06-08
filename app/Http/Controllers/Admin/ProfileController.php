@@ -87,11 +87,14 @@ class ProfileController extends Controller
             exit('上传文件为空');
             //TODO:修改此处上传request缺少avatar值后的错误信息
         }
+
         $file = $request->file('avatar');
+
         if (!$file->isValid()){
             exit('文件出错');
             //TODO:同上
         }
+
         $fileName = 'avatar'.'.'.$file->getClientOriginalExtension();
         $savePath = Auth::id().'/'.$fileName;
 
@@ -99,7 +102,6 @@ class ProfileController extends Controller
 
         Auth::user()->headimgurl = $savePath;
         Auth::user()->save();
-        
     }
     
     

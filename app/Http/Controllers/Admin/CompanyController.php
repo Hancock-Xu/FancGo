@@ -51,6 +51,9 @@ class CompanyController extends Controller
      */
     public function store(CompanyStoreRequest $request)
     {
+        /**
+         * 处理上传的公司logo,营业执照图片等
+         */
         $inputs = $request->all();
         $user = \Auth::user();
         $company = $user->company;
@@ -107,7 +110,7 @@ class CompanyController extends Controller
         $company = Company::findOrFail($id);
         $input = $request->all();
         $company->fill($input)->save();
-        
+
         return redirect()->back();
     }
 
