@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Http\Requests\CompanyStoreRequest;
 use Carbon\Carbon;
 use App\Company;
@@ -52,7 +53,7 @@ class CompanyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CompanyStoreRequest $request)
+    public function store(Request $request)
     {
         /**
          * 处理上传的公司logo,营业执照图片等
