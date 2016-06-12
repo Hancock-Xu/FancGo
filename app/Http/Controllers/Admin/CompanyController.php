@@ -109,10 +109,8 @@ class CompanyController extends Controller
     {
         $company = Company::find($id)->firstOrFail();
 
-        $file = Storage::disk('local')->get($company->certificate_url);
-
         if ($company){
-            return view('Company.detail',['company'=>$company,'file'=>$file]);
+            return view('Company.detail',['company'=>$company]);
         }else{
             return view('not_found');
         }
