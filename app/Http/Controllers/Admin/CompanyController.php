@@ -125,6 +125,18 @@ class CompanyController extends Controller
      */
     public function edit($id)
     {
+
+        /**
+         * 1.先验证修改资格
+         */
+
+        /**
+         * 验证cookie
+         */
+
+        /**
+         * 没有cookie验证企业邮箱
+         */
         $company = Company::findOrFail($id);
         if ($company){
             return view('Company.edit',['company'=>$company]);
