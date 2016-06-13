@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', 'Admin\BasicSiteInfoController@index');
 Route::get('/about', 'BasicSiteInfoController@about');
 
@@ -23,6 +24,11 @@ Route::post('/auth/register','Auth\AuthController@postRegister');
 
 Route::post('Admin\upload', 'Admin\UploadController@upload');
 Route::delete('Admin\delete', 'Admin\UploadController@delete');
+
+Route::get('password/email', 'Auth\PasswordController@getEmail');
+Route::post('password/email', 'Auth\PasswordController@postEmail');
+Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 Route::group([
 	'namespace'=>'Admin',
