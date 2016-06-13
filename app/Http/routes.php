@@ -47,3 +47,7 @@ Route::group([
 	Route::post('/profile/upload/avatar','ProfileController@avatarUpload');
 
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
