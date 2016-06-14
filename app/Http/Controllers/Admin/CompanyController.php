@@ -11,9 +11,12 @@ use Auth;
 use App\Http\Requests;
 use Storage;
 
-
 class CompanyController extends Controller
 {
+    
+    use VerifyEditCompanyQualifications;
+
+
     /**
      * Display a listing of the resource.
      *
@@ -50,10 +53,10 @@ class CompanyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  CompanyStoreRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CompanyStoreRequest $request)
     {
         /**
          * 处理上传的公司logo,营业执照图片等
@@ -123,26 +126,10 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function edit($id)
     {
-
-        /**
-         * 1.先验证修改资格
-         */
-
-        /**
-         * 验证cookie
-         */
-
-        /**
-         * 没有cookie验证企业邮箱
-         */
-        $company = Company::findOrFail($id);
-        if ($company){
-            return view('Company.edit',['company'=>$company]);
-        }else{
-            return view('not_found');
-        }
+        return $this->editPermission($id);
     }
 
     /**
@@ -174,4 +161,5 @@ class CompanyController extends Controller
 
         return redirect()->back();
     }
+
 }

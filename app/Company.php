@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * App\Company
@@ -45,7 +45,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read \App\User $user
  * @method static \Illuminate\Database\Query\Builder|\App\Company whereUserId($value)
  */
-class Company extends Model
+class Company extends Authenticatable
 {
     //
 

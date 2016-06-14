@@ -12,6 +12,8 @@
 */
 
 
+use Monolog\Handler\RollbarHandler;
+
 Route::get('/', 'Admin\BasicSiteInfoController@index');
 Route::get('/about', 'BasicSiteInfoController@about');
 
@@ -37,6 +39,10 @@ Route::group([
 	Route::resource('job','JobController');
 	
 	Route::resource('company','CompanyController');
+//	Route::get('company/verify_company_email', 'CompanyController@edit_BusinessEmailForm');/*接收填写email表格*/
+//	Route::post('company/verify_company_email', 'CompanyController@edit_ValidateBusinessEmailForm');/*发送验证链接*/
+//	Route::post('company/verify_company_email/{id}', '');/*post验证链接*/
+//	Route::get('company/edit', 'CompanyController@edit');
 	
 	Route::resource('apartment','ApartmentController');
 
