@@ -3,14 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Company;
-use Illuminate\Auth\Passwords\CanResetPassword;
-use Illuminate\Contracts\Auth\PasswordBroker;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Message;
 use Auth;
-use Illuminate\Support\Facades\Password;
-use Illuminate\Contracts\Mail\Mailer as MailerContract;
 
 trait VerifyEditCompanyQualifications
 {
@@ -56,12 +51,12 @@ trait VerifyEditCompanyQualifications
 	/**
 	 * 如果邮箱和company的注册邮箱一致则发送验证邮件,否则,提示邮箱后缀名不符
 	 * @param Request $request
-	 * @param $id
+	 * @param $id company id
 	 * @return $this|\Symfony\Component\HttpFoundation\Response
 	 */
-	public function verifyEditRequestEmail(Request $request)
+	public function verifyEditRequestEmail(Request $request, $id)
 	{
-		$company = Company::findOrFail($request->input('id'));
+		$company = Company::findOrFail($id);
 		$verifyEmail = $request->input('email');
 
 		$validator = \Validator::make($request->all(), [
@@ -107,6 +102,12 @@ trait VerifyEditCompanyQualifications
 		return $this->VALIDATE_LINK_SENT;
 
     }
+
+	public function getValidatedEditRequestEmail($id)
+	{
+		$company = Company::findOrFail($id);
+		return view('Company.edit', ['company' => $company]);
+	}
 
 	public function emailSender($applyEmail, $validateLink, \Closure $callback = null)
 	{
