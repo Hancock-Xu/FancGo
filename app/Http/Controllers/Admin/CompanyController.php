@@ -36,18 +36,18 @@ class CompanyController extends Controller
     public function create()
     {
         $user = \Auth::user();
+
         if (!$user->company){
+
             return view('Company.create_company',['user'=>$user]);
+
         }else{
             
             $company = $user->company;
-            return view('Company.detail',compact('company'));
-            
-            /*
-             * TODO:创建已经注册公司的提醒页面。
-             */
-        }
 
+            return view('Company.detail',compact('company'));
+
+        }
     }
 
     /**

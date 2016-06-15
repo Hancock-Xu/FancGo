@@ -103,17 +103,12 @@ trait VerifyEditCompanyQualifications
 
     }
 
-	public function getValidatedEditRequestEmail($id)
-	{
-		$company = Company::findOrFail($id);
-		return view('Company.edit', ['company' => $company]);
-	}
 
 	public function emailSender($applyEmail, $validateLink, \Closure $callback = null)
 	{
-		
+
 		$view = $this->emailView;
-		
+
 		\Mail::send($view, ['validateLink' => $validateLink], function (Message $message) use ($applyEmail, $callback){
 			$message->to($applyEmail);
 			if (!is_null($callback)){
@@ -121,6 +116,15 @@ trait VerifyEditCompanyQualifications
 			}
 		});
 	}
+
+
+	public function getValidatedEditRequestEmail($id)
+	{
+		$company = Company::findOrFail($id);
+		return view('Company.edit', ['company' => $company]);
+	}
+
+
 
 	public function getSendResetLinkEmailSuccessResponse($response)
 	{
