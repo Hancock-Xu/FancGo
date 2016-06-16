@@ -37,7 +37,7 @@ Route::group([
 	
 	Route::resource('company','CompanyController');
 	Route::post('company/verify_company_email', 'CompanyController@verifyEditRequestEmail');
-	Route::post('company/verify_company_email/{id}', 'CompanyController@getValidatedEditRequestEmail');
+	Route::get('company/verify_company_email/{id}', 'CompanyController@getValidatedEditRequestEmail');
 	
 	Route::resource('apartment','ApartmentController');
 
@@ -48,6 +48,7 @@ Route::group([
 	Route::post('/profile/upload/avatar','ProfileController@avatarUpload');
 
 });
+
 
 Route::auth();
 

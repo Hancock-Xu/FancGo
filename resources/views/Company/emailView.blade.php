@@ -5,6 +5,7 @@
 	</head>
 
 	<body>
-		<a href=""></a>
+		{{--{{$validateLink}}--}}
+		<a href="{{ $validateLink }}">validateLink</a>
 	</body>
 </html>

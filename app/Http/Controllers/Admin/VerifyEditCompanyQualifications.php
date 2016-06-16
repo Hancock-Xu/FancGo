@@ -54,9 +54,9 @@ trait VerifyEditCompanyQualifications
 	 * @param $id company id
 	 * @return $this|\Symfony\Component\HttpFoundation\Response
 	 */
-	public function verifyEditRequestEmail(Request $request, $id)
+	public function verifyEditRequestEmail(Request $request)
 	{
-		$company = Company::findOrFail($id);
+		$company = Company::findOrFail($request->input('id'));
 		$verifyEmail = $request->input('email');
 
 		$validator = \Validator::make($request->all(), [
@@ -65,17 +65,15 @@ trait VerifyEditCompanyQualifications
 
 		if (explode('@', $verifyEmail) == explode('@', $company->email)){
 
-			$response = $this->sendValidateLink($request->only('email'), $company, function (Message $message){
-				$message->subject('Validate Company email');
-			});
+			$this->sendValidateLink($request->only('email'), $company);
 
-			switch ($response) {
-				case $this->VALIDATE_LINK_SENT:
-					return $this->getSendResetLinkEmailSuccessResponse($response);
-				case \Password::INVALID_USER:
-				default:
-					return $this->getSendResetLinkEmailFailureResponse($response);
-			}
+//			switch ($response) {
+//				case $this->VALIDATE_LINK_SENT:
+//					return $this->getSendResetLinkEmailSuccessResponse($response);
+//				case \Password::INVALID_USER:
+//				default:
+//					return $this->getSendResetLinkEmailFailureResponse($response);
+//			}
 
 		}else{
 
@@ -86,9 +84,10 @@ trait VerifyEditCompanyQualifications
 			return $validator->errors()->add('email_domain_error', 'Company email domain not match');
 
 		}
+
 	}
 
-	public function sendValidateLink(array $credentials, $company, \Closure $callback = null)
+	public function sendValidateLink(array $credentials, $company)
 	{
 		if (!$company){
 			return $this->INVALID_COMPANY;
@@ -97,24 +96,23 @@ trait VerifyEditCompanyQualifications
 		$validateLink = action('Admin\CompanyController@getValidatedEditRequestEmail',[$company->id]);
 		$applyEmail = $credentials['email'];
 
-		$this->emailSender($applyEmail, $validateLink, $callback);
+		$this->emailSender($applyEmail, $validateLink);
 
 		return $this->VALIDATE_LINK_SENT;
 
     }
 
 
-	public function emailSender($applyEmail, $validateLink, \Closure $callback = null)
+	public function emailSender($applyEmail, $validateLink)
 	{
 
 		$view = $this->emailView;
 
-		\Mail::send($view, ['validateLink' => $validateLink], function (Message $message) use ($applyEmail, $callback){
+		\Mail::send($view, ['validateLink' => $validateLink], function (Message $message) use ($applyEmail){
 			$message->to($applyEmail);
-			if (!is_null($callback)){
-				call_user_func($callback);
-			}
+			$message->subject('Company email validate');
 		});
+
 	}
 
 
