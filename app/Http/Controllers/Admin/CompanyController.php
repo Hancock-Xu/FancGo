@@ -56,28 +56,11 @@ class CompanyController extends Controller
      * @param  CompanyStoreRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CompanyStoreRequest $request)
     {
         /**
          * 处理上传的公司logo,营业执照图片等
          */
-
-        $this->validate($request,[
-            'user_id'=>'required',
-            'name'=>'required',
-
-            'business_license_name'=>'required',
-
-            'logo_url'=>'required|image',
-            'certificate_url'=>'required|image',
-            'resume_email'=>'required|email',
-            'description'=>'required',
-            'scale'=>'required',
-            'location'=>'required',
-            'industry'=>'required',
-            'email'=>'required|email',
-            'phone_number'=>'required'
-        ]);
 
         $inputs = $request->all();
         $user = \Auth::user();

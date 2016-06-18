@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\Request;
 
 class CompanyStoreRequest extends Request
 {
@@ -38,4 +38,21 @@ class CompanyStoreRequest extends Request
             'phone_number'=>'required'
         ];
     }
+
+    public $messages = [
+        'name.required' => '创建公司机构需要填写公司名称',
+        'business_license_name.required' => '创建公司机构需要填写公司注册名称',
+        'logo_url.required' => '创建公司需要上传公司Logo',
+        'logo_url.image' => '公司Logo需要是图片格式',
+        'certificate_url.image' => '公司注册信息图片需要是图片格式',
+        'resume_email.required' => '创建公司机构需要填写邮箱用来接收简历',
+        'resume_email.email' => '创建公司机构需要填写邮箱用来接收简历',
+        'description.required' => '创建公司机构需要填写公司描述',
+        'scale.required' => '创建公司机构需要填写公司规模',
+        'location.required' => '创建公司需要填写公司地址',
+        'industry.required' => '创建公司机构需要填写公司行业',
+        'email.required' => '创建公司机构需要填写您的邮箱联系方式',
+        'email.email' => '创建公司机构需要填写您的邮箱联系方式',
+        'phone_number.required' => '创建公司机构需要填写您的联系电话'
+    ];
 }
