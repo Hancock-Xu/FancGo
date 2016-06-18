@@ -65,15 +65,15 @@ trait VerifyEditCompanyQualifications
 
 		if (explode('@', $verifyEmail) == explode('@', $company->email)){
 
-			$this->sendValidateLink($request->only('email'), $company);
+			$response = $this->sendValidateLink($request->only('email'), $company);
 
-//			switch ($response) {
-//				case $this->VALIDATE_LINK_SENT:
-//					return $this->getSendResetLinkEmailSuccessResponse($response);
-//				case \Password::INVALID_USER:
-//				default:
-//					return $this->getSendResetLinkEmailFailureResponse($response);
-//			}
+			switch ($response) {
+				case $this->VALIDATE_LINK_SENT:
+					return $this->getSendResetLinkEmailSuccessResponse($response);
+				case \Password::INVALID_USER:
+				default:
+					return $this->getSendResetLinkEmailFailureResponse($response);
+			}
 
 		}else{
 
@@ -126,12 +126,18 @@ trait VerifyEditCompanyQualifications
 
 	public function getSendResetLinkEmailSuccessResponse($response)
 	{
-		return redirect()->back()->with('status', trans($response));
+		/**
+		 * 返回验证邮件发送成功之后的提示视图
+		 */
+		return view('Company.succeed_send_email');
 	}
 
 	public function getSendResetLinkEmailFailureResponse($response)
 	{
-		return redirect()->back()->with('status', trans($response));
+		/**
+		 * 返回验证邮件发送失败的提示视图
+		 */
+		return view('Company.failed_send_email');
 	}
 	
 }

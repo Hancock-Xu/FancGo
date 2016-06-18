@@ -29,7 +29,7 @@ class CreateCompaniesTable extends Migration
             /**
              * 公司营业执照或者其他证明文件
              */
-            $table->string('certificate_url')->nullable()->default(nullValue());
+            $table->string('certificate_url')->nullable()->default(null);
 
             $table->text('description');
             $table->string('scale');

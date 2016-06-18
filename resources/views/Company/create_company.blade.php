@@ -19,13 +19,13 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('company_logo_avatar','Upload company logo') !!}
-			{!! Form::file('company_logo_avatar') !!}
+			{!! Form::label('logo_url','Upload company logo') !!}
+			{!! Form::file('logo_url') !!}
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('company_license_img', 'Upload company license') !!}
-			{!! Form::file('company_license_img') !!}
+			{!! Form::label('certificate_url', 'Upload company license') !!}
+			{!! Form::file('certificate_url') !!}
 		</div>
 
 		<div class="form-group">

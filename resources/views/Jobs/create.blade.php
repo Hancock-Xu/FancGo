@@ -33,8 +33,8 @@
 		</div>
 
 		<div class="dropdown">
-			{!! Form::label('job_status_type','Job Status:') !!}
-			{!! Form::select('job_status_type',[
+			{!! Form::label('industry','Job Status:') !!}
+			{!! Form::select('industry',[
 			'Actors',
 			'English Teaching',
 			'Design/Creative',

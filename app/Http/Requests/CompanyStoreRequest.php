@@ -24,10 +24,11 @@ class CompanyStoreRequest extends Request
     public function rules()
     {
         return [
+            'user_id'=>'required',
             'name'=>'required',
             'business_license_name'=>'required',
-            'company_logo_avatar'=>'required|image',
-            'company_license_img'=>'image',
+            'logo_url'=>'required|image',
+            'certificate_url'=>'image',
             'resume_email'=>'required|email',
             'description'=>'required',
             'scale'=>'required',
