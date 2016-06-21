@@ -49,8 +49,8 @@ class Handler extends ExceptionHandler
         {
             return $this->renderHttpException($e);
         }
-
-
+        
+        
         if (config('app.debug'))
         {
             return $this->renderExceptionWithWhoops($e);
