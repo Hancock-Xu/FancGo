@@ -63,7 +63,7 @@ trait VerifyEditCompanyQualifications
 			'email' => 'required|email'
 		]);
 
-		if (explode('@', $verifyEmail) == explode('@', $company->email)){
+		if (explode('@', $verifyEmail)[1] == explode('@', $company->email)[1]){
 
 			$response = $this->sendValidateLink($request->only('email'), $company);
 

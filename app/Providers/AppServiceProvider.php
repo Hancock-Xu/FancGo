@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Validator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,6 +14,35 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Validator::extend('business_email',function ($attribute, $value){
+
+            $businessEmailDomain = explode('@', $value)[1];
+
+            $personalEmailDomain = [
+                'qq.com',
+                '163.com',
+                'sina.com',
+                'gmail.com',
+                'hotmail.com',
+                'outlook.com',
+                'yahoo.com',
+                'vip.163.com',
+                'vip.126.com',
+                '126.com',
+                '188.com',
+                'foxmail.com',
+                'icloud.com'
+            ];
+
+            foreach ($personalEmailDomain as $emailDomain){
+                if ($businessEmailDomain == $emailDomain){
+                    return false;
+                }
+            }
+
+            return true;
+
+        });
         //
     }
 
