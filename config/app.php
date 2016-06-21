@@ -160,6 +160,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        GrahamCampbell\Exceptions\ExceptionsServiceProvider::class
     ],
 
     /*
