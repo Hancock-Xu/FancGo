@@ -18,11 +18,11 @@ class CreateCompaniesTable extends Migration
 
             $table->integer('user_id')->unsigned();
             
-            $table->string('name',50);
+            $table->string('name',50)->index();
             /*
              * 公司营业执照名字
              */
-            $table->string('business_license_name',50);
+            $table->string('business_license_name',50)->unique();
             $table->string('resume_email',50);
             $table->string('logo_url')->nullable()->default(null);
             $table->string('website')->nullable()->default(null);
@@ -33,11 +33,11 @@ class CreateCompaniesTable extends Migration
 
             $table->text('description');
             $table->string('scale');
-            $table->string('location');
-            $table->string('industry', 50);
+            $table->string('location')->index();
+            $table->string('industry', 50)->index();
             $table->string('email', 50);
             $table->string('phone_number',11);
-            $table->timestamp('published_at')->nullable();
+            $table->timestamp('published_at')->nullable()->index();
         });
         
         Schema::table('companies', function (Blueprint $table){

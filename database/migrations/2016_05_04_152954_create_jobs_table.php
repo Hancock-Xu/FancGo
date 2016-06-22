@@ -16,21 +16,74 @@ class CreateJobsTable extends Migration
             $table->increments('id');
             $table->timestamps();
 
-            /*
-             * company外键
-             */
-            $table->integer('company_id')->unsigned();
-
+            $table->integer('company_id')->unsigned()->index();
 
             $table->string('job_title',50);
-            $table->text('responsibility');
-            $table->string('eduction_require')->nullable()->default(null);
-            $table->integer('years_work_experience')->nullable()->default(null);
-            $table->string('salary_and_other_welfare');
-            $table->string('job_status_type',50)->nullable()->default(null);
-            $table->string('industry', 50)->nullable()->default(null);
+            $table->text('description');
+            $table->text('desired_skill_experience');
+            $table->text('compensation_benefits');
+            $table->enum('eduction_require', ['Any education','Degree and above', 'Master degree and above', 'Senior technical titles and Dr.']);
+            $table->enum('years_work_experience', ['Any work experience','Internship Experience','1','2','3','More than 5 years']);
+            $table->string('salary_lower_limit')->index();
+            $table->string('salary_upper_limit')->index();
+            $table->text('other_welfare')->nullable();
+            $table->enum('job_status_type',['Full-time', 'Part-time', 'Internship'])->nullable()->default(null)->index();
 
-            $table->timestamp('published_at')->nullable();
+            $table->enum('industry', [
+                'Sales/Marketing'=>[
+                    'Sales/Retail',
+                    'Marketing',
+                    'Advertisement',
+                    'PR',
+                    'Customer Service'],
+                'Education/Training'=>[
+                    'Teaching',
+                    'Other Teaching',
+                    'Translation/Proofreading'
+                    ],
+                'Creative'=>[
+                    'Graphic Design', 
+                    'Photographer', 
+                    'Artwork Designer'
+                    ],
+                'Trade/Logistic'=>[
+                    'Sourcing/Purchasing',
+                    'International Trade',
+                    'Logistic'
+                    ],
+                'Manufacture'=>[
+                    'Architecture',
+                    'Manufacturing/Production',
+                    'Engineer'
+                    ],
+                'Finance/Consultancy'=>[
+                    'Finance',
+                    'Accounting',
+                    'Banking',
+                    'Consultancy',
+                    'Legal'
+                    ],
+                'Admin'=>[
+                    'Professional Manager',
+                    'Secretarial/Office manager',
+                    'Human Resource'
+                    ],
+                'Entertainment/Catering'=>[
+                    'Acting/Model/Voice',
+                    'Bar/Club/Restaurant Staff',
+                    'Hotel/tourism'
+                    ],
+                'Healthcare'=>[
+                    'Physician Job',
+                    'Medical assistant job',
+                    'Biomedical Engineer Job'
+                    ],
+                'Others'
+                ])->index();
+
+            $table->string('position_points')->nullable();
+
+            $table->timestamp('published_at')->nullable()->index();
         });
         
         Schema::table('jobs', function (Blueprint $table){
