@@ -18,7 +18,7 @@ class CreateImagesTable extends Migration
 
             $table->integer('company_id')->unsigned()->nullable()->index();
             $table->integer('job_id')->unsigned()->nullable()->index();
-            $table->integer('apartment_id')->unsigned()->nullable()->index();
+//            $table->integer('apartment_id')->unsigned()->nullable()->index();
 
             $table->string('image_path');
 
@@ -28,7 +28,7 @@ class CreateImagesTable extends Migration
 
             $table->foreign('company_id')->references('id')->on('companies');
             $table->foreign('job_id')->references('id')->on('jobs');
-            $table->foreign('apartment_id')->references('id')->on('apartments');
+//            $table->foreign('apartment_id')->references('id')->on('apartments');
             
         });
     }
