@@ -14,14 +14,9 @@
 
 			@if($errors->has('name'))
 				<span class="help-block">
-					<ul class="alert-danger alert">
-						<div class="container">
-							<li>
-								<strong>{{ $errors->first('name') }}</strong>
-							</li>
-						</div>
-					</ul>
-
+					<div class="alert-danger alert">
+						<strong>{{ $errors->first('name') }}</strong>
+					</div>
 				</span>
 			@endif
 
@@ -84,22 +79,8 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('resume_email','Resume email') !!}
-			{!! Form::text('resume_email',null, ['class'=>'form-control']) !!}
-
-			@if($errors->has('resume_email'))
-				<span class="help-block">
-					<ul class="alert-danger alert">
-						<div class="container">
-							<li>
-								<strong>{{ $errors->first('resume_email') }}</strong>
-							</li>
-						</div>
-					</ul>
-
-				</span>
-			@endif
-
+			{!! Form::label('Website', 'Company website') !!}
+			{!! Form::text('Website', null, ['class'=>'form-control']) !!}
 		</div>
 
 		<div class="form-group">
@@ -122,18 +103,20 @@
 
 		<div class="form-group">
 			{!! Form::label('scale','scale') !!}
-			{!! Form::text('scale',null, ['class'=>'form-control']) !!}
+			{!! Form::select('scale', [
+				'< 15',
+				'15~50',
+				'50~150',
+				'150~500',
+				'500~2000',
+				'> 2000'
+			]) !!}
 
 			@if($errors->has('scale'))
 				<span class="help-block">
-					<ul class="alert-danger alert">
-						<div class="container">
-							<li>
-								<strong>{{ $errors->first('scale') }}</strong>
-							</li>
-						</div>
-					</ul>
-
+					<div class="alert-danger alert">
+						<strong>{{ $errors->first('scale') }}</strong>
+					</div>
 				</span>
 			@endif
 		</div>
@@ -246,6 +229,17 @@
 		</div>
 
 		{!! Form::close() !!}
+
+		@if($errors->any())
+			<ul class="alert alert-danger">
+				@foreach($errors->all() as $error)
+					<div class="container">
+						<li>{{ $error }}</li>
+					</div>
+
+				@endforeach
+			</ul>
+		@endif
 
 	</div>
 

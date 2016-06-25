@@ -1,5 +1,4 @@
 <ul class="nav navbar-nav">
-	{{--<li><a href="/">Home</a></li>--}}
 	@if(Auth::check())
 
 		<li @if(Request::is('/job')) class="active" @endif>
@@ -9,12 +8,6 @@
 			<a href="/company">Companies</a>
 		</li>
 
-		<li @if(Request::is('admin/apartment*')) class="active" @endif>
-			<a href="/apartment">Apartments</a>
-		</li>
-		{{--<li @if(Request::is('admin/upload*')) class="active" @endif>--}}
-			{{--<a href="/admin/upload">Uploads</a>--}}
-		{{--</li>--}}
 		<li @if(Request::is('/job/create')) class="active" @endif>
 			<a href="/job/create">Post Job</a>
 		</li>
