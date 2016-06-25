@@ -16,11 +16,18 @@ class JobController extends Controller
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function index()
+	public function index(Request $request)
 	{
-		$jobs = Job::where('published_at','<=',Carbon::now())->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
-		return view('Jobs.index',compact('jobs'));
+		if (!$request){
+			$jobs = Job::where('published_at','<=',Carbon::now())->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
+			return view('Jobs.index',compact('jobs'));
+		}else{
+//			$parameters = $request->query->all();
 
+			return null;
+			
+		}
+		
 		/**/
 	}
 
