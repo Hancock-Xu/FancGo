@@ -23,8 +23,15 @@ class JobStoreRequest extends Request
     {
         return [
             'job_title'=>'required',
-            'responsibility'=>'required',
-            'salary_and_other_welfare'=>'required'
+            'description'=>'required',
+            'desired_skill_experience'=>'required',
+            'eduction_require'=>'required',
+            'years_work_experience'=>'required',
+            'salary_lower_limit'=>'required',
+            'salary_upper_limit'=>'required',
+            'job_status_type'=>'required',
+            'industry'=>'required',
+            'resume_email'=>'required'
         ];
     }
 }

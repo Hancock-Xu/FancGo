@@ -22,13 +22,15 @@ class CreateJobsTable extends Migration
             $table->string('job_title',50);
             $table->text('description');
             $table->text('desired_skill_experience');
-            $table->text('compensation_benefits');
+
             $table->enum('eduction_require', ['Any education','Degree and above', 'Master degree and above', 'Senior technical titles and Dr.'])->index();
             $table->enum('years_work_experience', ['Any work experience','Internship Experience','1','2','3','More than 5 years'])->index();
             $table->string('salary_lower_limit')->index();
             $table->string('salary_upper_limit')->index();
+            $table->text('compensation_benefits')->nullable();
             $table->text('other_welfare')->nullable();
             $table->enum('job_status_type',['Full-time', 'Part-time', 'Internship'])->index();
+            //TODO:需要修改create job blade文件中的industry列表,如何选择industry?用enum还是直接存储string?
             $table->string('industry',50)->index();
 
             $table->string('position_points')->nullable();

@@ -44,6 +44,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Apartment whereUserId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Apartment whereCompanyId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Apartment wherePublishedAt($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Amenity[] $amenity
  */
 class Apartment extends Model
 {

@@ -34,6 +34,22 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read \App\Company $companies
  * @property integer $company_id
  * @method static \Illuminate\Database\Query\Builder|\App\Job whereCompanyId($value)
+ * @property string $resume_email
+ * @property string $description
+ * @property string $desired_skill_experience
+ * @property string $salary_lower_limit
+ * @property string $salary_upper_limit
+ * @property string $compensation_benefits
+ * @property string $other_welfare
+ * @property string $position_points
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereResumeEmail($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereDesiredSkillExperience($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereSalaryLowerLimit($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereSalaryUpperLimit($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereCompensationBenefits($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereOtherWelfare($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job wherePositionPoints($value)
  */
 class Job extends Model
 {
@@ -42,13 +58,21 @@ class Job extends Model
 
 	protected $fillable = [
 		'job_title',
-		'responsibility',
-		'eduction_require',
-		'years_work_experience',
-		'salary_and_other_welfare',
+		'description',
+		'desired_skill_experience',
+		'salary_lower_limit',
+		'salary_upper_limit',
+		'compensation_benefits',
+		'other_welfare',
 		'job_status_type',
 		'industry',
-		'published_at'
+		'position_points',
+		'published_at',
+
+		'eduction_require',
+		'years_work_experience',
+		'company_id',
+		'resume_email'
 	];
 
 	protected function setPublishedAtAttribute($date)

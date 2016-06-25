@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Amenity whereUpdatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Amenity whereName($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Apartment[] $apartment
  */
 class Amenity extends Model
 {

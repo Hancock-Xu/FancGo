@@ -7,6 +7,8 @@ use App\Http\Requests\JobStoreRequest;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 
+use Illuminate\Http\Request;
+
 class JobController extends Controller
 {
 	/**
@@ -36,7 +38,7 @@ class JobController extends Controller
 			return redirect('/company/create');
 		}else{
 			$company = $user->company;
-			return view('Jobs.create',compact('company'));
+			return view('Jobs.create', ['company'=>$company]);
 		}
 	}
 
@@ -46,7 +48,7 @@ class JobController extends Controller
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(JobStoreRequest $request)
+	public function store(Request $request)
 	{
 		$input = $request->all();
 		Job::create($input);
