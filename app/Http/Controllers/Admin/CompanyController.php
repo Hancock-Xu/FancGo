@@ -86,7 +86,7 @@ class CompanyController extends Controller
             if ($company_license_img){
 
                 $file_name = 'company_license_img'.'.'.$company_license_img->getClientOriginalExtension();
-                $save_path = '/uploads/companies/'.$company->id.'/'.$file_name;
+                $save_path = '/companies/'.$company->id.'/'.$file_name;
 
                 Storage::disk('local')->put($save_path, file_get_contents($company_license_img->getRealPath()));
 
@@ -108,9 +108,10 @@ class CompanyController extends Controller
     public function show($id)
     {
         $company = Company::find($id)->firstOrFail();
+        $company_certificate_url = '/uploads'.$company->certificate_url;
 
         if ($company){
-            return view('Company.detail',['company'=>$company]);
+            return view('Company.detail',['company'=>$company, 'company_certificate_url'=>$company_certificate_url]);
         }else{
             return view('not_found');
         }
