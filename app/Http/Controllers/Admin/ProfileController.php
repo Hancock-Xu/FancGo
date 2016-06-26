@@ -96,7 +96,7 @@ class ProfileController extends Controller
         }
 
         $fileName = 'avatar'.'.'.$file->getClientOriginalExtension();
-        $savePath = '/uploads/users/'.Auth::id().'/'.$fileName;
+        $savePath = '/users/'.Auth::id().'/'.$fileName;
 
         Storage::disk('local')->put($savePath, file_get_contents($file->getRealPath()));
 

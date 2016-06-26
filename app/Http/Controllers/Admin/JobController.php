@@ -18,13 +18,30 @@ class JobController extends Controller
 	 */
 	public function index(Request $request)
 	{
-		if (!$request){
-			$jobs = Job::where('published_at','<=',Carbon::now())->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
-			return view('Jobs.index',compact('jobs'));
-		}else{
-//			$parameters = $request->query->all();
+		/**
+		 * 查询参数数组
+		 */
+		$parameters = $request->query->all();
 
-			return null;
+		if (!$parameters){
+
+			$jobs = Job::where('published_at','<=',Carbon::now())->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
+
+			return view('Jobs.index',compact('jobs'));
+
+		}else{
+
+			$jobs = \DB::table('jobs');
+
+			foreach ($parameters as $key => $value)
+			{
+//				if ($key == 'education')
+				$jobs = $jobs->where($key, $value);
+			}
+
+			$jobs = $jobs->get();
+
+			return view('Jobs.index', ['jobs'=>$jobs]);
 			
 		}
 		
