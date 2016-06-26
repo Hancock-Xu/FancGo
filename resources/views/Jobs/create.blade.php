@@ -25,22 +25,22 @@
 		<div class="form-group">
 			{!! Form::label('education_require', 'Education require') !!}
 			{!! Form::select('education_require', [
-				'Any education',
-				'Degree and above',
-				'Master and above',
-				'Senior technical titles and Dr.'
+				'1'=>'Any education',
+				'2'=>'Degree and above',
+				'3'=>'Master and above',
+				'4'=>'Senior technical titles and Dr.'
 			]) !!}
 		</div>
 
 		<div class="form-group">
 			{!! Form::label('years_work_experience','Years Experience Require:') !!}
 			{!! Form::select('years_work_experience', [
-				'Any work experience',
-				'Internship experience',
-				'1',
-				'2',
-				'3',
-				'More than 5 years'
+				'1'=>'Any work experience',
+				'2'=>'Internship experience',
+				'3'=>'1',
+				'4'=>'2',
+				'5'=>'3',
+				'6'=>'More than 5 years'
 			]) !!}
 		</div>
 
@@ -61,37 +61,39 @@
 
 		<div class="form-group">
 			{!! Form::label('job_status_type', 'job_status_type') !!}
+
 			{!! Form::select('job_status_type', [
-				'Full-time',
-				'Part-time',
-				'Internship'
+				'1'=>'Full-time',
+				'2'=>'Part-time',
+				'3'=>'Internship'
 			]) !!}
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('industry','Job Status:') !!}
+			{!! Form::label('industry','industry:') !!}
 			{!! Form::select('industry',[
-			'Actors',
-			'English Teaching',
-			'Design/Creative',
-			'Models',
-			'Eduction',
-			'Musicians/DJ',
-			'Engineering',
-			'Entertainer',
-			'Finance',
-			'HealthCare',
-			'Hotel',
-			'HR/Admin',
-			'Insurance',
-			'International Trade',
-			'IT/Internet',
-			'PR/Media/Advertising',
-			'Read Estate',
-			'Retail',
-			'Sales/Marketing',
-			'Sports/Leisure'
+			'Actors'=>'Actors',
+			'English Teaching'=>'English Teaching',
+			'Design/Creative'=>'Design/Creative',
+			'Models'=>'Models',
+			'Eduction'=>'Eduction',
+			'Musicians'=>'Musicians/DJ',
+			'Engineering'=>'Engineering',
+			'Entertainer'=>'Entertainer',
+			'Finance'=>'Finance',
+			'HealthCare'=>'HealthCare',
+			'Hotel'=>'Hotel',
+			'HR/Admin'=>'HR/Admin',
+			'Insurance'=>'Insurance',
+			'International Trade'=>'International Trade',
+			'IT/Internet'=>'IT/Internet',
+			'PR/Media/Advertising'=>'PR/Media/Advertising',
+			'Read Estate'=>'Read Estate',
+			'Retail'=>'Retail',
+			'Sales/Marketing'=>'Sales/Marketing',
+			'Sports/Leisure'=>'Sports/Leisure'
 			]) !!}
+
 		</div>
 
 		<div class="form-group">

@@ -35,7 +35,6 @@ class JobController extends Controller
 
 			foreach ($parameters as $key => $value)
 			{
-//				if ($key == 'education')
 				$jobs = $jobs->where($key, $value);
 			}
 
@@ -72,7 +71,7 @@ class JobController extends Controller
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(Request $request)
+	public function store(JobStoreRequest $request)
 	{
 		$input = $request->all();
 		Job::create($input);

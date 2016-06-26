@@ -69,7 +69,7 @@ class Job extends Model
 		'position_points',
 		'published_at',
 
-		'eduction_require',
+		'education_require',
 		'years_work_experience',
 		'company_id',
 		'resume_email'
