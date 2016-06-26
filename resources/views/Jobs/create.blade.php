@@ -23,8 +23,8 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('eduction_require', 'Eduction require') !!}
-			{!! Form::select('eduction_require', [
+			{!! Form::label('education_require', 'Education require') !!}
+			{!! Form::select('education_require', [
 				'Any education',
 				'Degree and above',
 				'Master and above',

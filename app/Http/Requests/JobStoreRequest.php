@@ -25,7 +25,7 @@ class JobStoreRequest extends Request
             'job_title'=>'required',
             'description'=>'required',
             'desired_skill_experience'=>'required',
-            'eduction_require'=>'required',
+            'education_require'=>'required',
             'years_work_experience'=>'required',
             'salary_lower_limit'=>'required',
             'salary_upper_limit'=>'required',
