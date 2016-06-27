@@ -35,7 +35,13 @@ class JobController extends Controller
 
 			foreach ($parameters as $key => $value)
 			{
-				$jobs = $jobs->where($key, '=', $value);
+				if ($key == 'salary_lower_limit'){
+					$jobs = $jobs->where($key, '>=', $value);
+				}elseif ($key == 'salary_upper_limit'){
+					$jobs = $jobs->where($key, '<=', $value);
+				}else{
+					$jobs = $jobs->where($key, '=', $value);
+				}
 			}
 
 			$jobs = $jobs->get();
