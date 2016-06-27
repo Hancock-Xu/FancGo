@@ -22,7 +22,7 @@
 						</div>
 						<div class="job_short_cut">
 							<p>
-								{{ str_limit($job->responsibility) }}
+								{{ str_limit($job->description) }}
 							</p>
 						</div>
 					</article>
@@ -30,7 +30,7 @@
 
 			@endforeach
 			<hr>
-			{!! $jobs->render() !!}
+{{--			{!! $jobs->render() !!}--}}
 		</div>
 	</div>
 @stop

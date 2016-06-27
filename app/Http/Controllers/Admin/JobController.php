@@ -35,7 +35,7 @@ class JobController extends Controller
 
 			foreach ($parameters as $key => $value)
 			{
-				$jobs = $jobs->where($key, $value);
+				$jobs = $jobs->where($key, '=', $value);
 			}
 
 			$jobs = $jobs->get();
