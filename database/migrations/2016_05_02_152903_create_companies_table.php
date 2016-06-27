@@ -32,10 +32,10 @@ class CreateCompaniesTable extends Migration
 
             $table->text('description');
             $table->enum('scale', ['< 15', '15~50', '50~150', '150~500', '500~2000' , '> 2000'])->index();
-            $table->string('location')->index();
+            $table->string('location', 30)->index();
             $table->string('industry', 50)->index();
             $table->string('email', 50);
-            $table->string('phone_number',11);
+            $table->string('phone_number',14);
             $table->timestamp('published_at')->nullable()->index();
         });
         

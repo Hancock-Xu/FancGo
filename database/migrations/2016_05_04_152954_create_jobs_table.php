@@ -31,6 +31,7 @@ class CreateJobsTable extends Migration
             $table->text('other_welfare')->nullable();
             $table->enum('job_status_type',['Full-time', 'Part-time', 'Internship'])->index();
             $table->string('industry',50)->index();
+            $table->string('location',30)->index();
 
             $table->string('position_points')->nullable();
 
