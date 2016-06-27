@@ -30,7 +30,6 @@ class CreateJobsTable extends Migration
             $table->text('compensation_benefits')->nullable();
             $table->text('other_welfare')->nullable();
             $table->enum('job_status_type',['Full-time', 'Part-time', 'Internship'])->index();
-            //TODO:需要修改create job blade文件中的industry列表,如何选择industry?用enum还是直接存储string?
             $table->string('industry',50)->index();
 
             $table->string('position_points')->nullable();
