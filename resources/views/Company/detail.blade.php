@@ -2,9 +2,28 @@
 
 @section('content')
 	<div class="content">
-		<a href="{{action('Admin\CompanyController@edit', [$company->id])}}">edit</a>
-		<br>
-		<img src="{{ $company_certificate_url }}" alt="">
+
+		<div class="header container">
+			<header>
+				<h1>{{$company->name}}</h1>
+				<p>{{$company->published_at}}</p>
+			</header>
+		</div>
+
+		<div class="container">
+			<div class="content">
+				<hr>
+					<article>
+						{!! nl2br(e($company->description)) !!}
+					</article>
+				<hr>
+			</div>
+		</div>
+
+		<div class="container">
+			<img src="{{ $company_certificate_url }}" alt="">
+		</div>
+
 	</div>
 
 @endsection

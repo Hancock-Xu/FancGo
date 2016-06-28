@@ -39,6 +39,8 @@ class JobController extends Controller
 					$jobs = $jobs->where($key, '>=', $value);
 				}elseif ($key == 'salary_upper_limit'){
 					$jobs = $jobs->where($key, '<=', $value);
+				}elseif ($key == 'name'){
+					$jobs = $jobs->where($key, 'like', $value);
 				}else{
 					$jobs = $jobs->where($key, '=', $value);
 				}

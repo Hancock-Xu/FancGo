@@ -85,7 +85,7 @@
 
 		<div class="form-group">
 			{!! Form::label('description','Company description') !!}
-			{!! Form::text('description',null, ['class'=>'form-control']) !!}
+			{!! Form::textarea('description',null, ['class'=>'form-control']) !!}
 
 			@if($errors->has('description'))
 				<span class="help-block">
@@ -117,24 +117,6 @@
 					<div class="alert-danger alert">
 						<strong>{{ $errors->first('scale') }}</strong>
 					</div>
-				</span>
-			@endif
-		</div>
-
-		<div class="form-group">
-			{!! Form::label('location','location') !!}
-			{!! Form::text('location',null, ['class'=>'form-control']) !!}
-
-			@if($errors->has('location'))
-				<span class="help-block">
-					<ul class="alert-danger alert">
-						<div class="container">
-							<li>
-								<strong>{{ $errors->first('location') }}</strong>
-							</li>
-						</div>
-					</ul>
-
 				</span>
 			@endif
 		</div>
@@ -248,6 +230,20 @@
                 'Zhuhai'=>'Zhuhai',
                 'Others'=>'Others'
 			]) !!}
+
+
+			@if($errors->has('location'))
+				<span class="help-block">
+					<ul class="alert-danger alert">
+						<div class="container">
+							<li>
+								<strong>{{ $errors->first('location') }}</strong>
+							</li>
+						</div>
+					</ul>
+
+				</span>
+			@endif
 		</div>
 
 

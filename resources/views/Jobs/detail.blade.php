@@ -6,22 +6,22 @@
 
 @section('content')
 	<div class="container">
-		<article>
+
 			<h1>{{$job->job_title}}</h1>
 			<h5>{{$job->published_at}}</h5>
 
 			<br>
-			<h4>Responsibility:</h4>
+			<h4>Job description:</h4>
 			<hr>
-			<p class="job_description">{{$job->responsibility}}</p>
+			<article class="job_description">{{$job->description}}</article>
 			<hr>
+
+
 
 			<h4>Salary&Welfare:</h4>
 			<hr>
-			<p class="salary_and_welfare">{{$job->salary_and_other_welfare}}</p>
+			{{--<p class="salary_and_welfare">{{$job->salary_and_other_welfare}}</p>--}}
 			<hr>
-
-		</article>
 
 		<button class="btn btn-primary" onclick="history.go(-1)">
 			« Back
