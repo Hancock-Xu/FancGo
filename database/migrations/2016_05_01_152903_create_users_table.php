@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
 
             $table->string('passportNumber',9)->nullable()->default(null);
             $table->string('phoneNumber',13)->nullable()->default(null);
+            $table->string('resume_url')->nullable();
 
             $table->string('openid')->nullable()->default(null);
             $table->string('name', 25)->nullable()->default(null);

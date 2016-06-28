@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Job;
 use Illuminate\Http\Request;
 use App\Http\Requests\CompanyStoreRequest;
 use Carbon\Carbon;
@@ -144,6 +145,16 @@ class CompanyController extends Controller
         $company->fill($input)->save();
 
         return redirect()->back();
+    }
+
+    /**
+     * 删除公司下的工作
+     * @param $id 工作id
+     * @return int
+     */
+    public function deleteJob($id)
+    {
+        return Job::destroy($id);
     }
 
     /**

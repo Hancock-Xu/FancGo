@@ -12,35 +12,15 @@ use Storage;
 class ProfileController extends Controller
 {
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $user = Auth::getUser();
+        return view('Profile.profile',['user'=>$user]);
     }
 
     /**
@@ -49,11 +29,10 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        $user = User::findOrFail($id);
-
-        return view('Profile.profile',['user'=>$user]);
+        $user = Auth::getUser();
+        return view('Profile.edit',['user'=>$user]);
 
     }
 
@@ -64,60 +43,77 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $user = User::findOrFail($id);
+        $user = Auth::user();
         $input = $request->all();
 
         $user->fill($input)->save();
 
+        if ($request->hasFile('avatar')){
+
+            $file = $request->file('avatar');
+
+            if ($file->isValid()){
+                $fileName = 'avatar'.'.'.$file->getClientOriginalExtension();
+                $savePath = '/users/'.Auth::id().'/'.$fileName;
+
+                Storage::disk('local')->put($savePath, file_get_contents($file->getRealPath()));
+
+                Auth::user()->headimgurl = $savePath;
+                Auth::user()->save();
+
+            }else{
+                $request->session()->flash('error', 'file error');
+            }
+        }
+
+        if ($request->hasFile('resume')){
+            $file = $request->file('resume');
+
+            if ($file->isValid()){
+                $fileName = 'resume'.'.'.$file->getClientOriginalExtension();
+                $savePath = '/users/'.Auth::id().'/'.$fileName;
+
+                Storage::disk('local')->put($savePath, file_get_contents($file->getRealPath()));
+
+                Auth::user()->resume_url = $savePath;
+                Auth::user()->save();
+
+            }else{
+                $request->session()->flash('error', 'file error');
+            }
+
+        }
+
         return redirect('/profile/updated');
         
     }
-    
-//    public function avatar()
-//    {
-//        return view('Profile.avatar');
-//    }
 
-
-    public function avatarUpload(Request $request)
+    public function company()
     {
-        if (!$request->hasFile('avatar')) {
-            exit('上传文件为空');
-            //TODO:修改此处上传request缺少avatar值后的错误信息
+        $user = Auth::user();
+        $company = $user->company;
+        if (!$company){
+            redirect('/company/create');
         }
-
-        $file = $request->file('avatar');
-
-        if (!$file->isValid()){
-            exit('文件出错');
-            //TODO:同上
-        }
-
-        $fileName = 'avatar'.'.'.$file->getClientOriginalExtension();
-        $savePath = '/users/'.Auth::id().'/'.$fileName;
-
-        Storage::disk('local')->put($savePath, file_get_contents($file->getRealPath()));
-
-        Auth::user()->headimgurl = $savePath;
-        Auth::user()->save();
+        redirect(action('Admin\ApartmentController@edit',$company->id));
     }
-    
-    
+
+    public function deleteCompany(Request $request)
+    {
+        $user = Auth::getUser();
+
+        if ($user->company){
+            return $user->company->delete();
+        }else{
+            $request->session()->flash('error', 'This user didn\'t have company');
+        }
+
+        return redirect()->back();
+    }
 
     public function updateSucceed(){
         return view('Profile.updated');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

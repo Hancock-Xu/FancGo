@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Company;
+use App\Job;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Message;
 use Auth;
@@ -39,7 +40,8 @@ trait VerifyEditCompanyQualifications
 	{
 		$company = Company::findOrFail($id);
 		if ($company->user_id == Auth::getUser()->id) {
-			return view('Company.edit', ['company' => $company]);
+			$jobs = Job::where('company_id', '==', $company->id)->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
+			return view('Company.edit', ['company' => $company, 'jobs'=>$jobs]);
 		}else{
 			/**
 			 * 把company id作为隐含form值返回

@@ -38,18 +38,18 @@ Route::group([
 	Route::resource('company','CompanyController');
 	Route::post('company/verify_company_email', 'CompanyController@verifyEditRequestEmail');
 	Route::get('company/verify_company_email/{id}', 'CompanyController@getValidatedEditRequestEmail');
+	Route::get('company/delete/{id}','CompanyController@deleteJob');
 	
-	Route::resource('apartment','ApartmentController');
+//	Route::resource('apartment','ApartmentController');
 
 	Route::get('/profile/edit', 'ProfileController@edit');
 	Route::post('/profile/update', 'ProfileController@update');
 	Route::get('/profile/updated','ProfileController@updateSucceed');
+	Route::get('/profile/company', 'ProfileController@company');
+	Route::post('/profile/company/delete', 'ProfileController@deleteCompany');
 
-	Route::post('/profile/upload/avatar','ProfileController@avatarUpload');
 
 });
 
 
 Route::auth();
-
-Route::get('/home', 'HomeController@index');
