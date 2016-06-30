@@ -51,6 +51,11 @@ class CompanyController extends Controller
         }
     }
 
+    public function validateCreateCompanyEmail(Request $request)
+    {
+        
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -154,7 +159,14 @@ class CompanyController extends Controller
      */
     public function deleteJob($id)
     {
-        return Job::destroy($id);
+        $job = Job::findOrFail($id);
+        if ($job){
+            $job->delete();
+        }else{
+            \Session::flash('error','Can\'t find the job');
+        }
+
+       return redirect()->back();
     }
 
     /**

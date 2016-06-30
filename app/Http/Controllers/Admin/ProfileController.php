@@ -113,7 +113,8 @@ class ProfileController extends Controller
         return redirect()->back();
     }
 
-    public function updateSucceed(){
+    public function updateSucceed()
+    {
         return view('Profile.updated');
     }
 }

@@ -136,11 +136,6 @@ class JobController extends Controller
 		return redirect()->back();
 	}
 
-//	public function conditionalSearch(Request $request)
-//	{
-//		
-//	}
-
 	/**
 	 * Remove the specified resource from storage.
 	 *
