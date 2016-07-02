@@ -30,7 +30,7 @@
 					<a href="{{action('Admin\JobController@create')}}">Post job</a>
 				</li>
 				<li>
-					<a href="{{action('Admin\ApartmentController@create')}}">Post apartment</a>
+{{--					<a href="{{action('Admin\ApartmentController@create')}}">Post apartment</a>--}}
 				</li>
 				<li>
 					<a href="{{ action('Auth\AuthController@getLogout') }}">Logout</a>
