@@ -16,6 +16,8 @@ return [
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
+
+        'verify_email' => 'verify_email'
     ],
 
     /*
@@ -94,6 +96,13 @@ return [
     | they have less time to be guessed. You may change this as needed.
     |
     */
+
+    'verify_email' => [
+        'provider' => 'users',
+        'email' => 'auth.emails.verify_business_email',
+        'table' => 'password_resets',
+        'expire' => 60,
+    ],
 
     'passwords' => [
         'users' => [
