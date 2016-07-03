@@ -12,5 +12,13 @@ use Closure;
 
 interface verifyEmail
 {
-	public function sendVerifyEmail(array $credentials, Closure $callback = null);
+	const VERIFY_EMAIL_SENT = 'verify.email.sent';
+	
+	const VERIFY_SUCCEED = 'succeed';
+	
+	const VERIFY_FAILED = 'failed';
+	
+	public function sendVerifyEmail($email, Closure $callback = null);
+
+	public function verifyEmail($email, $token, Closure $callback = null);
 }

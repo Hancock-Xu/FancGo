@@ -62,7 +62,7 @@ class tokenRepository
 		return $token && !$this->tokenExpired($token);
 	}
 	
-	protected function tokenExpired($token)
+	public function tokenExpired($token)
 	{
 		$expiresAt = Carbon::parse($token['created_at'])->addSeconds($this->expires);
 
