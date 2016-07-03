@@ -13,7 +13,7 @@ use Illuminate\Support\Str;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class verifyEmailTokenRepository
+class tokenRepository
 {
 	protected $connection;
 

@@ -9,7 +9,7 @@
 namespace verifyEmailService;
 
 
-interface verifyEmailBrokerFactory
+interface verifyBrokerFactory
 {
 	/**
 	 * Get verify email broker by name

@@ -15,7 +15,7 @@ use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Auth\Passwords\TokenRepositoryInterface;
 use Illuminate\Contracts\Mail\Mailer as MailerContract;
 
-class verifyEmailBroker
+class verifyBroker
 {
 	protected $tokens;
 
