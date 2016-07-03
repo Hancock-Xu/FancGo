@@ -38,6 +38,8 @@ class tokenRepository
 		$token = $this->createNewToken();
 
 		$this->getTable()->insert($this->getPayload($email, $token));
+		
+		return $token;
 	}
 
 	public function createNewToken()

@@ -14,6 +14,7 @@ use UnexpectedValueException;
 use Illuminate\Contracts\Auth\UserProvider;
 use verifyEmailService\tokenRepository;
 use Illuminate\Contracts\Mail\Mailer as MailerContract;
+use Illuminate\Mail\Message;
 use verifyEmailService\Protocol\verifyEmail as verifyEmailContract;
 
 class verifyBroker implements verifyEmailContract
@@ -44,7 +45,7 @@ class verifyBroker implements verifyEmailContract
 		$token = $this->tokens->create($email);
 		$view = $this->emailView;
 		
-		$this->mailer->send($view, compact('token'), function ($m) use ($callback, $email){
+		$this->mailer->send($view, compact('token'), function (Message $m) use ($callback, $email){
 			
 			$m->to($email);
 			
