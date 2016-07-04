@@ -6,18 +6,18 @@
  * Time: 22:53
  */
 
-namespace verifyEmailService;
+namespace VerifyEmailService;
 
 use Closure;
 use Illuminate\Support\Arr;
 use UnexpectedValueException;
 use Illuminate\Contracts\Auth\UserProvider;
-use verifyEmailService\tokenRepository;
+use VerifyEmailService\TokenRepository;
 use Illuminate\Contracts\Mail\Mailer as MailerContract;
 use Illuminate\Mail\Message;
-use verifyEmailService\Protocol\verifyEmail as verifyEmailContract;
+use VerifyEmailService\Protocol\VerifyEmail as verifyEmailContract;
 
-class verifyBroker implements verifyEmailContract
+class VerifyBroker implements verifyEmailContract
 {
 	protected $tokens;
 
@@ -28,7 +28,7 @@ class verifyBroker implements verifyEmailContract
 	protected $emailView;
 
 	public function __construct(
-		tokenRepository $tokenRepository,
+		TokenRepository $tokenRepository,
 		UserProvider $user,
 		MailerContract $mailer,
 		$emailView

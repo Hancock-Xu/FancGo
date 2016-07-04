@@ -7,6 +7,7 @@ use App\Job;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Message;
 use Auth;
+use VerifyEmailService\Verify;
 
 trait VerifyEditCompanyQualifications
 {

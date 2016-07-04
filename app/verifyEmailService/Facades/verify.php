@@ -6,11 +6,11 @@
  * Time: 15:06
  */
 
-namespace verifyEmailService;
+namespace VerifyEmailService;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 
-class Facade extends LaravelFacade
+class Verify extends LaravelFacade
 {
 	protected static function getFacadeAccessor()
 	{

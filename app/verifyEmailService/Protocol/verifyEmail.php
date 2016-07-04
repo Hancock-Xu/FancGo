@@ -6,11 +6,11 @@
  * Time: 00:55
  */
 
-namespace verifyEmailService\Protocol;
+namespace VerifyEmailService\Protocol;
 
 use Closure;
 
-interface verifyEmail
+interface VerifyEmail
 {
 	const VERIFY_EMAIL_SENT = 'verify.email.sent';
 	

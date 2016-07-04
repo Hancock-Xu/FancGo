@@ -6,10 +6,10 @@
  * Time: 15:30
  */
 
-namespace verifyEmailService;
+namespace VerifyEmailService;
 
 
-interface verifyBrokerFactory
+interface VerifyBrokerFactory
 {
 	/**
 	 * Get verify email broker by name

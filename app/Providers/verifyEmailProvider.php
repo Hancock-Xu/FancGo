@@ -3,9 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use verifyEmailService\verifyBrokerManager;
+use VerifyEmailService\VerifyBrokerManager;
 
-class verifyEmailProvider extends ServiceProvider
+class VerifyEmailProvider extends ServiceProvider
 {
     
     protected $defer = true;
@@ -28,7 +28,7 @@ class verifyEmailProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('verifyEmail', function ($app){
-            return new verifyBrokerManager($app);
+            return new VerifyBrokerManager($app);
         });
         
         $this->app->bind('verifyEmail.broker', function ($app) {

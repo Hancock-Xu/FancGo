@@ -6,15 +6,15 @@
  * Time: 16:56
  */
 
-namespace verifyEmailService;
+namespace VerifyEmailService;
 
 use Illuminate\Support\Str;
 use InvalidArgumentException;
-use verifyEmailService\tokenRepository;
-use verifyEmailService\verifyBrokerFactory as FactoryContract;
+use VerifyEmailService\TokenRepository;
+use VerifyEmailService\VerifyBrokerFactory as FactoryContract;
 
 
-class verifyBrokerManager implements FactoryContract
+class VerifyBrokerManager implements FactoryContract
 {
 	/**
 	 * the application instance
@@ -51,7 +51,7 @@ class verifyBrokerManager implements FactoryContract
 			throw new InvalidArgumentException("Business email verifier [{$name}] is not defined.");
 		}
 		
-		return new verifyBroker(
+		return new VerifyBroker(
 			$this->createVerifyEmailTokenRepository($config),
 			$this->app['auth']->createUserProvider($config['provider']),
 			$this->app['mailer'],
@@ -69,7 +69,7 @@ class verifyBrokerManager implements FactoryContract
 
 		$connection = isset($config['connection']) ? $config['connection'] : null;
 
-		return new tokenRepository(
+		return new TokenRepository(
 			$this->app['db']->connection($connection),
 			$config['table'],
 			$key,

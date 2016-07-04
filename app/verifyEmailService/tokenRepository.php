@@ -6,14 +6,14 @@
  * Time: 17:44
  */
 
-namespace verifyEmailService;
+namespace VerifyEmailService;
 
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class tokenRepository
+class TokenRepository
 {
 	protected $connection;
 
