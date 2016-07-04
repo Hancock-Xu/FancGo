@@ -1,5 +1,8 @@
 <?php
 
+use App\Providers\verifyEmailProvider;
+use verifyEmailService\verifyBrokerManager;
+
 return [
 
     /*
@@ -160,7 +163,9 @@ return [
         App\Providers\RouteServiceProvider::class,
         
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        GrahamCampbell\Exceptions\ExceptionsServiceProvider::class
+        GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
+
+        App\Providers\verifyEmailProvider::class
     ],
 
     /*
@@ -208,6 +213,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Illuminate\Html\FormFacade::class,
         'Wechat' => Overtrue\LaravelWechat\Facade::class,
+
+        'VerifyEmail' => verifyEmailService\Facade::class
     ],
 
 ];
