@@ -6,7 +6,7 @@
  * Time: 00:55
  */
 
-namespace VerifyEmailService\Protocol;
+namespace App\VerifyEmailService\Protocol;
 
 use Closure;
 
