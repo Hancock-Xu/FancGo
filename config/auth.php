@@ -100,6 +100,7 @@ return [
     'verify_email' => [
         'provider' => 'users',
         'email' => 'auth.emails.verify_business_email',
+        'baseURL' => 'Admin\CompanyController@getVerifyRequestEmail',
         'table' => 'password_resets',
         'expire' => 60,
     ],

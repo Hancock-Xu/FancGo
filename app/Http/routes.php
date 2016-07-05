@@ -36,11 +36,13 @@ Route::group([
 	Route::resource('job','JobController');
 	
 	Route::resource('company','CompanyController');
-	Route::post('company/verify_company_email', 'CompanyController@verifyEditRequestEmail');
 	
-	Route::get('company/verify_edit_company_email/{id}', 'CompanyController@getValidatedEditRequestEmail');
+	Route::post('company/send_verify_apply', 'CompanyController@sendVerifyRequestEmail');
 	
-//	Route::get('company/verify_create_company_email/')
+	Route::get('company/verify_email/{token}{id}', 'CompanyController@getVerifyRequestEmail');
+	
+
+	
 	Route::get('company/delete/{id}','CompanyController@deleteJob');
 	
 //	Route::resource('apartment','ApartmentController');

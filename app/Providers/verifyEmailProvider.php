@@ -15,10 +15,10 @@ class VerifyEmailProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
-        //
-    }
+//    public function boot()
+//    {
+//        //
+//    }
 
     /**
      * Register the application services.
@@ -27,10 +27,15 @@ class VerifyEmailProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->registerVerifyEmailBroker();
+    }
+
+    public function registerVerifyEmailBroker()
+    {
         $this->app->singleton('verifyEmail', function ($app){
             return new VerifyBrokerManager($app);
         });
-        
+
         $this->app->bind('verifyEmail.broker', function ($app) {
             return $app->make('verifyEmail')->broker();
         });

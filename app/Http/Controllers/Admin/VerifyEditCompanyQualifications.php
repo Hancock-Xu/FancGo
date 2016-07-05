@@ -7,7 +7,10 @@ use App\Job;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Message;
 use Auth;
+use Mockery\Matcher\Closure;
 use VerifyEmailService\Verify;
+use VerifyEmailService\Protocol\VerifyEmail;
+use  VerifyEmailService\TokenRepository;
 
 trait VerifyEditCompanyQualifications
 {
@@ -30,99 +33,104 @@ trait VerifyEditCompanyQualifications
 	 * @var string 填写邮箱验证页面
 	 */
 	public $linkRequestView = 'Company.link_request_form';
-
-
-	/**
-	 * 当需要返回link_request_form视图的时候,应把company的id作为隐含列值
-	 * @param $id
-	 * @return mixed
-	 */
-	public function editPermission($id)
-	{
-		$company = Company::findOrFail($id);
-		if ($company->user_id == Auth::getUser()->id) {
-			$jobs = Job::where('company_id', '==', $company->id)->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
-			return view('Company.edit', ['company' => $company, 'jobs'=>$jobs]);
-		}else{
-			/**
-			 * 把company id作为隐含form值返回
-			 */
-			return view('Company.link_request_form', ['company' => $company]);
-		}
-	}
-
+	
 	/**
 	 * 如果邮箱和company的注册邮箱一致则发送验证邮件,否则,提示邮箱后缀名不符
 	 * @param Request $request
 	 * @param $id company id
 	 * @return $this|\Symfony\Component\HttpFoundation\Response
 	 */
-	public function verifyEditRequestEmail(Request $request)
+	public function sendVerifyRequestEmail(Request $request)
 	{
-		$company = Company::findOrFail($request->input('id'));
-		$verifyEmail = $request->input('email');
-
 		$validator = \Validator::make($request->all(), [
 			'email' => 'required|email'
 		]);
 
-		if (explode('@', $verifyEmail)[1] == explode('@', $company->email)[1]){
+		$verifyEmail = $request->input('email');
 
-			$response = $this->sendValidateLink($request->only('email'), $company);
+		if ($request->input('id')) {
 
-			switch ($response) {
-				case $this->VALIDATE_LINK_SENT:
-					return $this->getSendResetLinkEmailSuccessResponse($response);
-				case \Password::INVALID_USER:
-				default:
-					return $this->getSendResetLinkEmailFailureResponse($response);
+			$company = Company::findOrFail($request->input('id'));
+
+			if (explode('@', $verifyEmail)[1] == explode('@', $company->email)[1]) {
+
+				return $this->sendValidateLink($verifyEmail, ['company_id'=>$request->input('id')]);
+
+			} else {
+
+				/*
+				 * 返回错误,邮箱域名错误,请用公司企业邮箱
+				 */
+
+				return $validator->errors()->add('email_domain_error', 'Company email domain not match');
+
 			}
+
+		} else {
+
+			return $this->sendValidateLink($verifyEmail);
+
+
+		}
+	}
+
+	public function sendValidateLink($verifyEmail, array $credentials = null, Closure $callback = null)
+	{
+		$response = Verify::broker()->sendVerifyEmail($verifyEmail, $credentials, function (Message $message){
+			$message->subject('Verify business email');
+		});
+
+		switch ($response) {
+
+			case Verify::VERIFY_EMAIL_SENT:
+				return $this->getSendResetLinkEmailSuccessResponse($response);
+			default:
+				return $this->getSendResetLinkEmailFailureResponse($response);
+		}
+
+	}
+
+
+
+//	public function emailSender($applyEmail, $validateLink)
+//	{
+//
+//		$view = $this->emailView;
+//
+//		\Mail::send($view, ['validateLink' => $validateLink], function (Message $message) use ($applyEmail){
+//			$message->to($applyEmail);
+//			$message->subject('Company email validate');
+//		});
+//
+//	}
+
+
+	public function getVerifyRequestEmail(Request $request, $token, $id)
+	{
+		$response = Verify::broker()->verifyEmail($request, $token);
+
+		if ($response == Verify::VERIFY_SUCCEED){
+			
+			if ($id){
+				
+				$company = Company::findOrFail($id);
+
+				return view('Company.edit', ['company' => $company]);	
+			
+			}else{
+				
+				return view('Company.create_company');
+				
+			}
+
+			
 
 		}else{
 
-			/*
-			 * 返回错误,邮箱域名错误,请用公司企业邮箱
-			 */
-
-			return $validator->errors()->add('email_domain_error', 'Company email domain not match');
+			return view('Company.verify_business_email_failed');
 
 		}
 
-	}
-
-	public function sendValidateLink(array $credentials, $company)
-	{
-		if (!$company){
-			return $this->INVALID_COMPANY;
-		}
-
-		$validateLink = action('Admin\CompanyController@getValidatedEditRequestEmail',[$company->id]);
-		$applyEmail = $credentials['email'];
-
-		$this->emailSender($applyEmail, $validateLink);
-
-		return $this->VALIDATE_LINK_SENT;
-
-    }
-
-
-	public function emailSender($applyEmail, $validateLink)
-	{
-
-		$view = $this->emailView;
-
-		\Mail::send($view, ['validateLink' => $validateLink], function (Message $message) use ($applyEmail){
-			$message->to($applyEmail);
-			$message->subject('Company email validate');
-		});
-
-	}
-
-
-	public function getValidatedEditRequestEmail($id)
-	{
-		$company = Company::findOrFail($id);
-		return view('Company.edit', ['company' => $company]);
 	}
 
 

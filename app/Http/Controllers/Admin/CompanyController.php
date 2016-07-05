@@ -40,7 +40,7 @@ class CompanyController extends Controller
 
         if (!$user->company){
 
-            return view('Company.create_company',['user'=>$user]);
+            return view('Company.link_request_form',['company'=> null]);
 
         }else{
             
@@ -49,11 +49,6 @@ class CompanyController extends Controller
             return view('Company.detail',compact('company'));
 
         }
-    }
-
-    public function validateCreateCompanyEmail(Request $request)
-    {
-        
     }
 
     /**
@@ -133,7 +128,16 @@ class CompanyController extends Controller
 
     public function edit($id)
     {
-        return $this->editPermission($id);
+        $company = Company::findOrFail($id);
+        if ($company->user_id == Auth::getUser()->id) {
+            $jobs = Job::where('company_id', '==', $company->id)->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
+            return view('Company.edit', ['company' => $company, 'jobs'=>$jobs]);
+        }else{
+            /**
+             * 把company id作为隐含form值返回
+             */
+            return view('Company.link_request_form', ['company' => $company]);
+        }
     }
 
     /**
