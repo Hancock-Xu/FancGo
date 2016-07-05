@@ -6,16 +6,14 @@
  * Time: 22:53
  */
 
-namespace VerifyEmailService;
+namespace App\VerifyEmailService;
 
-use Closure;
-use Illuminate\Support\Arr;
-use UnexpectedValueException;
+use Closure;;
+use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\UserProvider;
-use VerifyEmailService\TokenRepository;
 use Illuminate\Contracts\Mail\Mailer as MailerContract;
 use Illuminate\Mail\Message;
-use VerifyEmailService\Protocol\VerifyEmail as verifyEmailContract;
+use App\VerifyEmailService\Protocol\VerifyEmail as verifyEmailContract;
 
 class VerifyBroker implements verifyEmailContract
 {
@@ -24,6 +22,8 @@ class VerifyBroker implements verifyEmailContract
 	protected $users;
 
 	protected $mailer;
+	
+	public $baseURL;
 
 	protected $emailView;
 
@@ -31,21 +31,25 @@ class VerifyBroker implements verifyEmailContract
 		TokenRepository $tokenRepository,
 		UserProvider $user,
 		MailerContract $mailer,
+		$baseURL,
 		$emailView
 	)
 	{
 		$this->tokens = $tokenRepository;
 		$this->users = $user;
 		$this->mailer = $mailer;
+		$this->baseURL = $baseURL;
 		$this->emailView = $emailView;
 	}
 
-	public function sendVerifyEmail($email, Closure $callback = null)
+	public function sendVerifyEmail($email, array $credentials = null, Closure $callback = null)
 	{
 		$token = $this->tokens->create($email);
-		$view = $this->emailView;
+		$credentials['token'] = $token;
+
+		$validateLink = \URL::action($this->baseURL, $credentials);
 		
-		$this->mailer->send($view, compact('token'), function (Message $m) use ($callback, $email){
+		$this->mailer->send($this->emailView, ['validateLink'=>$validateLink], function (Message $m) use ($callback, $email){
 			
 			$m->to($email);
 			
@@ -58,9 +62,9 @@ class VerifyBroker implements verifyEmailContract
 
 	}
 	
-	public function verifyEmail($email, $token, Closure $callback = null)
+	public function verifyEmail($token)
 	{
-		if ($this->tokens->exists($email, $token)){
+		if ($this->tokens->exists($token)){
 			$this->tokens->delete($token);
 			return static::VERIFY_SUCCEED;
 		}else{

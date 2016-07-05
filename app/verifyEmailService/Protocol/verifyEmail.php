@@ -20,5 +20,5 @@ interface VerifyEmail
 	
 	public function sendVerifyEmail($email, Closure $callback = null);
 
-	public function verifyEmail($email, $token, Closure $callback = null);
+	public function verifyEmail($token);
 }

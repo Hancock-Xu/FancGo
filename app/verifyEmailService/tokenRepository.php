@@ -6,7 +6,7 @@
  * Time: 17:44
  */
 
-namespace VerifyEmailService;
+namespace App\VerifyEmailService;
 
 use Carbon\Carbon;
 use Illuminate\Support\Str;
@@ -57,9 +57,9 @@ class TokenRepository
 		return ['email' => $email, 'token' => $token, 'created_at' => new Carbon];
 	}
 
-	public function exists($email, $token)
+	public function exists($token)
 	{
-		$token = (array) $this->getTable()->where('email', $email)->where('token', $token)->first();
+		$token = (array) $this->getTable()->where('token', $token)->first();
 
 		return $token && !$this->tokenExpired($token);
 	}
