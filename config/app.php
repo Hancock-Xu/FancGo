@@ -1,9 +1,5 @@
 <?php
 
-use App\Providers\VerifyEmailProvider;
-use VerifyEmailService\Verify;
-use VerifyEmailService\VerifyBrokerManager;
-
 return [
 
     /*
@@ -215,7 +211,7 @@ return [
         'Form' => Illuminate\Html\FormFacade::class,
         'Wechat' => Overtrue\LaravelWechat\Facade::class,
 
-        'VerifyEmail' => App\VerifyEmailService\Verify::class
+        'VerifyEmail' => App\VerifyEmailService\VerifyEmail::class
     ],
 
 ];

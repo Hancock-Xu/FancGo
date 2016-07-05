@@ -10,7 +10,7 @@ namespace App\VerifyEmailService;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 
-class Verify extends LaravelFacade
+class VerifyEmail extends LaravelFacade
 {
 	const VERIFY_EMAIL_SENT = 'verify.email.sent';
 

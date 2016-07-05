@@ -3,14 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Company;
-use App\Job;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Message;
 use Auth;
 use Mockery\Matcher\Closure;
-use App\VerifyEmailService\Verify;
-use App\VerifyEmailService\Protocol\VerifyEmail;
-use App\VerifyEmailService\TokenRepository;
+use App\VerifyEmailService\VerifyEmail;
 
 trait EmailVerifier
 {
@@ -74,29 +71,29 @@ trait EmailVerifier
 		}
 	}
 
-	public function sendValidateLink($verifyEmail, array $credentials = null, Closure $callback = null)
+	public function sendValidateLink($verifyEmail, array $credentials = null)
 	{
-		$response = Verify::broker()->sendVerifyEmail($verifyEmail, $credentials, function (Message $message){
+		$response = VerifyEmail::broker()->sendVerifyEmail($verifyEmail, $credentials, function (Message $message){
 			$message->subject('Verify business email');
 		});
 
 		switch ($response) {
 
-			case Verify::VERIFY_EMAIL_SENT:
-				return $this->getSendResetLinkEmailSuccessResponse($response);
+			case VerifyEmail::VERIFY_EMAIL_SENT:
+				return $this->getSendResetLinkEmailSuccessResponse();
 			default:
-				return $this->getSendResetLinkEmailFailureResponse($response);
+				return $this->getSendResetLinkEmailFailureResponse();
 		}
 
 	}
 
 
-	public function getVerifyRequestEmail(Request $request, $token, $id = null)
+	public function getVerifyRequestEmail($token, $id = null)
 	{
-		$response = Verify::broker()->verifyEmail($request, $token);
+		$response = VerifyEmail::broker()->verifyEmail($token);
 		$user = Auth::getUser();
 
-		if ($response == Verify::VERIFY_SUCCEED){
+		if ($response == VerifyEmail::VERIFY_SUCCEED){
 			
 			if ($id){
 				
@@ -120,7 +117,7 @@ trait EmailVerifier
 
 	}
 
-	public function getSendResetLinkEmailSuccessResponse($response)
+	public function getSendResetLinkEmailSuccessResponse()
 	{
 		/**
 		 * 返回验证邮件发送成功之后的提示视图
@@ -128,7 +125,7 @@ trait EmailVerifier
 		return view('Company.succeed_send_email');
 	}
 
-	public function getSendResetLinkEmailFailureResponse($response)
+	public function getSendResetLinkEmailFailureResponse()
 	{
 		/**
 		 * 返回验证邮件发送失败的提示视图

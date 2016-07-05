@@ -18,7 +18,7 @@ interface VerifyEmail
 	
 	const VERIFY_FAILED = 'failed';
 	
-	public function sendVerifyEmail($email, Closure $callback = null);
+	public function sendVerifyEmail($email, array $credentials = null, Closure $callback = null);
 
 	public function verifyEmail($token);
 }
