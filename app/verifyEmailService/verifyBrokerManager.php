@@ -6,12 +6,12 @@
  * Time: 16:56
  */
 
-namespace VerifyEmailService;
+namespace App\VerifyEmailService;
 
 use Illuminate\Support\Str;
 use InvalidArgumentException;
-use VerifyEmailService\TokenRepository;
-use VerifyEmailService\VerifyBrokerFactory as FactoryContract;
+use App\VerifyEmailService\TokenRepository;
+use App\VerifyEmailService\VerifyBrokerFactory as FactoryContract;
 
 
 class VerifyBrokerManager implements FactoryContract
@@ -55,6 +55,7 @@ class VerifyBrokerManager implements FactoryContract
 			$this->createVerifyEmailTokenRepository($config),
 			$this->app['auth']->createUserProvider($config['provider']),
 			$this->app['mailer'],
+			$config['baseURL'],
 			$config['email']
 		);
 	} 
@@ -85,7 +86,7 @@ class VerifyBrokerManager implements FactoryContract
 	 */
 	public  function getDefaultDriver()
 	{
-		return $this->app['config']['auth.defaults.verifyEmail'];
+		return $this->app['config']['auth.defaults.verify_email'];
 	}
 
 	/**

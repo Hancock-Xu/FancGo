@@ -215,7 +215,7 @@ return [
         'Form' => Illuminate\Html\FormFacade::class,
         'Wechat' => Overtrue\LaravelWechat\Facade::class,
 
-        'VerifyEmail' => VerifyEmailService\Verify::class
+        'VerifyEmail' => App\VerifyEmailService\Verify::class
     ],
 
 ];

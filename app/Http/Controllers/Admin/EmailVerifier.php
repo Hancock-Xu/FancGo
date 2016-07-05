@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 use Illuminate\Mail\Message;
 use Auth;
 use Mockery\Matcher\Closure;
-use VerifyEmailService\Verify;
-use VerifyEmailService\Protocol\VerifyEmail;
-use  VerifyEmailService\TokenRepository;
+use App\VerifyEmailService\Verify;
+use App\VerifyEmailService\Protocol\VerifyEmail;
+use App\VerifyEmailService\TokenRepository;
 
-trait VerifyEditCompanyQualifications
+trait EmailVerifier
 {
 
 	public $VALIDATE_LINK_SENT = 'validate_link_sent';
@@ -91,23 +91,10 @@ trait VerifyEditCompanyQualifications
 	}
 
 
-
-//	public function emailSender($applyEmail, $validateLink)
-//	{
-//
-//		$view = $this->emailView;
-//
-//		\Mail::send($view, ['validateLink' => $validateLink], function (Message $message) use ($applyEmail){
-//			$message->to($applyEmail);
-//			$message->subject('Company email validate');
-//		});
-//
-//	}
-
-
-	public function getVerifyRequestEmail(Request $request, $token, $id)
+	public function getVerifyRequestEmail(Request $request, $token, $id = null)
 	{
 		$response = Verify::broker()->verifyEmail($request, $token);
+		$user = Auth::getUser();
 
 		if ($response == Verify::VERIFY_SUCCEED){
 			
@@ -119,7 +106,7 @@ trait VerifyEditCompanyQualifications
 			
 			}else{
 				
-				return view('Company.create_company');
+				return view('Company.create_company', ['user'=>$user]);
 				
 			}
 
@@ -132,8 +119,6 @@ trait VerifyEditCompanyQualifications
 		}
 
 	}
-
-
 
 	public function getSendResetLinkEmailSuccessResponse($response)
 	{

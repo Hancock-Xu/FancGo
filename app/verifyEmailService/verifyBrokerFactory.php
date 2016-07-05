@@ -6,7 +6,7 @@
  * Time: 15:30
  */
 
-namespace VerifyEmailService;
+namespace App\VerifyEmailService;
 
 
 interface VerifyBrokerFactory

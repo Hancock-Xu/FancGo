@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Job;
-use Illuminate\Http\Request;
 use App\Http\Requests\CompanyStoreRequest;
 use Carbon\Carbon;
 use App\Company;
@@ -15,7 +14,7 @@ use Storage;
 class CompanyController extends Controller
 {
     
-    use VerifyEditCompanyQualifications;
+    use EmailVerifier;
 
 
     /**
