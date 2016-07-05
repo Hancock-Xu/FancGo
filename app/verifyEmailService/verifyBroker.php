@@ -8,8 +8,7 @@
 
 namespace App\VerifyEmailService;
 
-use Closure;;
-use Illuminate\Http\Request;
+use Closure;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Mail\Mailer as MailerContract;
 use Illuminate\Mail\Message;

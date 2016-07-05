@@ -10,9 +10,7 @@ namespace App\VerifyEmailService;
 
 use Illuminate\Support\Str;
 use InvalidArgumentException;
-use App\VerifyEmailService\TokenRepository;
 use App\VerifyEmailService\VerifyBrokerFactory as FactoryContract;
-
 
 class VerifyBrokerManager implements FactoryContract
 {
