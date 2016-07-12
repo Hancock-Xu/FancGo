@@ -8,23 +8,23 @@
 
 	<title>{{ config('blog.title') }} </title>
 
-	<link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
+	{!! Html::style('css/app.css') !!}
+	{!! Html::script('js/app.js') !!}
 
-	<link rel="stylesheet" href="data:text/css;charset=utf-8,"
-	      data-href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" id="bs-theme-stylesheet">
-	<link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="../packages/patch.css">
-	<link rel="stylesheet" href="../packages/doc.min.css">
+	<style>
+		body {
+			padding-top: 60px;
+		}
+	</style>
+
 
 	@yield('styles')
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1, user-scalable=no">
-        <!--[if lt IE 9]>
-	<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+
 </head>
+
 <body>
 
 {{-- Navigation Bar --}}
