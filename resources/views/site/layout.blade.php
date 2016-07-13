@@ -4,9 +4,11 @@
 	<meta charset="utf-8">
 	<!-- saved from url=(0014)about:internet -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1, user-scalable=no">
+	<meta name="keyword" content="JobLead China, Joblead, Job in China, Job in Shenzhen, Working in China, Life in China, Living in China, Work Visa in China">
+	<meta name="description" content="JobLead China provide a set of job solution for enterises and forein talents.">
 
-	<title>{{ config('blog.title') }} </title>
+	<title>JobLeadChina </title>
 
 
 	{!! Html::style('css/app.css') !!}
@@ -14,38 +16,15 @@
 
 	<style>
 		body {
-			padding-top: 60px;
+			padding-top: 80px;
 		}
 	</style>
-
-
-	@yield('styles')
-
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1, user-scalable=no">
 
 </head>
 
 <body>
 
-{{-- Navigation Bar --}}
-
-
-<nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
-				<span class="sr-only">Toggle Navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="/">JobLead China</a>
-		</div>
-		<div class="collapse navbar-collapse" id="navbar-menu">
-			@include('site.navbar')
-		</div>
-	</div>
-</nav>
+@include('site.navbar')
 
 @yield('content')
 
