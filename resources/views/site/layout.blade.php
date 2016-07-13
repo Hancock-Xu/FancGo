@@ -42,7 +42,7 @@
 			<a class="navbar-brand" href="/">JobLead China</a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbar-menu">
-			@include('admin.partials.navbar')
+			@include('site.navbar')
 		</div>
 	</div>
 </nav>
