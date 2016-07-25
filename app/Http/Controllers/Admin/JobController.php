@@ -27,7 +27,7 @@ class JobController extends Controller
 
 			$jobs = Job::where('published_at','<=',Carbon::now())->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
 
-			return view('Jobs.index',compact('jobs'));
+			return view('Jobs.index_partial.index',compact('jobs'));
 
 		}else{
 
@@ -48,7 +48,7 @@ class JobController extends Controller
 
 			$jobs = $jobs->get();
 
-			return view('Jobs.index', ['jobs'=>$jobs]);
+			return view('Jobs.index_partial.index', ['jobs'=>$jobs]);
 			
 		}
 		

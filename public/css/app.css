@@ -100,6 +100,56 @@ body {
 .contact {
   float: right; }
 
+.space-2 {
+  margin-bottom: 12px; }
+
+.space-top-2 {
+  margin-top: 12px; }
+
+.col-sm-2 {
+  width: 16.66667%;
+  float: left; }
+
+.col-sm-10 {
+  width: 83.33333%;
+  float: left; }
+
+.searchForm-industry {
+  float: left;
+  margin: 0 -1px 0 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  vertical-align: middle;
+  width: auto; }
+
+.GroupedIndustries {
+  box-sizing: border-box;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border: 1px solid #c4c4c4;
+  background: #fff;
+  overflow: auto;
+  width: auto; }
+
+.IndustryGroup {
+  color: #484848;
+  width: auto;
+  border-bottom: 1px solid #c4c4c4;
+  margin: 0;
+  float: left; }
+
+.industryGroupRow_Name {
+  vertical-align: middle;
+  float: left;
+  padding: 10px; }
+
+.industryGroupRow_detail {
+  float: left; }
+
+.searchForm-submit {
+  float: left;
+  clear: left; }
+
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.

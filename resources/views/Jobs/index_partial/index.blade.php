@@ -1,8 +1,12 @@
 @extends('site.layout')
 
 @section('content')
+	{{--<div class="container">--}}
+		{{--@include('site.docHeader')--}}
+	{{--</div>--}}
+
 	<div class="container">
-		@include('site.docHeader')
+		@include('Jobs.index_partial.search_box')
 	</div>
 
 	<div class="container">

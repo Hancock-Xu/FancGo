@@ -10,15 +10,8 @@
 
 	<title>JobLeadChina </title>
 
-
 	{!! Html::style('css/app.css') !!}
 	{!! Html::script('js/app.js') !!}
-
-	<style>
-		body {
-			padding-top: 80px;
-		}
-	</style>
 
 </head>
 
