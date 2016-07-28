@@ -3,7 +3,7 @@
 		<div class="searchbarWapper">
 
 			<div class="searchbarCitySelect">
-				<select class="cityselect" name="City">
+				<select class="cityselect" name="location">
 
 					<option value="Shenzhen" selected>Shenzhen</option>
 					<option value="Shanghai">Shanghai</option>
@@ -11,16 +11,16 @@
 					<option value="Beijing">Beijing</option>
 					<option value="Others">Others</option>
 				</select>
-				<i id="cityselecticon" class="glyphicon glyphicon-chevron-down"></i>
+				{{--<i id="cityselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
 			</div>
 
-			<div class="searchbarJobTypeSelect">
-				<select class="jobtypeselect">
+			<div class="searchbarJobTypeSelect" >
+				<select class="jobtypeselect" name="job_status_type">
 					<option value="full-time" selected>Full-time</option>
 					<option value="part-time">Part-time</option>
 					<option value="intership">Intership</option>
 				</select>
-				<i id="jobtypeselecticon" class="glyphicon glyphicon-chevron-down"></i>
+				{{--<i id="jobtypeselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
 			</div>
 
 			<div class="searchbarIndustrySelect">
@@ -29,8 +29,8 @@
 					<div class="industryCell">
 						<label class="industryinputlabel" for="">
 							<!--<span class="inputplaceholderlabel">Industry</span>-->
-							<input type="text" class="industryInput input-large" name="selectedIndustry" id="selectedIndustry" value="" placeholder="Industry" autocomplete="off" readonly>
-							<i id="industryselecticon" class="glyphicon glyphicon-chevron-down"></i>
+							<input type="text" class="industryInput input-large" name="industry" id="selectedIndustry" value="" placeholder="Industry" autocomplete="off" readonly>
+							{{--<i id="industryselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
 							<!--<span class="caret"></span>-->
 						</label>
 
@@ -276,7 +276,7 @@
 			</div>
 
 			<div class="searchbarSalarySelect">
-				<select class="salaryselect">
+				<select class="salaryselect" name="salary_range">
 					<option value="1">Under 8K/MTH</option>
 					<option value="2">8K-10KMTH</option>
 					<option value="3">10K-15K/MTH</option>
@@ -285,7 +285,7 @@
 					<option value="6">30K-50K/MTH</option>
 					<option value="7">Above 50K/MTH</option>
 				</select>
-				<i id="salaryselecticon" class="glyphicon glyphicon-chevron-down"></i>
+				{{--<i id="salaryselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
 			</div>
 
 			<div class="searchbarCompanyNameInput">
@@ -293,7 +293,7 @@
 				<div class="industryCell">
 					<label class="companyNameInputLabel" for="">
 
-						<input type="text" class="companyNameInput input-large" name="companyname" id="companyname" value="" placeholder="Company name" autocomplete="">
+						<input type="text" class="companyNameInput input-large" name="company_name" id="companyname" value="" placeholder="Company name" autocomplete="">
 
 					</label>
 				</div>
@@ -302,7 +302,7 @@
 
 		</div>
 		<div class="searchbarSearchButton">
-			<button class="searchbarButton" type="submit">
+			<button class="btn-searchbar searchbarButton" type="submit">
 				Search
 			</button>
 		</div>

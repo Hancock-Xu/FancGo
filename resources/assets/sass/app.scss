@@ -1,5 +1,7 @@
 //== Colors
 $brand-primary:    #694c9c;
+$brand-normal:     #f0f6ed;
+$border-color:	   #aeaeae;
 
 //== Scaffolding
 //## Settings for some of the most global styles.
@@ -14,7 +16,7 @@ $link-color:            $brand-primary;
 // Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%);
 // Link hover decoration.
-$link-hover-decoration: none;
+$link-hover-decoration: underline;
 
 //== Typography
 $font-size-base:          16px;
@@ -41,12 +43,31 @@ $table-bg:                      #fff;
 
 
 //== Forms
-//Text color for `<input>`s
-$input-color:                    $text-color;
-// `<input>` border color
-$input-border:                   #aeaeae;
-//Border color for inputs on focus
-$input-border-focus:             #694c9c;
+.form-group {
+  .form-city,.form-jobtype{
+    border-color: $border-color;
+    &:focus {
+      border-color: darken($border-color, 6.5%)
+    }
+    &:active {
+      border-color: $brand-primary;
+    }
+  }
+}
+
+.form-control {
+  width: 370px;
+  padding-right: 30px;
+}
+.form-group {
+  position: relative;
+}
+
+$input-border-focus:             $brand-primary;
+$input-height-base:  40px;
+
+//== Nav-tab
+
 
 // `.form-group` margin
 $form-group-margin-bottom:       20px;
@@ -57,41 +78,139 @@ $dropdown-bg:                    #fff;
 
 //== Navbar
 $navbar-height:                    60px;
-$navbar-default-color:             #F0F6ED;
+$navbar-default-color:             #fff;
 $navbar-default-bg:                $brand-primary;
-$navbar-default-link-hover-color:  #fff;
-$navbar-default-link-color:        #F0F6ED;
-$navbar-default-link-hover-bg:     darken($navbar-default-bg, 6.5%);
+$navbar-default-link-color:        #fff;
+$navbar-default-link-hover-color:  darken($navbar-default-link-color, 30%);
+$navbar-default-link-hover-bg:     $brand-primary;
+$navbar-default-link-active-color: #fff;
+$navbar-default-link-active-bg:    #9681B9;
+
+
+
 
 //== Buttons
-$btn-default-color:              #F0F6ED;
-$btn-default-bg:                 #694c9c;
+.btn {
+  padding: 0;
+  font-size: 20px;
+  height: 40px;
+  color: $brand-normal;
+  background-color: $brand-primary;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active
+  &.active {
+    color: #fff;
+    background: darken($brand-primary,6.5%)
+  }
+}
+
 
 //==Background color used for `.table-striped`.
-$table-bg-accent:               #fafafa;
+$table-bg-accent-odd:               #fff;
+$table-bg-accent-even:             #fafafa;
 $table-border-color:            #fafafa;
+.table-striped {
+  > tbody > tr:nth-of-type(odd) {
+    background-color: $table-bg-accent-odd;
+  }
+}
+
+.table-striped {
+  > tbody > tr:nth-of-type(even) {
+    background-color: $table-bg-accent-even;
+  }
+}
 
 //Padding for `<th>`s and `<td>`s.
 $table-cell-padding:            0px;
+
+//== Grid system
+$grid-gutter-width:         0px;
+
+// Background color for textual input addons
+//$input-group-addon-bg:           $gray-lighter;
+//Border color for textual input addons
+//$input-group-addon-border-color: $input-border;
+
+
+
+/*注册页面*/
+.signup-signin {
+  display: inline-block;
+  margin: 15px 40px;
+  float: right;
+
+  .form-control {
+    height: 30px;
+    width: 200px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  .btn {
+    background-color: #fff;
+    color: $brand-primary;
+    height: 30px;
+    width: 80px;
+    margin-left: 40px;
+    margin-right: 10px;
+
+  }
+  a {
+    color: $brand-normal;
+  }
+}
 
 
 
 body {
   padding-top: 120px;
+  word-wrap: break-word;
 }
 
-.yi{
+hr {
+  border-top: 1px solid #c9c9c9;
+}
+
+.center-home {
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
   margin: 0 auto;
   width: 500px;
 }
 
-/*search*/
+img {
+  display: inline-block;
+  overflow: hidden;
+}
+
+#sidebar-company-logo {
+  display: inline-block;
+}
+
+#brand-jobleadchina {
+  margin-left: 40px;
+}
+
+.navbar-right {
+  margin-right: 30px;
+}
+
+
+/*home页面*/
+
+
+/*首页搜索框*/
+
 .search {
   margin: 0 auto;
   width: 980px;
 }
 
-.form-city,.form-jobtype,.form-salary {
+.form-city,
+.form-jobtype,
+.form-salary {
   width: 130px;
   height: 40px;
   padding-left: 10px;
@@ -109,27 +228,37 @@ body {
   text-align: center;
 }
 
-.form-group {
+.search .form-group {
   margin: -3px;
 }
 
 #button-search {
   width: 120px;
   height: 40px;
-  font-size: 20px;
 }
 
+
 /*position*/
+
 #positionTab {
   width: 980px;
   margin: 67px auto 10px;
 }
-#newest-tab {
-  border-bottom: 3px solid #694C9C;
 
+#positionTab ul li {
+  margin: 0;
 }
 
-/*job thumbnail*/
+.change-position-line {
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  background-color: #694c9c;
+}
+
+
+/*职位缩略图*/
+
 #homePosition {
   width: 980px;
   margin: 0 auto;
@@ -144,7 +273,6 @@ body {
 .seperate-line {
   border-width: 3px;
   padding: 5px;
-
 }
 
 .seperate-line {
@@ -155,7 +283,8 @@ body {
   line-height: 18px;
 }
 
-.position-item h3 {
+.position-item h3,
+.job-detail-thumbnail h3 {
   color: #694c9c;
 }
 
@@ -165,8 +294,7 @@ body {
 }
 
 .position-item dd {
-  margin: 20px;
-
+  margin: 20px 20px 20px 0px;
 }
 
 .post-time {
@@ -174,6 +302,9 @@ body {
   font-size: 14px;
   margin-bottom: 24px;
 }
+
+
+/*pagination*/
 
 .pagination li a {
   margin: 5px;
@@ -190,42 +321,525 @@ body {
   margin: 25px;
 }
 
-#pre-footer {
+
+/*footer*/
+
+#footer {
   background-color: #fff;
-  border-top: 1px solid #c9c9c9;
+  text-align: center;
+  height: 130px;
 }
 
-.copy-right {
-  float: left;
+#footer span {
+  padding: 20px;
 }
 
-.contact {
+.more-about,
+.contact-email a {
+  text-decoration: underline;
+}
+
+
+/*job detail页面*/
+
+
+/*left position info*/
+
+.container {
+  width: 980px;
+}
+
+.left-position {
+  width: 600px;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+
+.detail-position-item {
+  padding-top: 10px;
+}
+
+.detail-position-item li {
+  margin: 20px;
+}
+
+.detail-position-item-point span {
+  font-size: 18px;
+  padding-right: 50px;
+}
+
+.detail-position-item h2,
+.detail-position-item h4 {
+  color: #694c9c;
+}
+
+.detail-position-item .benefit span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+
+/*职位信息与公司信息切换；申请该岗位*/
+
+#button-apply {
+  padding: 6px 85px;
+  margin-right: 20px;
   float: right;
 }
 
-.space-2 {
-  margin-bottom: 12px;
+.nav-pills li {
+  margin: 0 0 0 20px;
 }
 
-.space-top-2 {
-  margin-top: 12px;
+
+/*岗位、公司描述*/
+
+.item-content {
+  margin: 20px;
+  font-size: 14px;
+  overflow: hidden;
 }
 
-.col-sm-2 {
-  width: 16.66667%;
-  float: left;
+.item-content p {
+  color: #666;
+  word-wrap: break-word;
+  word-break: normal;
 }
 
-.col-sm-10 {
-  width: 83.33333%;
-  float: left;
+.color-line {
+  border-left: 5px solid #694c9c;
+  padding-left: 10px;
+}
+
+
+/*公司信息概览*/
+
+#sidebar {
+  width: 330px;
+}
+
+.company-info {
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+.company-info-logo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.company-info-title {
+  text-align: center;
+  padding: 20px;
+}
+
+.company-info-title P {
+  color: #694c9c;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.company-info-content {
+  padding: 0 0 30px 0;
+  margin: 0 20px;
+  list-style: none;
+}
+
+.company-info-content li span {
+  padding-right: 8px;
+  display: inline-block;
+  width: 80px;
+  margin-bottom: 5px;
+  color: #999;
+}
+
+.company-info-content li {
+  overflow: hidden;
+}
+
+
+/*相似职位*/
+
+.similar-position {
+  background-color: #fff;
+}
+
+.similar-other-position {
+  padding-bottom: 20px;
+}
+
+.headline {
+  margin: 20px;
+  color: #694c9c;
+  padding-top: 8px;
+}
+
+#sidebar-company-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 20px;
+}
+
+
+/*该公司的其他职位*/
+
+.other-position-list {
+  list-style: none;
+  padding: 0;
+}
+
+.other-company-salary,
+.other-company-location {
+  float: right;
+}
+
+.other-company-position,
+.other-company-position {
+  font-size: 16px;
+}
+
+.other-position-list li {
+  border-bottom: 1px dashed #c9c9c9;
+  margin: 21px 30px;
+  padding-bottom: 10px;
+}
+
+
+/*登录页面*/
+
+.signin,
+.forget-password,
+.reset-password,
+.signup-content {
+  margin: 100px auto;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px #c9c9c9;
+  width: 440px;
+}
+
+.signin {
+  height: 350px;
+  padding-top: 60px;
+}
+
+.signin .form-group,
+.forget-password .form-group,
+.reset-password .form-group,
+.signup-content .form-group {
+  margin: 0 35px 20px;
+}
+
+.signin-btn,
+.submit-btn {
+  width: 140px;
+}
+
+.not-member {
+  text-align: center;
+}
+
+.icon-email,
+.icon-password {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  font-size: 14px;
+}
+
+
+/*忘记密码页面*/
+
+.forget-password h1,
+.reset-password h1,
+.signup h1 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+
+/*重置密码页面*/
+
+.reset-btn,
+.signup-btn,
+.setting-btn {
+  width: 370px;
+}
+
+.reset-password,
+.forget-password,
+.signup-content {
+  padding: 30px 0;
+}
+
+
+/*注册页面在less文件中*/
+
+
+/*post job 验证邮箱页面*/
+
+.head-verifyEmail {
+  text-align: center;
+}
+
+.head-verifyEmail h3 {
+  margin: 0 auto 50px;
+}
+
+#full-name-company,
+#company-tel {
+  width: 370px;
+}
+
+.verify-content {
+  margin: 30px auto;
+  width: 370px;
+}
+
+.or-divider {
+  border-left: 1px solid #c9c9c9;
+  height: 282px;
+  position: relative;
+  align-items: center;
+  display: flex;
+  margin-left: 20px;
+}
+
+.or-divider-text {
+  position: relative;
+  right: 10px;
+  display: inline-block;
+  background-color: #f5f5f5;
+  margin: 10px 0px;
+  padding: 10px 0;
+}
+
+.icon-phone,
+.icon-enterpriseMail {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.verify-content .form-group {
+  margin-bottom: 20px;
+}
+
+.verify-way {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 30px 20px 180px;
+  /*	margin-left: 50px;*/
+}
+
+
+/*邮箱验证和营业执照验证*/
+
+.verify-info h4 {
+  color: #694c9c;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.verify-btn {
+  width: 370px;
+  margin: 30px auto;
+  display: block;
+}
+
+.upload-file {
+  position: relative;
+  display: inline-block;
+  background: #D0EEFF;
+  border: 1px solid #99D3F5;
+  border-radius: 4px;
+  padding: 4px 12px;
+  overflow: hidden;
+  color: #1E88C7;
+  text-decoration: none;
+  text-indent: 0;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.upload-file input {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.upload-file:hover {
+  background: #AADFFD;
+  border-color: #78C3F3;
+  color: #004974;
+  text-decoration: none;
+}
+
+.business-lincense {
+  padding: 30px 20px 78px;
+  text-align: center;
+  border: 1px solid #c9c9c9;
+  background-color: #fff;
+  width: 220px;
+}
+
+
+/*上传公司信息*/
+
+.upload-company-logo,
+.upload-resume {
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #c9c9c9;
+  background-color: #fff;
+  width: 350px;
+  height: 250px;
+  padding-top: 30px;
+}
+
+#short-name,
+#company-industry,
+#company-address {
+  width: 420px;
+}
+
+#company-size,
+#company-founded {
+  width: 160px;
+}
+
+#company-website {
+  width: 350px;
+}
+
+#company-des-content {
+  width: 880px;
+}
+
+#company-submit {
+  margin: 30px 50px;
+}
+
+.company-size {
+  margin-left: 20px;
+}
+
+
+/*上传职位信息*/
+
+
+/*salary*/
+
+
+/*.salary-range {
+	display: flex;
+	justify-content: space-between;
+}
+
+.fixed-k {
+	position: absolute;
+	right: 10px;
+	top:9px;
+	color: #999;
+}
+
+.seperate-to p {
+	top: 9px;
+	position: absolute;
+}
+.min-salary, .max-salary, .seperate-to {
+	position: relative;
+}*/
+
+
+/*选择benefit*/
+
+.benefit-point {
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefit-point ul li {
+  padding-bottom: 10px;
+}
+
+#position-submit {
+  margin: 30px 50px;
+}
+
+.position-point span {
+  background-color: #694c9c;
+  color: #f0f6ed;
+  margin-right: 3px;
+  padding: 3px;
+}
+
+.position-point {
+  margin-top: 10px;
+}
+
+#position-point,
+#benefit-content,
+#skills-content,
+#job-des-content {
+  width: 880px;
+}
+
+.position-btn,
+.company-btn {
+  width: 440px;
+  margin: 20px 220px;
+}
+
+.min-salary .form-control,
+.max-salary .form-control {
+  width: 144px;
+}
+
+.salary-range {
+  width: 370px;
+}
+
+
+/*设置*/
+
+.personal-resume span,
+.change-password span {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.change-password .form-group,
+.upload-resume {
+  margin-left: 90px;
+}
+
+
+/*Search No result 页面*/
+
+.search-noresult {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.content-noresult {
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.content-noresult h2 {
+  color: #999;
 }
 
 .searchbar {
   position: relative;
   max-width: 980px;
   margin: 0 auto;
-  top: 50px;
+
 }
 
 .searchbarForm {
@@ -256,7 +870,7 @@ body {
   border-right-width: 0;
   border-right-color: initial;
   border-right-style: initial;
-  color: #484;
+  color: #333;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -280,7 +894,7 @@ body {
   border-right-width: 0;
   border-right-color: initial;
   border-right-style: initial;
-  color: #484;
+  color: #333;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -330,8 +944,9 @@ body {
   /*border-radius: 2px;*/
   /*background-color: #fff;*/
   /*background-color: rgb(248, 248, 248);*/
-  color: #484;
+  color: #999;
   border: 1px solid #ccc;
+  font-weight: normal;
 }
 
 .industrylist {
@@ -393,8 +1008,8 @@ body {
 }
 
 .searchbarSalarySelect {
-  flex: 1.2;
-  -webkit-box-flex: 1.2;
+  flex: 1.4;
+  -webkit-box-flex: 1.4;
   position: relative;
   margin-left: -1px;
 }
@@ -407,7 +1022,7 @@ body {
   border-right-width: 0;
   border-right-color: initial;
   border-right-style: initial;
-  color: #484;
+  color: #333;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -459,6 +1074,40 @@ body {
   height: 100%;
 }
 
+
+.btn-searchbar {
+
+
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 1.428571429;
+  border-radius: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  color: $brand-normal;
+  background-color: $brand-primary;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active
+  &.active {
+    color: #fff;
+    background: darken($brand-primary,6.5%)
+  }
+}
 
  @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 

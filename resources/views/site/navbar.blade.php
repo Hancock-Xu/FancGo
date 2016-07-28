@@ -8,14 +8,14 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/">JobLead China</a>
+			<a id="brand-jobleadchina" class="navbar-brand" href="/">JobLead China</a>
 		</div>
 
 		<div class="collapse navbar-collapse" id="navbar-menu" aria-expanded="false">
 
 				@if(Auth::check())
 
-					<div class="yi">
+					<div class="center-home">
 
 						<ul class="nav navbar-nav">
 							<li @if(Request::is('job')) class="active" @endif>
@@ -62,7 +62,9 @@
 									<li>
 										<a href="{{ action('Auth\AuthController@getLogout') }}">Logout</a>
 									</li>
-									{{--<li><a href="/auth/logout">Logout</a></li>--}}
+									<li>
+										<a href="{{ action('Admin\ProfileController@edit') }}">Edit Resume/Profile</a>
+									</li>
 								</ul>
 							</li>
 						@endif
