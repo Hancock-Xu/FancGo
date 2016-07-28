@@ -291,9 +291,9 @@ body {
 .searchbarIndustrySelect {
   position: relative;
   /*height: 44px;*/
-  /*-webkit-flex: 3;
-  flex: 3;*/
-  width: 300px;
+  -webkit-flex: 3;
+  flex: 3;
+  //width: 300px;
   height: 44px;
   margin-left: -1px;
 }
@@ -335,7 +335,7 @@ body {
 }
 
 .industrylist {
-  position: relative;
+  position: absolute;
   z-index: 99;
   text-align: left;
   border-bottom-left-radius: 4px;

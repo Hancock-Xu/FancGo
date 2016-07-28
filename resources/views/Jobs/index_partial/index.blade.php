@@ -6,7 +6,7 @@
 	{{--</div>--}}
 
 	<div class="container">
-		@include('Jobs.index_partial.search_box')
+		@include('Jobs.index_partial.searchbar')
 	</div>
 
 	<div class="container">
