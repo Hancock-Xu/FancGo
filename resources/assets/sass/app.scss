@@ -270,19 +270,6 @@ img {
   height: 150px;
 }
 
-.seperate-line {
-  border-width: 3px;
-  padding: 5px;
-}
-
-.seperate-line {
-  border-right: 3px solid #694c9c;
-  border-height: 10px;
-  padding-right: 10px;
-  margin-right: 10px;
-  line-height: 18px;
-}
-
 .position-item h3,
 .job-detail-thumbnail h3 {
   color: #694c9c;
@@ -300,11 +287,7 @@ img {
 .post-time {
   color: #999;
   font-size: 14px;
-  margin-bottom: 24px;
 }
-
-
-/*pagination*/
 
 .pagination li a {
   margin: 5px;
@@ -839,7 +822,6 @@ img {
   position: relative;
   max-width: 980px;
   margin: 0 auto;
-
 }
 
 .searchbarForm {
@@ -960,6 +942,9 @@ img {
   /*top: 100%;*/
   width: 700px;
   display: none;
+  background: #fff;
+  overflow: auto;
+  border: 1px solid #c4c4c4;
 }
 
 .industrylist_row {
@@ -1107,6 +1092,97 @@ img {
     color: #fff;
     background: darken($brand-primary,6.5%)
   }
+}
+
+.joblist{
+  margin-top: 50px;
+}
+.jobThumbnail {
+  display: flex;
+  display: -webkit-flex;
+  max-width: 980px;
+  margin: 0 auto;
+  //margin-top:50px;
+  /*border: 1px solid #ccc;*/
+}
+
+.jobThumbnailCompanyLogo {
+  flex: 1;
+  margin: 10px;
+}
+
+.jobThumbnailPosition {
+  flex: 2;
+  margin: 10px;
+}
+
+.jobThumbnailCompany {
+  flex: 2;
+  margin: 10px;
+  margin-left: 30px;
+}
+
+.positionTitle {
+  margin-top: 10px;
+}
+
+.positionTitle h3{
+  color: #694c9c;
+  font-weight: normal;
+}
+
+.salaryRange{
+  margin-top:25px;
+  color: #694c9c;
+  font-weight: normal;
+}
+
+.seperate-line {
+  border-right: 3px solid #694c9c;
+  border-height: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  line-height: 18px;
+}
+
+.jobThumbnailPositionRequire {
+  margin-top: 20px;
+}
+
+.jobThumbnailPositionPoint {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.companyName {
+  margin-top: 10px;
+}
+
+.jobThumbnailCompanyIndustry {
+  margin-top: 25px;
+}
+
+.jobThumbnailWalfareTag {
+  margin-top: 20px;
+}
+
+.jobThumbnailWalfareTag span {
+  background: #F1F1F1;
+  padding: 6px 5px;
+}
+
+.timestamp {
+  margin-top: 10px;
+  color: #999;
+  font-size: 14px;
+}
+
+div.jobThumbnail:nth-child(even) {
+  background-color: #fafafa;
+}
+
+div.jobThumbnail:nth-child(odd) {
+  background-color: #fefefe;
 }
 
  @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";

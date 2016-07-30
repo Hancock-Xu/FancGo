@@ -1,57 +1,69 @@
 @extends('site.layout')
 
 @section('content')
-	{{--<div class="container">--}}
-		{{--@include('site.docHeader')--}}
-	{{--</div>--}}
 
 	<div class="container">
 		@include('Jobs.index_partial.searchbar')
 	</div>
 
-	<div class="container">
+	<div class="container joblist">
 
-		<div class="starter-template">
+			{{--@foreach ($jobs as $job)--}}
 
-			<div class="container">
-				<article>
-					<h3 class="job_title">
-						<a href="">fdsfdsdfsfds</a>
-					</h3>
-
-					<div class="job_published_at">
-						<em>dsssfdsfdsfds</em>
+			<div class="jobThumbnail">
+				<div class="jobThumbnailCompanyLogo">
+					<figure>
+						<img src="#" alt="jobLeadChina">
+					</figure>
+				</div>
+				<div class="jobThumbnailPosition">
+					<div class="jobThumbnailPositionName">
+						<h3 class="positionTitle">
+							<a href="#">JobLead China</a>
+						</h3>
 					</div>
-					<div class="job_short_cut">
-						<p>
-							grgfdgfd
-						</p>
+					<div class="jobThumbnailSalaryRange">
+						<h3 class="salaryRange">
+							30K-35K
+						</h3>
 					</div>
-				</article>
+					<div class="jobThumbnailPositionRequire">
+						<span>Master</span>
+						<span class="seperate-line"></span>
+						<span>Experience: 5 years</span>
+						<span class="seperate-line"></span>
+						<span>Full time</span>
+					</div>
+					<div class="jobThumbnailPositionPoint">
+						<p class="positionpoint">“Must native English speaker,and fluent in Chinese"</p>
+					</div>
+				</div>
+				<div class="jobThumbnailCompany">
+					<div class="jobThumbnailCompanyName">
+						<h3 class="companyName">
+							<a href="#">JobLeadChina</a>
+						</h3>
+					</div>
+					<div class="jobThumbnailCompanyIndustry">
+						<span>IT</span>
+						<span class="seperate-line"></span>
+						<span>Shenzhen</span>
+					</div>
+					<div class="jobThumbnailWalfareTag">
+						<span>Working Visa</span>
+						<span>Working Visa</span>
+						<span>Work Visa</span>
+					</div>
+					<div class="timestamp">
+						<i class="glyphicon glyphicon-time post-time"></i>
+						<span class="post-time">post time:</span>
+					</div>
+				</div>
 			</div>
 
-			@foreach ($jobs as $job)
-
-				<div class="container">
-					<article>
-						<h3 class="job_title">
-							<a href="{{ action('Admin\JobController@show',[$job->id]) }}">{{$job->job_title}}</a>
-						</h3>
-
-						<div class="job_published_at">
-							<em>({{ $job->published_at}})</em>
-						</div>
-						<div class="job_short_cut">
-							<p>
-								{{ str_limit($job->description) }}
-							</p>
-						</div>
-					</article>
-				</div>
-
-			@endforeach
+			{{--@endforeach--}}
 			<hr>
 			{!! $jobs->render() !!}
-		</div>
+
 	</div>
 @stop

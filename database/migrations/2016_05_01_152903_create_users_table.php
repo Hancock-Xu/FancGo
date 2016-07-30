@@ -15,7 +15,6 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            
 
             $table->string('email',50)->unique()->index();
             $table->string('password',60);
@@ -29,9 +28,8 @@ class CreateUsersTable extends Migration
             $table->string('name', 25)->nullable()->default(null);
             $table->enum('gender',[1, 2, 0])->nullable()->default(null);
             $table->string('city',50)->nullable()->default(null);
-            $table->string('country',2)->nullable()->default(null);
+            $table->string('country',30)->nullable()->default(null);
             $table->string('headimgurl')->nullable()->default(null);
-            $table->string('province',50)->nullable()->default(null);
             $table->string('unionid')->nullable()->default(null);
         });
         
