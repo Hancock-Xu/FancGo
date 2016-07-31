@@ -36,7 +36,6 @@ class CreateCompaniesTable extends Migration
             $table->string('company_industry', 50)->index();
             $table->string('company_email', 50);
             $table->string('company_phone_number',14);
-            $table->timestamp('published_at')->nullable()->index();
         });
         
         Schema::table('companies', function (Blueprint $table){

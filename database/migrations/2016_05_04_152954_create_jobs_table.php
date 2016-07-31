@@ -28,7 +28,7 @@ class CreateJobsTable extends Migration
             $table->string('salary_lower_limit')->index();
             $table->string('salary_upper_limit')->index();
 //            $table->text('compensation_benefits')->nullable();
-            $table->text('post_welfare');
+            $table->text('post_welfare')->nullable();
             $table->text('extra_welfare')->nullable();
             $table->enum('job_status_type',['Full-time', 'Part-time', 'Internship'])->index();
             $table->string('job_industry',50)->index();
