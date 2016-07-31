@@ -79,7 +79,7 @@ class CompanyController extends Controller
 
                 Storage::disk('local')->put($save_path, file_get_contents($company_logo_avatar->getRealPath()));
 
-                $company->logo_url = 'uploads'.$save_path;
+                $company->logo_url = '/uploads'.$save_path;
 
             }
 
@@ -90,7 +90,7 @@ class CompanyController extends Controller
 
                 Storage::disk('local')->put($save_path, file_get_contents($company_license_img->getRealPath()));
 
-                $company->certificate_url = 'uploads'.$save_path;
+                $company->certificate_url = '/uploads'.$save_path;
             }
 
             $company->save();
