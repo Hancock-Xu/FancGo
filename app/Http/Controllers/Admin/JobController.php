@@ -28,34 +28,36 @@ class JobController extends Controller
 
 //			$jobs = Job::where('published_at','<=',Carbon::now())->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
 
-			$jobs = DB::table('jobs')
+			$jobs = \DB::table('jobs')
 					->where('published_at','<=',Carbon::now())->orderBy('published_at','desc')
 					->join('companies', 'jobs.company_id', '=', 'companies.id')
 					->select('jobs.*', 'companies.user_id', 'companies.company_name','companies.business_license_name','companies.logo_url','companies.website','companies.company_description','companies.scale','companies.company_location','companies.company_industry','companies.company_email','companies.company_phone_number')
 					->orderBy('published_at','desc')
-					->get();
-
+					->paginate(config('jobs.posts_per_page'));
 
 			return view('Jobs.index_partial.index',compact('jobs'));
 
 		}else{
 
-			$jobs = \DB::table('jobs');
+//			$jobs = \DB::table('jobs');
+//
+//			foreach ($parameters as $key => $value)
+//			{
+//				if ($key == 'salary_lower_limit'){
+//					$jobs = $jobs->where($key, '>=', $value);
+//				}elseif ($key == 'salary_upper_limit'){
+//					$jobs = $jobs->where($key, '<=', $value);
+//				}elseif ($key == 'name'){
+//					$jobs = $jobs->where($key, 'like', $value);
+//				}else{
+//					$jobs = $jobs->where($key, '=', $value);
+//				}
+//			}
+//
+//			$jobs = $jobs->get();
 
-			foreach ($parameters as $key => $value)
-			{
-				if ($key == 'salary_lower_limit'){
-					$jobs = $jobs->where($key, '>=', $value);
-				}elseif ($key == 'salary_upper_limit'){
-					$jobs = $jobs->where($key, '<=', $value);
-				}elseif ($key == 'name'){
-					$jobs = $jobs->where($key, 'like', $value);
-				}else{
-					$jobs = $jobs->where($key, '=', $value);
-				}
-			}
-
-			$jobs = $jobs->get();
+//			$jobs = \DB::table('jobs')
+//					->where($jobs)
 
 			return view('Jobs.index_partial.index', ['jobs'=>$jobs]);
 			
