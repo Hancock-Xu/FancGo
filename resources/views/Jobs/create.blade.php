@@ -132,56 +132,6 @@
 			]) !!}
 		</div>
 
-		<div>
-			{!! Form::label('test', 'test') !!}
-			{!! Form::select('test', [
-
-				'Chongqing'=>['Hong Kong'=>'Hong Kong',
-                'Shenzhen'=>'Shenzhen',
-                'Beijing'=>'Beijing',
-                'Shanghai'=>'Shanghai',
-                'Chengdu'=>'Chengdu',
-                'Qingdao'=>'Qingdao',
-                'Hangzhou'=>'Hangzhou',
-                'Guangzhou'=>'Guangzhou',
-                'Nanjing'=>'Nanjing',
-                'Xi\'an'=>'Xi\'an',
-                'Lanzhou'=>'Lanzhou',
-                'Haikou'=>'Haikou',
-                'Tianjin'=>'Tianjin',
-                'Kunming'=>'Kunming',
-                'Taiwan'=>['Hong Kong'=>'Hong Kong',
-                'Shenzhen'=>'Shenzhen',
-                'Beijing'=>'Beijing',
-                'Shanghai'=>'Shanghai',
-                'Chengdu'=>'Chengdu',
-                'Qingdao'=>'Qingdao',
-                'Hangzhou'=>'Hangzhou',
-                'Guangzhou'=>'Guangzhou',
-                'Nanjing'=>'Nanjing',
-                'Xi\'an'=>'Xi\'an',
-                'Lanzhou'=>'Lanzhou',
-                'Haikou'=>'Haikou',
-                'Tianjin'=>'Tianjin',
-                'Kunming'=>'Kunming',
-                'Taiwan'=>'Taiwan',
-                ],
-                ],
-                'Wuhan'=>'Wuhan',
-                'Shenyang'=>'Shenyang',
-                'Changchun'=>'Changchun',
-                'Suzhou'=>'Suzhou',
-                'Changsha'=>'Changsha',
-                'Dongguan'=>'Dongguan',
-                'Wuxi'=>'Wuxi',
-                'Guiyang'=>'Guiyang',
-                'Ningbo'=>'Ningbo',
-                'Changzhou'=>'Changzhou',
-                'Dalian'=>'Dalian',
-                'Zhuhai'=>'Zhuhai',
-                'Others'=>'Others'
-			]) !!}
-		</div>
 
 		<div class="form-group">
 			{!! Form::label('published_at','Published At:') !!}
