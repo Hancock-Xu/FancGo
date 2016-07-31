@@ -13,41 +13,45 @@
 				<div class="jobThumbnail">
 					<div class="jobThumbnailCompanyLogo">
 						<figure>
-							<img src="#" alt="jobLeadChina">
+							<img src="{{$job->logo_url}}" alt="{{$job->company_name}}">
 						</figure>
 					</div>
 					<div class="jobThumbnailPosition">
 						<div class="jobThumbnailPositionName">
 							<h3 class="positionTitle">
-								<a href="#">JobLead China</a>
+								<a href="{{ action('Admin\JobController@show',[$job->id]) }}">{{$job->job_title}}</a>
 							</h3>
 						</div>
 						<div class="jobThumbnailSalaryRange">
 							<h3 class="salaryRange">
-								30K-35K
+								{{$job->salary_lower_limit}}K/M - {{$job->salary_upper_limit}}K/M
 							</h3>
 						</div>
 						<div class="jobThumbnailPositionRequire">
-							<span>Master</span>
+							<span>{{$job->education_require}}</span>
 							<span class="seperate-line"></span>
-							<span>Experience: 5 years</span>
+							<span>Experience: {{$job->years_work_experience}}</span>
 							<span class="seperate-line"></span>
-							<span>Full time</span>
+							<span>{{$job->job_status_type}}</span>
 						</div>
-						<div class="jobThumbnailPositionPoint">
-							<p class="positionpoint">“Must native English speaker,and fluent in Chinese"</p>
-						</div>
+						@if($job->position_points)
+							<div class="jobThumbnailPositionPoint">
+								<p class="positionpoint">“{{$job->position_points}}"</p>
+							</div>
+						@else
+							<div class="jobThumbnailPositionPoint"></div>
+						@endif
 					</div>
 					<div class="jobThumbnailCompany">
 						<div class="jobThumbnailCompanyName">
 							<h3 class="companyName">
-								<a href="#">JobLeadChina</a>
+								<a href="{{ action('Admin\CompanyController@show',[$job->company_id]) }}">{{$job->company_name}}</a>
 							</h3>
 						</div>
 						<div class="jobThumbnailCompanyIndustry">
-							<span>IT</span>
+							<span>{{$job->company_industry}}</span>
 							<span class="seperate-line"></span>
-							<span>Shenzhen</span>
+							<span>{{$job->company_location}}</span>
 						</div>
 						<div class="jobThumbnailWalfareTag">
 							<span>Working Visa</span>

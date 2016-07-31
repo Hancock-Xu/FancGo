@@ -9,8 +9,8 @@
 		
 		{!! Form::open(['url'=>'/company', 'files'=>true]) !!}
 		<div class="form-group">
-			{!! Form::label('name','Company Name') !!}
-			{!! Form::text('name',null, ['class'=>'form-control']) !!}
+			{!! Form::label('company_name','Company Name') !!}
+			{!! Form::text('company_name',null, ['class'=>'form-control']) !!}
 
 			@if($errors->has('name'))
 				<span class="help-block">
@@ -84,10 +84,10 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('description','Company description') !!}
-			{!! Form::textarea('description',null, ['class'=>'form-control']) !!}
+			{!! Form::label('company_description','Company description') !!}
+			{!! Form::textarea('company_description',null, ['class'=>'form-control']) !!}
 
-			@if($errors->has('description'))
+			@if($errors->has('company_description'))
 				<span class="help-block">
 					<ul class="alert-danger alert">
 						<div class="container">
@@ -123,8 +123,8 @@
 
 		<div class="dropdown">
 
-			{!! Form::label('industry','industry:') !!}
-			{!! Form::select('industry',[
+			{!! Form::label('company_industry','industry:') !!}
+			{!! Form::select('company_industry',[
 			'Actors'=>'Actors',
 			'English Teaching'=>'English Teaching',
 			'Design/Creative'=>'Design/Creative',
@@ -147,7 +147,7 @@
 			'Sports/Leisure'=>'Sports/Leisure'
 			]) !!}
 
-			@if($errors->has('industry'))
+			@if($errors->has('company_industry'))
 				<span class="help-block">
 					<ul class="alert-danger alert">
 						<div class="container">
@@ -162,10 +162,10 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('email','email') !!}
-			{!! Form::text('email',null, ['class'=>'form-control']) !!}
+			{!! Form::label('company_email','email') !!}
+			{!! Form::text('company_email',null, ['class'=>'form-control']) !!}
 
-			@if($errors->has('email'))
+			@if($errors->has('company_email'))
 				<span class="help-block">
 					<ul class="alert-danger alert">
 						<div class="container">
@@ -180,10 +180,10 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('phone_number','phone number') !!}
-			{!! Form::text('phone_number',null, ['class'=>'form-control']) !!}
+			{!! Form::label('company_phone_number','phone number') !!}
+			{!! Form::text('company_phone_number',null, ['class'=>'form-control']) !!}
 
-			@if($errors->has('phone_number'))
+			@if($errors->has('company_phone_number'))
 				<span class="help-block">
 					<ul class="alert-danger alert">
 						<div class="container">
@@ -198,8 +198,8 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('location', 'Location') !!}
-			{!! Form::select('location', [
+			{!! Form::label('company_location', 'Location') !!}
+			{!! Form::select('company_location', [
 				'Hong Kong'=>'Hong Kong',
                 'Shenzhen'=>'Shenzhen',
                 'Beijing'=>'Beijing',
@@ -232,7 +232,7 @@
 			]) !!}
 
 
-			@if($errors->has('location'))
+			@if($errors->has('company_location'))
 				<span class="help-block">
 					<ul class="alert-danger alert">
 						<div class="container">
@@ -251,10 +251,10 @@
 			{!! Form::hidden('user_id',$user->id) !!}
 		</div>
 
-		<div class="form-group">
-			{!! Form::label('published_at','Published At:') !!}
-			{!! Form::input('date', 'published_at', date('Y-m-d'), ['class'=>'form-control']) !!}
-		</div>
+		{{--<div class="form-group">--}}
+			{{--{!! Form::label('published_at','Published At:') !!}--}}
+			{{--{!! Form::input('date', 'published_at', date('Y-m-d'), ['class'=>'form-control']) !!}--}}
+		{{--</div>--}}
 
 		<div class="form-group">
 			{!! Form::submit('Publish Company',['class'=>'btn btn-success form-control']) !!}

@@ -13,8 +13,8 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('description','Job description:') !!}
-			{!! Form::textarea('description',null, ['class'=>'form-control']) !!}
+			{!! Form::label('job_description','Job description:') !!}
+			{!! Form::textarea('job_description',null, ['class'=>'form-control']) !!}
 		</div>
 
 		<div class="form-group">
@@ -55,8 +55,13 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('other_welfare', 'Other welfare') !!}
-			{!! Form::text('other_welfare', null, ['class'=>'form-control']) !!}
+			{!! Form::label('post_welfare', 'Post welfare') !!}
+			{!! Form::text('post_welfare', null, ['class'=>'form-control']) !!}
+		</div>
+
+		<div class="form-group">
+			{!! Form::label('extra_welfare', 'Extra welfare') !!}
+			{!! Form::text('extra_welfare', null, ['class'=>'form-control']) !!}
 		</div>
 
 		<div class="form-group">
@@ -70,8 +75,8 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('industry','industry:') !!}
-			{!! Form::select('industry',[
+			{!! Form::label('job_industry','industry:') !!}
+			{!! Form::select('job_industry',[
 
 			'HR/Admin'=>'HR/Admin',
 			'Insurance'=>'Insurance',
@@ -87,18 +92,13 @@
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('compensation_benefits', 'Compensation benefits') !!}
-			{!! Form::textarea('compensation_benefits', null, ['class'=>'form-control']) !!}
-		</div>
-
-		<div class="form-group">
 			{!! Form::label('resume_email', 'Resume email') !!}
 			{!! Form::text('resume_email', null, ['class'=>'form-control']) !!}
 		</div>
 
 		<div class="form-group">
-			{!! Form::label('location', 'Location') !!}
-			{!! Form::select('location', [
+			{!! Form::label('job_location', 'Location') !!}
+			{!! Form::select('job_location', [
 
 				'Hong Kong'=>'Hong Kong',
                 'Shenzhen'=>'Shenzhen',
