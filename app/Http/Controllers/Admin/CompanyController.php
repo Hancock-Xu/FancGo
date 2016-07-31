@@ -24,7 +24,7 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies = Company::where('published_at','<=', Carbon::now())->orderBy('published_at','desc')->paginate(config('companies.posts_per_page'));
+        $companies = Company::where('created_at','<=', Carbon::now())->orderBy('created_at','desc')->paginate(config('companies.posts_per_page'));
         return view('Company.index',compact('companies'));
     }
 
@@ -79,7 +79,7 @@ class CompanyController extends Controller
 
                 Storage::disk('local')->put($save_path, file_get_contents($company_logo_avatar->getRealPath()));
 
-                $company->logo_url = $save_path;
+                $company->logo_url = 'uploads'.$save_path;
 
             }
 
@@ -90,7 +90,7 @@ class CompanyController extends Controller
 
                 Storage::disk('local')->put($save_path, file_get_contents($company_license_img->getRealPath()));
 
-                $company->certificate_url = $save_path;
+                $company->certificate_url = 'uploads'.$save_path;
             }
 
             $company->save();

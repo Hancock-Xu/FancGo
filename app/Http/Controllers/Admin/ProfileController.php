@@ -60,7 +60,7 @@ class ProfileController extends Controller
 
                 Storage::disk('local')->put($savePath, file_get_contents($file->getRealPath()));
 
-                Auth::user()->headimgurl = $savePath;
+                Auth::user()->headimgurl = 'uploads'.$savePath;
                 Auth::user()->save();
 
             }else{
@@ -77,7 +77,7 @@ class ProfileController extends Controller
 
                 Storage::disk('local')->put($savePath, file_get_contents($file->getRealPath()));
 
-                Auth::user()->resume_url = $savePath;
+                Auth::user()->resume_url = 'uploads'.$savePath;
                 Auth::user()->save();
 
             }else{
