@@ -50,6 +50,18 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Job whereCompensationBenefits($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Job whereOtherWelfare($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Job wherePositionPoints($value)
+ * @property string $job_description
+ * @property string $education_require
+ * @property string $post_welfare
+ * @property string $extra_welfare
+ * @property string $job_industry
+ * @property string $job_location
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereJobDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereEducationRequire($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job wherePostWelfare($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereExtraWelfare($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereJobIndustry($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereJobLocation($value)
  */
 class Job extends Model
 {
@@ -58,17 +70,17 @@ class Job extends Model
 
 	protected $fillable = [
 		'job_title',
-		'description',
+		'job_description',
 		'desired_skill_experience',
 		'salary_lower_limit',
 		'salary_upper_limit',
-		'compensation_benefits',
-		'other_welfare',
+		'post_welfare',
+		'extra_welfare',
 		'job_status_type',
-		'industry',
+		'job_industry',
+		'job_location',
 		'position_points',
 		'published_at',
-
 		'education_require',
 		'years_work_experience',
 		'company_id',
@@ -80,8 +92,8 @@ class Job extends Model
 		$this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d',$date);
 	}
 
-//	public function companies()
-//	{
-//		return $this->belongsTo('App\Company');
-//	}
+	public function companies()
+	{
+		return $this->belongsTo('App\Company');
+	}
 }

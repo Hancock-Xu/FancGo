@@ -41,6 +41,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @mixin \Eloquent
  * @property-read \App\Company $company
  * @method static \Illuminate\Database\Query\Builder|\App\User wherePhoneNumber($value)
+ * @property string $resume_url
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereResumeUrl($value)
  */
 class User extends Authenticatable
 {

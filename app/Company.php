@@ -44,25 +44,37 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Job[] $jobs
  * @property-read \App\User $user
  * @method static \Illuminate\Database\Query\Builder|\App\Company whereUserId($value)
+ * @property string $company_name
+ * @property string $company_description
+ * @property string $company_location
+ * @property string $company_industry
+ * @property string $company_email
+ * @property string $company_phone_number
+ * @method static \Illuminate\Database\Query\Builder|\App\Company whereCompanyName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Company whereCompanyDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Company whereCompanyLocation($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Company whereCompanyIndustry($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Company whereCompanyEmail($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Company whereCompanyPhoneNumber($value)
  */
 class Company extends Authenticatable
 {
     //
 
 	protected $fillable = [
-		'name',
+		'company_name',
 		'user_id',
 		'business_license_name',
 		'resume_email',
 		'logo_url',
 		'website',
 		'certificate_url',
-		'description',
+		'company_description',
 		'scale',
-		'location',
-		'industry',
-		'email',
-		'phone_number',
+		'company_location',
+		'company_industry',
+		'company_email',
+		'company_phone_number',
 		'published_at'
 	];
 
