@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class JobController extends Controller
 {
@@ -25,7 +26,13 @@ class JobController extends Controller
 
 		if (!$parameters){
 
-			$jobs = Job::where('published_at','<=',Carbon::now())->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
+//			$jobs = Job::where('published_at','<=',Carbon::now())->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
+
+			$jobs = DB::table('jobs')
+					->join('companies', 'jobs.company_id', '=', 'companies.id')
+					->select('jobs.*', 'companies.*')
+					->get();
+
 
 			return view('Jobs.index_partial.index',compact('jobs'));
 
