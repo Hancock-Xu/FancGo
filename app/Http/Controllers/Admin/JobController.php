@@ -42,13 +42,13 @@ class JobController extends Controller
 
 			foreach ($parameters as $key => $value)
 			{
-				if ($key == 'job_location'){
+				if ($key == 'job_location' && $value != null){
 					$jobs = $jobs->where($key, '=', $value);
-				}elseif ($key == 'job_status_type'){
+				}elseif ($key == 'job_status_type' && $value != null){
 					$jobs = $jobs->where($key, '=', $value);
 				}elseif ($key == 'job_industry' && $value != null){
 					$jobs = $jobs->where($key, '=', $value);
-				}elseif ($key == 'salary_range'){
+				}elseif ($key == 'salary_range' && $value != null){
 					if ($value == 1){
 						$jobs = $jobs->where('salary_upper_limit', '<=', 8);
 					}elseif ($value == 2){
@@ -74,7 +74,7 @@ class JobController extends Controller
 				}
 			}
 
-			$jobs = $jobs->get();
+			$jobs = $jobs->paginate(config('jobs.posts_per_page'));
 
 			return view('Jobs.index_partial.index', ['jobs'=>$jobs]);
 			

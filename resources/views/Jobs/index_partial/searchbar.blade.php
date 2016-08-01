@@ -13,7 +13,7 @@
 						<option value="Hong Kong">Hong Kong</option>
 						<option value="Macao">Macao</option>
 						<option value="Others">Others</option>
-						<option>All</option>
+						<option value="">All</option>
 					</select>
 				</label>
 				{{--<i id="cityselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
@@ -26,7 +26,7 @@
 					<option value="full-time">Full-time</option>
 					<option value="part-time">Part-time</option>
 					<option value="intership">Intership</option>
-					<option>All</option>
+					<option value="">All</option>
 				</select>
 				</label>
 				{{--<i id="jobtypeselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
@@ -295,7 +295,7 @@
 						<option value="5">20K-30K/MTK</option>
 						<option value="6">30K-50K/MTH</option>
 						<option value="7">Above 50K/MTH</option>
-						<option>All</option>
+						<option value="">All</option>
 					</select>
 				</label>
 				{{--<i id="salaryselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
