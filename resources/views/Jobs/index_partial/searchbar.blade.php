@@ -1,27 +1,34 @@
 <div class="searchbar">
-	<form class="searchbarForm" action="job" method="GET">
+	<form class="searchbarForm" action="/job" method="GET">
 		<div class="searchbarWapper">
 
 			<div class="searchbarCitySelect">
-				<select class="cityselect" name="job_location">
-
-					<option value="Shen Zhen">Shen Zhen</option>
-					<option value="Shang Hai">Shang Hai</option>
-					<option value="Guang Zhou">Guang Zhou</option>
-					<option value="Bei Jing">Bei Jing</option>
-					<option value="Hong Kong">Hong Kong</option>
-					<option value="Macao">Macao</option>
-					<option value="Others">Others</option>
-				</select>
+				<label class="industryinputlabel" for="">
+					<select class="cityselect" name="job_location">
+						<option selected disabled>City</option>
+						<option value="Shen Zhen">Shen Zhen</option>
+						<option value="Shang Hai">Shang Hai</option>
+						<option value="Guang Zhou">Guang Zhou</option>
+						<option value="Bei Jing">Bei Jing</option>
+						<option value="Hong Kong">Hong Kong</option>
+						<option value="Macao">Macao</option>
+						<option value="Others">Others</option>
+						<option>All</option>
+					</select>
+				</label>
 				{{--<i id="cityselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
 			</div>
 
 			<div class="searchbarJobTypeSelect" >
+				<label class="industryinputlabel" for="">
 				<select class="jobtypeselect" name="job_status_type">
-					<option value="full-time" selected>Full-time</option>
+					<option selected disabled>Job Type</option>
+					<option value="full-time">Full-time</option>
 					<option value="part-time">Part-time</option>
 					<option value="intership">Intership</option>
+					<option>All</option>
 				</select>
+				</label>
 				{{--<i id="jobtypeselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
 			</div>
 
@@ -278,15 +285,19 @@
 			</div>
 
 			<div class="searchbarSalarySelect">
-				<select class="salaryselect" name="salary_range">
-					<option value="1">Under 8K/MTH</option>
-					<option value="2">8K-10KMTH</option>
-					<option value="3">10K-15K/MTH</option>
-					<option value="4" selected>15K-20K/MTH</option>
-					<option value="5">20K-30K/MTK</option>
-					<option value="6">30K-50K/MTH</option>
-					<option value="7">Above 50K/MTH</option>
-				</select>
+				<label class="industryinputlabel" for="">
+					<select class="salaryselect" name="salary_range" title="Salary Range">
+						<option selected disabled>Salary Range</option>
+						<option value="1">Under 8K/MTH</option>
+						<option value="2">8K-10KMTH</option>
+						<option value="3">10K-15K/MTH</option>
+						<option value="4">15K-20K/MTH</option>
+						<option value="5">20K-30K/MTK</option>
+						<option value="6">30K-50K/MTH</option>
+						<option value="7">Above 50K/MTH</option>
+						<option>All</option>
+					</select>
+				</label>
 				{{--<i id="salaryselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
 			</div>
 
@@ -295,7 +306,7 @@
 				<div class="industryCell">
 					<label class="companyNameInputLabel" for="">
 
-						<input type="text" class="companyNameInput input-large" name="company_name" id="companyname" value="" placeholder="Company name" autocomplete="">
+						<input type="text" class="companyNameInput input-large" name="company_name" id="companyname" value="" placeholder="Company name" autocomplete="off">
 
 					</label>
 				</div>

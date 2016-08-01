@@ -636,7 +636,8 @@ img {
 .industryinputlabel {
   width: 100%;
   display: inline-block;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-weight: normal; }
 
 /*.searchbar input {
     display: block;
@@ -660,7 +661,6 @@ img {
   /*border-radius: 2px;*/
   /*background-color: #fff;*/
   /*background-color: rgb(248, 248, 248);*/
-  color: #999;
   border: 1px solid #ccc;
   font-weight: normal; }
 
@@ -693,7 +693,8 @@ img {
   margin-top: 12px;
   margin-bottom: 12px;
   width: 17%;
-  min-width: 200px;
+  min-width: 230px;
+  word-wrap: break-word;
   position: relative;
   min-height: 1px;
   padding-left: 12px;
@@ -821,7 +822,16 @@ img {
 .jobThumbnailCompanyLogo {
   -webkit-box-flex: 1;
   flex: 1;
-  margin: 10px; }
+  margin: 10px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center; }
+
+.jobThumbnailCompanyLogoImg {
+  width: 100%; }
 
 .jobThumbnailPosition {
   -webkit-box-flex: 3;
