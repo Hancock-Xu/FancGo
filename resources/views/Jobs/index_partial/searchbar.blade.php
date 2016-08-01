@@ -3,12 +3,14 @@
 		<div class="searchbarWapper">
 
 			<div class="searchbarCitySelect">
-				<select class="cityselect" name="location">
+				<select class="cityselect" name="job_location">
 
-					<option value="Shenzhen" selected>Shenzhen</option>
-					<option value="Shanghai">Shanghai</option>
-					<option value="Guangzhou">Guangzhou</option>
-					<option value="Beijing">Beijing</option>
+					<option value="Shen Zhen">Shen Zhen</option>
+					<option value="Shang Hai">Shang Hai</option>
+					<option value="Guang Zhou">Guang Zhou</option>
+					<option value="Bei Jing">Bei Jing</option>
+					<option value="Hong Kong">Hong Kong</option>
+					<option value="Macao">Macao</option>
 					<option value="Others">Others</option>
 				</select>
 				{{--<i id="cityselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
@@ -29,7 +31,7 @@
 					<div class="industryCell">
 						<label class="industryinputlabel" for="">
 							<!--<span class="inputplaceholderlabel">Industry</span>-->
-							<input type="text" class="industryInput input-large" name="industry" id="selectedIndustry" value="" placeholder="Industry" autocomplete="off" readonly>
+							<input type="text" class="industryInput input-large" name="job_industry" id="selectedIndustry" value="" placeholder="Industry" autocomplete="off" readonly>
 							{{--<i id="industryselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
 							<!--<span class="caret"></span>-->
 						</label>

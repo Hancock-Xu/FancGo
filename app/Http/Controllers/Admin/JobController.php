@@ -24,40 +24,57 @@ class JobController extends Controller
 		 */
 		$parameters = $request->query->all();
 
+		$jobs = \DB::table('jobs')
+			->where('published_at','<=',Carbon::now())->orderBy('published_at','desc')
+			->join('companies', 'jobs.company_id', '=', 'companies.id')
+			->select('jobs.*', 'companies.user_id', 'companies.company_name','companies.business_license_name','companies.logo_url','companies.website','companies.company_description','companies.scale','companies.company_location','companies.company_industry','companies.company_email','companies.company_phone_number')
+			->orderBy('published_at','desc');
+
 		if (!$parameters){
 
-//			$jobs = Job::where('published_at','<=',Carbon::now())->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
-
-			$jobs = \DB::table('jobs')
-					->where('published_at','<=',Carbon::now())->orderBy('published_at','desc')
-					->join('companies', 'jobs.company_id', '=', 'companies.id')
-					->select('jobs.*', 'companies.user_id', 'companies.company_name','companies.business_license_name','companies.logo_url','companies.website','companies.company_description','companies.scale','companies.company_location','companies.company_industry','companies.company_email','companies.company_phone_number')
-					->orderBy('published_at','desc')
-					->paginate(config('jobs.posts_per_page'));
+			$jobs = $jobs->paginate(config('jobs.posts_per_page'));
 
 			return view('Jobs.index_partial.index',compact('jobs'));
 
 		}else{
 
-//			$jobs = \DB::table('jobs');
-//
-//			foreach ($parameters as $key => $value)
-//			{
-//				if ($key == 'salary_lower_limit'){
-//					$jobs = $jobs->where($key, '>=', $value);
-//				}elseif ($key == 'salary_upper_limit'){
-//					$jobs = $jobs->where($key, '<=', $value);
-//				}elseif ($key == 'name'){
-//					$jobs = $jobs->where($key, 'like', $value);
-//				}else{
-//					$jobs = $jobs->where($key, '=', $value);
-//				}
-//			}
-//
-//			$jobs = $jobs->get();
 
-//			$jobs = \DB::table('jobs')
-//					->where($jobs)
+
+			foreach ($parameters as $key => $value)
+			{
+				if ($key == 'job_location'){
+					$jobs = $jobs->where($key, '=', $value);
+				}elseif ($key == 'job_status_type'){
+					$jobs = $jobs->where($key, '=', $value);
+				}elseif ($key == 'job_industry' && $value != null){
+					$jobs = $jobs->where($key, '=', $value);
+				}elseif ($key == 'salary_range'){
+					if ($value == 1){
+						$jobs = $jobs->where('salary_upper_limit', '<=', 8);
+					}elseif ($value == 2){
+						$jobs = $jobs->where('salary_upper_limit', '<=', 10);
+						$jobs = $jobs->where('salary_lower_limit', '>=', 8);
+					}elseif ($value == 3){
+						$jobs = $jobs->where('salary_upper_limit', '<=', 15);
+						$jobs = $jobs->where('salary_lower_limit', '>=', 10);
+					}elseif ($value == 4){
+						$jobs = $jobs->where('salary_upper_limit', '<=', 20);
+						$jobs = $jobs->where('salary_lower_limit', '>=', 15);
+					}elseif ($value == 5){
+						$jobs = $jobs->where('salary_upper_limit', '<=', 30);
+						$jobs = $jobs->where('salary_lower_limit', '>=', 20);
+					}elseif ($value == 6){
+						$jobs = $jobs->where('salary_upper_limit', '<=', 50);
+						$jobs = $jobs->where('salary_lower_limit', '>=', 30);
+					}else{
+						$jobs = $jobs->where('salary_upper_limit', '>', 50);
+					}
+				}elseif ($key == 'company_name' && $value != null){
+					$jobs = $jobs->where($key, 'like', $value);
+				}
+			}
+
+			$jobs = $jobs->get();
 
 			return view('Jobs.index_partial.index', ['jobs'=>$jobs]);
 			

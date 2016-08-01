@@ -54,13 +54,13 @@
 							<span>{{$job->company_location}}</span>
 						</div>
 						<div class="jobThumbnailWalfareTag">
-							<span>Working Visa</span>
-							<span>Working Visa</span>
-							<span>Work Visa</span>
+							{{--<span>Working Visa</span>--}}
+							{{--<span>Working Visa</span>--}}
+							{{--<span>Work Visa</span>--}}
 						</div>
 						<div class="timestamp">
 							<i class="glyphicon glyphicon-time post-time"></i>
-							<span class="post-time">post time:</span>
+							<span class="post-time">post time: {{$job->published_at}}</span>
 						</div>
 					</div>
 				</div>
