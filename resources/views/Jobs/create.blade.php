@@ -26,21 +26,22 @@
 			{!! Form::label('education_require', 'Education require') !!}
 			{!! Form::select('education_require', [
 				'1'=>'Any education',
-				'2'=>'Degree and above',
-				'3'=>'Master and above',
-				'4'=>'Senior technical titles and Dr.'
+				'2'=>'Associate',
+				'3'=>'Bachelor',
+				'4'=>'Master',
+				'5'=>'Dr.'
 			]) !!}
 		</div>
 
 		<div class="form-group">
 			{!! Form::label('years_work_experience','Years Experience Require:') !!}
 			{!! Form::select('years_work_experience', [
-				'1'=>'Any work experience',
-				'2'=>'Internship experience',
-				'3'=>'1',
-				'4'=>'2',
-				'5'=>'3',
-				'6'=>'More than 5 years'
+				'1'=>'Intership',
+				'2'=>'Entry Level',
+				'3'=>'Associate',
+				'4'=>'Mid-Senior Level',
+				'5'=>'Director',
+				'6'=>'Executive'
 			]) !!}
 		</div>
 
