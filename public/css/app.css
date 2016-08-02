@@ -8,7 +8,8 @@
 
 .form-control {
   width: 370px;
-  padding-right: 30px; }
+  padding-right: 30px;
+  margin-left: 10px; }
 
 .form-group {
   position: relative; }

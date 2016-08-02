@@ -19,14 +19,14 @@
 
 						<ul class="nav navbar-nav">
 							<li @if(Request::is('job')) class="active" @endif>
-								<a href="/job">Jobs <span class="sr-only">(current)</span></a>
+								<a href="{{url('/job')}}">Jobs <span class="sr-only">(current)</span></a>
 							</li>
 							{{--<li><a href="#">Apartment</a></li>--}}
 							<li @if(Request::is('company*')) class="active" @endif>
-								<a href="/company">Companies <span class="sr-only">(current)</span></a>
+								<a href="{{url('/company')}}">Companies <span class="sr-only">(current)</span></a>
 							</li>
 							<li @if(Request::is('job/create')) class="active" @endif>
-								<a href="/job/create">Post Job <span class="sr-only">(current)</span></a>
+								<a href="{{url('/job/create')}}">Post Job <span class="sr-only">(current)</span></a>
 							</li>
 							<li><a href="#">Work Visa <span class="sr-only">(current)</span></a></li>
 							<li><a href="#">Guidence <span class="sr-only">(current)</span></a></li>
@@ -40,10 +40,10 @@
 
 						@if(Auth::guest())
 							<li>
-								<a href="/auth/login">Login</a>
+								<a href="{{ url('/auth/login') }}">Login</a>
 							</li>
 							<li>
-								<a href="/auth/register">Register</a>
+								<a href="{{ url('/auth/register') }}">Register</a>
 							</li>
 						@else
 							<li class="dropdown">
