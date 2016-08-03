@@ -50,6 +50,10 @@ class CompanyController extends Controller
         }
     }
 
+    public function storePreCompany(PreCompanyStoreRequest $request){
+    	//TODO:
+    }
+
     /**
      * Store a newly created resource in storage.
      *

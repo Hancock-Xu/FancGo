@@ -13,8 +13,6 @@
 
 		<div class="collapse navbar-collapse" id="navbar-menu" aria-expanded="false">
 
-				@if(Auth::check())
-
 					<div class="center-home">
 
 						<ul class="nav navbar-nav">
@@ -35,7 +33,6 @@
 
 					</div>
 
-				@endif
 					<ul class="nav navbar-nav navbar-right">
 
 						@if(Auth::guest())

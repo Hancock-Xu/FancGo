@@ -317,7 +317,8 @@ img {
 
 .signin-btn,
 .submit-btn {
-  width: 140px; }
+  width: 140px;
+  margin-left: 10px; }
 
 .not-member {
   text-align: center; }
