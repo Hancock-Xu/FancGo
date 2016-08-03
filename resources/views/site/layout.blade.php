@@ -13,6 +13,7 @@
 	{!! Html::style('css/app.css') !!}
 	{!! Html::script('js/app.js') !!}
 	{!! Html::script('js/searchbar.js') !!}
+	{!! Html::script('js/previewUploadFile.js') !!}
 
 </head>
 

@@ -317,8 +317,7 @@ img {
 
 .signin-btn,
 .submit-btn {
-  width: 140px;
-  margin-left: 10px; }
+  width: 140px; }
 
 .not-member {
   text-align: center; }
@@ -412,7 +411,8 @@ img {
 
 .upload-file {
   position: relative;
-  display: inline-block;
+  display: -webkit-box;
+  display: flex;
   background: #D0EEFF;
   border: 1px solid #99D3F5;
   border-radius: 4px;
@@ -422,7 +422,12 @@ img {
   text-decoration: none;
   text-indent: 0;
   line-height: 20px;
-  margin-top: 10px; }
+  -webkit-box-flex: 1;
+  flex: 1;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center; }
 
 .upload-file input {
   position: absolute;
@@ -430,7 +435,9 @@ img {
   right: 0;
   top: 0;
   opacity: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 100%;
+  height: 100%; }
 
 .upload-file:hover {
   background: #AADFFD;
@@ -439,11 +446,13 @@ img {
   text-decoration: none; }
 
 .business-lincense {
-  padding: 30px 20px 78px;
+  padding: 30px 20px 30px;
   text-align: center;
   border: 1px solid #c9c9c9;
   background-color: #fff;
-  width: 220px; }
+  position: relative;
+  display: -webkit-box;
+  display: flex; }
 
 /*上传公司信息*/
 .upload-company-logo,
@@ -895,6 +904,25 @@ div.jobThumbnail:nth-child(even) {
 
 div.jobThumbnail:nth-child(odd) {
   background-color: #fefefe; }
+
+.previewSelectFile {
+  -webkit-box-flex: 2;
+  flex: 2;
+  border: 1px solid #ccc;
+  margin: 20px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 300px;
+  height: 250px; }
+
+#previewer {
+  width: 100%;
+  height: 100%; }
 
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
