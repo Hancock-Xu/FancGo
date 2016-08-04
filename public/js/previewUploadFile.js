@@ -17,59 +17,22 @@ $(document).ready(function () {
         var file = files[0];
 
         // 接受 jpeg, jpg, png 类型的图片
+        var filesize = file.size / 1024;
+        if (filesize > 2000) {
+            alert('Maximum file 2MB');
+            target.value = '';
+            return;
+        }
         if (!/\/(?:jpeg|jpg|png)/i.test(file.type)) return;
 
         var reader = new FileReader();
         reader.onload = function () {
-            var result = this.result;
 
-            previewer.src = result;
-            // filechooser.value = '';
-            // var img = new Image();
-            //
-            // // 如果图片小于 200kb，不压缩
-            // if (result.length <= maxsize) {
-            //     toPreviewer(result);
-            //     return;
-            // }
-            //
-            // img.onload = function() {
-            //     var compressedDataUrl = compress(img, file.type);
-            //     toPreviewer(compressedDataUrl);
-            //     img = null;
-            // };
-            //
-            // img.src = result;
+            previewer.src = this.result;
         };
 
         reader.readAsDataURL(file);
     };
-
-    function toPreviewer(dataUrl) {
-        previewer.src = dataUrl;
-        filechooser.value = '';
-    }
-
-    function compress(img, fileType) {
-        var canvas = document.createElement("canvas");
-        var ctx = canvas.getContext('2d');
-
-        var width = img.width;
-        var height = img.height;
-
-        canvas.width = width;
-        canvas.height = height;
-
-        ctx.fillStyle = "#fff";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.drawImage(img, 0, 0, width, height);
-
-        // 压缩
-        var base64data = canvas.toDataURL(fileType, 0.75);
-        canvas = ctx = null;
-
-        return base64data;
-    }
 });
 
 },{}]},{},[1]);
