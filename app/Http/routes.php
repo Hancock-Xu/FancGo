@@ -36,6 +36,9 @@ Route::group([
 	Route::resource('job','JobController');
 	
 	Route::resource('company','CompanyController');
+
+	Route::post('company/storeCompany', 'CompanyController@storeCompany');
+	Route::post('company/storePreCompany', 'CompanyController@storePreCompany');
 	
 	Route::post('company/send_verify_apply', 'CompanyController@sendVerifyRequestEmail');
 	
