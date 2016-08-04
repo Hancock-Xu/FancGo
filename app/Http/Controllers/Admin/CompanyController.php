@@ -61,7 +61,7 @@ class CompanyController extends Controller
 
 	    $user = \Auth::user();
 	    $company = $user->company;
-	    $this->sendValidateLink($verifyEmail, [$company->id]);
+	    $this->sendValidateLink($verifyEmail, ['id' => $company->id]);
     }
 
     /**

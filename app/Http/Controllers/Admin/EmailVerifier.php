@@ -88,7 +88,7 @@ trait EmailVerifier
 	}
 
 
-	public function getVerifyRequestEmail($token, $id = null)
+	public function getVerifyRequestEmail($token, $id)
 	{
 		$response = VerifyEmail::broker()->verifyEmail($token);
 		$user = Auth::getUser();
@@ -99,7 +99,11 @@ trait EmailVerifier
 				
 				$company = Company::findOrFail($id);
 
-				return view('Company.edit', ['company' => $company]);	
+				if (!$company->pass_email_verify){
+					return view('Company.create_company', ['company'=>$company]);
+				}else{
+					return view('Company.edit', ['company' => $company]);
+				}
 			
 			}else{
 				

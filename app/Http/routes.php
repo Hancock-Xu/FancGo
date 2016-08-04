@@ -42,7 +42,7 @@ Route::group([
 	
 	Route::post('company/send_verify_apply', 'CompanyController@sendVerifyRequestEmail');
 	
-	Route::get('company/verify_email/{token}', 'CompanyController@getVerifyRequestEmail');
+	Route::get('company/verify_email/{token}/{id}', 'CompanyController@getVerifyRequestEmail');
 	
 
 	
