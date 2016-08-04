@@ -19,21 +19,24 @@ $(document).ready(function() {
         var reader = new FileReader();
         reader.onload = function() {
             var result = this.result;
-            var img = new Image();
 
-            // 如果图片小于 200kb，不压缩
-            if (result.length <= maxsize) {
-                toPreviewer(result);
-                return;
-            }
-
-            img.onload = function() {
-                var compressedDataUrl = compress(img, file.type);
-                toPreviewer(compressedDataUrl);
-                img = null;
-            };
-
-            img.src = result;
+            previewer.src = result;
+            // filechooser.value = '';
+            // var img = new Image();
+            //
+            // // 如果图片小于 200kb，不压缩
+            // if (result.length <= maxsize) {
+            //     toPreviewer(result);
+            //     return;
+            // }
+            //
+            // img.onload = function() {
+            //     var compressedDataUrl = compress(img, file.type);
+            //     toPreviewer(compressedDataUrl);
+            //     img = null;
+            // };
+            //
+            // img.src = result;
         };
 
         reader.readAsDataURL(file);
