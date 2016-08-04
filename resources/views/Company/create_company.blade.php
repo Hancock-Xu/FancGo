@@ -247,9 +247,9 @@
 		</div>
 
 
-		<div class="form-group">
-			{!! Form::hidden('user_id',$user->id) !!}
-		</div>
+		{{--<div class="form-group">--}}
+			{{--{!! Form::hidden('user_id',$user->id) !!}--}}
+		{{--</div>--}}
 
 		{{--<div class="form-group">--}}
 			{{--{!! Form::label('published_at','Published At:') !!}--}}
