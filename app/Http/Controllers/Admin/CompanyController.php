@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Job;
 use App\Http\Requests\CompanyStoreRequest;
 use Carbon\Carbon;
 use App\Company;
 use Auth;
-use App\Http\Requests;
+use App\Http\Requests\PreCompanyStoreRequest;
+use League\Flysystem\File;
 use Storage;
 
 class CompanyController extends Controller
@@ -39,7 +41,7 @@ class CompanyController extends Controller
 
         if (!$user->company){
 
-            return view('Company.link_request_form',['company'=> null]);
+            return view('Company.link_request_form',['user'=> $user]);
 
         }else{
             
@@ -50,8 +52,14 @@ class CompanyController extends Controller
         }
     }
 
-    public function storePreCompany(PreCompanyStoreRequest $request){
-    	//TODO:
+    public function storePreCompany(Request $request)
+    {
+
+    	$input = $request->all();
+		$verifyEmail = $input['company_email'];
+    	$this->store($request);
+
+	    $this->sendValidateLink($verifyEmail);
     }
 
     /**
@@ -60,47 +68,51 @@ class CompanyController extends Controller
      * @param  CompanyStoreRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CompanyStoreRequest $request)
+    public function store(Request $request)
     {
         /**
          * 处理上传的公司logo,营业执照图片等
          */
 
-        $inputs = $request->all();
-        $user = \Auth::user();
-        $company = $user->company;
+	    $company = Company::create($request->all());
 
-        if (!$company) {
-            $company = Company::create($inputs);
+	    $company_logo_avatar = $request->file('logo_url');
+	    $company_license_img = $request->file('certificate_url');
 
-            $company_logo_avatar = $request->file('logo_url');
-            $company_license_img = $request->file('certificate_url');
+	    if ($company_logo_avatar){
 
-            if ($company_logo_avatar){
+		    $file_name = 'company_logo_avatar'.'.'.$company_logo_avatar->getClientOriginalExtension();
+		    $save_path = '/companies/'.$company->id.'/'.$file_name;
 
-                $file_name = 'company_logo_avatar'.'.'.$company_logo_avatar->getClientOriginalExtension();
-                $save_path = '/companies/'.$company->id.'/'.$file_name;
+		    Storage::disk('local')->put($save_path, file_get_contents($company_logo_avatar->getRealPath()));
 
-                Storage::disk('local')->put($save_path, file_get_contents($company_logo_avatar->getRealPath()));
+		    $company->logo_url = '/uploads'.$save_path;
 
-                $company->logo_url = '/uploads'.$save_path;
+	    }
 
-            }
+	    if ($company_license_img){
 
-            if ($company_license_img){
+		    $file_name = 'company_license_img'.'.'.$company_license_img->getClientOriginalExtension();
+		    $save_path = '/companies/'.$company->id.'/'.$file_name;
 
-                $file_name = 'company_license_img'.'.'.$company_license_img->getClientOriginalExtension();
-                $save_path = '/companies/'.$company->id.'/'.$file_name;
+		    Storage::disk('local')->put($save_path, file_get_contents($company_license_img->getRealPath()));
 
-                Storage::disk('local')->put($save_path, file_get_contents($company_license_img->getRealPath()));
+		    $company->certificate_url = '/uploads'.$save_path;
+	    }
 
-                $company->certificate_url = '/uploads'.$save_path;
-            }
+	    $company->save();
 
-            $company->save();
-        }
+    }
 
-        return view('Jobs.create',['company'=>$company]);
+    public function storeCompany(CompanyStoreRequest $request){
+
+	    $this->store($request);
+
+	    $user = \Auth::user();
+	    $company = $user->company;
+
+	    return view('Jobs.create',['company'=>$company]);
+
     }
 
     /**
