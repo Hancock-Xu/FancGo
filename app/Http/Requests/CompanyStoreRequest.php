@@ -26,7 +26,9 @@ class CompanyStoreRequest extends Request
             'company_name'=>'required',
             'business_license_name'=>'required',
             'logo_url'=>'required|image',
-            'certificate_url'=>'image',
+//	        'logo_url'=>'image',
+	        'certificate_url'=>'required|image',
+
             'company_description'=>'required',
             'scale'=>'required',
             'company_location'=>'required',

@@ -49,7 +49,7 @@ trait EmailVerifier
 
 			$company = Company::findOrFail($request->input('id'));
 
-			if (explode('@', $verifyEmail)[1] == explode('@', $company->email)[1]) {
+			if (explode('@', $verifyEmail)[1] == explode('@', $company->company_email)[1]) {
 
 				return $this->sendValidateLink($verifyEmail, ['company_id'=>$request->input('id')]);
 

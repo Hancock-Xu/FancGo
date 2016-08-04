@@ -52,14 +52,16 @@ class CompanyController extends Controller
         }
     }
 
-    public function storePreCompany(Request $request)
+    public function storePreCompany(PreCompanyStoreRequest $request)
     {
 
     	$input = $request->all();
 		$verifyEmail = $input['company_email'];
     	$this->store($request);
 
-	    $this->sendValidateLink($verifyEmail);
+	    $user = \Auth::user();
+	    $company = $user->company;
+	    $this->sendValidateLink($verifyEmail, [$company->id]);
     }
 
     /**
