@@ -97,6 +97,10 @@ class JobController extends Controller
 			return redirect('/company/create');
 		}else{
 			$company = $user->company;
+
+			if (!$company->pass_email_verify){
+				return view('Company.create_company', ['company'=>$company]);
+			}
 			return view('Jobs.create', ['company'=>$company]);
 		}
 	}
