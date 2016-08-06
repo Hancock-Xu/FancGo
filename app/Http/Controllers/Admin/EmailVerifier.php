@@ -100,6 +100,10 @@ trait EmailVerifier
 				$company = Company::findOrFail($id);
 
 				if (!$company->pass_email_verify){
+
+					$company->pass_email_verify = true;
+					$company->save();
+
 					return view('Company.create_company', ['company'=>$company]);
 				}else{
 					return view('Company.edit', ['company' => $company]);
