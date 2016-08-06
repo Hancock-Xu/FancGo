@@ -38,6 +38,7 @@ class CreateCompaniesTable extends Migration
             $table->text('company_description')->nullable()->default(null);
             $table->enum('scale', ['< 15', '15~50', '50~150', '150~500', '500~2000' , '> 2000'])->nullable()->default(null)->index();
             $table->string('company_location', 30)->nullable()->default(null)->index();
+	        $table->string('company_address', 200)->nullable()->default(null)->index();
             $table->string('company_industry', 50)->nullable()->default(null)->index();
 	        $table->time('founder_time')->nullable()->default(null);
 
