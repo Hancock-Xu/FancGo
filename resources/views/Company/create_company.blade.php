@@ -3,276 +3,431 @@
 @section('content')
 	
 	<div class="container">
-		
-		<h1>Create Company</h1>
-		<hr>
-		
-		{!! Form::open(['url'=>'/company', 'files'=>true]) !!}
-		<div class="form-group">
-			{!! Form::label('company_name','Company Name') !!}
-			{!! Form::text('company_name',null, ['class'=>'form-control']) !!}
 
-			@if($errors->has('name'))
-				<span class="help-block">
-					<div class="alert-danger alert">
-						<strong>{{ $errors->first('name') }}</strong>
-					</div>
-				</span>
-			@endif
+		<div id="page-container">
+			<div class="container">
 
-		</div>
-		
-		<div class="form-group">
-			{!! Form::label('business_license_name','Company registered name') !!}
-			{!! Form::text('business_license_name',null,['class'=>'form-control']) !!}
+				<div class="head-verifyEmail">
+					<ul class="nav-justified list-unstyled recuitment-process">
+						<li>
+							<embed src="{{asset('images/verify_email.svg')}}" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
+							<p>Verify Email</p>
+						</li>
+						<li>
+							<embed src="{{asset('images/company_info_success.svg')}}" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
+							<p>Company Infomation</p>
 
-			@if($errors->has('business_license_name'))
-				<span class="help-block">
-					<ul class="alert-danger alert">
-						<div class="container">
-							<li>
-								<strong>{{ $errors->first('business_license_name') }}</strong>
-							</li>
-						</div>
+						</li>
+						<li>
+							<embed src="{{asset('images/position.svg')}}" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
+							<p>Position Info</p>
+						</li>
 					</ul>
+				</div>
 
-				</span>
-			@endif
+				<!-- 上传公司信息 -->
+				<div class="container">
+
+						<form id="company-submit" method="post" action="#" role="form" enctype="multipart/form-data">
+
+								<div class="company-info">
+
+									<div class="business_license">
+
+										<div class="company_logo_container">
+
+											<div class="upload-file">
+
+												<div class="upload-icon">
+
+													<embed src="{{asset('images/upload.svg')}}" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
+
+													<label for="file">UpLoad Company Logo</label>
+													<input type="file" id="filechooser" accept="image/png,images/jpg,image/gif,image/jpeg" name="certificate_url">
+													<label for="">Upper Limit 2M</label>
+
+												</div>
+
+											</div>
+
+											<div class="previewSelectFile">
+												<img src="" alt="Logo Previewer">
+											</div>
+
+										</div>
+
+
+									</div>
+
+									<div class="company-property-container">
+
+										<div class="company_property">
+
+											<div class="business_license_name">
+												<label for="license_name">Business License Name</label>
+												<i class="glyphicon glyphicon-asterisk required-item"></i>
+												{{--<span>This name will be shown in public</span>--}}
+												<input type="text" class="form-control" id="short-name" name="business_licenese_name" value="{{$company->business_license_name}}">
+											</div>
+
+											<div class="company_short_name">
+												<label for="short-name">Company Name</label>
+												<i class="glyphicon glyphicon-asterisk required-item"></i>
+												<span>This name will be shown in public</span>
+												<input type="text" class="form-control" id="short-name" name="shortName">
+											</div>
+
+											<div class="company_industry_select">
+
+												<div class="industrywarpper">
+													<div class="industryCell">
+														<label for="job_industry">Company Industry</label>
+														<label class="industryinputlabel" for="job_industry">
+															<!--<span class="inputplaceholderlabel">Industry</span>-->
+															<input type="text" class="industryInput input-large" name="job_industry" id="selectedIndustry" value="" placeholder="Industry" autocomplete="off" readonly>
+														{{--<i id="industryselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
+														<!--<span class="caret"></span>-->
+														</label>
+
+													</div>
+
+													<div class="industrylist">
+
+														<div class="industrylist_row">
+															<strong class="industrylist_row_name">
+																Sales/Marketing
+															</strong>
+															<div class="industrylist_row_content">
+
+																<ul class="industrylist_row_1">
+																	<li>
+																		<a href="#">Sales/Retail</a>
+																	</li>
+																	<li>
+																		<a href="#">Marketing</a>
+																	</li>
+																	<li>
+																		<a href="#">Advertisement </a>
+																	</li>
+																	<li>
+																		<a href="#">PR</a>
+																	</li>
+																	<li>
+																		<a href="#">Customer Service</a>
+																	</li>
+																</ul>
+
+															</div>
+														</div>
+
+														<div class="industrylist_row">
+															<strong class="industrylist_row_name">
+																Education/Training
+															</strong>
+															<div class="industrylist_row_content">
+
+																<ul class="industrylist_row_1">
+																	<li>
+																		<a href="#">Teaching</a>
+																	</li>
+																	<li>
+																		<a href="#">Translation/Proofreading </a>
+																	</li>
+																	<li>
+																		<a href="#">Other Teaching</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+
+
+														<div class="industrylist_row">
+															<strong class="industrylist_row_name">
+																Creative
+															</strong>
+															<div class="industrylist_row_content">
+
+																<ul class="industrylist_row_1">
+																	<li>
+																		<a href="#">Graphic Design</a>
+																	</li>
+																	<li>
+																		<a href="#">Photographer</a>
+																	</li>
+																	<li>
+																		<a href="#">Artwork Designer</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="industrylist_row">
+															<strong class="industrylist_row_name">
+																Trade/Logistic
+															</strong>
+															<div class="industrylist_row_content">
+
+																<ul class="industrylist_row_1">
+																	<li>
+																		<a href="#">Sourcing/Purchasing</a>
+																	</li>
+																	<li>
+																		<a href="#">International Trade</a>
+																	</li>
+																	<li>
+																		<a href="#">Logistic</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="industrylist_row">
+															<strong class="industrylist_row_name">
+																Manufacture
+															</strong>
+															<div class="industrylist_row_content">
+
+																<ul class="industrylist_row_1">
+																	<li>
+																		<a href="#">Architecture</a>
+																	</li>
+																	<li>
+																		<a href="#">Manufacturing/Production</a>
+																	</li>
+																	<li>
+																		<a href="#">Engineer</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="industrylist_row">
+															<strong class="industrylist_row_name">
+																Finance/Consultancy
+															</strong>
+															<div class="industrylist_row_content">
+
+																<ul class="industrylist_row_1">
+																	<li>
+																		<a href="#">Finance</a>
+																	</li>
+																	<li>
+																		<a href="#">Accounting</a>
+																	</li>
+																	<li>
+																		<a href="#">Banking</a>
+																	</li>
+																	<li>
+																		<a href="#">Consultancy</a>
+																	</li>
+																	<li>
+																		<a href="#">Legal</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="industrylist_row">
+															<strong class="industrylist_row_name">
+																IT
+															</strong>
+															<div class="industrylist_row_content">
+
+																<ul class="industrylist_row_1">
+																	<li>
+																		<a href="#">Software Engineer</a>
+																	</li>
+																	<li>
+																		<a href="#">Data Analyst</a>
+																	</li>
+																	<li>
+																		<a href="#">Product Designer</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="industrylist_row">
+															<strong class="industrylist_row_name">
+																Admin
+															</strong>
+															<div class="industrylist_row_content">
+
+																<ul class="industrylist_row_1">
+																	<li>
+																		<a href="#">Professional Manager</a>
+																	</li>
+																	<li>
+																		<a href="#">Secretarial/Office manager</a>
+																	</li>
+																	<li>
+																		<a href="#">Human Resource</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="industrylist_row">
+															<strong class="industrylist_row_name">
+																Entertainment/Catering
+															</strong>
+															<div class="industrylist_row_content">
+
+																<ul class="industrylist_row_1">
+																	<li>
+																		<a href="#">Acting/Model/Voice</a>
+																	</li>
+																	<li>
+																		<a href="#">Bar/Club/Restaurant Staff</a>
+																	</li>
+																	<li>
+																		<a href="#">Hotel/tourism</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+
+
+
+														<div class="industrylist_row">
+															<strong class="industrylist_row_name">
+																Healthcare
+															</strong>
+															<div class="industrylist_row_content">
+
+																<ul class="industrylist_row_1">
+																	<li>
+																		<a href="#">Physician Job</a>
+																	</li>
+																	<li>
+																		<a href="#">Medical assistant job</a>
+																	</li>
+																	<li>
+																		<a href="#">Biomedical Engineer Job</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="industrylist_row">
+															<strong class="industrylist_row_name">
+																Others
+															</strong>
+															<div class="industrylist_row_content">
+
+																<ul class="industrylist_row_1">
+																	<li>
+																		<a href="#">Others</a>
+																	</li>
+
+																</ul>
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+
+											</div>
+
+											<div class="company_scale_founded_time">
+
+												<div class="company-scale">
+													<label for="company-size">Company Size</label>
+													<i class="glyphicon glyphicon-asterisk required-item"></i>
+													<select name="companySize" class="form-control" id="company-size">
+
+														<option disabled selected>choose</option>
+														<option>Less than 15</option>
+														<option>15-50</option>
+														<option>50-150</option>
+														<option>500-2000</option>
+														<option>More than 2000</option>
+													</select>
+													<i class="glyphicon glyphicon-menu-down arrow-down"></i>
+												</div>
+
+												<div class="company-foundedtime">
+													<label for="company-founded">Founded Year</label>
+													<i class="glyphicon glyphicon-asterisk required-item"></i>
+													<select name="companyFoundedTime" class="form-control" id="company-founded">
+														<option value="1980">1980</option>
+														<option value="1981">1981</option>
+														<option value="1982">1982</option>
+														<option value="1983">1983</option>
+														<option value="1984">1984</option>
+														<option value="1985">1985</option>
+														<option value="1986">1986</option>
+														<option value="1987">1987</option>
+														<option value="1988">1988</option>
+														<option value="1989">1989</option>
+														<option value="1990">1990</option>
+														<option value="1991">1991</option>
+														<option value="1992">1992</option>
+														<option value="1993">1993</option>
+														<option value="1994">1994</option>
+														<option value="1995">1995</option>
+														<option value="1996">1996</option>
+														<option value="1997">1997</option>
+														<option value="1998">1998</option>
+														<option value="1999">1999</option>
+														<option value="2000">2000</option>
+														<option value="2001">2001</option>
+														<option value="2002">2002</option>
+														<option value="2003">2003</option>
+														<option value="2004">2004</option>
+														<option value="2005">2005</option>
+														<option value="2006">2006</option>
+														<option value="2007">2007</option>
+														<option value="2008">2008</option>
+														<option value="2009">2009</option>
+														<option value="2010">2010</option>
+														<option value="2011">2011</option>
+														<option value="2012">2012</option>
+														<option value="2013">2013</option>
+														<option value="2014">2014</option>
+														<option value="2015">2015</option>
+														<option value="2016">2016</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="company_website">
+												<label for="company-website">Webiste</label>
+												<input type="url" name="companyWebsite" class="form-control" id="company-website">
+											</div>
+
+											<div class="company_address">
+												<label for="company-address">Address</label>
+												<input type="text" name="companyAddress" class="form-control" id="company-address">
+											</div>
+
+										</div>
+
+										<div class="company_description">
+											<label for="company-des-content">Company Description</label>
+											<i class="glyphicon glyphicon-asterisk required-item"></i>
+											<textarea class="form-control" rows="8" id="company-des-content" name="companyDescription" spellcheck="true"></textarea>
+										</div>
+
+									</div>
+
+								</div>
+
+							<div class="form-group">
+								<button type="submit" class="btn company-btn" id="company-btn">Save</span>
+								</button>
+							</div>
+
+						</form>
+
+				</div>
+			</div>
+
+			<script type="text/javascript" src="js/jobleadchina.js"></script>
+
 
 		</div>
-
-		<div class="form-group">
-			{!! Form::label('logo_url','Upload company logo') !!}
-			{!! Form::file('logo_url') !!}
-
-			@if($errors->has('logo_url'))
-				<span class="help-block">
-					<ul class="alert-danger alert">
-						<div class="container">
-							<li>
-								<strong>{{ $errors->first('logo_url') }}</strong>
-							</li>
-						</div>
-					</ul>
-
-				</span>
-			@endif
-
-		</div>
-
-		<div class="form-group">
-			{!! Form::label('certificate_url', 'Upload company license') !!}
-			{!! Form::file('certificate_url') !!}
-
-			@if($errors->has('certificate_url'))
-				<span class="help-block">
-					<ul class="alert-danger alert">
-						<div class="container">
-							<li>
-								<strong>{{ $errors->first('certificate_url') }}</strong>
-							</li>
-						</div>
-					</ul>
-
-				</span>
-			@endif
-		</div>
-
-		<div class="form-group">
-			{!! Form::label('Website', 'Company website') !!}
-			{!! Form::text('Website', null, ['class'=>'form-control']) !!}
-		</div>
-
-		<div class="form-group">
-			{!! Form::label('company_description','Company description') !!}
-			{!! Form::textarea('company_description',null, ['class'=>'form-control']) !!}
-
-			@if($errors->has('company_description'))
-				<span class="help-block">
-					<ul class="alert-danger alert">
-						<div class="container">
-							<li>
-								<strong>{{ $errors->first('description') }}</strong>
-							</li>
-						</div>
-					</ul>
-
-				</span>
-			@endif
-		</div>
-
-		<div class="form-group">
-			{!! Form::label('scale','scale') !!}
-			{!! Form::select('scale', [
-				'< 15',
-				'15~50',
-				'50~150',
-				'150~500',
-				'500~2000',
-				'> 2000'
-			]) !!}
-
-			@if($errors->has('scale'))
-				<span class="help-block">
-					<div class="alert-danger alert">
-						<strong>{{ $errors->first('scale') }}</strong>
-					</div>
-				</span>
-			@endif
-		</div>
-
-		<div class="dropdown">
-
-			{!! Form::label('company_industry','industry:') !!}
-			{!! Form::select('company_industry',[
-			'Actors'=>'Actors',
-			'English Teaching'=>'English Teaching',
-			'Design/Creative'=>'Design/Creative',
-			'Models'=>'Models',
-			'Eduction'=>'Eduction',
-			'Musicians'=>'Musicians/DJ',
-			'Engineering'=>'Engineering',
-			'Entertainer'=>'Entertainer',
-			'Finance'=>'Finance',
-			'HealthCare'=>'HealthCare',
-			'Hotel'=>'Hotel',
-			'HR/Admin'=>'HR/Admin',
-			'Insurance'=>'Insurance',
-			'International Trade'=>'International Trade',
-			'IT/Internet'=>'IT/Internet',
-			'PR/Media/Advertising'=>'PR/Media/Advertising',
-			'Read Estate'=>'Read Estate',
-			'Retail'=>'Retail',
-			'Sales/Marketing'=>'Sales/Marketing',
-			'Sports/Leisure'=>'Sports/Leisure'
-			]) !!}
-
-			@if($errors->has('company_industry'))
-				<span class="help-block">
-					<ul class="alert-danger alert">
-						<div class="container">
-							<li>
-								<strong>{{ $errors->first('industry') }}</strong>
-							</li>
-						</div>
-					</ul>
-
-				</span>
-			@endif
-		</div>
-
-		<div class="form-group">
-			{!! Form::label('company_email','email') !!}
-			{!! Form::text('company_email',null, ['class'=>'form-control']) !!}
-
-			@if($errors->has('company_email'))
-				<span class="help-block">
-					<ul class="alert-danger alert">
-						<div class="container">
-							<li>
-								<strong>{{ $errors->first('email') }}</strong>
-							</li>
-						</div>
-					</ul>
-
-				</span>
-			@endif
-		</div>
-
-		<div class="form-group">
-			{!! Form::label('company_phone_number','phone number') !!}
-			{!! Form::text('company_phone_number',null, ['class'=>'form-control']) !!}
-
-			@if($errors->has('company_phone_number'))
-				<span class="help-block">
-					<ul class="alert-danger alert">
-						<div class="container">
-							<li>
-								<strong>{{ $errors->first('phone_number') }}</strong>
-							</li>
-						</div>
-					</ul>
-
-				</span>
-			@endif
-		</div>
-
-		<div class="form-group">
-			{!! Form::label('company_location', 'Location') !!}
-			{!! Form::select('company_location', [
-				'Hong Kong'=>'Hong Kong',
-                'Shenzhen'=>'Shenzhen',
-                'Beijing'=>'Beijing',
-                'Shanghai'=>'Shanghai',
-                'Chengdu'=>'Chengdu',
-                'Qingdao'=>'Qingdao',
-                'Hangzhou'=>'Hangzhou',
-                'Guangzhou'=>'Guangzhou',
-                'Nanjing'=>'Nanjing',
-                'Xi\'an'=>'Xi\'an',
-                'Lanzhou'=>'Lanzhou',
-                'Haikou'=>'Haikou',
-                'Tianjin'=>'Tianjin',
-                'Kunming'=>'Kunming',
-                'Taiwan'=>'Taiwan',
-                'Chongqing'=>'Chongqing',
-                'Wuhan'=>'Wuhan',
-                'Shenyang'=>'Shenyang',
-                'Changchun'=>'Changchun',
-                'Suzhou'=>'Suzhou',
-                'Changsha'=>'Changsha',
-                'Dongguan'=>'Dongguan',
-                'Wuxi'=>'Wuxi',
-                'Guiyang'=>'Guiyang',
-                'Ningbo'=>'Ningbo',
-                'Changzhou'=>'Changzhou',
-                'Dalian'=>'Dalian',
-                'Zhuhai'=>'Zhuhai',
-                'Others'=>'Others'
-			]) !!}
-
-
-			@if($errors->has('company_location'))
-				<span class="help-block">
-					<ul class="alert-danger alert">
-						<div class="container">
-							<li>
-								<strong>{{ $errors->first('location') }}</strong>
-							</li>
-						</div>
-					</ul>
-
-				</span>
-			@endif
-		</div>
-
-
-		{{--<div class="form-group">--}}
-			{{--{!! Form::hidden('user_id',$user->id) !!}--}}
-		{{--</div>--}}
-
-		{{--<div class="form-group">--}}
-			{{--{!! Form::label('published_at','Published At:') !!}--}}
-			{{--{!! Form::input('date', 'published_at', date('Y-m-d'), ['class'=>'form-control']) !!}--}}
-		{{--</div>--}}
-
-		<div class="form-group">
-			{!! Form::submit('Publish Company',['class'=>'btn btn-success form-control']) !!}
-		</div>
-
-		{!! Form::close() !!}
-
-		@if($errors->any())
-			<ul class="alert alert-danger">
-				@foreach($errors->all() as $error)
-					<div class="container">
-						<li>{{ $error }}</li>
-					</div>
-
-				@endforeach
-			</ul>
-		@endif
-
 	</div>
 
-@stop
+@endsection

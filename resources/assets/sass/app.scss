@@ -404,6 +404,7 @@ img {
 
 .company-info {
   background-color: #fff;
+  display: flex;
   margin-bottom: 30px;
 }
 
@@ -646,6 +647,9 @@ img {
   flex: 1;
   align-items: center;
   justify-content: center;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
 }
 
 .upload-file input {
@@ -666,13 +670,14 @@ img {
   text-decoration: none;
 }
 
-.business-lincense {
+.business_license {
   padding: 30px 20px 30px;
   text-align: center;
-  border: 1px solid #c9c9c9;
+  //border: 1px solid #c9c9c9;
   background-color: #fff;
   position: relative;
   display: flex;
+  flex: 1;
 }
 
 
@@ -705,7 +710,7 @@ img {
 }
 
 #company-des-content {
-  width: 880px;
+  //width: 880px;
 }
 
 #company-submit {
@@ -1215,6 +1220,13 @@ div.jobThumbnail:nth-child(odd) {
 #previewer{
   width: 100%;
   height: 100%;
+}
+
+.company-property-container{
+
+  padding: 50px 30px 30px 30px;
+  flex: 2;
+
 }
 
  @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";

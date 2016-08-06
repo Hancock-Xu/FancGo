@@ -7,7 +7,7 @@ $(document).ready(function() {
 
         var target = event.target;
         var industrylist = $("div.industrylist");
-        if (target.className === "industryInput input-large") {
+        if (target.className === "industryInput input-large form-control" || target.className === "industryInput input-large") {
             industrylist.toggle();
         } else {
             if (industrylist.show()) {
