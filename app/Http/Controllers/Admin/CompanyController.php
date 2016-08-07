@@ -126,10 +126,9 @@ class CompanyController extends Controller
     public function show($id)
     {
         $company = Company::find($id)->firstOrFail();
-//        $company_certificate_url = '/uploads'.$company->certificate_url;
 
         if ($company){
-            return view('Company.detail',['company'=>$company, 'company_certificate_url'=>$company_certificate_url]);
+            return view('Company.detail',['company'=>$company]);
         }else{
             return view('not_found');
         }
@@ -167,7 +166,6 @@ class CompanyController extends Controller
     public function update(CompanyStoreRequest $request, $id)
     {
         $company = Company::findOrFail($id);
-//	    $company = fill(Input::all())->save();
         $input = $request->all();
         $company->fill($input)->save();
 
