@@ -28,7 +28,10 @@
 				<!-- 上传公司信息 -->
 				<div class="container">
 
-						<form class="form-horizontal" id="company-submit" method="post" action="#" role="form" enctype="multipart/form-data">
+						<form class="form-horizontal" id="company-submit" method="post" action="{{action('Admin\CompanyController@update', ['id'=>$company->id])}}" role="form" enctype="multipart/form-data">
+							<input type="hidden" name="_method" value="PUT">
+
+							<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 								<div class="company-info">
 
@@ -42,8 +45,8 @@
 
 													<embed src="{{asset('images/upload.svg')}}" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
 
-													<label for="file">UpLoad Company Logo</label>
-													<input type="file" id="filechooser" accept="image/png,images/jpg,image/gif,image/jpeg" name="certificate_url">
+													<label for="logo_url">UpLoad Company Logo</label>
+													<input type="file" id="filechooser" accept="image/png,images/jpg,image/gif,image/jpeg" name="logo_url">
 													<label for="">Upper Limit 2M</label>
 
 												</div>
@@ -51,7 +54,7 @@
 											</div>
 
 											<div class="previewSelectFile">
-												<img src="" alt="Logo Previewer">
+												<img id="previewer" src="" alt="Logo Previewer">
 											</div>
 
 										</div>
@@ -63,22 +66,7 @@
 
 										<div class="company_property">
 
-											<div class="form-group {{ $errors->has('business_license_name') ? ' has-error' : '' }}">
-												<label for="business_license_name" class="control-label col-md-4" >Business Lincense Name
-													<i class="glyphicon glyphicon-asterisk required-item"></i>
-												</label>
-
-												<div class="col-md-6">
-													<input autofocus id="business_license_name" type="text" class="form-control" name="business_license_name" value="{{ old('business_license_name') }}">
-
-													@if ($errors->has('business_license_name'))
-														<span class="help-block">
-					                                        <strong>{{ $errors->first('business_license_name') }}</strong>
-					                                    </span>
-													@endif
-												</div>
-
-											</div>
+											<h1 class="company_business_license_name">{{$company->business_license_name}}</h1>
 
 											<div class="form-group{{ $errors->has('company_name') ? ' has-error' : '' }}">
 												<label for="short-name" class="col-md-4 control-label">Company Name
@@ -86,7 +74,7 @@
 												</label>
 
 												<div class="col-md-6">
-													<input autofocus id="short-name" type="text" class="form-control" name="short-name" value="{{ old('company_name') }}">
+													<input autofocus id="short-name" type="text" class="form-control" name="company_name" value="{{ old('company_name') }}">
 
 													@if ($errors->has('company_name'))
 														<span class="help-block">
@@ -106,7 +94,7 @@
 
 												<div class="col-md-6">
 
-														<input type="text" class="industryInput input-large form-control" name="job_industry" id="selectedIndustry" value="" placeholder="Industry" autocomplete="off" readonly>
+														<input type="text" class="industryInput input-large form-control" name="company_industry" id="selectedIndustry" value="" placeholder="Industry" autocomplete="off" readonly>
 
 													@if ($errors->has('company_industry'))
 														<span class="help-block">
@@ -119,25 +107,28 @@
 
 													<div class="industrylist_row">
 														<strong class="industrylist_row_name">
-															Sales/Marketing
+															Retail/Wholesale
 														</strong>
 														<div class="industrylist_row_content">
 
 															<ul class="industrylist_row_1">
 																<li>
-																	<a href="#">Sales/Retail</a>
+																	<a href="#">Cosmetics</a>
 																</li>
 																<li>
-																	<a href="#">Marketing</a>
+																	<a href="#">Luxury</a>
 																</li>
 																<li>
-																	<a href="#">Advertisement </a>
+																	<a href="#">Clothing/Shoes Store</a>
 																</li>
 																<li>
-																	<a href="#">PR</a>
+																	<a href="#">Food</a>
 																</li>
 																<li>
-																	<a href="#">Customer Service</a>
+																	<a href="#">Furniture</a>
+																</li>
+																<li>
+																	<a href="#">Household Appliance Stores</a>
 																</li>
 															</ul>
 
@@ -152,13 +143,13 @@
 
 															<ul class="industrylist_row_1">
 																<li>
-																	<a href="#">Teaching</a>
+																	<a href="#">Teaching Center</a>
 																</li>
 																<li>
-																	<a href="#">Translation/Proofreading </a>
+																	<a href="#">School</a>
 																</li>
 																<li>
-																	<a href="#">Other Teaching</a>
+																	<a href="#">Translation/Proofreading</a>
 																</li>
 															</ul>
 														</div>
@@ -167,19 +158,22 @@
 
 													<div class="industrylist_row">
 														<strong class="industrylist_row_name">
-															Creative
+															Business Service
 														</strong>
 														<div class="industrylist_row_content">
 
 															<ul class="industrylist_row_1">
 																<li>
-																	<a href="#">Graphic Design</a>
+																	<a href="#">Consultancy/Legal/Admin</a>
 																</li>
 																<li>
-																	<a href="#">Photographer</a>
+																	<a href="#">Outsourcing</a>
 																</li>
 																<li>
-																	<a href="#">Artwork Designer</a>
+																	<a href="#">Information Technology Services</a>
+																</li>
+																<li>
+																	<a href="#">Convention and Exhibition/Ad/PR</a>
 																</li>
 															</ul>
 														</div>
@@ -227,14 +221,11 @@
 
 													<div class="industrylist_row">
 														<strong class="industrylist_row_name">
-															Finance/Consultancy
+															Finance
 														</strong>
 														<div class="industrylist_row_content">
 
 															<ul class="industrylist_row_1">
-																<li>
-																	<a href="#">Finance</a>
-																</li>
 																<li>
 																	<a href="#">Accounting</a>
 																</li>
@@ -242,10 +233,10 @@
 																	<a href="#">Banking</a>
 																</li>
 																<li>
-																	<a href="#">Consultancy</a>
+																	<a href="#">Insurance</a>
 																</li>
 																<li>
-																	<a href="#">Legal</a>
+																	<a href="#">Investment</a>
 																</li>
 															</ul>
 														</div>
@@ -253,19 +244,22 @@
 
 													<div class="industrylist_row">
 														<strong class="industrylist_row_name">
-															IT
+															Internet
 														</strong>
 														<div class="industrylist_row_content">
 
 															<ul class="industrylist_row_1">
 																<li>
-																	<a href="#">Software Engineer</a>
+																	<a href="#">Software</a>
 																</li>
 																<li>
-																	<a href="#">Data Analyst</a>
+																	<a href="#">Computer Hardware</a>
 																</li>
 																<li>
-																	<a href="#">Product Designer</a>
+																	<a href="#">E-Commerce</a>
+																</li>
+																<li>
+																	<a href="#">Communication</a>
 																</li>
 															</ul>
 														</div>
@@ -273,19 +267,22 @@
 
 													<div class="industrylist_row">
 														<strong class="industrylist_row_name">
-															Admin
+															Real Estate/Construction
 														</strong>
 														<div class="industrylist_row_content">
 
 															<ul class="industrylist_row_1">
 																<li>
-																	<a href="#">Professional Manager</a>
+																	<a href="#">Real Estate</a>
 																</li>
 																<li>
-																	<a href="#">Secretarial/Office manager</a>
+																	<a href="#">Construction/Engineering</a>
 																</li>
 																<li>
-																	<a href="#">Human Resource</a>
+																	<a href="#">Interior Decoration/Interior Design</a>
+																</li>
+																<li>
+																	<a href="#">Commercial Center</a>
 																</li>
 															</ul>
 														</div>
@@ -293,19 +290,19 @@
 
 													<div class="industrylist_row">
 														<strong class="industrylist_row_name">
-															Entertainment/Catering
+															Culture/Entertainment/Media
 														</strong>
 														<div class="industrylist_row_content">
 
 															<ul class="industrylist_row_1">
 																<li>
-																	<a href="#">Acting/Model/Voice</a>
+																	<a href="#">Media/Film</a>
 																</li>
 																<li>
-																	<a href="#">Bar/Club/Restaurant Staff</a>
+																	<a href="#">Club/Cafe/Bar</a>
 																</li>
 																<li>
-																	<a href="#">Hotel/tourism</a>
+																	<a href="#">Model</a>
 																</li>
 															</ul>
 														</div>
@@ -315,20 +312,44 @@
 
 													<div class="industrylist_row">
 														<strong class="industrylist_row_name">
-															Healthcare
+															Service
 														</strong>
 														<div class="industrylist_row_content">
 
 															<ul class="industrylist_row_1">
 																<li>
-																	<a href="#">Physician Job</a>
+																	<a href="#">Health Care</a>
 																</li>
 																<li>
-																	<a href="#">Medical assistant job</a>
+																	<a href="#">Beauty</a>
 																</li>
 																<li>
-																	<a href="#">Biomedical Engineer Job</a>
+																	<a href="#">Tourism</a>
 																</li>
+																<li>
+																	<a href="#">Hotel</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+
+													<div class="industrylist_row">
+														<strong class="industrylist_row_name">
+															Producting/Processing/Manufacturing
+														</strong>
+														<div class="industrylist_row_content">
+
+															<ul class="industrylist_row_1">
+																<li>
+																	<a href="#">Printing/Package</a>
+																</li>
+																<li>
+																	<a href="#">Office Supplies & Equipment</a>
+																</li>
+																<li>
+																	<a href="#">Medical Facility</a>
+																</li>
+
 															</ul>
 														</div>
 													</div>
@@ -359,7 +380,7 @@
 
 												<div class="col-md-6">
 
-													<select name="companySize" class="form-control" id="company_scale">
+													<select name="scale" class="form-control" id="company_scale">
 														<option disabled selected>choose</option>
 														<option>Less than 15</option>
 														<option>15-50</option>
@@ -434,14 +455,14 @@
 
 
 											<div class="form-group{{ $errors->has('company_location') ? ' has-error' : '' }}">
-												<label for="company_location" class="col-md-4 control-label">Company Location
+												<label for="company_location" class="col-md-4 control-label">Location City
 													<i class="glyphicon glyphicon-asterisk required-item"></i>
 												</label>
 
 												<div class="col-md-6">
-													{{--<input id="company_location" type="text" class="form-control" name="short-name" value="{{ old('company_location') }}">--}}
+
 													<select class="cityselect form-control" name="company_location" id="company_location">
-														<option selected disabled>City</option>
+														<option selected disabled>choose</option>
 														<option value="Shen Zhen">Shen Zhen</option>
 														<option value="Shang Hai">Shang Hai</option>
 														<option value="Guang Zhou">Guang Zhou</option>
@@ -484,7 +505,7 @@
 												</label>
 
 												<div class="col-md-6">
-													<input autofocus id="company_website" type="text" class="form-control" name="company_website" value="{{ old('company_website') }}">
+													<input id="company_website" type="url" class="form-control" name="company_website" value="{{ old('company_website') }}">
 
 													@if ($errors->has('company_website'))
 														<span class="help-block">
@@ -508,7 +529,7 @@
 
 											<div class="col-md-6">
 
-												<textarea name="company_description" id="company_description" cols="30" rows="20" spellcheck="true" class="form-control"></textarea>
+												<textarea name="company_description" id="company_description" cols="20" rows="15" spellcheck="true" class="form-control"></textarea>
 
 											@if ($errors->has('company_description'))
 													<span class="help-block">
@@ -519,19 +540,17 @@
 
 										</div>
 
-										{{--<div class="company_description">--}}
-											{{--<label for="company-des-content">Company Description</label>--}}
-											{{--<i class="glyphicon glyphicon-asterisk required-item"></i>--}}
-											{{--<textarea class="form-control" rows="8" id="company-des-content" name="companyDescription" spellcheck="true"></textarea>--}}
-										{{--</div>--}}
 
 									</div>
 
 								</div>
 
-							<div class="form-group">
-								<button type="submit" class="btn company-btn" id="company-btn">Save</span>
-								</button>
+							<div class="form-group form-submit-button">
+								{{--<div class="col-md-6 col-md-offset-4">--}}
+									<button type="submit" class="btn company-btn btn-primary">
+										<i class="fa fa-btn fa-envelope"></i> Save
+									{{--</button>--}}
+								</div>
 							</div>
 
 						</form>

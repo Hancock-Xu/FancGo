@@ -536,7 +536,7 @@ img {
 .position-btn,
 .company-btn {
   width: 440px;
-  margin: 20px 220px; }
+  margin: 0 auto; }
 
 .min-salary .form-control,
 .max-salary .form-control {
@@ -946,6 +946,15 @@ div.jobThumbnail:nth-child(odd) {
   appearance: none;
   border: 1px solid #ccc;
   padding: 10px; }
+
+.company_business_license_name {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 50px; }
+
+.form-submit-button {
+  display: -webkit-box;
+  display: flex; }
 
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)

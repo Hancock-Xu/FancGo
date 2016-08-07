@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'Admin\BasicSiteInfoController@index');
-Route::get('/about', 'BasicSiteInfoController@about');
+//Route::get('/about', 'BasicSiteInfoController@about');
 
 Route::get('/auth/login','Auth\AuthController@getLogin');
 Route::post('/auth/login','Auth\AuthController@postLogin');
@@ -21,8 +21,8 @@ Route::get('/auth/logout','Auth\AuthController@getLogout');
 Route::get('/auth/register','Auth\AuthController@getRegister');
 Route::post('/auth/register','Auth\AuthController@postRegister');
 
-Route::post('Admin\upload', 'Admin\UploadController@upload');
-Route::delete('Admin\delete', 'Admin\UploadController@delete');
+//Route::post('Admin\upload', 'Admin\UploadController@upload');
+//Route::delete('Admin\delete', 'Admin\UploadController@delete');
 
 Route::get('password/email', 'Auth\PasswordController@getEmail');
 Route::post('password/email', 'Auth\PasswordController@postEmail');
@@ -36,6 +36,8 @@ Route::group([
 	Route::resource('job','JobController');
 	
 	Route::resource('company','CompanyController');
+
+//	Route::post('company/update/{id}', 'CompanyController@update');
 
 	Route::post('company/storeCompany', 'CompanyController@storeCompany');
 	Route::post('company/storePreCompany', 'CompanyController@storePreCompany');

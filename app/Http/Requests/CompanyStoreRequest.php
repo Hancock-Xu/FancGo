@@ -22,19 +22,12 @@ class CompanyStoreRequest extends Request
     public function rules()
     {
         return [
-            'user_id'=>'required',
             'company_name'=>'required',
-            'business_license_name'=>'required',
-            'logo_url'=>'required|image',
-//	        'logo_url'=>'image',
-	        'certificate_url'=>'required|image',
-
+//            'logo_url'=>'required|image',
             'company_description'=>'required',
             'scale'=>'required',
             'company_location'=>'required',
             'company_industry'=>'required',
-            'company_email'=>'required|email|business_email',/*企业邮箱*/
-            'company_phone_number'=>'required'
         ];
     }
 
