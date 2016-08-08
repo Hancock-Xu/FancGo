@@ -956,6 +956,10 @@ div.jobThumbnail:nth-child(odd) {
   display: -webkit-box;
   display: flex; }
 
+.resend_verify_email {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
