@@ -131,6 +131,9 @@ class CompanyController extends Controller
 		    $input = $request->all();
 		    $company->fill($input)->save();
 
+		    $company->complete_create = true;
+		    $company->save();
+
 	    }else{
 
 		    $this->store($request);

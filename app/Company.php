@@ -62,6 +62,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Query\Builder|\App\Company whereFounderTime($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Company wherePassEmailVerify($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Company wherePassCertificateVerify($value)
+ * @property string $company_address
+ * @property boolean $complete_create
+ * @method static \Illuminate\Database\Query\Builder|\App\Company whereCompanyAddress($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Company whereCompleteCreate($value)
  */
 class Company extends Authenticatable
 {
