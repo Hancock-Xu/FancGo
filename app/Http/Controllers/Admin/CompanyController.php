@@ -65,6 +65,8 @@ class CompanyController extends Controller
 
     }
 
+//    public function store
+
     public function resendVerifyLinkEmail()
     {
     	$user = \Auth::user();
@@ -118,12 +120,22 @@ class CompanyController extends Controller
 
     }
 
-    public function storeCompany(CompanyStoreRequest $request){
-
-	    $this->store($request);
+    public function storeCompany(CompanyStoreRequest $request)
+    {
 
 	    $user = \Auth::user();
 	    $company = $user->company;
+
+	    if ($company){
+
+		    $input = $request->all();
+		    $company->fill($input)->save();
+
+	    }else{
+
+		    $this->store($request);
+
+	    }
 
 	    return view('Jobs.create',['company'=>$company]);
 
