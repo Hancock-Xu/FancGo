@@ -58,7 +58,6 @@ class VerifyBroker implements verifyEmailContract
 		});
 		
 		return static::VERIFY_EMAIL_SENT;
-
 	}
 	
 	public function verifyEmail($token)

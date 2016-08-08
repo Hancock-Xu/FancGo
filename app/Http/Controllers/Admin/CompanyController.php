@@ -61,7 +61,19 @@ class CompanyController extends Controller
 
 	    $user = \Auth::user();
 	    $company = $user->company;
-	    $this->sendValidateLink($verifyEmail, ['id' => $company->id]);
+	    return $this->sendValidateLink($verifyEmail, ['id' => $company->id]);
+
+    }
+
+    public function resendVerifyLinkEmail()
+    {
+    	$user = \Auth::user();
+	    $company = $user->company;
+    	if ($company){
+    		$this->sendValidateLink($company->company_email, ['id'=>$company->id]);
+	    }else{
+	    	return;
+	    }
     }
 
     /**
@@ -169,7 +181,7 @@ class CompanyController extends Controller
         $input = $request->all();
         $company->fill($input)->save();
 
-        return redirect()->back();
+        return redirect()->home();
     }
 
     /**
@@ -200,7 +212,7 @@ class CompanyController extends Controller
         $company = Company::findOrFail($id);
         $company->delete();
 
-        return redirect()->back();
+	    return redirect('/company/create');
     }
 
 }
