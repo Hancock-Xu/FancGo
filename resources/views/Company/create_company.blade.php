@@ -28,8 +28,7 @@
 				<!-- 上传公司信息 -->
 				<div class="container">
 
-						<form class="form-horizontal" id="company-submit" method="post" action="{{action('Admin\CompanyController@update', ['id'=>$company->id])}}" role="form" enctype="multipart/form-data">
-							<input type="hidden" name="_method" value="PUT">
+						<form class="form-horizontal" id="company-submit" method="post" action="{{action('Admin\CompanyController@storeCompany')}}" role="form" enctype="multipart/form-data">
 
 							<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
