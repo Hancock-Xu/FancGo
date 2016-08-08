@@ -44,6 +44,7 @@ class CreateCompaniesTable extends Migration
 
 	        
 	        $table->boolean('pass_email_verify')->default(false);
+	        $table->boolean('complete_create')->default(false);
 	        $table->boolean('pass_certificate_verify')->default(false);
         });
         
