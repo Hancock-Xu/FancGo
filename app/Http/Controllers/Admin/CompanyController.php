@@ -78,6 +78,35 @@ class CompanyController extends Controller
 	    }
     }
 
+	/**
+	 * @param CompanyStoreRequest $request
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|void
+	 */
+	public function storeCompany(CompanyStoreRequest $request)
+	{
+
+		$user = \Auth::user();
+		$company = $user->company;
+
+		if ($company){
+
+			$input = $request->all();
+			$company->fill($input)->save();
+
+			$company->complete_create = true;
+			$company->save();
+
+			return view('Jobs.create',['company'=>$company]);
+
+		}else{
+
+			$this->store($request);
+
+			return;
+
+		}
+	}
+
     /**
      * Store a newly created resource in storage.
      *
@@ -120,29 +149,7 @@ class CompanyController extends Controller
 
     }
 
-    public function storeCompany(CompanyStoreRequest $request)
-    {
 
-	    $user = \Auth::user();
-	    $company = $user->company;
-
-	    if ($company){
-
-		    $input = $request->all();
-		    $company->fill($input)->save();
-
-		    $company->complete_create = true;
-		    $company->save();
-
-	    }else{
-
-		    $this->store($request);
-
-	    }
-
-	    return view('Jobs.create',['company'=>$company]);
-
-    }
 
     /**
      * Display the specified resource.
