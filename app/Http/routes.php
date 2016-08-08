@@ -43,11 +43,10 @@ Route::group([
 	Route::post('company/storePreCompany', 'CompanyController@storePreCompany');
 	
 	Route::post('company/send_verify_apply', 'CompanyController@sendVerifyRequestEmail');
+	Route::post('company/resend_verify_link','CompanyController@resendVerifyLinkEmail');
 	
 	Route::get('company/verify_email/{token}/{id}', 'CompanyController@getVerifyRequestEmail');
-	
 
-	
 	Route::get('company/delete/{id}','Admin\CompanyController@deleteJob');
 	
 //	Route::resource('apartment','ApartmentController');
