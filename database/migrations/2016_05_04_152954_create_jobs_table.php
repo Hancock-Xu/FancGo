@@ -23,15 +23,15 @@ class CreateJobsTable extends Migration
             $table->text('job_description');
             $table->text('desired_skill_experience');
 
-            $table->enum('education_require', ['Any education','Associate', 'Bachelor', 'Master', 'Dr.'])->index();
-            $table->enum('years_work_experience', ['Intership','Entry Level','Associate','Mid-Senior Level','Director','Executive'])->index();
-            $table->string('salary_lower_limit')->index();
-            $table->string('salary_upper_limit')->index();
-            $table->text('post_welfare')->nullable();
+            $table->enum('education_degree', ['Any education','Associate', 'Bachelor', 'Master', 'Dr.'])->index();
+            $table->enum('position_experience', ['Intership','Entry Level','Associate','Mid-Senior Level','Director','Executive'])->index();
+            $table->string('min_salary')->index();
+            $table->string('max_salary')->index();
+            $table->text('position_benefit')->nullable();
             $table->text('extra_welfare')->nullable();
             $table->enum('job_status_type',['Full-time', 'Part-time', 'Internship'])->index();
             $table->string('job_industry',50)->index();
-            $table->string('job_location',30)->index();
+            $table->string('work_city',30)->index();
 
             $table->string('position_points')->nullable();
 

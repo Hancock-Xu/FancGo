@@ -803,6 +803,7 @@ img {
   background-color: #694c9c;
   color: #f0f6ed;
   margin-right: 3px;
+  margin-left: 10px;
   padding: 3px;
 }
 
@@ -814,7 +815,7 @@ img {
 #benefit-content,
 #skills-content,
 #job-des-content {
-  width: 880px;
+  //width: 880px;
 }
 
 .position-btn,
@@ -1323,6 +1324,10 @@ div.jobThumbnail:nth-child(odd) {
   justify-content: space-between;
 }
 
+.max_salary_input,
+.min_salary_input{
+  position: relative;
+}
 .min-salary, .max-salary {
   width: 140px;
 }
@@ -1350,6 +1355,26 @@ select{
   -moz-appearance: none;
   appearance: none;
 }
+
+.job_label{
+  margin-left: 10px;
+}
+
+.job_description_area,
+.desired_skill_experience_area,
+.position_benefit_input,
+.position_point_input{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  margin-bottom: 20px;
+}
+.joblead_btn{
+  margin: 0 auto;
+  max-width: 440px;
+}
+
 
 //$icon-font-path: 'node_modules/bootstrap-sass/assets/fonts/';
  @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
