@@ -333,17 +333,6 @@
 
 							</div>
 
-
-						{{--<div class="job_industry form-group">--}}
-								{{--<label class="job_label" for="position_industry">Position Industry</label>--}}
-								{{--<i class="glyphicon glyphicon-asterisk required-item"></i>--}}
-								{{--<select name="job_industry" class="form-control job_select" data-style=" btn-success " id="position-industry ">--}}
-									{{--<i class="glyphicon glyphicon-menu-down " ></i>--}}
-									{{--<option>Education</option>--}}
-									{{--<option>Banking</option>--}}
-								{{--</select>--}}
-								{{--<i class="glyphicon glyphicon-menu-down arrow-down "></i>--}}
-							{{--</div>--}}
 							<!-- Employment Type and Expereince -->
 
 
