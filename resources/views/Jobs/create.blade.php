@@ -28,7 +28,7 @@
 
 			<div class="job_property">
 
-				<form class="form-horizontal" id="position-submit" method="post" action="#" role="form">
+				<form class="form-horizontal" id="position-submit" method="post" action="/job" role="form">
 
 					<div class="job_property_part1">
 
@@ -169,7 +169,7 @@
 						<div class="form-group">
 							<label class="job_label" for="position_point" >Position Point</label>
 							<!-- <i class="glyphicon glyphicon-asterisk required-item ";"></i> -->
-							<input type="text" class="form-control" name="position_point" id="position_point" placeholder="No more than 10 words (like the following example)" spellcheck="true">
+							<input type="text" class="form-control" name="position_points" id="position_point" placeholder="No more than 10 words (like the following example)" spellcheck="true">
 						</div>
 						<div class="position-point">
 							<span>
@@ -307,18 +307,18 @@
 
 		</div>
 	</div>
+
 	<script type="text/javascript" src="js/jobleadchina.js"></script>
 
-		@if($errors->any())
-			<ul class="alert alert-danger">
-				@foreach($errors->all() as $error)
-					<div class="container">
-						<li>{{ $error }}</li>
-					</div>
+	@if($errors->any())
+		<ul class="alert alert-danger">
+			@foreach($errors->all() as $error)
+				<div class="container">
+					<li>{{ $error }}</li>
+				</div>
 
-				@endforeach
-			</ul>
-		@endif
+			@endforeach
+		</ul>
+	@endif
 
-	</div>
 @stop
