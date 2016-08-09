@@ -62,6 +62,18 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Job whereExtraWelfare($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Job whereJobIndustry($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Job whereJobLocation($value)
+ * @property string $education_degree
+ * @property string $position_experience
+ * @property string $min_salary
+ * @property string $max_salary
+ * @property string $position_benefit
+ * @property string $work_city
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereEducationDegree($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job wherePositionExperience($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereMinSalary($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereMaxSalary($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job wherePositionBenefit($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereWorkCity($value)
  */
 class Job extends Model
 {
@@ -72,17 +84,17 @@ class Job extends Model
 		'job_title',
 		'job_description',
 		'desired_skill_experience',
-		'salary_lower_limit',
-		'salary_upper_limit',
-		'post_welfare',
+		'min_salary',
+		'max_salary',
+		'position_benefit',
 		'extra_welfare',
 		'job_status_type',
 		'job_industry',
-		'job_location',
+		'work_city',
 		'position_points',
 		'published_at',
-		'education_require',
-		'years_work_experience',
+		'education_degree',
+		'position_experience',
 		'company_id',
 		'resume_email'
 	];
