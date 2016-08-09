@@ -77,6 +77,38 @@ img {
 .navbar-right {
   margin-right: 30px; }
 
+/*图标插入*/
+.arrow-down {
+  font-size: 16px;
+  color: #999;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  font-weight: normal;
+  cursor: default; }
+
+.left-arrow-down {
+  font-size: 16px;
+  color: #999;
+  position: absolute;
+  left: 344px;
+  top: 40px;
+  font-weight: normal;
+  cursor: default; }
+
+.required-item {
+  font-size: 10px;
+  color: #ce1c1c; }
+
+.icon-post-time {
+  color: #999; }
+
+.icon-phone, .icon-enterpriseMail {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  color: #999; }
+
 /*home页面*/
 /*首页搜索框*/
 .search {
@@ -959,6 +991,52 @@ div.jobThumbnail:nth-child(odd) {
 .resend_verify_email {
   margin-top: 30px;
   margin-bottom: 30px; }
+
+.job_property_part1 {
+  display: -webkit-box;
+  display: flex; }
+
+.job_property_part1_left_part {
+  -webkit-box-flex: 1;
+  flex: 1;
+  margin: 20px;
+  padding: 20px; }
+
+.job_property_part1_right_part {
+  -webkit-box-flex: 1;
+  flex: 1;
+  margin: 20px;
+  padding: 20px; }
+
+.choose-salary {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between; }
+
+.min-salary, .max-salary {
+  width: 140px; }
+
+.salary-k {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  color: #999;
+  margin-left: 10px; }
+
+.salary-to {
+  position: relative;
+  top: 9px; }
+
+.job_status_type,
+.job_industry,
+.position_experience,
+.education_degree_select,
+.work_city_select,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
 
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
