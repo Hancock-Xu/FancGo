@@ -1054,6 +1054,21 @@ select {
   margin: 0 auto;
   max-width: 440px; }
 
+.job_industrylist {
+  position: absolute;
+  z-index: 99;
+  text-align: left;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 1px 5px rgba(50, 50, 50, 0.2);
+  border-top: 0;
+  top: 100%;
+  width: 600px;
+  display: none;
+  background: #fff;
+  overflow: auto;
+  border: 1px solid #c4c4c4; }
+
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
