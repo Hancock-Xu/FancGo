@@ -88,15 +88,16 @@
 							<i class="glyphicon glyphicon-asterisk required-item"></i>
 							<div class="job_industry form-group{{ $errors->has('company_industry') ? ' has-error' : '' }}">
 
-									<input type="text" class="industryInput input-large form-control" name="company_industry" id="selectedIndustry" value="" placeholder="Industry" autocomplete="off" readonly>
-
+								<label class="industryinputlabel" for="job_industry">
+									<input type="text" class="industryInput input-large form-control" name="job_industry" id="job_industry" value="" placeholder="Industry" autocomplete="off" readonly>
+								</label>
 									@if ($errors->has('company_industry'))
 										<span class="help-block">
 	                                        <strong>{{ $errors->first('company_industry') }}</strong>
 	                                    </span>
 									@endif
 
-								<div class="job_industrylist">
+								<div class="industrylist">
 
 									<div class="industrylist_row">
 										<strong class="industrylist_row_name">
