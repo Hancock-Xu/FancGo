@@ -1053,6 +1053,20 @@ select {
   margin: 0 auto;
   max-width: 440px; }
 
+.job_company_info {
+  display: -webkit-box;
+  display: flex; }
+
+.job_info {
+  -webkit-box-flex: 2;
+  flex: 2;
+  padding: 20px; }
+
+.company_info {
+  -webkit-box-flex: 1;
+  flex: 1;
+  padding: 20px; }
+
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.

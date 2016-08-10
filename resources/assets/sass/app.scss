@@ -1375,6 +1375,23 @@ select{
   max-width: 440px;
 }
 
+//========job detail======
+
+.job_company_info{
+  display: flex;
+}
+
+.job_info{
+  flex: 2;
+  padding: 20px;
+}
+
+.company_info{
+  flex: 1;
+  padding: 20px;
+}
+
+
 //$icon-font-path: 'node_modules/bootstrap-sass/assets/fonts/';
  @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
