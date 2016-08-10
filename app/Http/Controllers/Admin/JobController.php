@@ -138,8 +138,9 @@ class JobController extends Controller
 			->select('jobs.*', 'companies.user_id', 'companies.company_name','companies.business_license_name','companies.logo_url','companies.website','companies.company_description','companies.scale','companies.company_location','companies.company_industry','companies.company_email','companies.company_phone_number')
 			->first();
 
+		$user = \Auth::getUser();
 		if ($job) {
-			return view('Jobs.detail', compact('job'));
+			return view('Jobs.detail', ['job'=>$job, 'user'=>$user]);
 		}else{
 			return view('not_found');
 		}
