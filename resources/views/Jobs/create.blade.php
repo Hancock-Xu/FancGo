@@ -29,7 +29,7 @@
 			<div class="job_property">
 
 				<form class="form-horizontal" id="position-submit" method="post" action="/job" role="form">
-
+					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<div class="job_property_part1">
 
 						<div class="job_property_part1_left_part">
@@ -42,11 +42,11 @@
 							<div class="job_status_type form-group">
 								<label class="job_label" for="employment-type">Employment Type</label>
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
-								<select name="job_status_type " class="form-control job_select" id="employment-type ">
+								<select name="job_status_type" class="form-control job_select" id="employment-type ">
 									<option disabled selected>Choose</option>
-									<option value="Full-time ">Full-time</option>
-									<option value="Part-time ">Part-time</option>
-									<option value="Intership ">Intership</option>
+									<option value=0>Full-time</option>
+									<option value=1>Part-time</option>
+									<option value=2>Intership</option>
 								</select>
 								{{--<span class="glyphicon glyphicon-menu-down left-arrow-down"></span>--}}
 							</div>
@@ -55,19 +55,15 @@
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<div class="choose-salary ">
 									<div class="min_salary_input">
-										{{--<label class="sr-only" for="min-salary " >Salary--}}
-											<input type="text" name="min_salary " class="min-salary form-control " placeholder="Min ">
+											<input type="text" name="min_salary" class="min-salary form-control" placeholder="Min">
 											<span class="salary-k ">K</span>
-										{{--</label>--}}
 									</div>
 									<div>
 										<p class="salary-to">to</p>
 									</div>
 									<div class="max_salary_input">
-										{{--<label class="sr-only " for="min-salary " >Salary--}}
-											<input type="text" name="max_salary " class="max-salary form-control" placeholder="Max">
+											<input type="text" name="max_salary" class="max-salary form-control" placeholder="Max">
 											<span class="salary-k">K</span>
-										{{--</label>--}}
 									</div>
 								</div>
 							</div>
@@ -342,12 +338,12 @@
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<select name="position_experience" class="form-control job_select" id="experience ">
 									<option disabled selected>Choose</option>
-									<option value="Executive ">Executive</option>
-									<option value="Director ">Director</option>
-									<option value="Mid-Senior Level ">Mid-Senior Level</option>
-									<option value="Associate ">Associate</option>
-									<option value="Entry Level ">Entry Level</option>
-									<option value="Intership ">Intership</option>
+									<option value=5>Executive</option>
+									<option value=4>Director</option>
+									<option value=3>Mid-Senior Level</option>
+									<option value=2>Associate</option>
+									<option value=1>Entry Level</option>
+									<option value=0>Intership</option>
 								</select>
 								{{--<i class="glyphicon glyphicon-menu-down arrow-down "></i>--}}
 							</div>
@@ -356,13 +352,13 @@
 							<div class="education_degree_select form-group">
 								<label class="job_label" for="education_degree">Education Degree</label>
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
-								<select name="education_degree " class="form-control job_select" id="education_degree">
+								<select name="education_degree" class="form-control job_select" id="education_degree">
 									<option disabled selected>Choose</option>
-									<option value="Any education ">Any education</option>
-									<option value="Associate Degree ">Associate Degree</option>
-									<option value="Bachelor Degree ">Bachelor Degree</option>
-									<option value="Master Degree ">Master Degree</option>
-									<option value="Dr. ">Dr.</option>
+									<option value=0>Any education</option>
+									<option value=1>Associate Degree</option>
+									<option value=2>Bachelor Degree</option>
+									<option value=3>Master Degree</option>
+									<option value=4>Dr.</option>
 								</select>
 								{{--<i class="glyphicon glyphicon-menu-down arrow-down "></i>--}}
 							</div>
@@ -413,7 +409,7 @@
 						</div>
 						<div class="position-point">
 							<span>
-					        “Must native English speaker, and fluent in Chinese"
+					        "Must native English speaker, and fluent in Chinese"
 					      </span>
 							<span>
 				            "Experience of France market"
@@ -530,6 +526,11 @@
 					--}}
 					<!--choose benefit-->
 					<!-- Verify -->
+
+					<div>
+						<input type="hidden" name="company_id" value="{{$company->id}}">
+					</div>
+
 					<div class="joblead_btn">
 						<button type="submit" class="btn position-btn" id="position-btn">Publish Job
 						</button>
