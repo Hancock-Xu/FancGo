@@ -131,7 +131,13 @@ class JobController extends Controller
 	 */
 	public function show($id)
 	{
-		$job = Job::whereId($id)->firstOrFail();
+
+		$job = \DB::table('jobs')
+			->where('jobs.id','=', $id)
+			->join('companies', 'jobs.company_id', '=', 'companies.id')
+			->select('jobs.*', 'companies.user_id', 'companies.company_name','companies.business_license_name','companies.logo_url','companies.website','companies.company_description','companies.scale','companies.company_location','companies.company_industry','companies.company_email','companies.company_phone_number')
+			->first();
+
 		if ($job) {
 			return view('Jobs.detail', compact('job'));
 		}else{
