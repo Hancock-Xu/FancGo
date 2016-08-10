@@ -40,7 +40,7 @@ class CreateCompaniesTable extends Migration
             $table->string('company_location', 30)->nullable()->default(null)->index();
 	        $table->string('company_address', 200)->nullable()->default(null)->index();
             $table->string('company_industry', 50)->nullable()->default(null)->index();
-	        $table->time('founder_time')->nullable()->default(null);
+	        $table->string('founder_time')->nullable()->default(null);
 
 	        
 	        $table->boolean('pass_email_verify')->default(false);

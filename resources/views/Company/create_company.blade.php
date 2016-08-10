@@ -381,11 +381,11 @@
 
 													<select name="scale" class="form-control" id="company_scale">
 														<option disabled selected>choose</option>
-														<option>Less than 15</option>
-														<option>15-50</option>
-														<option>50-150</option>
-														<option>500-2000</option>
-														<option>More than 2000</option>
+														<option value=0>Less than 15</option>
+														<option value=1>15-50</option>
+														<option value=2>50-150</option>
+														<option value=3>500-2000</option>
+														<option value=4>More than 2000</option>
 													</select>
 
 													@if ($errors->has('scale'))
@@ -503,7 +503,7 @@
 												</label>
 
 												<div class="col-md-6">
-													<input autofocus id="company_address" type="text" class="form-control" name="company_address" value="{{ old('company_address') }}">
+													<input id="company_address" type="text" class="form-control" name="company_address" value="{{ old('company_address') }}">
 
 													@if ($errors->has('company_address'))
 														<span class="help-block">
@@ -514,17 +514,17 @@
 
 											</div>
 
-											<div class="form-group{{ $errors->has('company_website') ? ' has-error' : '' }}">
+											<div class="form-group{{ $errors->has('website') ? ' has-error' : '' }}">
 												<label for="company_website" class="col-md-4 control-label">Company Website
 													<i class="glyphicon glyphicon-asterisk required-item"></i>
 												</label>
 
 												<div class="col-md-6">
-													<input id="company_website" type="url" class="form-control" name="company_website" value="{{ old('company_website') }}">
+													<input id="company_website" type="url" class="form-control" name="website" value="{{ old('website') }}">
 
-													@if ($errors->has('company_website'))
+													@if ($errors->has('website'))
 														<span class="help-block">
-					                                        <strong>{{ $errors->first('company_website') }}</strong>
+					                                        <strong>{{ $errors->first('website') }}</strong>
 					                                    </span>
 													@endif
 												</div>
