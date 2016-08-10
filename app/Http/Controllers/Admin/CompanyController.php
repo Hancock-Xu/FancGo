@@ -92,7 +92,7 @@ class CompanyController extends Controller
 
 			$input = $request->all();
 			$company->fill($input)->save();
-
+			$this->correctImgPath($request, $company);
 			$company->complete_create = true;
 			$company->save();
 
@@ -115,12 +115,21 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        /**
-         * 处理上传的公司logo,营业执照图片等
-         */
+
 
 	    $company = Company::create($request->all());
 
+		$this->correctImgPath($request, $company);
+
+	    $company->save();
+
+    }
+
+    public function correctImgPath(Request $request, Company $company)
+    {
+	    /**
+	     * 处理上传的公司logo,营业执照图片等
+	     */
 	    $company_logo_avatar = $request->file('logo_url');
 	    $company_license_img = $request->file('certificate_url');
 
@@ -144,8 +153,6 @@ class CompanyController extends Controller
 
 		    $company->certificate_url = '/uploads'.$save_path;
 	    }
-
-	    $company->save();
 
     }
 
