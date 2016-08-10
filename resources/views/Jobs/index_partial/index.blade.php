@@ -24,13 +24,13 @@
 						</div>
 						<div class="jobThumbnailSalaryRange">
 							<h3 class="salaryRange">
-								{{$job->salary_lower_limit}}K/M - {{$job->salary_upper_limit}}K/M
+								{{$job->min_salary}}K/M - {{$job->max_salary}}K/M
 							</h3>
 						</div>
 						<div class="jobThumbnailPositionRequire">
-							<span>{{$job->education_require}}</span>
+							<span>{{$job->education_degree}}</span>
 							<span class="seperate-line"></span>
-							<span>Experience: {{$job->years_work_experience}}</span>
+							<span>Experience: {{$job->position_experience}}</span>
 							<span class="seperate-line"></span>
 							<span>{{$job->job_status_type}}</span>
 						</div>
@@ -60,7 +60,7 @@
 						</div>
 						<div class="timestamp">
 							<i class="glyphicon glyphicon-time post-time"></i>
-							<span class="post-time">post time: {{$job->published_at}}</span>
+							<span class="post-time">post time: {{$job->updated_at}}</span>
 						</div>
 					</div>
 				</div>

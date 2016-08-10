@@ -14,7 +14,7 @@ class CreateJobsTable extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+	        $table->timestamps();
 
             $table->integer('company_id')->unsigned()->index();
             $table->string('resume_email',50);
