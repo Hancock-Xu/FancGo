@@ -68,7 +68,7 @@
 											<h1 class="company_business_license_name">{{$company->business_license_name}}</h1>
 
 											<div class="form-group{{ $errors->has('company_name') ? ' has-error' : '' }}">
-												<label for="short-name" class="col-md-4 control-label">Company Name
+												<label for="short-name" class="col-md-4 control-label">Company Public Name
 													<i class="glyphicon glyphicon-asterisk required-item"></i>
 												</label>
 
@@ -461,13 +461,29 @@
 												<div class="col-md-6">
 
 													<select class="cityselect form-control" name="company_location" id="company_location">
-														<option selected disabled>choose</option>
-														<option value="Shen Zhen">Shen Zhen</option>
-														<option value="Shang Hai">Shang Hai</option>
-														<option value="Guang Zhou">Guang Zhou</option>
-														<option value="Bei Jing">Bei Jing</option>
-														<option value="Hong Kong">Hong Kong</option>
+														<option disabled selected>Choose</option>
+														<option value="Shenzhen">Shenzhen</option>
+														<option value="Shanghai">Shanghai</option>
+														<option value="Guangzhou">Guangzhou</option>
+														<option value="Beijing">Beijing</option>
+														<option value="Chengdu">Chengdu</option>
+														<option value="Hangzhou">Hangzhou</option>
+														<option value="Nanjing">Nanjing</option>
+														<option value="Xi'an">Xi'an</option>
+														<option value="Haikou">Haikou</option>
+														<option value="Tianjin">Tianjin</option>
+														<option value="Wuhan">Wuhan</option>
+														<option value="Chongqing">Chongqing</option>
+														<option value="Kunming">Kunming</option>
+														<option value="Shenyang">Shenyang</option>
+														<option value="Dongguan">Dongguan</option>
+														<option value="Ningbo">Ningbo</option>
+														<option value="Zhuhai">Zhuhai</option>
+														<option value="Dalian">Dalian</option>
+														<option value="Qingdao">Qingdao</option>
+														<option value="Hongkong">Hongkong</option>
 														<option value="Macao">Macao</option>
+														<option value="Taiwan">Taiwan</option>
 														<option value="Others">Others</option>
 														<option value="">All</option>
 													</select>
