@@ -368,28 +368,29 @@
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<select name="work_city" class="form-control job_select" id="work-city ">
 									<option disabled selected>Choose</option>
-									<option value="1 ">Hongkong</option>
-									<option value="2 ">Shenzhen</option>
-									<option value="3 ">Beijing</option>
-									<option value="4 ">Shanghai</option>
-									<option value="5 ">Guangzhou</option>
-									<option value="6 ">Taiwan</option>
-									<option value="7 ">Chengdu</option>
-									<option value="8 ">Hangzhou</option>
-									<option value="9 ">Nanjing</option>
-									<option value="10 ">Xi'an</option>
-									<option value="11 ">Haikou</option>
-									<option value="12 ">Tianjin</option>
-									<option value="13 ">Wuhan</option>
-									<option value="14 ">Chongqing</option>
-									<option value="15 ">Kunming</option>
-									<option value="16 ">Shenyang</option>
-									<option value="17 ">Dongguan</option>
-									<option value="18 ">Ningbo</option>
-									<option value="19 ">Zhuhai</option>
-									<option value="20 ">Dalian</option>
-									<option value="21 ">Qingdao</option>
-									<option value="22 ">Others</option>
+									<option value="Shenzhen">Shenzhen</option>
+									<option value="Shanghai">Shanghai</option>
+									<option value="Guangzhou">Guangzhou</option>
+									<option value="Beijing">Beijing</option>
+									<option value="Chengdu">Chengdu</option>
+									<option value="Hangzhou">Hangzhou</option>
+									<option value="Nanjing">Nanjing</option>
+									<option value="Xi'an">Xi'an</option>
+									<option value="Haikou">Haikou</option>
+									<option value="Tianjin">Tianjin</option>
+									<option value="Wuhan">Wuhan</option>
+									<option value="Chongqing">Chongqing</option>
+									<option value="Kunming">Kunming</option>
+									<option value="Shenyang">Shenyang</option>
+									<option value="Dongguan">Dongguan</option>
+									<option value="Ningbo">Ningbo</option>
+									<option value="Zhuhai">Zhuhai</option>
+									<option value="Dalian">Dalian</option>
+									<option value="Qingdao">Qingdao</option>
+									<option value="Hongkong">Hongkong</option>
+									<option value="Macao">Macao</option>
+									<option value="Taiwan">Taiwan</option>
+									<option value="Others">Others</option>
 								</select>
 								{{--<i class="glyphicon glyphicon-menu-down arrow-down "></i>--}}
 							</div>
