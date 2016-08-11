@@ -380,6 +380,8 @@ img {
 
 .detail-position-item li {
   margin: 20px;
+  //margin-top: 20px;
+  //margin-bottom: 20px;
 }
 
 .detail-position-item-point span {
@@ -1382,7 +1384,8 @@ select{
 }
 
 .job_info{
-  flex: 2;
+  background-color: white;
+  flex: 3;
   padding: 20px;
   margin: 20px;
 }
@@ -1391,6 +1394,7 @@ select{
   flex: 1;
   padding: 20px;
   margin: 20px;
+  background-color: white;
 }
 
 //========job apply bar=======
@@ -1428,13 +1432,14 @@ select{
   display: inline-block;
   margin: 10px;
   font-size: 25px;
+  font-weight: normal;
 }
 .basic_info_container{
   position: relative;
 }
 .basic_info_content{
   display: inline-block;
-  width: 250px;
+  width: 200px;
   margin-left: 100px;
 }
 .basic_info_item{
@@ -1445,6 +1450,7 @@ select{
 }
 .basic_info_label{
   width: 100%;
+  font-weight: normal;
 }
 //$icon-font-path: 'node_modules/bootstrap-sass/assets/fonts/';
  @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";

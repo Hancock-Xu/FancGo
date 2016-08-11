@@ -1058,8 +1058,9 @@ select {
   display: flex; }
 
 .job_info {
-  -webkit-box-flex: 2;
-  flex: 2;
+  background-color: white;
+  -webkit-box-flex: 3;
+  flex: 3;
   padding: 20px;
   margin: 20px; }
 
@@ -1067,7 +1068,8 @@ select {
   -webkit-box-flex: 1;
   flex: 1;
   padding: 20px;
-  margin: 20px; }
+  margin: 20px;
+  background-color: white; }
 
 .job_apply_bar_url {
   display: -webkit-box;
@@ -1099,14 +1101,15 @@ select {
 .company_info_name {
   display: inline-block;
   margin: 10px;
-  font-size: 25px; }
+  font-size: 25px;
+  font-weight: normal; }
 
 .basic_info_container {
   position: relative; }
 
 .basic_info_content {
   display: inline-block;
-  width: 250px;
+  width: 200px;
   margin-left: 100px; }
 
 .basic_info_item {
@@ -1116,7 +1119,8 @@ select {
   width: 100px; }
 
 .basic_info_label {
-  width: 100%; }
+  width: 100%;
+  font-weight: normal; }
 
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)

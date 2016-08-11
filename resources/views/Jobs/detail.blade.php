@@ -42,7 +42,7 @@
 					{{--<label for="">Position Info</label>--}}
 					{{--<button type="button" class="btn btn-primary" id="button-apply">Apply</button>--}}
 					<ul class="nav nav-pills job_apply_bar_url" id="fixed">
-						<li role="presentation " class="active h3 job_apply_bar_title"><a href="# " role="tab " >Position Info</a></li>
+						<li role="presentation " class="active h3 job_apply_bar_title"><a href="# " role="tab" >Position Info</a></li>
 						<li class="job_apply_placeholder"></li>
 						{{--<li role="presentation " class="h3 "><a href="# " id="newest-tab " role="tab " >Company Info</a></li>--}}
 						<button type="button " class="btn btn-primary job_apply_btn" id="button-apply ">Apply</button>
@@ -97,7 +97,7 @@
 
 								<div class="basic_info_content">
 
-									<label class="basic_info_company_industry">{{$job->company_industry}}</label>
+									<label class="basic_info_label">{{$job->company_industry}}</label>
 
 								</div>
 							</div>
