@@ -55,6 +55,7 @@
 							<article>
 								{{$job->job_description}}
 							</article>
+							<hr/>
 						</div>
 					</div>
 					<div class="job_desired_skill_and_experience">
@@ -63,6 +64,7 @@
 							<article>
 								{{$job->desired_skill_experience}}
 							</article>
+							<hr/>
 						</div>
 					</div>
 					<div class="job_benefits">
@@ -70,6 +72,7 @@
 							<h4 class="color-line ">Benefits</h4>
 							<p>{{$job->position_benefit}}</p>
 						</div>
+						<hr/>
 					</div>
 				</div>
 			</div>
@@ -86,24 +89,78 @@
 				<div class="company_basic_info">
 					<ul class="company-info-content ">
 						<li>
-							<span>Industry</span>
-							{{$job->company_industry}}
+							<div class="basic_info_container">
+								<div class="basic_info_item">
+									<span>Industry</span>
+									{{--<label for="">Industry</label>--}}
+								</div>
+
+								<div class="basic_info_content">
+
+									<label class="basic_info_company_industry">{{$job->company_industry}}</label>
+
+								</div>
+							</div>
 						</li>
 						<li>
-							<span>Founded</span>
-							{{$job->founder_time}}
+							<div class="basic_info_container">
+								<div class="basic_info_item">
+									<span>Founded</span>
+									{{--<label for="">Industry</label>--}}
+								</div>
+
+								<div class="basic_info_content">
+
+									<label class="basic_info_label">{{$job->founder_time}}</label>
+
+								</div>
+							</div>
+
+
 						</li>
 						<li>
-							<span>Size</span>
-							{{$job->scale}}
+							<div class="basic_info_container">
+								<div class="basic_info_item">
+									<span>Size</span>
+									{{--<label for="">Industry</label>--}}
+								</div>
+
+								<div class="basic_info_content">
+
+									<label class="basic_info_label">{{$job->scale}}</label>
+
+								</div>
+							</div>
 						</li>
 						<li>
-							<span>Website</span>
-							<a href="#" target="_blank ">{{$job->website}}</a>
+							<div class="basic_info_container">
+								<div class="basic_info_item">
+									<span>Website</span>
+									{{--<label for="">Industry</label>--}}
+								</div>
+
+								<div class="basic_info_content">
+
+									<label class="basic_info_label"><a href="#" target="_blank ">{{$job->website}}</a></label>
+
+								</div>
+							</div>
 						</li>
 						<li>
-							<span >Address</span>
-							{{$job->company_address}}
+							<div class="basic_info_container">
+								<div class="basic_info_item">
+									<span >Address</span>
+									{{--<label for="">Industry</label>--}}
+								</div>
+
+								<div class="basic_info_content">
+
+									<label class="basic_info_label">{{$job->company_address}}</label>
+
+								</div>
+							</div>
+
+
 						</li>
 					</ul>
 				</div>

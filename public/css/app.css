@@ -1097,8 +1097,26 @@ select {
   margin: 0; }
 
 .company_info_name {
+  display: inline-block;
   margin: 10px;
-  font-size: 20px; }
+  font-size: 25px; }
+
+.basic_info_container {
+  position: relative; }
+
+.basic_info_content {
+  display: inline-block;
+  width: 250px;
+  margin-left: 100px; }
+
+.basic_info_item {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 100px; }
+
+.basic_info_label {
+  width: 100%; }
 
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
