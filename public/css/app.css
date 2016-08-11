@@ -1060,12 +1060,45 @@ select {
 .job_info {
   -webkit-box-flex: 2;
   flex: 2;
-  padding: 20px; }
+  padding: 20px;
+  margin: 20px; }
 
 .company_info {
   -webkit-box-flex: 1;
   flex: 1;
-  padding: 20px; }
+  padding: 20px;
+  margin: 20px; }
+
+.job_apply_bar_url {
+  display: -webkit-box;
+  display: flex; }
+
+.job_apply_bar_title {
+  -webkit-box-flex: initial;
+  flex: initial;
+  width: 200px;
+  min-width: 100px;
+  margin: 0;
+  background-color: #694c9c;
+  float: left; }
+
+.job_apply_btn {
+  float: right;
+  width: 200px;
+  min-width: 100px;
+  -webkit-box-flex: initial;
+  flex: initial;
+  margin: 0; }
+
+.job_apply_placeholder {
+  -webkit-box-flex: 1;
+  flex: 1;
+  height: 10px;
+  margin: 0; }
+
+.company_info_name {
+  margin: 10px;
+  font-size: 20px; }
 
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)

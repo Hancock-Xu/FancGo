@@ -21,17 +21,10 @@ Route::get('/auth/logout','Auth\AuthController@getLogout');
 Route::get('/auth/register','Auth\AuthController@getRegister');
 Route::post('/auth/register','Auth\AuthController@postRegister');
 
-//Route::post('Admin\upload', 'Admin\UploadController@upload');
-//Route::delete('Admin\delete', 'Admin\UploadController@delete');
-
 Route::get('password/email', 'Auth\PasswordController@getEmail');
 Route::post('password/email', 'Auth\PasswordController@postEmail');
 Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
-
-//Route::get('/job', 'Admin\JobController@index');
-
-//Route::get('/job/{id}', 'Admin\JobController@show');
 
 Route::resource('job','Admin\JobController');
 Route::resource('company','Admin\CompanyController');
@@ -61,8 +54,6 @@ Route::group([
 	Route::get('company/verify_email/{token}/{id}', 'CompanyController@getVerifyRequestEmail');
 
 	Route::get('company/delete/{id}','Admin\CompanyController@deleteJob');
-	
-//	Route::resource('apartment','ApartmentController');
 
 	Route::get('/profile/edit', 'ProfileController@edit');
 	Route::post('/profile/update', 'ProfileController@update');

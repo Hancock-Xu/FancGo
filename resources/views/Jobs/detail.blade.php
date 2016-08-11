@@ -15,7 +15,7 @@
 						<li><h2>{{$job->job_title}}</h2></li>
 						<li><h4>{{$job->company_name}}</h4></li>
 						<li class="detail-position-item-point ">
-							<span>{{$job->min_salary}} K - {{$job->max_salary}} k</span>
+							<span>{{$job->min_salary}} K - {{$job->max_salary}} K</span>
 							<span>{{$job->work_city}}</span>
 						</li>
 						<li>
@@ -25,11 +25,11 @@
 							<span class="seperate-line "></span>
 							<span>{{$job->job_status_type}}</span>
 						</li>
-						<li class="benefit ">
-							<span>Working Visa</span>
-							<span>Working Visa</span>
-							<span>Work Visddd</span>
-						</li>
+						{{--<li class="benefit ">--}}
+							{{--<span>Working Visa</span>--}}
+							{{--<span>Working Visa</span>--}}
+							{{--<span>Work Visddd</span>--}}
+						{{--</li>--}}
 						<li>
 							<i class="glyphicon glyphicon-time icon-post-time "></i>
 							<span class="post-time ">{{$job->updated_at}}</span>
@@ -38,10 +38,14 @@
 
 				</div>
 				<div class="job_apply_bar">
-					<ul class="nav nav-pills " id="fixed ">
-						<li role="presentation " class="active h3 "><a href="# " role="tab " >Position Info</a></li>
-						<li role="presentation " class="h3 "><a href="# " id="newest-tab " role="tab " >Company Info</a></li>
-						<button type="button " class="btn " id="button-apply ">Apply</button>
+
+					{{--<label for="">Position Info</label>--}}
+					{{--<button type="button" class="btn btn-primary" id="button-apply">Apply</button>--}}
+					<ul class="nav nav-pills job_apply_bar_url" id="fixed">
+						<li role="presentation " class="active h3 job_apply_bar_title"><a href="# " role="tab " >Position Info</a></li>
+						<li class="job_apply_placeholder"></li>
+						{{--<li role="presentation " class="h3 "><a href="# " id="newest-tab " role="tab " >Company Info</a></li>--}}
+						<button type="button " class="btn btn-primary job_apply_btn" id="button-apply ">Apply</button>
 					</ul>
 				</div>
 				<div class="job_description_and_other">
@@ -72,18 +76,18 @@
 
 			<div class="company_info">
 				<div class="company_logo">
-					<div class="company-info-title ">
-						<img src="# " alt="JobLeadChina " class="company-info-logo ">
+					<div class="jobThumbnailCompanyLogo">
+						<figure>
+							<img class="jobThumbnailCompanyLogoImg" src="{{$job->logo_url}}" alt="{{$job->company_name}}">
+							<label class="company_info_name">{{$job->company_name}}</label>
+						</figure>
 					</div>
-				</div>
-				<div class="company_name">
-					<h3>{{$job->company_name}}</h3>
 				</div>
 				<div class="company_basic_info">
 					<ul class="company-info-content ">
 						<li>
 							<span>Industry</span>
-							{{$job->job_industry}}
+							{{$job->company_industry}}
 						</li>
 						<li>
 							<span>Founded</span>
@@ -112,10 +116,11 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 
 		<button class="btn btn-primary" onclick="history.go(-1)">
-			« Back
+			«  Back
 		</button>
 
 	</div>

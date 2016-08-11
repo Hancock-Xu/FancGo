@@ -1384,13 +1384,50 @@ select{
 .job_info{
   flex: 2;
   padding: 20px;
+  margin: 20px;
 }
 
 .company_info{
   flex: 1;
   padding: 20px;
+  margin: 20px;
 }
 
+//========job apply bar=======
+
+.job_apply_bar_url{
+  display: flex;
+}
+
+.job_apply_bar_title{
+  flex: initial;
+  width: 200px;
+  min-width: 100px;
+  margin: 0;
+  background-color: #694c9c;
+  float: left;
+  //flex: 1;
+}
+
+.job_apply_btn{
+  float: right;
+  width: 200px;
+  min-width: 100px;
+  flex: initial;
+  margin: 0;
+  //flex: 1;
+}
+
+.job_apply_placeholder{
+  flex: 1;
+  height: 10px;
+  margin: 0;
+}
+
+.company_info_name{
+  margin: 10px;
+  font-size: 20px;
+}
 
 //$icon-font-path: 'node_modules/bootstrap-sass/assets/fonts/';
  @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
