@@ -85,7 +85,9 @@ class Company extends Authenticatable
 		'company_industry',
 		'company_email',
 		'company_phone_number',
-		'published_at'
+		'published_at',
+		'founder_time',
+		'company_address'
 	];
 
 	public function jobs()
