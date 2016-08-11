@@ -16,7 +16,9 @@ class BasicSiteInfoController extends Controller
      */
     public function index()
     {
-        return view('site.welcome');
+
+    	return redirect('/job');
+//        return view('site.welcome');
     }
 
     /**

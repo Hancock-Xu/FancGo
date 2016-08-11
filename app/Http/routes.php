@@ -29,15 +29,28 @@ Route::post('password/email', 'Auth\PasswordController@postEmail');
 Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
+//Route::get('/job', 'Admin\JobController@index');
+
+//Route::get('/job/{id}', 'Admin\JobController@show');
+
+Route::resource('job','Admin\JobController');
+Route::resource('company','Admin\CompanyController');
+
 Route::group([
 	'namespace'=>'Admin',
 	'middleware'=>'auth'], function(){
-	
-	Route::resource('job','JobController');
-	
-	Route::resource('company','CompanyController');
 
-//	Route::post('company/update/{id}', 'CompanyController@update');
+	Route::get('/job/create', 'JobController@create');
+	Route::post('/job', 'JobController@store');
+	Route::get('/job/{id}/edit', 'JobController@edit');
+	Route::put('/job/{id}', 'JobController@update');
+	Route::delete('/job/{id}', 'JobController@destroy');
+
+	Route::get('/company/create', 'CompanyController@create');
+	Route::post('/company', 'CompanyController@store');
+	Route::get('/company/{id}/edit', 'CompanyController@edit');
+	Route::put('/company/{id}', 'CompanyController@update');
+	Route::delete('/company/{id}', 'CompanyController@destroy');
 
 	Route::post('company/storeCompany', 'CompanyController@storeCompany');
 	Route::post('company/storePreCompany', 'CompanyController@storePreCompany');
