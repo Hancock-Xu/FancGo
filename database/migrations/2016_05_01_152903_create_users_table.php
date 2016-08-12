@@ -16,8 +16,8 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->timestamps();
 
-	        $table->string('first_name')->nullable()->default(null);
-	        $table->string('last_name')->nullable()->default(null);
+	        $table->string('first_name', 50);
+	        $table->string('last_name', 50);
 	        $table->enum('sex',[1, 2, 0])->nullable()->default(null);
 	        $table->timestamp('date_of_birth')->nullable()->default(null);
 	        $table->string('nationality')->nullable()->default(null);
@@ -37,7 +37,6 @@ class CreateUsersTable extends Migration
 
 
             $table->string('openid')->nullable()->default(null);
-            $table->string('name', 25)->nullable()->default(null);
 
             $table->string('city',50)->nullable()->default(null);
             $table->string('country',30)->nullable()->default(null);
