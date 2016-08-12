@@ -21,11 +21,6 @@ Route::get('/auth/logout','Auth\AuthController@getLogout');
 Route::get('/auth/register','Auth\AuthController@getRegister');
 Route::post('/auth/register','Auth\AuthController@postRegister');
 
-Route::get('password/email', 'Auth\PasswordController@getEmail');
-Route::post('password/email', 'Auth\PasswordController@postEmail');
-Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
-Route::post('password/reset', 'Auth\PasswordController@postReset');
-
 Route::resource('job','Admin\JobController');
 Route::resource('company','Admin\CompanyController');
 
@@ -68,3 +63,5 @@ Route::group([
 
 
 Route::auth();
+
+//Route::get('/home', 'HomeController@index');

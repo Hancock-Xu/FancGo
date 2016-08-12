@@ -15,7 +15,6 @@
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
-                                {{--<i class="glyphicon glyphicon-envelope icon-email"></i>--}}
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -30,7 +29,6 @@
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password">
-                                {{--<i class="glyphicon glyphicon-lock icon-password"></i>--}}
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -52,7 +50,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn signin-btn btn-primary">
+                                <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-sign-in"></i> Login
                                 </button>
 

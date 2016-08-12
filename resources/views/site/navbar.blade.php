@@ -63,7 +63,7 @@
 										{{--<a href="{{action('Admin\ProfileController@edit')}}"></a>--}}
 									</li>
 									<li>
-{{--										<a href="{{ action('Auth\PasswordController@getReset') }}">Reset Password</a>--}}
+										<a href="{{ action('Auth\PasswordController@getEmail') }}">Reset Password</a>
 									</li>
 									<li>
 										<a href="{{ action('Admin\ProfileController@edit') }}">Edit Resume/Profile</a>
