@@ -47,9 +47,21 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
 	protected $fillable = [
-		'name',
+		'first_name',
+		'last_name',
 		'email',
 		'password',
+
+		'sex',
+		'date_of_birth',
+		'nationality',
+		'native_language',
+		'chinese_level',
+		'phone_number',
+		'current_residence',
+		'finish_basic_info',
+		'passportNumber',
+		'resume_url',
 		];
 	
 	protected $hidden = [
