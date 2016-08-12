@@ -40,7 +40,7 @@ class JobController extends Controller
 
 			foreach ($parameters as $key => $value)
 			{
-				if ($key == 'job_location' && $value != null){
+				if ($key == 'work_city' && $value != null){
 					$jobs = $jobs->where($key, '=', $value);
 				}elseif ($key == 'job_status_type' && $value != null){
 					$jobs = $jobs->where($key, '=', $value);

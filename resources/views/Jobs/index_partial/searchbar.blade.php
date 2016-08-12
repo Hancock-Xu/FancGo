@@ -4,7 +4,7 @@
 
 			<div class="searchbarCitySelect">
 				<label class="industryinputlabel" for="">
-					<select class="cityselect" name="job_location">
+					<select class="cityselect" name="work_city">
 						<option selected disabled>City</option>
 						<option value="Shenzhen">Shenzhen</option>
 						<option value="Shanghai">Shanghai</option>
