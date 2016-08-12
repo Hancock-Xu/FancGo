@@ -29,6 +29,7 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 Route::resource('job','Admin\JobController');
 Route::resource('company','Admin\CompanyController');
 
+
 Route::group([
 	'namespace'=>'Admin',
 	'middleware'=>'auth'], function(){
@@ -55,11 +56,12 @@ Route::group([
 
 	Route::get('company/delete/{id}','Admin\CompanyController@deleteJob');
 
-	Route::get('/profile/edit', 'ProfileController@edit');
-	Route::post('/profile/update', 'ProfileController@update');
-	Route::get('/profile/updated','ProfileController@updateSucceed');
-	Route::get('/profile/company', 'ProfileController@company');
-	Route::post('/profile/company/delete', 'ProfileController@deleteCompany');
+
+	Route::get('profile/edit', 'ProfileController@edit');
+//	Route::post('/profile/update', 'ProfileController@update');
+//	Route::get('/profile/updated','ProfileController@updateSucceed');
+//	Route::get('/profile/company', 'ProfileController@company');
+//	Route::post('/profile/company/delete', 'ProfileController@deleteCompany');
 
 
 });

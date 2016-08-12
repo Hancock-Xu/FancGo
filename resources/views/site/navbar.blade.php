@@ -60,6 +60,9 @@
 										<a href="{{ action('Auth\AuthController@getLogout') }}">Logout</a>
 									</li>
 									<li>
+										{{--<a href="{{action('Admin\ProfileController@edit')}}"></a>--}}
+									</li>
+									<li>
 {{--										<a href="{{ action('Auth\PasswordController@getReset') }}">Reset Password</a>--}}
 									</li>
 									<li>
