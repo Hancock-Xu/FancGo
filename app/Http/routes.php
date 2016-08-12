@@ -58,10 +58,10 @@ Route::group([
 
 
 	Route::get('profile/edit', 'ProfileController@edit');
-//	Route::post('/profile/update', 'ProfileController@update');
-//	Route::get('/profile/updated','ProfileController@updateSucceed');
-//	Route::get('/profile/company', 'ProfileController@company');
-//	Route::post('/profile/company/delete', 'ProfileController@deleteCompany');
+	Route::post('/profile/update', 'ProfileController@update');
+	Route::get('/profile/updated','ProfileController@updateSucceed');
+	Route::get('/profile/company', 'ProfileController@company');
+	Route::post('/profile/company/delete', 'ProfileController@deleteCompany');
 
 
 });

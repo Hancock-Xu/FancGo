@@ -1,11 +1,11 @@
 @extends('site.layout')
 
-{{--action="{{action('Admin\ProfileController@edit')}}"--}}
+
 @section('content')
 
 	<div class="container">
 
-		<form class="form-horizontal" id="company-submit" method="post" role="form" enctype="multipart/form-data">
+		<form class="form-horizontal" id="company-submit" method="post" role="form" enctype="multipart/form-data" action="{{action('Admin\ProfileController@edit')}}">
 
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -28,10 +28,6 @@
 							</div>
 
 						</div>
-
-						{{--<div class="previewSelectFile">--}}
-							{{--<img id="previewer" src="" alt="Logo Previewer">--}}
-						{{--</div>--}}
 
 					</div>
 

@@ -43,6 +43,26 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Query\Builder|\App\User wherePhoneNumber($value)
  * @property string $resume_url
  * @method static \Illuminate\Database\Query\Builder|\App\User whereResumeUrl($value)
+ * @property string $first_name
+ * @property string $last_name
+ * @property string $sex
+ * @property string $date_of_birth
+ * @property string $nationality
+ * @property string $native_language
+ * @property string $chinese_level
+ * @property string $current_residence
+ * @property string $phone_number
+ * @property string $passport_number
+ * @property boolean $finish_basic_info
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereFirstName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereLastName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereSex($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereDateOfBirth($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereNationality($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereNativeLanguage($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereChineseLevel($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereCurrentResidence($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereFinishBasicInfo($value)
  */
 class User extends Authenticatable
 {
