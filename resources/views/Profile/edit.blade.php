@@ -5,7 +5,7 @@
 
 	<div class="container">
 
-		<form class="form-horizontal" id="company-submit" method="post" role="form" enctype="multipart/form-data" action="{{action('Admin\ProfileController@edit')}}">
+		<form class="form-horizontal" id="company-submit" method="post" role="form" enctype="multipart/form-data" action="{{action('Admin\ProfileController@update')}}">
 
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
