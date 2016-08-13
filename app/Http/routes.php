@@ -52,7 +52,7 @@ Route::group([
 	Route::get('company/delete/{id}','Admin\CompanyController@deleteJob');
 
 
-	Route::get('profile/edit', 'ProfileController@edit');
+	Route::get('/profile/edit', 'ProfileController@edit');
 	Route::post('/profile/update', 'ProfileController@update');
 	Route::get('/profile/updated','ProfileController@updateSucceed');
 	Route::get('/profile/company', 'ProfileController@company');
@@ -61,7 +61,7 @@ Route::group([
 
 });
 
-
+//Route::post('/profile/updateprofile', 'Admin\ProfileController@updateProfile');
 Route::auth();
 
 //Route::get('/home', 'HomeController@index');

@@ -52,6 +52,8 @@ class CompanyController extends Controller
         }
     }
 
+
+
     public function storePreCompany(PreCompanyStoreRequest $request)
     {
 

@@ -9,6 +9,8 @@
 
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
+			{{--<input type="hidden" name="_method" value="put">--}}
+
 			<div class="company-info">
 
 				<div class="business_license">
@@ -22,12 +24,18 @@
 								<embed src="{{asset('images/upload.svg')}}" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
 
 								<label for="logo_url">UpLoad your Resume</label>
-								<input type="file" id="filechooser" accept="image/png,images/jpg,image/gif,image/jpeg" name="resume_url">
+								<input type="file" id="resume_chooser" accept="application/pdf" name="resume_url">
 								<label for="">Upper Limit 2M</label>
+								<label for="">Only Accept PDF</label>
 
 							</div>
 
 						</div>
+
+						{{--<div class="previewSelectFile">--}}
+							{{--<img id="previewer" src="" alt="Logo Previewer">--}}
+							{{--<embed id="pdf_previewer" src="" type='application/pdf'>--}}
+						{{--</div>--}}
 
 					</div>
 
@@ -379,9 +387,9 @@
 									<option value="Zulu">Zulu</option>
 									<option value="Other">Other</option>
 								</select>
-								@if ($errors->has('nationality'))
+								@if ($errors->has('native_language'))
 									<span class="help-block">
-                                        <strong>{{ $errors->first('nationality') }}</strong>
+                                        <strong>{{ $errors->first('native_language') }}</strong>
                                     </span>
 								@endif
 							</div>
