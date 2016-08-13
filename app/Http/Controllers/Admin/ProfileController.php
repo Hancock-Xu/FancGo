@@ -106,7 +106,7 @@ class ProfileController extends Controller
         return redirect()->back();
     }
 
-    public function updateSucceed()
+    public function updated()
     {
         return view('Profile.updated');
     }
