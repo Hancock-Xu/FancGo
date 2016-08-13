@@ -6,7 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Auth;
 use App\Http\Controllers\Controller;
-use App\Http\Requests;
+use App\Http\Requests\ProfileUpdateRequest;
 use Storage;
 
 class ProfileController extends Controller
@@ -43,7 +43,7 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(ProfileUpdateRequest $request)
     {
         $user = Auth::user();
         $input = $request->all();
