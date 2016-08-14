@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use App\VerifyEmailService\VerifyEmail;
 
 class JobController extends Controller
 {
@@ -191,6 +191,32 @@ class JobController extends Controller
 		$job->delete();
 
 		return redirect()->back();
+
+	}
+
+	public function applyJob($id){
+
+		$user = \Auth::getUser();
+
+		if ($user->finish_basic_info){
+
+			$job = Job::findOrFail($id);
+
+			$response = VerifyEmail::broker()->sendJobApplyEmail($job->resume_email, $job, function($message){
+				$message->subject('A candidate has applied for your position');
+			});
+
+			if ($response == 'verify.email.sent'){
+				return view('Jobs.apply_job_succeed');
+			}else{
+				return view('Jobs.apply_job_failed');
+			}
+
+		}else{
+
+			return redirect(action('ProfileController@edit'));
+
+		}
 
 	}
 

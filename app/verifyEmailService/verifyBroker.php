@@ -8,6 +8,7 @@
 
 namespace App\VerifyEmailService;
 
+use App\Job;
 use Closure;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Mail\Mailer as MailerContract;
@@ -57,6 +58,23 @@ class VerifyBroker implements verifyEmailContract
 			}
 		});
 		
+		return static::VERIFY_EMAIL_SENT;
+	}
+
+	public function sendJobApplyEmail($email, Job $job)
+	{
+		$user = \Auth::getUser();
+		$resume = $user->resume_url;
+
+		$this->mailer->send($job->resume_email, $user, function($message) use ($job, $resume){
+			$to = $job->resume_email;
+			$message->to($to);
+
+			$attachment = storage_path($resume);
+
+			$message->attach($attachment,['as'=>"=?UTF-8?B?".base64_encode('resume')."?=.pdf"]);
+		});
+
 		return static::VERIFY_EMAIL_SENT;
 	}
 	

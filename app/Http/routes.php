@@ -49,7 +49,7 @@ Route::group([
 	
 	Route::get('company/verify_email/{token}/{id}', 'CompanyController@getVerifyRequestEmail');
 
-	Route::get('company/delete/{id}','Admin\CompanyController@deleteJob');
+	Route::get('company/delete/{id}','CompanyController@deleteJob');
 
 
 	Route::get('/profile/edit', 'ProfileController@edit');
@@ -61,7 +61,4 @@ Route::group([
 
 });
 
-//Route::post('/profile/updateprofile', 'Admin\ProfileController@updateProfile');
 Route::auth();
-
-//Route::get('/home', 'HomeController@index');
