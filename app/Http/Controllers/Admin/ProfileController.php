@@ -79,8 +79,8 @@ class ProfileController extends Controller
 
         }
 
-        return redirect('/profile/updated');
-        
+//        return redirect('/profile/updated');
+        return redirect()->back();
     }
 
     public function company()
@@ -105,9 +105,9 @@ class ProfileController extends Controller
 
         return redirect()->back();
     }
-
-    public function updated()
-    {
-        return view('Profile.updated');
-    }
+//
+//    public function updated()
+//    {
+//        return view('Profile.updated');
+//    }
 }
