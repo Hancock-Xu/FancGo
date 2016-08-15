@@ -60,7 +60,7 @@
 						</div>
 						<div class="timestamp">
 							<i class="glyphicon glyphicon-time post-time"></i>
-							<span class="post-time">post time: {{$job->updated_at}}</span>
+							<span class="post-time">post time: {{$job->updated_at->format('Y-m-d')}}</span>
 						</div>
 					</div>
 				</div>

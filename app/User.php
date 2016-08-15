@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Carbon\Carbon;
 
 /**
  * App\User
@@ -90,5 +91,15 @@ class User extends Authenticatable
 
 	public function company(){
 		return $this->hasOne('App\Company');
+	}
+
+	public function getDateOfBirthAttribute($date_of_birth)
+	{
+		if (!$date_of_birth){
+			return null;
+		}else{
+			return Carbon::createFromFormat('Y-m-d H:i:s', $date_of_birth)->format('Y-m-d');
+		}
+
 	}
 }
