@@ -32,11 +32,6 @@
 
 						</div>
 
-						{{--<div class="previewSelectFile">--}}
-							{{--<img id="previewer" src="" alt="Logo Previewer">--}}
-							{{--<embed id="pdf_previewer" src="" type='application/pdf'>--}}
-						{{--</div>--}}
-
 					</div>
 
 
@@ -90,12 +85,6 @@
 
 						</div>
 
-
-						{{--<div class="form-group">--}}
-							{{--{!! Form::label('date_of_birth','Date of Birth') !!}--}}
-							{{--{!! Form::input('date', 'date_of_birth', date('Y-m-d'), ['class'=>'form-control']) !!}--}}
-						{{--</div>--}}
-
 						<div class="form-group{{ $errors->has('date_of_birth') ? ' has-error' : '' }}">
 							<label for="date_of_birth" class="col-md-4 control-label">Date of Birth
 								<i class="glyphicon glyphicon-asterisk required-item"></i>
@@ -103,9 +92,6 @@
 
 							<div class="col-md-6">
 								<input id="date_of_birth" type="date" class="form-control" name="date_of_birth" value="{{ $user->date_of_birth}}">
-{{--								<p>{{$user->date_of_birth->format('Y-m-d')}}</p>--}}
-{{--								{!! Form::input('date', 'date_of_birth', value($user->date_of_birth->format('Y-m-d')), date('Y-m-d'), ['class'=>'form-control']) !!}--}}
-								{{--<date-util format="dd/MM/yyyy"></date-util>--}}
 
 								@if ($errors->has('date_of_birth'))
 									<span class="help-block">
