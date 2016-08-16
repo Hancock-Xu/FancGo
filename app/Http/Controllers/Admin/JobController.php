@@ -7,6 +7,7 @@ use App\Http\Requests\JobStoreRequest;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use App\User;
+use Illuminate\Mail\Message;
 use Illuminate\Http\Request;
 use App\VerifyEmailService\VerifyEmail;
 
@@ -202,8 +203,10 @@ class JobController extends Controller
 
 			$job = Job::findOrFail($id);
 
-			$response = VerifyEmail::broker()->sendJobApplyEmail($job->resume_email, $job, function($message){
-				$message->subject('A candidate has applied for your position');
+			$response = VerifyEmail::broker()->sendJobApplyEmail($job, function(Message $message) use ($job, $user){
+				$to = $job->resume_email;
+				$message->to($to)->subject('A candidate has applied for your position on JobleadChina!');
+				$message->attach(public_path($user->resume_url), ['as'=>"=?UTF-8?B?".base64_encode('resume')."?=.pdf"]);
 			});
 
 			if ($response == 'verify.email.sent'){
@@ -214,7 +217,7 @@ class JobController extends Controller
 
 		}else{
 
-			return redirect(action('ProfileController@edit'));
+			return redirect(action('Admin\ProfileController@edit'));
 
 		}
 
