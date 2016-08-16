@@ -27,6 +27,7 @@
 								<input type="file" id="resume_chooser" accept="application/pdf" name="resume_url" value="{{$user->resume_url}}">
 								<label for="">Upper Limit 2M</label>
 								<label for="">Only Accept PDF</label>
+								<label for="" id="pdf_name"></label>
 
 							</div>
 
@@ -70,10 +71,10 @@
 							<div class="col-md-6">
 
 								<select name="sex" class="form-control" id="sex" onselect="{{$user->sex}}">
-									<option disabled >choose</option>
-									<option value=0 {{ $user->sex == 0 ? 'selected':''}}>Male</option>
-									<option value=1 {{ $user->sex == 1 ? 'selected':''}}>Female</option>
-									<option value=2 {{ $user->sex == 2 ? 'selected':''}}>Can not tell</option>
+									<option disabled {{ $user->sex == null ? 'selected':''}}>choose</option>
+									<option value=1 {{ $user->sex == 'Male' ? 'selected':''}}>Male</option>
+									<option value=2 {{ $user->sex == 'Female' ? 'selected':''}}>Female</option>
+									<option value=3 {{ $user->sex == 'Can not tell' ? 'selected':''}}>Can not tell</option>
 								</select>
 
 								@if ($errors->has('sex'))
@@ -81,6 +82,7 @@
                                         <strong>{{ $errors->first('sex') }}</strong>
                                     </span>
 								@endif
+
 							</div>
 
 						</div>

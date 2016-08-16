@@ -54,7 +54,8 @@ class VerifyBrokerManager implements FactoryContract
 			$this->app['auth']->createUserProvider($config['provider']),
 			$this->app['mailer'],
 			$config['baseURL'],
-			$config['email']
+			$config['email'],
+			$config['apply_job_email_view']
 		);
 	} 
 

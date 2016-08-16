@@ -533,7 +533,7 @@
 					</div>
 
 					<div class="joblead_btn">
-						<button type="submit" class="btn position-btn" id="position-btn">Publish Job
+						<button type="submit" class="btn position-btn btn-primary" id="position-btn">Publish Job
 						</button>
 					</div>
 

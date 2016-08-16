@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
 	        $table->string('remember_token',62)->default('default');/**/
 
 
-	        $table->enum('sex',[1, 2, 0])->nullable()->default(null);
+	        $table->enum('sex',['Male', 'Female', 'Can not tell'])->nullable()->default(null);
 	        $table->timestamp('date_of_birth')->nullable()->default(null);
 	        $table->string('nationality')->nullable()->default(null);
 	        $table->string('native_language')->nullable()->default(null);
