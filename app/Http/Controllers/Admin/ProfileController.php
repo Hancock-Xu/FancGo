@@ -79,7 +79,9 @@ class ProfileController extends Controller
 
         }
 
-//        return redirect('/profile/updated');
+
+		$user->finish_basic_info = true;
+	    $user->save();
         return redirect()->back();
     }
 
