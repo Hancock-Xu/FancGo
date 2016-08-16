@@ -34,6 +34,7 @@ Route::group([
 	Route::get('/job/{id}/edit', 'JobController@edit');
 	Route::put('/job/{id}', 'JobController@update');
 	Route::delete('/job/{id}', 'JobController@destroy');
+	Route::get('/job/apply/{id}', 'JobController@applyJob');
 
 	Route::get('/company/create', 'CompanyController@create');
 	Route::post('/company', 'CompanyController@store');
