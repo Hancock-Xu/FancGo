@@ -32,7 +32,7 @@
 						{{--</li>--}}
 						<li>
 							<i class="glyphicon glyphicon-time icon-post-time "></i>
-							<span class="post-time ">{{$job->updated_at}}</span>
+							<span class="post-time ">{{ date('F d, Y', strtotime($job->updated_at)) }}</span>
 						</li>
 					</ul>
 
@@ -45,7 +45,10 @@
 						<li role="presentation " class="active h3 job_apply_bar_title"><a href="# " role="tab" >Position Info</a></li>
 						<li class="job_apply_placeholder"></li>
 						{{--<li role="presentation " class="h3 "><a href="# " id="newest-tab " role="tab " >Company Info</a></li>--}}
-						<button type="button " class="btn btn-primary job_apply_btn" id="button-apply ">Apply</button>
+						{{--<button type="button " class="btn btn-primary job_apply_btn" id="button-apply ">--}}
+							{{--<a href="">Apply</a>--}}
+						{{--</button>--}}
+						<input type="button" class="btn btn-primary job_apply_btn" value="Apply" onclick="location.href='{{action('Admin\JobController@applyJob', $job->id)}}'">
 					</ul>
 				</div>
 				<div class="job_description_and_other">

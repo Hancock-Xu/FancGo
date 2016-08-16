@@ -2,7 +2,7 @@
 <html>
 <html lang="zh-CN">
 <head>
-	<title>Refine company and position info</title>
+	<title></title>
 	<meta charset="UTF-8">
 	<meta name="keyword" content="JobLead China, Joblead, Job in China, Job in Shenzhen, Working in China, Life in China, Living in China, Apartment in China, Apartment in Shenzhen, Work Visa in China">
 	<meta name="description" content="JobLead China provide a set of job solution for enterises and forein talents.">
@@ -10,19 +10,10 @@
 	<!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
 </head>
 <body>
-<div id="mailContainer" style="
-	margin: 0 auto;
-	width: 600px;
-	overflow: hidden;
-	color: #666;">
+<div id="mailContainer" style="margin: 0 auto;width: 600px;overflow: hidden;color: #666;">
 	<h2>JobleadChina</h2>
-	<div class="mailContentContainer" style="
-	background-color: #fff;
-	border-top: 20px solid #694c9c;
-	padding: 20px;">
-		<div class="mailContent-enterprise" style="
-		text-align: center;
-	color: blue">
+	<div class="mailContentContainer" style="background-color: #fff;border-top: 20px solid #694c9c;padding: 20px;">
+		<div class="mailContent-enterprise" style="text-align: center;color: blue;">
 			<h4 class="mail-applyPostion">Apply Position:&nbsp;{{$job->job_title}}</h4>
 			<hr/>
 			<h4>Hello</h4>
