@@ -100,6 +100,7 @@ return [
     'verify_email' => [
         'provider' => 'users',
         'email' => 'Company.emailView',
+	    'apply_job_email_view' => 'Jobs.apply_job_email',
         'baseURL' => 'Admin\CompanyController@getVerifyRequestEmail',
         'table' => 'password_resets',
         'expire' => 60,

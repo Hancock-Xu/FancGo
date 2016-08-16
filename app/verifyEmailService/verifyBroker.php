@@ -14,6 +14,7 @@ use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Mail\Mailer as MailerContract;
 use Illuminate\Mail\Message;
 use App\VerifyEmailService\Protocol\VerifyEmail as verifyEmailContract;
+use Illuminate\Support\Facades\Mail;
 
 class VerifyBroker implements verifyEmailContract
 {
@@ -27,12 +28,15 @@ class VerifyBroker implements verifyEmailContract
 
 	protected $emailView;
 
+	protected $applyJobEmailView;
+
 	public function __construct(
 		TokenRepository $tokenRepository,
 		UserProvider $user,
 		MailerContract $mailer,
 		$baseURL,
-		$emailView
+		$emailView,
+		$applyJobEmailView
 	)
 	{
 		$this->tokens = $tokenRepository;
@@ -40,6 +44,7 @@ class VerifyBroker implements verifyEmailContract
 		$this->mailer = $mailer;
 		$this->baseURL = $baseURL;
 		$this->emailView = $emailView;
+		$this->applyJobEmailView = $applyJobEmailView;
 	}
 
 	public function sendVerifyEmail($email, array $credentials = null, Closure $callback = null)
@@ -51,7 +56,7 @@ class VerifyBroker implements verifyEmailContract
 		
 		$this->mailer->send($this->emailView, ['validateLink'=>$validateLink], function (Message $m) use ($callback, $email){
 			
-			$m->to($email);
+			$m->to($email)->subject('A candidate has applied for your position');;
 			
 			if (!is_null($callback)){
 				call_user_func($callback, $m);
@@ -61,18 +66,15 @@ class VerifyBroker implements verifyEmailContract
 		return static::VERIFY_EMAIL_SENT;
 	}
 
-	public function sendJobApplyEmail($email, Job $job)
+	public function sendJobApplyEmail(Job $job, Closure $callback = null)
 	{
 		$user = \Auth::getUser();
 		$resume = $user->resume_url;
 
-		$this->mailer->send($job->resume_email, $user, function($message) use ($job, $resume){
-			$to = $job->resume_email;
-			$message->to($to);
-
-			$attachment = storage_path($resume);
-
-			$message->attach($attachment,['as'=>"=?UTF-8?B?".base64_encode('resume')."?=.pdf"]);
+		$this->mailer->send($this->applyJobEmailView, ['job'=>$job, 'user'=>$user], function($message) use ($callback){
+			if (!is_null($callback)){
+				call_user_func($callback, $message);
+			}
 		});
 
 		return static::VERIFY_EMAIL_SENT;
