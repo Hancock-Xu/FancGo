@@ -8,7 +8,9 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a id="brand-jobleadchina" class="navbar-brand" href="/">JobLead China</a>
+			<a id="brand-jobleadchina" class="navbar-brand" href="/">
+				<img src="{{asset('images/logo.png')}}" alt="">
+			</a>
 		</div>
 
 		<div class="collapse navbar-collapse" id="navbar-menu" aria-expanded="false">

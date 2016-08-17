@@ -11,6 +11,17 @@
 
 	<title>JobLeadChina </title>
 
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "//hm.baidu.com/hm.js?c6c4b754d625a58bc03add45318067b6";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+
 	{!! Html::style('css/app.css') !!}
 	{!! Html::script('js/app.js') !!}
 	{!! Html::script('js/searchbar.js') !!}
