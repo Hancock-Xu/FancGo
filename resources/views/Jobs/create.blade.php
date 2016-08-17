@@ -44,9 +44,9 @@
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<select name="job_status_type" class="form-control job_select" id="employment-type ">
 									<option disabled selected>Choose</option>
-									<option value=0>Full-time</option>
-									<option value=1>Part-time</option>
-									<option value=2>Intership</option>
+									<option value=1>Full-time</option>
+									<option value=2>Part-time</option>
+									<option value=3>Intership</option>
 								</select>
 								{{--<span class="glyphicon glyphicon-menu-down left-arrow-down"></span>--}}
 							</div>
@@ -338,12 +338,12 @@
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<select name="position_experience" class="form-control job_select" id="experience ">
 									<option disabled selected>Choose</option>
-									<option value=5>Executive</option>
-									<option value=4>Director</option>
-									<option value=3>Mid-Senior Level</option>
-									<option value=2>Associate</option>
-									<option value=1>Entry Level</option>
-									<option value=0>Intership</option>
+									<option value=6>Executive</option>
+									<option value=5>Director</option>
+									<option value=4>Mid-Senior Level</option>
+									<option value=3>Associate</option>
+									<option value=2>Entry Level</option>
+									<option value=1>Intership</option>
 								</select>
 								{{--<i class="glyphicon glyphicon-menu-down arrow-down "></i>--}}
 							</div>
@@ -354,11 +354,11 @@
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<select name="education_degree" class="form-control job_select" id="education_degree">
 									<option disabled selected>Choose</option>
-									<option value=0>Any education</option>
-									<option value=1>Associate Degree</option>
-									<option value=2>Bachelor Degree</option>
-									<option value=3>Master Degree</option>
-									<option value=4>Dr.</option>
+									<option value=1>Any education</option>
+									<option value=2>Associate Degree</option>
+									<option value=3>Bachelor Degree</option>
+									<option value=4>Master Degree</option>
+									<option value=5>Dr.</option>
 								</select>
 								{{--<i class="glyphicon glyphicon-menu-down arrow-down "></i>--}}
 							</div>

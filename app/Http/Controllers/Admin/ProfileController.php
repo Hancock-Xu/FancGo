@@ -90,9 +90,9 @@ class ProfileController extends Controller
         $user = Auth::user();
         $company = $user->company;
         if (!$company){
-            redirect('/company/create');
+	        return redirect('/company/create');
         }
-        redirect(action('Admin\ApartmentController@edit',$company->id));
+        return redirect(action('Admin\CompanyController@edit',$company->id));
     }
 
     public function deleteCompany(Request $request)

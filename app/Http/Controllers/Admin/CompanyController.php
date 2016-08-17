@@ -188,8 +188,9 @@ class CompanyController extends Controller
     public function edit($id)
     {
         $company = Company::findOrFail($id);
-        if ($company->user_id == Auth::getUser()->id) {
-            $jobs = Job::where('company_id', '==', $company->id)->orderBy('published_at','desc')->paginate(config('jobs.posts_per_page'));
+	    $user = \Auth::user();
+        if ($company->user_id == $user->id) {
+            $jobs = Job::where('company_id', '=', $company->id)->orderBy('updated_at','desc')->paginate(config('jobs.posts_per_page'));
             return view('Company.edit', ['company' => $company, 'jobs'=>$jobs]);
         }else{
             /**

@@ -1452,6 +1452,57 @@ select{
   width: 100%;
   font-weight: normal;
 }
+
+//refine company info position info
+.refine-position {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.updated-time {
+  color: #999;
+  margin: 20px;
+}
+.refine-links{
+  margin-right: 20px;
+}
+.refine-links a {
+  margin-left: 20px;
+  cursor: pointer;
+}
+.refine-position-item{
+  padding: 10px;
+}
+.refine-position-item-title {
+  color: #694c9c;
+  margin: 20px;
+}
+
+.refine-position-item-point {
+  margin: 20px;
+}
+.refine-position-item li:nth-child(odd) {
+  background-color: #fff;
+}
+.refine-position-item li:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.refine-position-item-edit{
+  margin-bottom: 20px;
+}
+
+div.refine-position-item:nth-child(even) {
+  background-color: #fafafa;
+}
+
+div.refine-position-item:nth-child(odd) {
+  background-color: #fefefe;
+}
+
 //$icon-font-path: 'node_modules/bootstrap-sass/assets/fonts/';
  @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 

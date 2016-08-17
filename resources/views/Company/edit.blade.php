@@ -14,6 +14,7 @@
 
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
+						<h2>Edit Company Info</h2>
 						<div class="company-info">
 
 							<div class="business_license">
@@ -543,8 +544,49 @@
 
 						</div>
 
+						<h2>Edit Position</h2>
+						<div class="refine-position">
+
+							@if(count($jobs)>0)
+
+								@foreach($jobs as $job)
+									<div class="refine-position-item">
+
+										<h3 class="refine-position-item-title">{{$job->job_title}}</h3>
+										<div class="refine-position-item-point">
+											<span>{{$job->min_salary}}K - {{$job->max_salary}}K</span>
+											<span class="seperate-line"></span>
+											<span>{{$job->education_degree}}</span>
+											<span class="seperate-line"></span>
+											<span>Experience:&nbsp;{{$job->position_experience}}</span>
+											<span class="seperate-line"></span>
+											<span>{{$job->job_status_type}}</span>
+										</div>
+										<div class="refine-position-item-edit">
+											<span class="updated-time" >Updated time:&nbsp;{{ date('F d, Y', strtotime($job->updated_at)) }}</span>
+											<div class="refine-links pull-right">
+												<a  class="job-refresh">Refresh</a>
+												<a href="{{action('Admin\JobController@edit', $job->id)}}" class="job-edit" target="_blank">Edit</a>
+												<a href="">Delete</a>
+											</div>
+										</div>
+									</div>
+								@endforeach
+
+							@else
+
+								<h2>No other jobs</h2>
+
+							@endif
+
+
+
+						</div><!--refine company position-->
+
+
+
 						<div class="form-group form-submit-button">
-							<div class="col-md-6 col-md-offset-4">
+							<div class="joblead_btn">
 								<button type="submit" class="btn company-btn btn-primary">
 									<i class="fa fa-btn fa-envelope"></i> Save
 								</button>
@@ -554,6 +596,7 @@
 					</form>
 
 				</div>
+
 			</div>
 
 			<script type="text/javascript" src="js/jobleadchina.js"></script>
