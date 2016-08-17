@@ -33,7 +33,7 @@ Route::group([
 	Route::post('/job', 'JobController@store');
 	Route::get('/job/{id}/edit', 'JobController@edit');
 	Route::post('/job/{id}', 'JobController@update');
-	Route::delete('/job/{id}', 'JobController@destroy');
+	Route::get('/job/{id}/delete', 'JobController@destroy');
 	Route::get('/job/apply/{id}', 'JobController@applyJob');
 
 	Route::get('/company/create', 'CompanyController@create');
