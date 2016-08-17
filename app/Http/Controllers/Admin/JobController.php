@@ -157,7 +157,7 @@ class JobController extends Controller
 	{
 		$job = Job::whereId($id)->firstOrFail();
 		if ($job){
-			return view('Jobs.edit',compact($job));
+			return view('Jobs.edit', ['job'=>$job]);
 		}else {
 			return view('not_found');
 		}
@@ -172,12 +172,12 @@ class JobController extends Controller
 	 */
 	public function update(JobStoreRequest $request, $id)
 	{
-		$job = Job::firstOrFail($id);
+		$job = Job::findOrFail($id);
 		$input = $request->all();
 
 		$job->fill($input)->save();
 	
-		return redirect()->back();
+		return redirect(action('Admin\CompanyController@edit', $job->company_id));
 	}
 
 	/**

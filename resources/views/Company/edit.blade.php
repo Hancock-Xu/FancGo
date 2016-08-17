@@ -10,16 +10,17 @@
 				<!-- 上传公司信息 -->
 				<div class="container">
 
-					<form class="form-horizontal" id="company-submit" method="post" action="{{action('Admin\CompanyController@storeCompany')}}" role="form" enctype="multipart/form-data">
+					<form class="form-horizontal" id="company-submit" method="post" action="{{action('Admin\CompanyController@update', $company->id)}}" role="form" enctype="multipart/form-data">
 
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+						{{--<input type="hidden" name="_method" value="put">--}}
 
 						<h2>Edit Company Info</h2>
 						<div class="company-info">
 
 							<div class="business_license">
 
-								<div class="company_logo_container">
+								<div class="company_logo_container {{ $errors->has('logo_url') ? ' has-error' : '' }}">
 
 									<div class="upload-file">
 
@@ -38,6 +39,12 @@
 									<div class="previewSelectFile">
 										<img id="previewer" src="" alt="Logo Previewer">
 									</div>
+
+									@if ($errors->has('logo_url'))
+										<span class="help-block">
+	                                        <strong>{{ $errors->first('logo_url') }}</strong>
+	                                    </span>
+									@endif
 
 								</div>
 
@@ -565,9 +572,9 @@
 										<div class="refine-position-item-edit">
 											<span class="updated-time" >Updated time:&nbsp;{{ date('F d, Y', strtotime($job->updated_at)) }}</span>
 											<div class="refine-links pull-right">
-												<a  class="job-refresh">Refresh</a>
+												<a href="{{action('Admin\JobController@update', $job->id)}}" class="job-refresh">Refresh</a>
 												<a href="{{action('Admin\JobController@edit', $job->id)}}" class="job-edit" target="_blank">Edit</a>
-												<a href="">Delete</a>
+												<a href="{{action('Admin\JobController@destroy', $job->id)}}">Delete</a>
 											</div>
 										</div>
 									</div>

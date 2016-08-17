@@ -213,7 +213,7 @@ class CompanyController extends Controller
         $input = $request->all();
         $company->fill($input)->save();
 
-        return redirect()->home();
+        return redirect('/job');
     }
 
     /**
