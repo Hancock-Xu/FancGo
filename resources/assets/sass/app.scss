@@ -1503,6 +1503,14 @@ div.refine-position-item:nth-child(odd) {
   background-color: #fefefe;
 }
 
+//brand
+
+.brand{
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px
+}
+
 //$icon-font-path: 'node_modules/bootstrap-sass/assets/fonts/';
  @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 

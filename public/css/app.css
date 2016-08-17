@@ -1165,6 +1165,12 @@ div.refine-position-item:nth-child(even) {
 div.refine-position-item:nth-child(odd) {
   background-color: #fefefe; }
 
+.brand {
+  display: -webkit-box;
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
