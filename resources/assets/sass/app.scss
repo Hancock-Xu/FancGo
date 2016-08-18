@@ -164,11 +164,16 @@ $grid-gutter-width:         0px;
   }
 }
 
-
+html{
+  height: 100%;
+}
 
 body {
-  padding-top: 120px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   word-wrap: break-word;
+  position: relative;
 }
 
 hr {
@@ -871,6 +876,7 @@ img {
   position: relative;
   max-width: 980px;
   margin: 0 auto;
+  margin-top: 50px;
 }
 
 .searchbarForm {
@@ -1509,6 +1515,40 @@ div.refine-position-item:nth-child(odd) {
   display: flex;
   padding-top: 5px;
   padding-bottom: 5px
+}
+
+/*footer*/
+#footer {
+  background-color: #fff;
+  text-align: center;
+  height:150px;
+  margin-top:-100px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  //background-color: #ffc0cb;
+}
+
+#footer span {
+  padding: 20px;
+}
+
+.more-about, .contact-email a {
+  text-decoration: underline;
+}
+
+//navbar
+
+.jb_navbar{
+  @extend .navbar;
+  @extend .navbar-default;
+  @extend .navbar-fixed-top;
+  position: relative !important;
+  margin-bottom: 0px !important;
+}
+
+.jb_content{
+  padding-bottom: 100px;
 }
 
 //$icon-font-path: 'node_modules/bootstrap-sass/assets/fonts/';
