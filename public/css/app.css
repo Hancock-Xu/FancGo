@@ -606,8 +606,7 @@ img {
 .searchbar {
   position: relative;
   max-width: 980px;
-  margin: 0 auto;
-  margin-top: 50px; }
+  margin: 0 auto; }
 
 .searchbarForm {
   position: relative;
@@ -1185,7 +1184,6 @@ div.refine-position-item:nth-child(odd) {
   height: 150px;
   margin-top: -100px;
   position: absolute;
-  bottom: 0;
   width: 100%; }
 
 #footer span {
@@ -1193,6 +1191,10 @@ div.refine-position-item:nth-child(odd) {
 
 .more-about, .contact-email a {
   text-decoration: underline; }
+
+.navbar_container {
+  width: 100%;
+  margin-bottom: 60px; }
 
 .jb_navbar {
   position: relative !important;
