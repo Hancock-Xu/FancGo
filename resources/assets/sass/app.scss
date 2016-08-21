@@ -876,7 +876,6 @@ img {
   position: relative;
   max-width: 980px;
   margin: 0 auto;
-  margin-top: 50px;
 }
 
 .searchbarForm {
@@ -1524,7 +1523,7 @@ div.refine-position-item:nth-child(odd) {
   height:150px;
   margin-top:-100px;
   position: absolute;
-  bottom: 0;
+  //bottom: 0;
   width: 100%;
   //background-color: #ffc0cb;
 }
@@ -1538,6 +1537,11 @@ div.refine-position-item:nth-child(odd) {
 }
 
 //navbar
+
+.navbar_container{
+  width: 100%;
+  margin-bottom: 60px;
+}
 
 .jb_navbar{
   @extend .navbar;
