@@ -1543,6 +1543,12 @@ div.refine-position-item:nth-child(odd) {
   margin-bottom: 60px;
 }
 
+.content-container{
+  min-height: 100%;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
 .jb_navbar{
   @extend .navbar;
   @extend .navbar-default;
