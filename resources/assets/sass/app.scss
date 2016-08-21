@@ -1546,7 +1546,7 @@ div.refine-position-item:nth-child(odd) {
 .content-container{
   min-height: 100%;
   width: 100%;
-  margin-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 .jb_navbar{
@@ -1558,7 +1558,8 @@ div.refine-position-item:nth-child(odd) {
 }
 
 .jb_content{
-  padding-bottom: 100px;
+  //padding-bottom: 100px;
+  //margin-bottom: 100px;
 }
 
 //$icon-font-path: 'node_modules/bootstrap-sass/assets/fonts/';
