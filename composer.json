@@ -33,7 +33,7 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "VerifyEmailService\\": "VerifyEmailService/"
+            "App\\VerifyEmailService\\": "app/VerifyEmailService/"
         }
     },
     "autoload-dev": {
