@@ -33,9 +33,9 @@
 
 <body>
 
-<div class="container" style="min-height: 100%; width: 100%">
+<div class="content_container">
 
-	<div class="container" style="width: 100%;">
+	<div class="navbar_container">
 		@include('site.navbar')
 	</div>
 
