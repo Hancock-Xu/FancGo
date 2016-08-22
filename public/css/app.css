@@ -390,7 +390,8 @@ img {
 /*注册页面在less文件中*/
 /*post job 验证邮箱页面*/
 .head-verifyEmail {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 50px; }
 
 .head-verifyEmail h3 {
   margin: 0 auto 50px; }
@@ -948,9 +949,7 @@ div.jobThumbnail:nth-child(odd) {
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  justify-content: center;
-  width: 300px;
-  height: 250px; }
+  justify-content: center; }
 
 #previewer {
   width: 100%;
