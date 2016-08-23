@@ -21,7 +21,7 @@
 		</div>
 
 		<div class="container">
-			<img src="{{ $company_certificate_url }}" alt="">
+			<img src="{{ $company->certificate_url }}" alt="">
 		</div>
 
 	</div>

@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'Admin\BasicSiteInfoController@index');
-Route::get('/about', 'BasicSiteInfoController@about');
+Route::get('/about', 'Admin\BasicSiteInfoController@about');
 
 Route::get('/auth/login','Auth\AuthController@getLogin');
 Route::post('/auth/login','Auth\AuthController@postLogin');
@@ -37,21 +37,16 @@ Route::group([
 	Route::get('/job/apply/{id}', 'JobController@applyJob');
 
 	Route::get('/company/create', 'CompanyController@create');
+	Route::post('/company/storeprecompany', 'CompanyController@storePreCompany');
+	Route::post('/company/storeCompany', 'CompanyController@storeCompany');
 	Route::post('/company', 'CompanyController@store');
-	Route::get('/company/{id}/edit', 'CompanyController@edit');
+	Route::post('/company/send_verify_apply', 'CompanyController@sendVerifyRequestEmail');
+	Route::post('/company/resend_verify_link','CompanyController@resendVerifyLinkEmail');
 	Route::post('/company/{id}', 'CompanyController@update');
+	Route::get('/company/{id}/edit', 'CompanyController@edit');
 	Route::delete('/company/{id}', 'CompanyController@destroy');
-
-	Route::post('company/storeCompany', 'CompanyController@storeCompany');
-	Route::post('company/storePreCompany', 'CompanyController@storePreCompany');
-	
-	Route::post('company/send_verify_apply', 'CompanyController@sendVerifyRequestEmail');
-	Route::post('company/resend_verify_link','CompanyController@resendVerifyLinkEmail');
-	
-	Route::get('company/verify_email/{token}/{id}', 'CompanyController@getVerifyRequestEmail');
-
-	Route::get('company/delete/{id}','CompanyController@deleteJob');
-
+	Route::get('/company/verify_email/{token}/{id}', 'CompanyController@getVerifyRequestEmail');
+	Route::get('/company/delete/{id}','CompanyController@deleteJob');
 
 	Route::get('/profile/edit', 'ProfileController@edit');
 	Route::post('/profile/update', 'ProfileController@update');

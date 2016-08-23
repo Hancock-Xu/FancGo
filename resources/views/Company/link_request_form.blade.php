@@ -33,7 +33,7 @@
 								</div>
 							@endif
 
-							<form class="form-horizontal" role="form" method="POST" action="/company/storePreCompany" enctype="multipart/form-data">
+							<form class="form-horizontal" role="form" method="post" action= "{{action('Admin\CompanyController@storePreCompany')}}" enctype="multipart/form-data">
 								{{ csrf_field() }}
 
 								<div class="form-group {{ $errors->has('business_license_name') ? ' has-error' : '' }}">
@@ -127,7 +127,7 @@
 
 								{{--@endif--}}
 
-								<div class="form-group">
+								<div class="form-group form-submit-button">
 									<div class="joblead_btn">
 										<button type="submit" class="btn position-btn btn-primary">
 											<i class="fa fa-btn fa-envelope"></i> Send Verify Link

@@ -168,7 +168,7 @@ class CompanyController extends Controller
      */
     public function show($id)
     {
-        $company = Company::find($id)->firstOrFail();
+        $company = Company::findOrFail($id);
 
         if ($company){
             return view('Company.detail',['company'=>$company]);
