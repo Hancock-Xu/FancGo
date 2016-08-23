@@ -381,11 +381,11 @@
 
 													<select name="scale" class="form-control" id="company_scale">
 														<option disabled selected>choose</option>
-														<option value=0>Less than 15</option>
-														<option value=1>15-50</option>
-														<option value=2>50-150</option>
-														<option value=3>500-2000</option>
-														<option value=4>More than 2000</option>
+														<option value=1>Less than 15</option>
+														<option value=2>15-50</option>
+														<option value=3>50-150</option>
+														<option value=4>500-2000</option>
+														<option value=5>More than 2000</option>
 													</select>
 
 													@if ($errors->has('scale'))

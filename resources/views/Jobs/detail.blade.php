@@ -15,7 +15,7 @@
 						<li><h2>{{$job->job_title}}</h2></li>
 						<li><h4>{{$job->company_name}}</h4></li>
 						<li class="detail-position-item-point ">
-							<span>{{$job->min_salary}} K - {{$job->max_salary}} K</span>
+							<span>{{$job->min_salary}}K/MTH - {{$job->max_salary}}K/MTH</span>
 							<span>{{$job->work_city}}</span>
 						</li>
 						<li>

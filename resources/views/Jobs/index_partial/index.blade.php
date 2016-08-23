@@ -24,7 +24,7 @@
 						</div>
 						<div class="jobThumbnailSalaryRange">
 							<h3 class="salaryRange">
-								{{$job->min_salary}}K/M - {{$job->max_salary}}K/M
+								{{$job->min_salary}}K/MTH - {{$job->max_salary}}K/MTH
 							</h3>
 						</div>
 						<div class="jobThumbnailPositionRequire">
@@ -36,7 +36,7 @@
 						</div>
 						@if($job->position_points)
 							<div class="jobThumbnailPositionPoint">
-								<p class="positionpoint">“{{$job->position_points}}"</p>
+								<p class="positionpoint">"{{$job->position_points}}"</p>
 							</div>
 						@else
 							<div class="jobThumbnailPositionPoint"></div>
@@ -45,7 +45,7 @@
 					<div class="jobThumbnailCompany">
 						<div class="jobThumbnailCompanyName">
 							<h3 class="companyName">
-								<a href="{{ action('Admin\CompanyController@show',[$job->company_id]) }}">{{$job->company_name}}</a>
+								<a href="{{ action('Admin\JobController@show',[$job->id]) }}">{{$job->company_name}}</a>
 							</h3>
 						</div>
 						<div class="jobThumbnailCompanyIndustry">
