@@ -211,8 +211,11 @@ class CompanyController extends Controller
     public function update(CompanyStoreRequest $request, $id)
     {
         $company = Company::findOrFail($id);
+
         $input = $this->replaceLineFeed($request);
         $company->fill($input)->save();
+	    $this->correctImgPath($request, $company);
+	    $company->save();
 
         return redirect('/job');
     }
