@@ -58,8 +58,14 @@ $table-bg:                      #fff;
 .form-control {
   width: 370px;
   padding-right: 30px;
-  margin-left:10px;
+  //margin-left:10px;
 }
+
+.control-label{
+  @extend .control-label;
+  margin-right: 10px;
+}
+
 .form-group {
   position: relative;
 }
@@ -1372,7 +1378,7 @@ select{
 }
 
 .job_label{
-  margin-left: 10px;
+  //margin-left: 10px;
 }
 
 .job_description_area,

@@ -34,12 +34,18 @@
 
 						<div class="job_property_part1_left_part">
 
-							<div class="job_title form-group">
+							<div class="job_title form-group {{ $errors->has('job_title') ? ' has-error' : '' }}">
 								<label class="job_label" for="job-title">Job Title</label>
 								<i class="glyphicon glyphicon-asterisk required-item"></i>
 								<input type="text" class="form-control" id="job-title" name="job_title" spellcheck="true">
+
+								@if ($errors->has('job_title'))
+									<span class="help-block">
+                                        <strong>{{ $errors->first('job_title') }}</strong>
+                                    </span>
+								@endif
 							</div>
-							<div class="job_status_type form-group">
+							<div class="job_status_type form-group {{ $errors->has('job_status_type') ? ' has-error' : '' }}">
 								<label class="job_label" for="employment-type">Employment Type</label>
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<select name="job_status_type" class="form-control job_select" id="employment-type ">
@@ -48,32 +54,53 @@
 									<option value=2>Part-time</option>
 									<option value=3>Intership</option>
 								</select>
+								@if ($errors->has('job_status_type'))
+									<span class="help-block">
+                                        <strong>{{ $errors->first('job_status_type') }}</strong>
+                                    </span>
+								@endif
 								{{--<span class="glyphicon glyphicon-menu-down left-arrow-down"></span>--}}
 							</div>
 							<div class="salary_range form-group">
 								<label class="job_label" for="employment-type">Salary Per Month</label>
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
-								<div class="choose-salary ">
-									<div class="min_salary_input">
-											<input type="text" name="min_salary" class="min-salary form-control" placeholder="Min">
-											<span class="salary-k ">K</span>
+								<div class="choose-salary">
+									<div class="min_salary_input {{ $errors->has('min_salary') ? ' has-error' : '' }}">
+										<input type="text" name="min_salary" class="min-salary form-control" placeholder="Min">
+										<span class="salary-k ">K</span>
+										@if ($errors->has('min_salary'))
+											<span class="help-block">
+		                                        <strong>{{ $errors->first('min_salary') }}</strong>
+		                                    </span>
+										@endif
 									</div>
+
 									<div>
 										<p class="salary-to">to</p>
 									</div>
-									<div class="max_salary_input">
-											<input type="text" name="max_salary" class="max-salary form-control" placeholder="Max">
-											<span class="salary-k">K</span>
+									<div class="max_salary_input {{ $errors->has('max_salary') ? ' has-error' : '' }}">
+										<input type="text" name="max_salary" class="max-salary form-control" placeholder="Max">
+										<span class="salary-k">K</span>
+										@if ($errors->has('max_salary'))
+											<span class="help-block">
+		                                        <strong>{{ $errors->first('max_salary') }}</strong>
+		                                    </span>
+										@endif
 									</div>
 								</div>
 							</div>
 
 							<!-- Email Address and Work City -->
-							<div class="resume_email form-group">
+							<div class="resume_email form-group {{ $errors->has('resume_email') ? ' has-error' : '' }}">
 								<label class="job_label" for="resume_email" >Email Address</label>
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<span class="position-alert">This mailbox will receive resumes</span>
 								<input type="email" class="form-control " name="resume_email" id="resume_email">
+								@if ($errors->has('resume_email'))
+									<span class="help-block">
+                                        <strong>{{ $errors->first('resume_email') }}</strong>
+                                    </span>
+								@endif
 							</div>
 
 						</div>
@@ -82,16 +109,16 @@
 
 							<label class="job_label" for="position_industry">Position Industry</label>
 							<i class="glyphicon glyphicon-asterisk required-item"></i>
-							<div class="job_industry form-group{{ $errors->has('company_industry') ? ' has-error' : '' }}">
+							<div class="job_industry form-group{{ $errors->has('job_industry') ? ' has-error' : '' }}">
 
 								<label class="industryinputlabel" for="job_industry">
 									<input type="text" class="industryInput input-large form-control" name="job_industry" id="job_industry" value="" placeholder="Industry" autocomplete="off" readonly>
 								</label>
-									@if ($errors->has('company_industry'))
-										<span class="help-block">
-	                                        <strong>{{ $errors->first('company_industry') }}</strong>
-	                                    </span>
-									@endif
+								@if ($errors->has('job_industry'))
+									<span class="help-block">
+                                        <strong>{{ $errors->first('job_industry') }}</strong>
+                                    </span>
+								@endif
 
 								<div class="company_industrylist industrylist">
 
@@ -333,7 +360,7 @@
 							<!-- Employment Type and Expereince -->
 
 
-							<div class="position_experience form-group">
+							<div class="position_experience form-group {{ $errors->has('position_experience') ? ' has-error' : '' }}">
 								<label class="job_label" for="experience">Expereince</label>
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<select name="position_experience" class="form-control job_select" id="experience ">
@@ -345,11 +372,16 @@
 									<option value=2>Entry Level</option>
 									<option value=1>Intership</option>
 								</select>
+								@if ($errors->has('position_experience'))
+									<span class="help-block">
+                                        <strong>{{ $errors->first('position_experience') }}</strong>
+                                    </span>
+								@endif
 								{{--<i class="glyphicon glyphicon-menu-down arrow-down "></i>--}}
 							</div>
 							<!-- Salary and Education Degree-->
 
-							<div class="education_degree_select form-group">
+							<div class="education_degree_select form-group {{ $errors->has('education_degree') ? ' has-error' : '' }}">
 								<label class="job_label" for="education_degree">Education Degree</label>
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<select name="education_degree" class="form-control job_select" id="education_degree">
@@ -360,10 +392,15 @@
 									<option value=4>Master Degree</option>
 									<option value=5>Dr.</option>
 								</select>
+								@if ($errors->has('education_degree'))
+									<span class="help-block">
+                                        <strong>{{ $errors->first('education_degree') }}</strong>
+                                    </span>
+								@endif
 								{{--<i class="glyphicon glyphicon-menu-down arrow-down "></i>--}}
 							</div>
 
-							<div class="work_city_select form-group">
+							<div class="work_city_select form-group {{ $errors->has('education_degree') ? ' has-error' : '' }}">
 								<label class="job_label" for="work-city">Work City</label>
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<select name="work_city" class="form-control job_select" id="work-city ">
@@ -392,6 +429,11 @@
 									<option value="Taiwan">Taiwan</option>
 									<option value="Others">Others</option>
 								</select>
+								@if ($errors->has('work_city'))
+									<span class="help-block">
+                                        <strong>{{ $errors->first('work_city') }}</strong>
+                                    </span>
+								@endif
 								{{--<i class="glyphicon glyphicon-menu-down arrow-down "></i>--}}
 							</div>
 

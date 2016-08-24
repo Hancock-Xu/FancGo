@@ -55,7 +55,7 @@
 								</div>
 
 								<div class="form-group{{ $errors->has('company_email') ? ' has-error' : '' }}">
-									<label for="company_email" class="col-md-4 control-label">E-Mail Address
+									<label for="company_email" class="col-md-4 control-label">Enterprise E-Mail(企业邮箱)
 										<i class="glyphicon glyphicon-asterisk required-item"></i>
 									</label>
 
