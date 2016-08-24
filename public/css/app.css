@@ -1101,7 +1101,8 @@ select {
   min-width: 100px;
   -webkit-box-flex: initial;
   flex: initial;
-  margin: 0; }
+  margin: 0;
+  font-size: 28px; }
 
 .job_apply_placeholder {
   -webkit-box-flex: 1;
@@ -1179,8 +1180,8 @@ div.refine-position-item:nth-child(odd) {
 .brand {
   display: -webkit-box;
   display: flex;
-  padding-top: 5px;
-  padding-bottom: 5px; }
+  padding-top: 13px;
+  padding-bottom: 13px; }
 
 /*footer*/
 #footer {
