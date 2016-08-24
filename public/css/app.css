@@ -56,6 +56,7 @@ html {
 
 body {
   height: 100%;
+  min-width: 1140px;
   margin: 0;
   padding: 0;
   word-wrap: break-word;
@@ -211,9 +212,6 @@ img {
 
 /*job detail页面*/
 /*left position info*/
-.container {
-  width: 980px; }
-
 .left-position {
   width: 600px;
   background-color: #fff;
@@ -1203,6 +1201,9 @@ div.refine-position-item:nth-child(odd) {
 .jb_navbar {
   position: relative !important;
   margin-bottom: 0px !important; }
+
+.container {
+  width: 1140px !important; }
 
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)

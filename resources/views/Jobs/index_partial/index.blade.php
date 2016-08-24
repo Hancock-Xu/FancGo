@@ -2,11 +2,11 @@
 
 @section('content')
 
-	<div class="container">
+	<div>
 		@include('Jobs.index_partial.searchbar')
 	</div>
 
-	<div class="container joblist">
+	<div class="joblist">
 
 			@foreach ($jobs as $job)
 

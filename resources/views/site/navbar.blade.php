@@ -2,12 +2,12 @@
 	<div class="container-fluid">
 
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="true">
-				<span class="sr-only">Toggle Navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
+			{{--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="true">--}}
+				{{--<span class="sr-only">Toggle Navigation</span>--}}
+				{{--<span class="icon-bar"></span>--}}
+				{{--<span class="icon-bar"></span>--}}
+				{{--<span class="icon-bar"></span>--}}
+			{{--</button>--}}
 			<a id="brand-jobleadchina" class="brand" href="/">
 				<img src="{{asset('images/logo.png')}}" alt="">
 			</a>
