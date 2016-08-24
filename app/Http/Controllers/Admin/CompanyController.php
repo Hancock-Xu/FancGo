@@ -88,6 +88,7 @@ class CompanyController extends Controller
 	{
 
 		$user = \Auth::user();
+
 		$company = $user->company;
 
 		if ($company){
@@ -117,9 +118,9 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
+		$input = $this->replaceLineFeed($request);
 
-
-	    $company = Company::create($request->all());
+	    $company = Company::create($input);
 
 		$this->correctImgPath($request, $company);
 
@@ -210,7 +211,7 @@ class CompanyController extends Controller
     public function update(CompanyStoreRequest $request, $id)
     {
         $company = Company::findOrFail($id);
-        $input = $request->all();
+        $input = $this->replaceLineFeed($request);
         $company->fill($input)->save();
 
         return redirect('/job');
@@ -247,4 +248,14 @@ class CompanyController extends Controller
 	    return redirect('/company/create');
     }
 
+
+
+	public function replaceLineFeed(Request $request)
+	{
+		$input = $request->all();
+		$input['company_description'] = str_replace("\n", "<br>", $input['company_description']);
+		$input['company_description'] = str_replace(" ", "&nbsp;", $input['company_description']);
+
+		return $input;
+	}
 }

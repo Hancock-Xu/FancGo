@@ -1079,7 +1079,8 @@ select {
   flex: 1;
   padding: 20px;
   margin: 20px;
-  background-color: white; }
+  background-color: white;
+  max-width: 400px; }
 
 .job_apply_bar_url {
   display: -webkit-box;

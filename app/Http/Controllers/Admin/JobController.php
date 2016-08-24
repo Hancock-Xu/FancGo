@@ -119,10 +119,13 @@ class JobController extends Controller
 	 */
 	public function store(JobStoreRequest $request)
 	{
-		$input = $request->all();
+		$input = $this->replaceLineFeed($request);
+
 		Job::create($input);
 		return redirect('/job');
 	}
+
+
 
 	/**
 	 * Display the specified resource.
@@ -173,7 +176,7 @@ class JobController extends Controller
 	public function update(JobStoreRequest $request, $id)
 	{
 		$job = Job::findOrFail($id);
-		$input = $request->all();
+		$input = $this->replaceLineFeed($request);
 
 		$job->fill($input)->save();
 	
@@ -221,6 +224,19 @@ class JobController extends Controller
 
 		}
 
+	}
+
+	public function replaceLineFeed(Request $request)
+	{
+		$input = $request->all();
+		$input['job_description'] = str_replace("\n", "<br>", $input['job_description']);
+		$input['job_description'] = str_replace(" ", "&nbsp;", $input['job_description']);
+		$input['desired_skill_experience'] = str_replace("\n", "<br>", $input['desired_skill_experience']);
+		$input['desired_skill_experience'] = str_replace(" ", "&nbsp;", $input['desired_skill_experience']);
+		$input['position_benefit'] = str_replace("\n", "<br>", $input['position_benefit']);
+		$input['position_benefit'] = str_replace(" ", "&nbsp;", $input['position_benefit']);
+
+		return $input;
 	}
 
 }

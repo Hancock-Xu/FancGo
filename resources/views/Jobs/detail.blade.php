@@ -56,7 +56,7 @@
 						<div class="item-content ">
 							<h4 class="color-line ">Job Description</h4>
 							<article>
-								{{$job->job_description}}
+								{!! $job->job_description !!}
 							</article>
 							<hr/>
 						</div>
@@ -65,7 +65,7 @@
 						<div class="item-content ">
 							<h4 class="color-line ">Desired Skill and Experience</h4>
 							<article>
-								{{$job->desired_skill_experience}}
+								{!! $job->desired_skill_experience !!}
 							</article>
 							<hr/>
 						</div>
@@ -73,7 +73,7 @@
 					<div class="job_benefits">
 						<div class="item-content ">
 							<h4 class="color-line ">Benefits</h4>
-							<p>{{$job->position_benefit}}</p>
+							<article>{!! $job->position_benefit !!}</article>
 						</div>
 						<hr/>
 					</div>
@@ -170,9 +170,9 @@
 				<div class="company_description">
 					<div class="item-content ">
 						<h4 class="color-line ">Company Description</h4>
-						<p>
-							{{$job->company_description}}
-						</p>
+						<article>
+							{!! $job->company_description !!}
+						</article>
 					</div>
 				</div>
 			</div>
