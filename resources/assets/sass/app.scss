@@ -997,11 +997,21 @@ img {
   box-shadow: 0 1px 5px rgba(50, 50, 50, 0.2);
   border-top: 0;
   top: 100%;
-  width: 600px;
+  width: 762px;
   display: none;
   background: #fff;
   overflow: auto;
   border: 1px solid #c4c4c4;
+}
+
+.company_industrylist{
+  //@extend .industrylist;
+  left: -251px;
+}
+
+.job_industrylist{
+  //@extend .company_industrylist;
+  left: -311px;
 }
 
 .industrylist_row {
@@ -1258,8 +1268,8 @@ div.jobThumbnail:nth-child(odd) {
   display: flex;
   align-items: center;
   justify-content: center;
-  //width: 300px;
-  //height: 250px;
+  width: 300px;
+  height: 300px;
 }
 
 #previewer{

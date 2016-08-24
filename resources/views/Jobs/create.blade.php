@@ -93,7 +93,7 @@
 	                                    </span>
 									@endif
 
-								<div class="industrylist">
+								<div class="company_industrylist industrylist">
 
 									<div class="industrylist_row">
 										<strong class="industrylist_row_name">
