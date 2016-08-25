@@ -55,25 +55,25 @@
 					<div class="job_description">
 						<div class="item-content ">
 							<h4 class="color-line ">Job Description</h4>
-							<article>
+							<div>
 								{!! $job->job_description !!}
-							</article>
+							</div>
 							<hr/>
 						</div>
 					</div>
 					<div class="job_desired_skill_and_experience">
 						<div class="item-content ">
 							<h4 class="color-line ">Desired Skill and Experience</h4>
-							<article>
+							<div>
 								{!! $job->desired_skill_experience !!}
-							</article>
+							</div>
 							<hr/>
 						</div>
 					</div>
 					<div class="job_benefits">
 						<div class="item-content ">
 							<h4 class="color-line ">Benefits</h4>
-							<article>{!! $job->position_benefit !!}</article>
+							<div>{!! $job->position_benefit !!}</div>
 						</div>
 						<hr/>
 					</div>
@@ -82,12 +82,14 @@
 
 			<div class="company_info">
 				<div class="company_logo">
-					<div class="jobThumbnailCompanyLogo">
-						<figure>
-							<img class="jobThumbnailCompanyLogoImg" src="{{$job->logo_url}}" alt="{{$job->company_name}}">
-							<label class="company_info_name">{{$job->company_name}}</label>
+					<div class="companyThumbnailCompanyLogo">
+						<figure class="companyThumbnailCompanyLogo_figure">
+							<img class="companyThumbnailCompanyLogoImg" src="{{$job->logo_url}}" alt="{{$job->company_name}}">
+
 						</figure>
+
 					</div>
+					<label class="company_info_name">{{$job->company_name}}</label>
 				</div>
 				<div class="company_basic_info">
 					<ul class="company-info-content ">

@@ -878,7 +878,7 @@ img {
   margin: 0 auto;
   /*border: 1px solid #ccc;*/ }
 
-.jobThumbnailCompanyLogo {
+.jobThumbnailCompanyLogo, .companyThumbnailCompanyLogo {
   -webkit-box-flex: 1;
   flex: 1;
   margin: 10px;
@@ -887,9 +887,23 @@ img {
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  width: 150px;
+  position: relative;
+  height: 150px; }
 
-.jobThumbnailCompanyLogoImg {
+.jobThumbnailCompanyLogo_figure, .companyThumbnailCompanyLogo_figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center; }
+
+.jobThumbnailCompanyLogoImg, .companyThumbnailCompanyLogoImg {
   width: 100%; }
 
 .jobThumbnailPosition {
@@ -1095,6 +1109,15 @@ select {
   background-color: white;
   width: 360px;
   margin-left: 0; }
+
+.companyThumbnailCompanyLogo {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto; }
+
+.companyThumbnailCompanyLogo_figure {
+  width: 250px;
+  height: 250px; }
 
 .job_apply_bar_url {
   display: -webkit-box;

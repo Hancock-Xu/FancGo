@@ -1198,11 +1198,23 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 150px;
+  position: relative;
+  height: 150px;
+}
+.jobThumbnailCompanyLogo_figure{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .jobThumbnailCompanyLogoImg{
   width: 100%;
 }
+
 
 .jobThumbnailPosition {
   flex: 3;
@@ -1434,6 +1446,23 @@ select{
   width: 360px;
   margin-left: 0;
   //max-width: 380px;
+}
+
+.companyThumbnailCompanyLogo{
+  @extend .jobThumbnailCompanyLogo;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.companyThumbnailCompanyLogo_figure{
+  @extend .jobThumbnailCompanyLogo_figure;
+  width: 250px;
+  height: 250px;
+}
+
+.companyThumbnailCompanyLogoImg{
+  @extend .jobThumbnailCompanyLogoImg;
 }
 
 //========job apply bar=======
