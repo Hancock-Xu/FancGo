@@ -63,7 +63,7 @@ $table-bg:                      #fff;
 
 .control-label{
   @extend .control-label;
-  margin-right: 10px;
+  padding-right: 10px !important;
 }
 
 .form-group {
