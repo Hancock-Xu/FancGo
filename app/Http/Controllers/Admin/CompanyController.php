@@ -256,7 +256,8 @@ class CompanyController extends Controller
 	public function replaceLineFeed(Request $request)
 	{
 		$input = $request->all();
-		if ($input['company_description']){
+
+		if (isset($input['company_description'])){
 			$input['company_description'] = str_replace("\n", "<br />", $input['company_description']);
 			$input['company_description'] = str_replace(" ", "&nbsp;", $input['company_description']);
 		}
