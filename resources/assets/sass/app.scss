@@ -427,6 +427,10 @@ img {
   margin: 20px;
   font-size: 14px;
   overflow: hidden;
+}
+
+.company_item-content{
+  @extend .item-content;
   width: 280px;
 }
 

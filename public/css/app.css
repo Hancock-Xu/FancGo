@@ -247,13 +247,15 @@ img {
   margin: 0 0 0 20px; }
 
 /*岗位、公司描述*/
-.item-content {
+.item-content, .company_item-content {
   margin: 20px;
   font-size: 14px;
-  overflow: hidden;
+  overflow: hidden; }
+
+.company_item-content {
   width: 280px; }
 
-.item-content p {
+.item-content p, .company_item-content p {
   color: #666;
   word-wrap: break-word;
   word-break: normal; }

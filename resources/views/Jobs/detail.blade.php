@@ -170,7 +170,7 @@
 					</ul>
 				</div>
 				<div class="company_description">
-					<div class="item-content ">
+					<div class="company_item-content">
 						<h4 class="color-line ">Company Description</h4>
 						<div>
 							{!! $job->company_description !!}
