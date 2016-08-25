@@ -39,10 +39,10 @@
 
 						@if(Auth::guest())
 							<li>
-								<a href="{{ url('/auth/login') }}">Login</a>
+								<a href="{{ url('/login') }}">Login</a>
 							</li>
 							<li>
-								<a href="{{ url('/auth/register') }}">Register</a>
+								<a href="{{ url('/register') }}">Register</a>
 							</li>
 						@else
 							<li class="dropdown">
@@ -59,7 +59,7 @@
 										{{--					<a href="{{action('Admin\ApartmentController@create')}}">Post apartment</a>--}}
 									</li>
 									<li>
-										<a href="{{ action('Auth\AuthController@getLogout') }}">Logout</a>
+										<a href="{{url('/logout')}}">Logout</a>
 									</li>
 									<li>
 										<a href="{{action('Admin\ProfileController@company')}}">Edit Company info</a>
