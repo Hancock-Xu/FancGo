@@ -1412,6 +1412,8 @@ select{
 
 .job_company_info{
   display: flex;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 .job_info{
@@ -1419,7 +1421,9 @@ select{
   flex: 3;
   padding: 20px;
   margin: 20px;
-  max-width: 800px;
+  width: 760px;
+  margin-left: 0;
+  //max-width: 760px;
 }
 
 .company_info{
@@ -1427,7 +1431,9 @@ select{
   padding: 20px;
   margin: 20px;
   background-color: white;
-  max-width: 400px;
+  width: 360px;
+  margin-left: 0;
+  //max-width: 380px;
 }
 
 //========job apply bar=======
