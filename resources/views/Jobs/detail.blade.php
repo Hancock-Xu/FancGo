@@ -172,9 +172,9 @@
 				<div class="company_description">
 					<div class="item-content ">
 						<h4 class="color-line ">Company Description</h4>
-						<article>
+						<div>
 							{!! $job->company_description !!}
-						</article>
+						</div>
 					</div>
 				</div>
 			</div>
