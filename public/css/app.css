@@ -1220,6 +1220,29 @@ div.refine-position-item:nth-child(odd) {
   position: relative !important;
   margin-bottom: 0px !important; }
 
+.moreInformation {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 20px 50px; }
+
+.moreInformation h2, .information-intro-en h3, .information-intro-en h4,
+.information-intro-ch-HR h4, .information-intro-ch-rent h4 {
+  color: #694c9c; }
+
+.head-hunter, .information-intro-ch-HR, .information-intro-ch-rent {
+  margin-top: 30px; }
+
+.information-intro-ch-rent span {
+  font-size: 14px;
+  color: #999; }
+
+.information-pic {
+  text-align: center; }
+
+.information-picList {
+  box-shadow: 1px 1px 5px #c9c9c9;
+  margin: 10px auto; }
+
 .container {
   width: 1140px !important; }
 

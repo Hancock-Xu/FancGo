@@ -89,8 +89,6 @@ class BasicSiteInfoController extends Controller
 
     public function about()
     {
-        $firstName = "Hanyu";
-        $secondName = "Xu";
-        return view('site.about', compact('firstName','secondName'));
+        return view('site.about');
     }
 }
