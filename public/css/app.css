@@ -250,7 +250,8 @@ img {
 .item-content, .company_item-content {
   margin: 20px;
   font-size: 14px;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 680px; }
 
 .company_item-content {
   width: 280px; }
