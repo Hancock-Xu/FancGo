@@ -82,7 +82,7 @@ class ProfileController extends Controller
 
 		$user->finish_basic_info = true;
 	    $user->save();
-        return redirect()->back();
+        return redirect('/job');
     }
 
     public function company()
