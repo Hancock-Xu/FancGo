@@ -229,12 +229,18 @@ class JobController extends Controller
 	public function replaceLineFeed(Request $request)
 	{
 		$input = $request->all();
-		$input['job_description'] = str_replace("\n", "<br>", $input['job_description']);
-		$input['job_description'] = str_replace(" ", "&nbsp;", $input['job_description']);
-		$input['desired_skill_experience'] = str_replace("\n", "<br>", $input['desired_skill_experience']);
-		$input['desired_skill_experience'] = str_replace(" ", "&nbsp;", $input['desired_skill_experience']);
-		$input['position_benefit'] = str_replace("\n", "<br>", $input['position_benefit']);
-		$input['position_benefit'] = str_replace(" ", "&nbsp;", $input['position_benefit']);
+		if ($input['job_description']){
+			$input['job_description'] = str_replace("\n", "<br />", $input['job_description']);
+			$input['job_description'] = str_replace(" ", "&nbsp;", $input['job_description']);
+		}
+		if ($input['desired_skill_experience']){
+			$input['desired_skill_experience'] = str_replace("\n", "<br />", $input['desired_skill_experience']);
+			$input['desired_skill_experience'] = str_replace(" ", "&nbsp;", $input['desired_skill_experience']);
+		}
+		if ($input['position_benefit']){
+			$input['position_benefit'] = str_replace("\n", "<br />", $input['position_benefit']);
+			$input['position_benefit'] = str_replace(" ", "&nbsp;", $input['position_benefit']);
+		}
 
 		return $input;
 	}
