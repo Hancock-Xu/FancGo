@@ -390,7 +390,7 @@
 
 									<div class="form-group{{ $errors->has('founder_time') ? ' has-error' : '' }}">
 										<label for="founder_time" class="col-md-4 control-label">Establishment Date
-											<i class="glyphicon glyphicon-asterisk required-item"></i>
+											{{--<i class="glyphicon glyphicon-asterisk required-item"></i>--}}
 										</label>
 
 										<div class="col-md-6">
@@ -490,7 +490,7 @@
 
 									<div class="form-group{{ $errors->has('company_address') ? ' has-error' : '' }}">
 										<label for="company_address" class="col-md-4 control-label">Company Address
-											<i class="glyphicon glyphicon-asterisk required-item"></i>
+											{{--<i class="glyphicon glyphicon-asterisk required-item"></i>--}}
 										</label>
 
 										<div class="col-md-6">
@@ -507,7 +507,7 @@
 
 									<div class="form-group{{ $errors->has('website') ? ' has-error' : '' }}">
 										<label for="company_website" class="col-md-4 control-label">Company Website
-											<i class="glyphicon glyphicon-asterisk required-item"></i>
+											{{--<i class="glyphicon glyphicon-asterisk required-item"></i>--}}
 										</label>
 
 										<div class="col-md-6">
@@ -551,7 +551,13 @@
 
 						</div>
 
-						<h2>Edit Position</h2>
+						@if(count($jobs)>0)
+
+							<h2>Edit Position</h2>
+
+						@else
+
+						@endif
 						<div class="refine-position">
 
 							@if(count($jobs)>0)
@@ -582,7 +588,7 @@
 
 							@else
 
-								<h2>No other jobs</h2>
+								{{--<h2>No other jobs</h2>--}}
 
 							@endif
 

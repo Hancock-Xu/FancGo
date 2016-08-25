@@ -28,6 +28,7 @@ class CompanyStoreRequest extends Request
             'scale'=>'required',
             'company_location'=>'required',
             'company_industry'=>'required',
+	        'website'=>'URL'
         ];
     }
 

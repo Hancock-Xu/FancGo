@@ -7,13 +7,13 @@
 	<body>
 
 		<div id="mailContainer" style="margin: 0 auto; width: 600px; overflow: hidden; color: #666;">
-			<h2>JobleadChina</h2>
+			<h2>JobLeadChina</h2>
 			<div class="mailContentContainer" style="
   background-color: #fff;
   border-top: 20px solid #694c9c;
   padding: 20px;">
 				<div class="mailContent-enterprise">
-					<h4>Welcome to join JobleadChina</h4>
+					<h4>Welcome to join JobLeadChina</h4>
 					</br>
 					Please click on the following link to verify your company email in 24 hours:
 					</br>
