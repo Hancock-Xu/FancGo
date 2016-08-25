@@ -258,7 +258,7 @@ class CompanyController extends Controller
 		$input = $request->all();
 
 		if (isset($input['company_description'])){
-			$input['company_description'] = str_replace("\n", "<br />", $input['company_description']);
+			$input['company_description'] = preg_replace("/\r\n|\r|\n/",'<br/>',$input['company_description']);
 			$input['company_description'] = str_replace(" ", "&nbsp;", $input['company_description']);
 		}
 

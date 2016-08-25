@@ -55,9 +55,9 @@
 					<div class="job_description">
 						<div class="item-content ">
 							<h4 class="color-line ">Job Description</h4>
-							<div>
+							<p>
 								{!! $job->job_description !!}
-							</div>
+							</p>
 							<hr/>
 						</div>
 					</div>
