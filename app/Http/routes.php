@@ -33,11 +33,12 @@ Route::group([
 	Route::get('/company/create', 'CompanyController@create');
 	Route::post('/company/storeprecompany', 'CompanyController@storePreCompany');
 	Route::post('/company/storeCompany', 'CompanyController@storeCompany');
+	Route::post('/company/updatePreCompany/{id}', 'CompanyController@updatePreCompany');
 	Route::post('/company', 'CompanyController@store');
 	Route::post('/company/send_verify_apply', 'CompanyController@sendVerifyRequestEmail');
 	Route::post('/company/resend_verify_link','CompanyController@resendVerifyLinkEmail');
 	Route::post('/company/{id}', 'CompanyController@update');
-	Route::get('/company/{id}/edit', 'CompanyController@edit');
+//	Route::get('/company/{id}/edit', 'CompanyController@edit');
 	Route::delete('/company/{id}', 'CompanyController@destroy');
 	Route::get('/company/verify_email/{token}/{id}', 'CompanyController@getVerifyRequestEmail');
 	Route::get('/company/delete/{id}','CompanyController@deleteJob');

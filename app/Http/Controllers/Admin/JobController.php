@@ -232,15 +232,15 @@ class JobController extends Controller
 		if (isset($input['job_description'])){
 			$input['job_description'] = preg_replace("/\r\n|\r|\n/",'<br/>',$input['job_description']);
 			//			$input['job_description'] = str_replace("\n", "<br>", $input['job_description']);
-			$input['job_description'] = str_replace(" ", "&nbsp;", $input['job_description']);
+//			$input['job_description'] = str_replace(" ", "&nbsp;", $input['job_description']);
 		}
 		if (isset($input['desired_skill_experience'])){
 			$input['desired_skill_experience'] = preg_replace("/\r\n|\r|\n/",'<br/>',$input['desired_skill_experience']);
-			$input['desired_skill_experience'] = str_replace(" ", "&nbsp;", $input['desired_skill_experience']);
+//			$input['desired_skill_experience'] = str_replace(" ", "&nbsp;", $input['desired_skill_experience']);
 		}
 		if (isset($input['position_benefit'])){
 			$input['position_benefit'] = preg_replace("/\r\n|\r|\n/",'<br/>',$input['position_benefit']);
-			$input['position_benefit'] = str_replace(" ", "&nbsp;", $input['position_benefit']);
+//			$input['position_benefit'] = str_replace(" ", "&nbsp;", $input['position_benefit']);
 		}
 
 		return $input;

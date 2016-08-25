@@ -64,7 +64,6 @@ class CompanyController extends Controller
 	    $user = \Auth::user();
 	    $company = $user->company;
 	    return $this->sendValidateLink($verifyEmail, ['id' => $company->id]);
-
     }
 
 //    public function store
@@ -190,6 +189,11 @@ class CompanyController extends Controller
     {
         $company = Company::findOrFail($id);
 	    $user = \Auth::user();
+
+	    if (!$company->pass_email_verify){
+	    	return view('Company.edit_link_request_form', ['company'=>$company, 'user'=>$user]);
+	    }
+
         if ($company->user_id == $user->id) {
             $jobs = Job::where('company_id', '=', $company->id)->orderBy('updated_at','desc')->paginate(config('jobs.posts_per_page'));
             return view('Company.edit', ['company' => $company, 'jobs'=>$jobs]);
@@ -200,6 +204,25 @@ class CompanyController extends Controller
             return view('Company.link_request_form', ['company' => $company]);
         }
     }
+
+	public function updatePreCompany(Request $request, $id)
+	{
+		$this->validate($request, [
+			'user_id'=>'required',
+			'business_license_name'=>'required',
+			'company_email'=>'required|email|business_email'
+		]);
+
+		$company = Company::findOrFail($id);
+		$input = $request->all();
+		$company->fill($input)->save();
+		$this->correctImgPath($request, $company);
+		$company->save();
+
+		$verifyEmail = $input['company_email'];
+
+		return $this->sendValidateLink($verifyEmail, ['id' => $company->id]);
+	}
 
     /**
      * Update the specified resource in storage.
@@ -259,7 +282,7 @@ class CompanyController extends Controller
 
 		if (isset($input['company_description'])){
 			$input['company_description'] = preg_replace("/\r\n|\r|\n/",'<br/>',$input['company_description']);
-			$input['company_description'] = str_replace(" ", "&nbsp;", $input['company_description']);
+//			$input['company_description'] = str_replace(" ", "&nbsp;", $input['company_description']);
 		}
 
 		return $input;

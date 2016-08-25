@@ -28,7 +28,7 @@
 							<li @if(Request::is('job/create')) class="active" @endif>
 								<a href="{{url('/job/create')}}">Post Job <span class="sr-only">(current)</span></a>
 							</li>
-							<li><a href="{{action('Admin\BasicSiteInfoController@about')}}">HR service<span class="sr-only">(current)</span></a></li>
+							<li><a href="{{action('Admin\BasicSiteInfoController@about')}}">Head Hunting<span class="sr-only">(current)</span></a></li>
 							{{--<li><a href="#">Guidence <span class="sr-only">(current)</span></a></li>--}}
 						</ul>
 

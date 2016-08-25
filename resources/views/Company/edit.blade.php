@@ -37,7 +37,7 @@
 									</div>
 
 									<div class="previewSelectFile">
-										<img id="previewer" src="" alt="Logo Previewer">
+										<img id="previewer" src="{{$company->logo_url}}" alt="Logo Previewer">
 									</div>
 
 									@if ($errors->has('logo_url'))

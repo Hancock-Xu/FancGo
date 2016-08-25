@@ -56,8 +56,8 @@
 
 <div id="footer">
 	<div class="container ">
-		<h3>Joblead China</h3>
-		<p>A set of job solution for enterprises and forein talents.</p>
+		<h3>JobLeadChina</h3>
+		<p>A Set of Job Solution for Enterprises and Foreign Talents</p>
 		<span class="more-about"><a  href="{{action('Admin\BasicSiteInfoController@about')}}">More about us</a></span>
 		<span class="contact-email"><a href="mailto:service@jobleadchina.com?subject=The%20subject%20of%20the%20mail">Email:&nbsp;service@jobleadchina.com</a> We will replay you in one day</span>
 	</div>

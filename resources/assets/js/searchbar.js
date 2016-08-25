@@ -1,8 +1,10 @@
 /**
  * Created by Xuhanyu on 7/28/16.
  */
-$(document).ready(function() {
 
+
+$(document).ready(function() {
+    $("a,button").focus(function(){this.blur()});
     $("body").click(function(event) {
 
         var target = event.target;

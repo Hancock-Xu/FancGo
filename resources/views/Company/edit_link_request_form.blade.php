@@ -33,7 +33,7 @@
 								</div>
 							@endif
 
-							<form class="form-horizontal" role="form" method="post" action= "{{action('Admin\CompanyController@storePreCompany')}}" enctype="multipart/form-data">
+							<form class="form-horizontal" role="form" method="post" action= "{{action('Admin\CompanyController@updatePreCompany', $company->id)}}" enctype="multipart/form-data">
 								{{ csrf_field() }}
 
 								<div class="form-group {{ $errors->has('business_license_name') ? ' has-error' : '' }}">
@@ -43,7 +43,7 @@
 
 
 									<div class="col-md-6">
-										<input autofocus id="business_license_name" type="text" class="form-control" name="business_license_name" value="{{ old('business_license_name')}}">
+										<input autofocus id="business_license_name" type="text" class="form-control" name="business_license_name" value="{{ $company->business_license_name}}">
 
 										@if ($errors->has('business_license_name'))
 											<span class="help-block">
@@ -60,7 +60,7 @@
 									</label>
 
 									<div class="col-md-6">
-										<input autofocus id="company_email" type="email" class="form-control" name="company_email" value="{{ old('company_email')}}">
+										<input autofocus id="company_email" type="email" class="form-control" name="company_email" value="{{ $company->company_email }}">
 
 										@if ($errors->has('company_email'))
 											<span class="help-block">
@@ -78,7 +78,7 @@
 									</label>
 
 									<div class="col-md-6">
-										<input autofocus id="company_phone_number" type="text" class="form-control" name="company_phone_number" value="{{ old('company_phone_number') }}">
+										<input autofocus id="company_phone_number" type="text" class="form-control" name="company_phone_number" value="{{ $company->company_phone_number }}">
 
 										@if ($errors->has('company_phone_number'))
 											<span class="help-block">
@@ -109,7 +109,7 @@
 										</div>
 
 										<div class="previewSelectFile">
-											<img id="previewer" alt="Image Previewer">
+											<img id="previewer" alt="Image Previewer" src="{{$company->certificate_url}}">
 										</div>
 
 									</div>
@@ -129,7 +129,7 @@
 
 								{{--@if($company)--}}
 
-									{{--{!! Form::hidden('id', $company->id) !!}--}}
+								{{--{!! Form::hidden('id', $company->id) !!}--}}
 
 								{{--@endif--}}
 

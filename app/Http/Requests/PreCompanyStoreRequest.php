@@ -26,7 +26,7 @@ class PreCompanyStoreRequest extends Request
 //            'company_name'=>'required',
 			'business_license_name'=>'required',
 //            'logo_url'=>'required|image',
-			'logo_url'=>'image',
+//			'logo_url'=>'image',
 			'certificate_url'=>'required|image',
 
 //            'company_description'=>'required',
@@ -34,7 +34,7 @@ class PreCompanyStoreRequest extends Request
 //            'company_location'=>'required',
 //            'company_industry'=>'required',
 			'company_email'=>'required|email|business_email',/*企业邮箱*/
-			'company_phone_number'=>'required'
+//			'company_phone_number'=>'required'
 		];
 	}
 
@@ -46,6 +46,7 @@ class PreCompanyStoreRequest extends Request
 //            'logo_url.required' => '需要上传公司Logo',
 //            'logo_url.image' => '公司Logo需要是图片格式',
 			'certificate_url.image' => '公司注册信息图片需要是图片格式',
+			'certificate_url.required' => '注册公司需要公司营业执照照片',
 //            'resume_email.email' => '需要填写邮箱用来接收简历',
 //            'company_description.required' => '需要填写公司描述',
 //            'scale.required' => '需要填写公司规模',

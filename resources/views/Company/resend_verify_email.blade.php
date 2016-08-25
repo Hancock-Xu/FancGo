@@ -11,7 +11,7 @@
 			<h2>Do you need resend verified email to {{$company->company_email}}?</h2>
 
 			<div class="resend_verify_email">
-				<form action="{{action('Admin\CompanyController@resendVerifyLinkEmail')}}" method="post">
+				<form action="{{action('Admin\CompanyController@edit', $company->id)}}" method="get">
 					{{--<input type="hidden" name="_method" value="">--}}
 					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -22,12 +22,12 @@
 			</div>
 
 			<div class="Re_create_company">
-				<form action="{{action('Admin\CompanyController@destroy', ['id'=>$company->id])}}" method="post">
-					<input type="hidden" name="_method" value="DELETE">
+				<form action="{{action('Admin\CompanyController@edit', ['id'=>$company->id])}}" method="get">
+					{{--<input type="hidden" name="_method" value="DELETE">--}}
 					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 					<button type="submit" class="btn btn-primary">
-						<i class="fa fa-btn fa-envelope"></i>Re-registration of the company
+						<i class="fa fa-btn fa-envelope"></i>Modify the company registration information
 					</button>
 				</form>
 
