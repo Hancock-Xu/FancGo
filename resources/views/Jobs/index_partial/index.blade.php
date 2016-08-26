@@ -68,7 +68,7 @@
 			@endforeach
 
 			<hr>
-{{--			{!! $jobs->render() !!}--}}
+			{!! $jobs->render() !!}
 
 	</div>
 @stop
