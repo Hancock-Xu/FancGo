@@ -94,7 +94,7 @@ class CompanyController extends Controller
 		$company->complete_create = true;
 		$company->save();
 
-		return view('Jobs.create',['company'=>$company]);
+		return redirect('/job/create');
 	}
 
     /**

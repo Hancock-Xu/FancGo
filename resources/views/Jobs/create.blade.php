@@ -463,16 +463,26 @@
 						</div>
 					</div>
 					<!-- Job Description -->
-					<div class="job_description_area form-group">
+					<div class="job_description_area form-group {{ $errors->has('job_description') ? ' has-error' : '' }}">
 						<label class="job_label" for="job-des-content">Job Description</label>
 						<i class="glyphicon glyphicon-asterisk required-item"></i>
 						<textarea rows="8" type="text" name="job_description" class="form-control" id="job-des-content" spellcheck="true"></textarea>
+						@if ($errors->has('job_description'))
+							<span class="help-block">
+                                <strong>{{ $errors->first('job_description') }}</strong>
+                            </span>
+						@endif
 					</div>
 					<!-- Desired Skills and expertise -->
-					<div class="desired_skill_experience_area form-group">
+					<div class="desired_skill_experience_area form-group {{ $errors->has('job_description') ? ' has-error' : '' }}">
 						<label class="job_label" for="skills-content">Desired Skills and Expertise</label>
 						<i class="glyphicon glyphicon-asterisk required-item"></i>
 						<textarea class="form-control" rows="8" id="skills-content" name="desired_skill_experience" spellcheck="true"></textarea>
+						@if ($errors->has('job_description'))
+							<span class="help-block">
+                                <strong>{{ $errors->first('job_description') }}</strong>
+                            </span>
+						@endif
 					</div>
 					<!-- Benefit -->
 					<div class="position_benefit_input form-group">
@@ -593,16 +603,5 @@
 	</div>
 
 	<script type="text/javascript" src="js/jobleadchina.js"></script>
-
-	@if($errors->any())
-		<ul class="alert alert-danger">
-			@foreach($errors->all() as $error)
-				<div class="container">
-					<li>{{ $error }}</li>
-				</div>
-
-			@endforeach
-		</ul>
-	@endif
 
 @stop
