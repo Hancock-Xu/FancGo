@@ -72,9 +72,9 @@
 
 	</div>
 
-	<div class="pagination_container">
+	<nav class="pagination_container">
 		{!! $jobs->render() !!}
-	</div>
+	</nav>
 
 
 @stop
