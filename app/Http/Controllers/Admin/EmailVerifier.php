@@ -92,12 +92,11 @@ trait EmailVerifier
 	{
 		$response = VerifyEmail::broker()->verifyEmail($token);
 		$user = Auth::getUser();
+		$company = Company::findOrFail($id);
 
 		if ($response == VerifyEmail::VERIFY_SUCCEED){
 			
 			if ($id){
-				
-				$company = Company::findOrFail($id);
 
 				if (!$company->pass_email_verify){
 
@@ -115,11 +114,9 @@ trait EmailVerifier
 				
 			}
 
-			
-
 		}else{
 
-			return view('Company.verify_business_email_failed');
+			return view('Company.verify_business_email_token_overdue', ['company'=>$company]);
 
 		}
 

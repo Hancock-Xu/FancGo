@@ -13,7 +13,7 @@
 
 			<div class="company-info">
 
-				<div class="business_license">
+				<div class="business_license {{ $errors->has('resume_url') ? ' has-error' : '' }}">
 
 					<div class="company_logo_container">
 
@@ -24,14 +24,20 @@
 								<embed src="{{asset('images/upload.svg')}}" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
 
 								<label for="logo_url">UpLoad your Resume</label>
-								<input type="file" id="resume_chooser" accept="application/pdf" name="resume_url" value="{{$user->resume_url}}">
+								<input type="file" id="resume_chooser" accept="application/pdf" name="resume_url">
 								<label for="">Upper Limit 2M</label>
 								<label for="">Only Accept PDF</label>
-								<label for="" id="pdf_name"></label>
+								<label for="" id="pdf_name">{{$user->resume_url}}</label>
 
 							</div>
 
 						</div>
+
+						@if ($errors->has('resume_url'))
+							<span class="help-block">
+                                        <strong>{{ $errors->first('resume_url') }}</strong>
+                                    </span>
+						@endif
 
 					</div>
 

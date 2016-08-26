@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\User;
+use Session;
 use Illuminate\Http\Request;
+use Redirect;
 use Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProfileUpdateRequest;
@@ -32,6 +33,9 @@ class ProfileController extends Controller
     public function edit()
     {
         $user = Auth::getUser();
+	    if (Session::has('backUrl')) {
+		    Session::keep('backUrl');
+	    }
         return view('Profile.edit',['user'=>$user]);
 
     }
@@ -82,7 +86,10 @@ class ProfileController extends Controller
 
 		$user->finish_basic_info = true;
 	    $user->save();
-        return redirect('/job');
+
+	    return ($url = Session::get('backUrl'))
+		    ? Redirect::to($url)
+		    : redirect('/job');
     }
 
     public function company()

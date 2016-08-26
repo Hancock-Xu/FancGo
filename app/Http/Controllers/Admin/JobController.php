@@ -6,7 +6,7 @@ use App\Job;
 use App\Http\Requests\JobStoreRequest;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
-use App\User;
+use Session;
 use Illuminate\Mail\Message;
 use Illuminate\Http\Request;
 use App\VerifyEmailService\VerifyEmail;
@@ -220,6 +220,7 @@ class JobController extends Controller
 
 		}else{
 
+			Session::flash('backUrl', \Request::fullUrl());
 			return redirect(action('Admin\ProfileController@edit'));
 
 		}

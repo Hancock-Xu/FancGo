@@ -8,6 +8,7 @@
 		</div>
 		<div class="content-noresult">
 			<h1>Verified email has been send successfully~~ </h1>
+			<h2>please check you mailbox in 2 hours</h2>
 		</div>
 	</div>
 

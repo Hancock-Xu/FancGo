@@ -384,8 +384,9 @@
 														<option value=1>Less than 15</option>
 														<option value=2>15-50</option>
 														<option value=3>50-150</option>
-														<option value=4>500-2000</option>
-														<option value=5>More than 2000</option>
+														<option value=4>150-500</option>
+														<option value=5>500-2000</option>
+														<option value=6>More than 2000</option>
 													</select>
 
 													@if ($errors->has('scale'))
