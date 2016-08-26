@@ -53,7 +53,7 @@
 											</div>
 
 											<div class="previewSelectFile">
-												<img id="previewer" src="" alt="Logo Previewer">
+												<img id="previewer" src="{{$company->logo_url}}" alt="Logo Previewer">
 											</div>
 
 										</div>
@@ -73,7 +73,7 @@
 												</label>
 
 												<div class="col-md-6">
-													<input autofocus id="short-name" type="text" class="form-control" name="company_name" value="{{ old('company_name') }}">
+													<input autofocus id="short-name" type="text" class="form-control" name="company_name" value="{{ $company->company_name }}">
 
 													@if ($errors->has('company_name'))
 														<span class="help-block">
@@ -93,7 +93,7 @@
 
 												<div class="col-md-6">
 
-														<input type="text" class="industryInput input-large form-control" name="company_industry" id="selectedIndustry" value="" placeholder="Industry" autocomplete="off" readonly>
+														<input type="text" class="industryInput input-large form-control" name="company_industry" id="selectedIndustry" value="{{ $company->company_industry }}" placeholder="Industry" autocomplete="off" readonly>
 
 													@if ($errors->has('company_industry'))
 														<span class="help-block">
@@ -380,13 +380,13 @@
 												<div class="col-md-6">
 
 													<select name="scale" class="form-control" id="company_scale">
-														<option disabled selected>choose</option>
-														<option value=1>Less than 15</option>
-														<option value=2>15-50</option>
-														<option value=3>50-150</option>
-														<option value=4>150-500</option>
-														<option value=5>500-2000</option>
-														<option value=6>More than 2000</option>
+														<option disabled {{$company->scale == null ? 'selected' : ''}}>choose</option>
+														<option value=1 {{$company->scale == '< 15' ? 'selected' : ''}}>Less than 15</option>
+														<option value=2 {{$company->scale == '15~50' ? 'selected' : ''}}>15-50</option>
+														<option value=3 {{$company->scale == '50~150' ? 'selected' : ''}}>50-150</option>
+														<option value=4 {{$company->scale == '150~500' ? 'selected' : ''}}>150-500</option>
+														<option value=5 {{$company->scale == '500~2000' ? 'selected' : ''}}>500-2000</option>
+														<option value=6 {{$company->scale == '> 2000' ? 'selected' : ''}}>More than 2000</option>
 													</select>
 
 													@if ($errors->has('scale'))
@@ -406,43 +406,43 @@
 												<div class="col-md-6">
 													<select name="founder_time" class="form-control" id="company_founder_time">
 														<option disabled selected>choose</option>
-														<option value="1980">1980</option>
-														<option value="1981">1981</option>
-														<option value="1982">1982</option>
-														<option value="1983">1983</option>
-														<option value="1984">1984</option>
-														<option value="1985">1985</option>
-														<option value="1986">1986</option>
-														<option value="1987">1987</option>
-														<option value="1988">1988</option>
-														<option value="1989">1989</option>
-														<option value="1990">1990</option>
-														<option value="1991">1991</option>
-														<option value="1992">1992</option>
-														<option value="1993">1993</option>
-														<option value="1994">1994</option>
-														<option value="1995">1995</option>
-														<option value="1996">1996</option>
-														<option value="1997">1997</option>
-														<option value="1998">1998</option>
-														<option value="1999">1999</option>
-														<option value="2000">2000</option>
-														<option value="2001">2001</option>
-														<option value="2002">2002</option>
-														<option value="2003">2003</option>
-														<option value="2004">2004</option>
-														<option value="2005">2005</option>
-														<option value="2006">2006</option>
-														<option value="2007">2007</option>
-														<option value="2008">2008</option>
-														<option value="2009">2009</option>
-														<option value="2010">2010</option>
-														<option value="2011">2011</option>
-														<option value="2012">2012</option>
-														<option value="2013">2013</option>
-														<option value="2014">2014</option>
-														<option value="2015">2015</option>
-														<option value="2016">2016</option>
+														<option value="1980" {{$company->founder_time == '1980' ? 'selected' : ''}}>1980</option>
+														<option value="1981" {{$company->founder_time == '1981' ? 'selected' : ''}}>1981</option>
+														<option value="1982" {{$company->founder_time == '1982' ? 'selected' : ''}}>1982</option>
+														<option value="1983" {{$company->founder_time == '1983' ? 'selected' : ''}}>1983</option>
+														<option value="1984" {{$company->founder_time == '1984' ? 'selected' : ''}}>1984</option>
+														<option value="1985" {{$company->founder_time == '1985' ? 'selected' : ''}}>1985</option>
+														<option value="1986" {{$company->founder_time == '1986' ? 'selected' : ''}}>1986</option>
+														<option value="1987" {{$company->founder_time == '1987' ? 'selected' : ''}}>1987</option>
+														<option value="1988" {{$company->founder_time == '1988' ? 'selected' : ''}}>1988</option>
+														<option value="1989" {{$company->founder_time == '1989' ? 'selected' : ''}}>1989</option>
+														<option value="1990" {{$company->founder_time == '1990' ? 'selected' : ''}}>1990</option>
+														<option value="1991" {{$company->founder_time == '1991' ? 'selected' : ''}}>1991</option>
+														<option value="1992" {{$company->founder_time == '1992' ? 'selected' : ''}}>1992</option>
+														<option value="1993" {{$company->founder_time == '1993' ? 'selected' : ''}}>1993</option>
+														<option value="1994" {{$company->founder_time == '1994' ? 'selected' : ''}}>1994</option>
+														<option value="1995" {{$company->founder_time == '1995' ? 'selected' : ''}}>1995</option>
+														<option value="1996" {{$company->founder_time == '1996' ? 'selected' : ''}}>1996</option>
+														<option value="1997" {{$company->founder_time == '1997' ? 'selected' : ''}}>1997</option>
+														<option value="1998" {{$company->founder_time == '1998' ? 'selected' : ''}}>1998</option>
+														<option value="1999" {{$company->founder_time == '1999' ? 'selected' : ''}}>1999</option>
+														<option value="2000" {{$company->founder_time == '2000' ? 'selected' : ''}}>2000</option>
+														<option value="2001" {{$company->founder_time == '2001' ? 'selected' : ''}}>2001</option>
+														<option value="2002" {{$company->founder_time == '2002' ? 'selected' : ''}}>2002</option>
+														<option value="2003" {{$company->founder_time == '2003' ? 'selected' : ''}}>2003</option>
+														<option value="2004" {{$company->founder_time == '2004' ? 'selected' : ''}}>2004</option>
+														<option value="2005" {{$company->founder_time == '2005' ? 'selected' : ''}}>2005</option>
+														<option value="2006" {{$company->founder_time == '2006' ? 'selected' : ''}}>2006</option>
+														<option value="2007" {{$company->founder_time == '2007' ? 'selected' : ''}}>2007</option>
+														<option value="2008" {{$company->founder_time == '2008' ? 'selected' : ''}}>2008</option>
+														<option value="2009" {{$company->founder_time == '2009' ? 'selected' : ''}}>2009</option>
+														<option value="2010" {{$company->founder_time == '2010' ? 'selected' : ''}}>2010</option>
+														<option value="2011" {{$company->founder_time == '2011' ? 'selected' : ''}}>2011</option>
+														<option value="2012" {{$company->founder_time == '2012' ? 'selected' : ''}}>2012</option>
+														<option value="2013" {{$company->founder_time == '2013' ? 'selected' : ''}}>2013</option>
+														<option value="2014" {{$company->founder_time == '2014' ? 'selected' : ''}}>2014</option>
+														<option value="2015" {{$company->founder_time == '2015' ? 'selected' : ''}}>2015</option>
+														<option value="2016" {{$company->founder_time == '2016' ? 'selected' : ''}}>2016</option>
 													</select>
 													@if ($errors->has('founder_time'))
 														<span class="help-block">
@@ -462,30 +462,30 @@
 												<div class="col-md-6">
 
 													<select class="cityselect form-control" name="company_location" id="company_location">
-														<option disabled selected>Choose</option>
-														<option value="Shenzhen">Shenzhen</option>
-														<option value="Shanghai">Shanghai</option>
-														<option value="Guangzhou">Guangzhou</option>
-														<option value="Beijing">Beijing</option>
-														<option value="Chengdu">Chengdu</option>
-														<option value="Hangzhou">Hangzhou</option>
-														<option value="Nanjing">Nanjing</option>
-														<option value="Xi'an">Xi'an</option>
-														<option value="Haikou">Haikou</option>
-														<option value="Tianjin">Tianjin</option>
-														<option value="Wuhan">Wuhan</option>
-														<option value="Chongqing">Chongqing</option>
-														<option value="Kunming">Kunming</option>
-														<option value="Shenyang">Shenyang</option>
-														<option value="Dongguan">Dongguan</option>
-														<option value="Ningbo">Ningbo</option>
-														<option value="Zhuhai">Zhuhai</option>
-														<option value="Dalian">Dalian</option>
-														<option value="Qingdao">Qingdao</option>
-														<option value="Hongkong">Hongkong</option>
-														<option value="Macao">Macao</option>
-														<option value="Taiwan">Taiwan</option>
-														<option value="Others">Others</option>
+														<option disabled {{$company->company_location == null ? 'selected' : ''}}>Choose</option>
+														<option value="Work City" {{ $company->company_location == "Work City" ? "selected":""}}>Work City</option>
+														<option value="Hongkong" {{ $company->company_location == "Hongkong" ? "selected":""}}>Hongkong</option>
+														<option value="Shenzhen" {{ $company->company_location == "Shenzhen" ? "selected":""}}>Shenzhen</option>
+														<option value="Beijing" {{ $company->company_location == "Beijing" ? "selected":""}}>Beijing</option>
+														<option value="Shanghai" {{ $company->company_location == "Shanghai" ? "selected":""}}>Shanghai</option>
+														<option value="Guangzhou" {{ $company->company_location == "Guangzhou" ? "selected":""}}>Guangzhou</option>
+														<option value="Taiwan" {{ $company->company_location == "Taiwan" ? "selected":""}}>Taiwan</option>
+														<option value="Chengdu" {{ $company->company_location == "Chengdu" ? "selected":""}}>Chengdu</option>
+														<option value="Hangzhou" {{ $company->company_location == "Hangzhou" ? "selected":""}}>Hangzhou</option>
+														<option value="Nanjing" {{ $company->company_location == "Nanjing" ? "selected":""}}>Nanjing</option>
+														<option value="Xi'an" {{ $company->company_location == "Xi'an" ? "selected":""}}>Xi'an</option>
+														<option value="Haikou" {{ $company->company_location == "Haikou" ? "selected":""}}>Haikou</option>
+														<option value="Tianjin" {{ $company->company_location == "Tianjin" ? "selected":""}}>Tianjin</option>
+														<option value="Wuhan" {{ $company->company_location == "Wuhan" ? "selected":""}}>Wuhan</option>
+														<option value="Chongqing" {{ $company->company_location == "Chongqing" ? "selected":""}}>Chongqing</option>
+														<option value="Kunming" {{ $company->company_location == "Kunming" ? "selected":""}}>Kunming</option>
+														<option value="Shenyang" {{ $company->company_location == "Shenyang" ? "selected":""}}>Shenyang</option>
+														<option value="Dongguan" {{ $company->company_location == "Dongguan" ? "selected":""}}>Dongguan</option>
+														<option value="Ningbo" {{ $company->company_location == "Ningbo" ? "selected":""}}>Ningbo</option>
+														<option value="Zhuhai" {{ $company->company_location == "Zhuhai" ? "selected":""}}>Zhuhai</option>
+														<option value="Dalian" {{ $company->company_location == "Dalian" ? "selected":""}}>Dalian</option>
+														<option value="Qingdao" {{ $company->company_location == "Qingdao" ? "selected":""}}>Qingdao</option>
+														<option value="Others" {{ $company->company_location == "Others" ? "selected":""}}>Others</option>
 														<option value="">All</option>
 													</select>
 
@@ -504,7 +504,7 @@
 												</label>
 
 												<div class="col-md-6">
-													<input id="company_address" type="text" class="form-control" name="company_address" value="{{ old('company_address') }}">
+													<input id="company_address" type="text" class="form-control" name="company_address" value="{{ $company->company_address }}">
 
 													@if ($errors->has('company_address'))
 														<span class="help-block">
@@ -521,7 +521,7 @@
 												</label>
 
 												<div class="col-md-6">
-													<input id="company_website" type="url" class="form-control" name="website" value="{{ old('website') }}">
+													<input id="company_website" type="url" class="form-control" name="website" value="{{ $company->website }}">
 
 													@if ($errors->has('website'))
 														<span class="help-block">
@@ -545,13 +545,13 @@
 
 											<div class="col-md-6">
 
-												<textarea name="company_description" id="company_description" cols="20" rows="15" spellcheck="true" class="form-control"></textarea>
+												<textarea name="company_description" id="company_description" cols="20" rows="15" spellcheck="true" class="form-control">{{$company->company_description}}</textarea>
 
 											@if ($errors->has('company_description'))
 													<span class="help-block">
-					                                        <strong>{{ $errors->first('company_description') }}</strong>
-					                                    </span>
-												@endif
+				                                        <strong>{{ $errors->first('company_description') }}</strong>
+				                                    </span>
+											@endif
 											</div>
 
 										</div>

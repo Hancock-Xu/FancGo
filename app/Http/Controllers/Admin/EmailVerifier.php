@@ -95,28 +95,19 @@ trait EmailVerifier
 		$company = Company::findOrFail($id);
 
 		if ($response == VerifyEmail::VERIFY_SUCCEED){
-			
-			if ($id){
 
-				if (!$company->pass_email_verify){
+			$company->pass_email_verify = true;
+			$company->save();
 
-					$company->pass_email_verify = true;
-					$company->save();
-
-					return view('Company.create_company', ['company'=>$company]);
-				}else{
-					return view('Company.edit', ['company' => $company]);
-				}
-			
-			}else{
-				
-				return view('Company.create_company', ['user'=>$user]);
-				
-			}
+			return view('Company.create_company', ['company'=>$company]);
 
 		}else{
 
-			return view('Company.verify_business_email_token_overdue', ['company'=>$company]);
+			if ($company->pass_email_verify){
+				return view('Company.create_company', ['company' => $company]);
+			}else{
+				return view('Company.verify_business_email_token_overdue', ['company'=>$company]);
+			}
 
 		}
 

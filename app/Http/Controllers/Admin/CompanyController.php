@@ -85,28 +85,16 @@ class CompanyController extends Controller
 	 */
 	public function storeCompany(CompanyStoreRequest $request)
 	{
-
 		$user = \Auth::user();
-
 		$company = $user->company;
 
-		if ($company){
+		$input = $request->all();
+		$company->fill($input)->save();
+		$this->correctImgPath($request, $company);
+		$company->complete_create = true;
+		$company->save();
 
-			$input = $request->all();
-			$company->fill($input)->save();
-			$this->correctImgPath($request, $company);
-			$company->complete_create = true;
-			$company->save();
-
-			return view('Jobs.create',['company'=>$company]);
-
-		}else{
-
-			$this->store($request);
-
-			return;
-
-		}
+		return view('Jobs.create',['company'=>$company]);
 	}
 
     /**
@@ -201,7 +189,7 @@ class CompanyController extends Controller
             /**
              * 把company id作为隐含form值返回
              */
-            return view('Company.link_request_form', ['company' => $company]);
+            return view('Company.link_request_form', ['company' => $company, 'user'=>$user]);
         }
     }
 
