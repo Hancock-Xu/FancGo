@@ -72,6 +72,9 @@
 
 	</div>
 
-	{!! $jobs->render() !!}
+	<div>
+		{!! $jobs->render() !!}
+	</div>
+
 
 @stop
