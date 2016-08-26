@@ -551,6 +551,14 @@
 
 						</div>
 
+						<div class="form-group form-submit-button">
+							<div class="joblead_btn">
+								<button type="submit" class="btn company-btn btn-primary">
+									<i class="fa fa-btn fa-envelope"></i> Save
+								</button>
+							</div>
+						</div>
+
 						@if(count($jobs)>0)
 
 							<h2>Edit Position</h2>
@@ -594,16 +602,6 @@
 
 
 						</div><!--refine company position-->
-
-
-
-						<div class="form-group form-submit-button">
-							<div class="joblead_btn">
-								<button type="submit" class="btn company-btn btn-primary">
-									<i class="fa fa-btn fa-envelope"></i> Save
-								</button>
-							</div>
-						</div>
 
 					</form>
 

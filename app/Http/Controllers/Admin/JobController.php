@@ -179,7 +179,8 @@ class JobController extends Controller
 		$input = $this->replaceLineFeed($request);
 
 		$job->fill($input)->save();
-	
+
+//		return view('Jobs.update_succeed');
 		return redirect(action('Admin\CompanyController@edit', $job->company_id));
 	}
 

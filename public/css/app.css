@@ -574,7 +574,8 @@ img {
 .position-btn,
 .company-btn {
   width: 440px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 40px !important; }
 
 .min-salary .form-control,
 .max-salary .form-control {

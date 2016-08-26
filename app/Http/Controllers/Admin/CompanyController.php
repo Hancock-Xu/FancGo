@@ -228,7 +228,7 @@ class CompanyController extends Controller
 	    $this->correctImgPath($request, $company);
 	    $company->save();
 
-        return redirect('/job');
+        return redirect()->back();
     }
 
     /**
