@@ -72,7 +72,7 @@
 
 	</div>
 
-	<div>
+	<div class="pagination_container">
 		{!! $jobs->render() !!}
 	</div>
 

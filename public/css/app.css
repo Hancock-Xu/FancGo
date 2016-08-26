@@ -1272,6 +1272,12 @@ div.refine-position-item:nth-child(odd) {
   box-shadow: 1px 1px 5px #c9c9c9;
   margin: 10px auto; }
 
+.pagination_container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center; }
+
 .container {
   width: 1140px !important; }
 
