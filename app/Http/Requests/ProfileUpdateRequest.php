@@ -22,6 +22,8 @@ class ProfileUpdateRequest extends Request
 	public function rules()
 	{
 		return [
+			'last_name' => 'required|max:50',
+			'first_name' => 'required|max:50',
 			'phone_number'=>'required',
 			'sex'=>'required',
 			'date_of_birth'=>'required',

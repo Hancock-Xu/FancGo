@@ -27,20 +27,23 @@
 								<input type="file" id="resume_chooser" accept="application/pdf" name="resume_url">
 								<label for="">Upper Limit 2M</label>
 								<label for="">Only Accept PDF</label>
+
 								<label for="" id="pdf_name">{{$user->resume_url}}</label>
 
 							</div>
-
+							<i class="glyphicon glyphicon-asterisk required-item"></i>
 						</div>
 
-						@if ($errors->has('resume_url'))
-							<span class="help-block">
-                                        <strong>{{ $errors->first('resume_url') }}</strong>
-                                    </span>
+						@if(!$user->resume_url)
+							@if ($errors->has('resume_url'))
+								<span class="help-block">
+	                                <strong>{{ $errors->first('resume_url') }}</strong>
+	                            </span>
+							@endif
 						@endif
 
-					</div>
 
+					</div>
 
 				</div>
 
@@ -49,6 +52,34 @@
 					<div class="company_property">
 
 						<h1 class="company_business_license_name">{{$user->first_name}} {{$user->last_name}}</h1>
+
+						<div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
+							<label for="first_name" class="col-md-4 control-label">First Name</label>
+
+							<div class="col-md-6">
+								<input id="first_name" type="text" class="form-control" name="first_name" value="{{ $user->first_name }}">
+
+								@if ($errors->has('first_name'))
+									<span class="help-block">
+                                        <strong>{{ $errors->first('first_name') }}</strong>
+                                    </span>
+								@endif
+							</div>
+						</div>
+
+						<div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
+							<label for="last_name" class="col-md-4 control-label">Last Name</label>
+
+							<div class="col-md-6">
+								<input id="last_name" type="text" class="form-control" name="last_name" value="{{ $user->last_name }}">
+
+								@if ($errors->has('last_name'))
+									<span class="help-block">
+                                        <strong>{{ $errors->first('last_name') }}</strong>
+                                    </span>
+								@endif
+							</div>
+						</div>
 
 						<div class="form-group{{ $errors->has('company_name') ? ' has-error' : '' }}">
 							<label for="short-name" class="col-md-4 control-label">Phone Number
