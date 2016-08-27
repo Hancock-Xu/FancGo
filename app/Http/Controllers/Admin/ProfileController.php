@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Redirect;
 use Auth;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProfileStoreRequest;
 use App\Http\Requests\ProfileUpdateRequest;
 use Storage;
 
@@ -36,60 +37,71 @@ class ProfileController extends Controller
 	    if (Session::has('backUrl')) {
 		    Session::keep('backUrl');
 	    }
-        return view('Profile.edit',['user'=>$user]);
-
+        return view('Profile.edit_profile',['user'=>$user]);
     }
 
-    public function update(ProfileUpdateRequest $request)
+    public function create()
     {
-        $user = Auth::user();
-        $input = $request->all();
+	    $user = Auth::getUser();
+	    if (Session::has('backUrl')) {
+		    Session::keep('backUrl');
+	    }
+	    return view('Profile.create_profile',['user'=>$user]);
+    }
 
-        $user->fill($input)->save();
+    public function storeProfile(ProfileStoreRequest $request)
+    {
+    	return $this->store($request);
+    }
 
-        if ($request->hasFile('avatar')){
+    public function updateProfile(ProfileUpdateRequest $request)
+    {
+     	return $this->store($request);
+    }
 
-            $file = $request->file('avatar');
+    public function store(Request $request)
+    {
+	    $user = Auth::user();
+	    $input = $request->all();
 
-            if ($file->isValid()){
-                $fileName = 'avatar'.'.'.$file->getClientOriginalExtension();
-                $savePath = '/users/'.Auth::id().'/'.$fileName;
+	    $user->fill($input)->save();
 
-                Storage::disk('local')->put($savePath, file_get_contents($file->getRealPath()));
+	    $this->correctImgPath($request);
 
-                Auth::user()->headimgurl = '/uploads'.$savePath;
-                Auth::user()->save();
-
-            }else{
-                $request->session()->flash('error', 'file error');
-            }
-        }
-
-        if ($request->hasFile('resume_url')){
-            $file = $request->file('resume_url');
-
-            if ($file->isValid()){
-                $fileName = 'resume'.'.'.$file->getClientOriginalExtension();
-                $savePath = '/users/'.Auth::id().'/'.$fileName;
-
-                Storage::disk('local')->put($savePath, file_get_contents($file->getRealPath()));
-
-                Auth::user()->resume_url = '/uploads'.$savePath;
-                Auth::user()->save();
-
-            }else{
-                $request->session()->flash('error', 'file error');
-            }
-
-        }
-
-
-		$user->finish_basic_info = true;
+	    $user->finish_basic_info = true;
 	    $user->save();
 
 	    return ($url = Session::get('backUrl'))
 		    ? Redirect::to($url)
 		    : redirect('/job');
+    }
+
+    public function correctImgPath(Request $request)
+    {
+	    $avatar = $request->file('avatar');
+	    $resume = $request->file('resume_url');
+	    if ($avatar){
+
+		    $fileName = 'avatar'.'.'.$avatar->getClientOriginalExtension();
+		    $savePath = '/users/'.Auth::id().'/'.$fileName;
+
+		    Storage::disk('local')->put($savePath, file_get_contents($avatar->getRealPath()));
+
+		    Auth::user()->headimgurl = '/uploads'.$savePath;
+		    Auth::user()->save();
+	    }
+
+	    if ($resume){
+
+		    $fileName = 'resume'.'.'.$resume->getClientOriginalExtension();
+		    $savePath = '/users/'.Auth::id().'/'.$fileName;
+
+		    Storage::disk('local')->put($savePath, file_get_contents($resume->getRealPath()));
+
+		    Auth::user()->resume_url = '/uploads'.$savePath;
+		    Auth::user()->save();
+
+	    }
     }
 
     public function company()
@@ -114,9 +126,4 @@ class ProfileController extends Controller
 
         return redirect()->back();
     }
-//
-//    public function updated()
-//    {
-//        return view('Profile.updated');
-//    }
 }

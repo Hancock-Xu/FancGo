@@ -5,7 +5,7 @@
 
 	<div class="container">
 
-		<form class="form-horizontal" id="company-submit" method="post" role="form" enctype="multipart/form-data" action="{{action('Admin\ProfileController@update')}}">
+		<form class="form-horizontal" id="company-submit" method="post" role="form" enctype="multipart/form-data" action="{{action('Admin\ProfileController@updateProfile')}}">
 
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
@@ -23,25 +23,26 @@
 
 								<embed src="{{asset('images/upload.svg')}}" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
 
-								<label for="logo_url">UpLoad your Resume</label>
+								@if($user->resume_url)
+									<label for="logo_url">Update your Resume</label>
+								@else
+									<label for="logo_url">UpLoad your Resume</label>
+								@endif
 								<input type="file" id="resume_chooser" accept="application/pdf" name="resume_url">
 								<label for="">Upper Limit 2M</label>
 								<label for="">Only Accept PDF</label>
-
-								<label for="" id="pdf_name">{{$user->resume_url}}</label>
-
+								@if($user->resume_url)
+									<label for="" id="pdf_name">PDF: resume.pdf</label>
+								@endif
 							</div>
 							<i class="glyphicon glyphicon-asterisk required-item"></i>
 						</div>
 
-						@if(!$user->resume_url)
-							@if ($errors->has('resume_url'))
-								<span class="help-block">
-	                                <strong>{{ $errors->first('resume_url') }}</strong>
-	                            </span>
-							@endif
+						@if ($errors->has('resume_url'))
+							<span class="help-block">
+                            <strong>{{ $errors->first('resume_url') }}</strong>
+                        </span>
 						@endif
-
 
 					</div>
 
@@ -54,7 +55,9 @@
 						<h1 class="company_business_license_name">{{$user->first_name}} {{$user->last_name}}</h1>
 
 						<div class="form-group{{ $errors->has('first_name') ? ' has-error' : '' }}">
-							<label for="first_name" class="col-md-4 control-label">First Name</label>
+							<label for="first_name" class="col-md-4 control-label">First Name
+								<i class="glyphicon glyphicon-asterisk required-item"></i>
+							</label>
 
 							<div class="col-md-6">
 								<input id="first_name" type="text" class="form-control" name="first_name" value="{{ $user->first_name }}">
@@ -68,7 +71,9 @@
 						</div>
 
 						<div class="form-group{{ $errors->has('last_name') ? ' has-error' : '' }}">
-							<label for="last_name" class="col-md-4 control-label">Last Name</label>
+							<label for="last_name" class="col-md-4 control-label">Last Name
+								<i class="glyphicon glyphicon-asterisk required-item"></i>
+							</label>
 
 							<div class="col-md-6">
 								<input id="last_name" type="text" class="form-control" name="last_name" value="{{ $user->last_name }}">

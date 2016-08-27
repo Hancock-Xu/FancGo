@@ -222,7 +222,7 @@ class JobController extends Controller
 		}else{
 
 			Session::flash('backUrl', \Request::fullUrl());
-			return redirect(action('Admin\ProfileController@edit'));
+			return redirect(action('Admin\ProfileController@create'));
 
 		}
 

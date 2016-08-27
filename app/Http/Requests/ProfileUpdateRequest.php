@@ -31,7 +31,7 @@ class ProfileUpdateRequest extends Request
 			'native_language'=>'required',
 			'chinese_level'=>'required',
 			'current_residence'=>'required',
-			'resume_url'=>'required'
+//			'resume_url'=>'required'
 		];
 	}
 
