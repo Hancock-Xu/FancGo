@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="">
 	<link rel="shortcut icon" type="image/x-icon">
 	<link rel="icon" type="image/x-icon">
-	<title>JobLeadChina </title>
+	<title>JobLeadChina | Find job in China</title>
 
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
 	<!-- polyfiller file to detect and load polyfills -->
