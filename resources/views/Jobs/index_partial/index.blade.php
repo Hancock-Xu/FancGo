@@ -51,7 +51,7 @@
 						<div class="jobThumbnailCompanyIndustry">
 							<span>{{$job->company_industry}}</span>
 							<span class="seperate-line"></span>
-							<span>{{$job->company_location}}</span>
+							<span>{{$job->work_city}}</span>
 						</div>
 						<div class="jobThumbnailWalfareTag">
 							{{--<span>Working Visa</span>--}}

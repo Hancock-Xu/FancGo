@@ -479,6 +479,7 @@ img {
 .company-info-content {
   padding: 0 0 30px 0;
   margin: 0 20px;
+  margin-right: 0;
   list-style: none;
 }
 
@@ -1438,7 +1439,7 @@ select{
 
 .job_info{
   background-color: white;
-  flex: 3;
+  //flex: 3;
   padding: 20px;
   margin: 20px;
   width: 760px;
@@ -1517,7 +1518,7 @@ select{
 .basic_info_content{
   display: inline-block;
   width: 200px;
-  margin-left: 100px;
+  margin-left: 80px;
 }
 .basic_info_item{
   display: inline-block;
