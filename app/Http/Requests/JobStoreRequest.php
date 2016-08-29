@@ -31,7 +31,8 @@ class JobStoreRequest extends Request
             'max_salary'=>'required',
             'job_status_type'=>'required',
             'job_industry'=>'required',
-            'resume_email'=>'required'
+            'resume_email'=>'required',
+	        'work_city'=>'required'
         ];
     }
 
@@ -44,10 +45,11 @@ class JobStoreRequest extends Request
             'education_degree.required'=>'Education degree is required',
             'position_experience.required'=>'Position experience is required',
             'min_salary.required'=>'Min Salary is required',
-            'max_salary.required'=>'Max salary is reqired',
+            'max_salary.required'=>'Max salary is required',
             'job_status_type.required'=>'Job type is required',
             'job_industry.required'=>'Position industry is required',
-            'resume_email.required'=>'This email address is required'
+            'resume_email.required'=>'This email address is required',
+			'work_city.required'=>'Work city is required'
 		];
 	}
 }

@@ -37,7 +37,7 @@
 							<div class="job_title form-group {{ $errors->has('job_title') ? ' has-error' : '' }}">
 								<label class="job_label" for="job-title">Job Title</label>
 								<i class="glyphicon glyphicon-asterisk required-item"></i>
-								<input type="text" class="form-control" id="job-title" name="job_title" spellcheck="true">
+								<input type="text" class="form-control" id="job-title" name="job_title" spellcheck="true" value="{{old('job_title')}}">
 
 								@if ($errors->has('job_title'))
 									<span class="help-block">
@@ -48,7 +48,7 @@
 							<div class="job_status_type form-group {{ $errors->has('job_status_type') ? ' has-error' : '' }}">
 								<label class="job_label" for="employment-type">Employment Type</label>
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
-								<select name="job_status_type" class="form-control job_select" id="employment-type ">
+								<select name="job_status_type" class="form-control job_select" id="employment-type">
 									<option disabled selected>Choose</option>
 									<option value=1>Full-time</option>
 									<option value=2>Part-time</option>
@@ -66,7 +66,7 @@
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<div class="choose-salary">
 									<div class="min_salary_input {{ $errors->has('min_salary') ? ' has-error' : '' }}">
-										<input type="text" name="min_salary" class="min-salary form-control" placeholder="Min">
+										<input type="text" name="min_salary" class="min-salary form-control" placeholder="Min" value="{{old('min_salary')}}">
 										<span class="salary-k ">K</span>
 										@if ($errors->has('min_salary'))
 											<span class="help-block">
@@ -79,7 +79,7 @@
 										<p class="salary-to">to</p>
 									</div>
 									<div class="max_salary_input {{ $errors->has('max_salary') ? ' has-error' : '' }}">
-										<input type="text" name="max_salary" class="max-salary form-control" placeholder="Max">
+										<input type="text" name="max_salary" class="max-salary form-control" placeholder="Max" value="{{old('max_salary')}}">
 										<span class="salary-k">K</span>
 										@if ($errors->has('max_salary'))
 											<span class="help-block">
@@ -95,7 +95,7 @@
 								<label class="job_label" for="resume_email" >Email Address</label>
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<span class="position-alert">This mailbox will receive resumes</span>
-								<input type="email" class="form-control " name="resume_email" id="resume_email">
+								<input type="email" class="form-control " name="resume_email" id="resume_email" value="{{old('resume_email')}}">
 								@if ($errors->has('resume_email'))
 									<span class="help-block">
                                         <strong>{{ $errors->first('resume_email') }}</strong>
@@ -400,7 +400,7 @@
 								{{--<i class="glyphicon glyphicon-menu-down arrow-down "></i>--}}
 							</div>
 
-							<div class="work_city_select form-group {{ $errors->has('education_degree') ? ' has-error' : '' }}">
+							<div class="work_city_select form-group {{ $errors->has('work_city') ? ' has-error' : '' }}">
 								<label class="job_label" for="work-city">Work City</label>
 								<i class="glyphicon glyphicon-asterisk required-item "></i>
 								<select name="work_city" class="form-control job_select" id="work-city ">
@@ -448,7 +448,7 @@
 						<div class="form-group">
 							<label class="job_label" for="position_point" >Position Point</label>
 							<!-- <i class="glyphicon glyphicon-asterisk required-item ";"></i> -->
-							<input type="text" class="form-control" name="position_points" id="position_point" placeholder="No more than 10 words (like the following example)" spellcheck="true">
+							<input type="text" class="form-control" name="position_points" id="position_point" placeholder="No more than 10 words (like the following example)" spellcheck="true" value="{{old('position_points')}}">
 						</div>
 						<div class="position-point">
 							<span>
@@ -466,7 +466,7 @@
 					<div class="job_description_area form-group {{ $errors->has('job_description') ? ' has-error' : '' }}">
 						<label class="job_label" for="job-des-content">Job Description</label>
 						<i class="glyphicon glyphicon-asterisk required-item"></i>
-						<textarea rows="8" type="text" name="job_description" class="form-control" id="job-des-content" spellcheck="true"></textarea>
+						<textarea rows="8" type="text" name="job_description" class="form-control" id="job-des-content" spellcheck="true">{{old('job_description')}}</textarea>
 						@if ($errors->has('job_description'))
 							<span class="help-block">
                                 <strong>{{ $errors->first('job_description') }}</strong>
@@ -474,20 +474,20 @@
 						@endif
 					</div>
 					<!-- Desired Skills and expertise -->
-					<div class="desired_skill_experience_area form-group {{ $errors->has('job_description') ? ' has-error' : '' }}">
+					<div class="desired_skill_experience_area form-group {{ $errors->has('desired_skill_experience') ? ' has-error' : '' }}">
 						<label class="job_label" for="skills-content">Desired Skills and Expertise</label>
 						<i class="glyphicon glyphicon-asterisk required-item"></i>
-						<textarea class="form-control" rows="8" id="skills-content" name="desired_skill_experience" spellcheck="true"></textarea>
-						@if ($errors->has('job_description'))
+						<textarea class="form-control" rows="8" id="skills-content" name="desired_skill_experience" spellcheck="true">{{old('desired_skill_experience')}}</textarea>
+						@if ($errors->has('desired_skill_experience'))
 							<span class="help-block">
-                                <strong>{{ $errors->first('job_description') }}</strong>
+                                <strong>{{ $errors->first('desired_skill_experience') }}</strong>
                             </span>
 						@endif
 					</div>
 					<!-- Benefit -->
 					<div class="position_benefit_input form-group">
 						<label class="job_label" for="benefit-content">Position Benefit</label>
-						<textarea class="form-control" rows="3" id="benefit-content" name="position_benefit" spellcheck="true"></textarea>
+						<textarea class="form-control" rows="3" id="benefit-content" name="position_benefit" spellcheck="true">{{old('position_benefit')}}</textarea>
 					</div>
 					<!-- Benefit Point -->
 					{{--
