@@ -35,20 +35,20 @@ class CompanyStoreRequest extends Request
     public function messages()
     {
         return [
-            'company_name.required' => '需要填写公司名称',
-            'business_license_name.required' => '需要填写公司注册名称',
-            'logo_url.required' => '需要上传公司Logo',
-            'logo_url.image' => '公司Logo需要是图片格式',
-            'certificate_url.image' => '公司注册信息图片需要是图片格式',
-            'resume_email.email' => '需要填写邮箱用来接收简历',
-            'company_description.required' => '需要填写公司描述',
-            'scale.required' => '需要填写公司规模',
-            'company_location.required' => '需要填写公司地址',
-            'company_industry.required' => '需要填写公司行业',
-            'company_email.required' => '需要填写您的企业邮箱联系方式',
-            'company_email.email' => '需要填写您的企业邮箱联系方式',
-            'business_email' => '需要填写您的企业邮箱',
-            'company_phone_number.required' => '需要填写您的联系电话'
+            'company_name.required' => 'Company full name is required',
+            'business_license_name.required' => 'Please fill up full name of your company',
+            'logo_url.required' => 'Company logo is required',
+            'logo_url.image' => 'Please upload right image type: JPEG、JPG、PNG',
+            'certificate_url.image' => 'Please upload right image type: JPEG、JPG、PNG',
+            'resume_email.email' => 'Resume email is required',
+            'company_description.required' => 'Company description is required',
+            'scale.required' => 'Company scale is required',
+            'company_location.required' => 'Company address is required',
+            'company_industry.required' => 'Company industry is required',
+            'company_email.required' => '需要填写您的企业邮箱联系方式,Enterprise mail is required',
+            'company_email.email' => '需要填写您的企业邮箱联系方式,Enterprise mail is required',
+            'business_email' => '需要填写您的企业邮箱,Enterprise mail is required',
+            'company_phone_number.required' => 'Phone number is required'
         ];
     }
 

@@ -38,17 +38,17 @@ class ProfileStoreRequest extends Request
 	public function messages()
 	{
 		return [
-			'last_name.required' => '需要填写姓',
-			'last_name.required' => '需要填写名',
-			'phone_number.required' => '需要填写电话号码',
-			'sex.required' => '需要填写性别',
-			'date_of_birth.required' => '需要填写生日',
-			'nationality.required' => '需要填写国籍',
-			'resume_url.required' => '需要上传简历',
-			'resume_url.mimes:pdf' => '简历格式需要是PDF',
-			'native_language.required' => '需要填写您的母语',
-			'chinese_level.required' => '需要填写中文水平',
-			'current_residence.required' => '需要填写现居地'
+			'first_name.required' => 'First name is required',
+			'last_name.required' => 'Last name is required',
+			'phone_number.required' => 'Phone number is required',
+			'sex.required' => 'Gender is required',
+			'date_of_birth.required' => 'Date of birth is required',
+			'nationality.required' => 'Nationality is required',
+			'resume_url.required' => 'Please upload your resume',
+			'resume_url.mimes:pdf' => 'Resume only support PDF type',
+			'native_language.required' => 'Mother tongue is required',
+			'chinese_level.required' => 'Chinese level is required',
+			'current_residence.required' => 'Current residence is required'
 		];
 	}
 
