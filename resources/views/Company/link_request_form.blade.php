@@ -37,7 +37,7 @@
 								{{ csrf_field() }}
 
 								<div class="form-group {{ $errors->has('business_license_name') ? ' has-error' : '' }}">
-									<label for="business_license_name" class="control-label col-md-4" >Full name of company
+									<label for="business_license_name" class="control-label col-md-4" >Business License Name(公司全称)
 										<i class="glyphicon glyphicon-asterisk required-item"></i>
 									</label>
 

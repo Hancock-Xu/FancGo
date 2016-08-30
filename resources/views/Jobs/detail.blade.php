@@ -70,13 +70,17 @@
 							<hr/>
 						</div>
 					</div>
-					<div class="job_benefits">
-						<div class="item-content ">
-							<h4 class="color-line ">Benefits</h4>
-							<div>{!! $job->position_benefit !!}</div>
+
+					@if($job->position_benefit)
+						<div class="job_benefits">
+							<div class="item-content ">
+								<h4 class="color-line ">Benefits</h4>
+								<div>{!! $job->position_benefit !!}</div>
+							</div>
+							<hr/>
 						</div>
-						<hr/>
-					</div>
+					@endif
+
 				</div>
 			</div>
 
