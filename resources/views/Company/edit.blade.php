@@ -58,12 +58,12 @@
 									<h1 class="company_business_license_name">{{$company->business_license_name}}</h1>
 
 									<div class="form-group{{ $errors->has('company_name') ? ' has-error' : '' }}">
-										<label for="short-name" class="col-md-4 control-label">Company Public Name
+										<label for="short-name" class="col-md-4 control-label">Short Name
 											<i class="glyphicon glyphicon-asterisk required-item"></i>
 										</label>
 
 										<div class="col-md-6">
-											<input autofocus id="short-name" type="text" class="form-control" name="company_name" value="{{ $company->company_name }}">
+											<input autofocus id="short-name" type="text" class="form-control" name="company_name" value="{{ $company->company_name }}" placeholder="this name wil show in public">
 
 											@if ($errors->has('company_name'))
 												<span class="help-block">
@@ -446,14 +446,13 @@
 
 									<div class="form-group{{ $errors->has('company_location') ? ' has-error' : '' }}">
 										<label for="company_location" class="col-md-4 control-label">Location City
-											<i class="glyphicon glyphicon-asterisk required-item"></i>
+											{{--<i class="glyphicon glyphicon-asterisk required-item"></i>--}}
 										</label>
 
 										<div class="col-md-6">
 
 											<select class="cityselect form-control" name="company_location" id="company_location">
 												<option disabled {{$company->company_location == null ? 'selected' : ''}}>Choose</option>
-												<option value="Work City" {{ $company->company_location == "Work City" ? "selected":""}}>Work City</option>
 												<option value="Hongkong" {{ $company->company_location == "Hongkong" ? "selected":""}}>Hongkong</option>
 												<option value="Shenzhen" {{ $company->company_location == "Shenzhen" ? "selected":""}}>Shenzhen</option>
 												<option value="Beijing" {{ $company->company_location == "Beijing" ? "selected":""}}>Beijing</option>
@@ -476,7 +475,7 @@
 												<option value="Dalian" {{ $company->company_location == "Dalian" ? "selected":""}}>Dalian</option>
 												<option value="Qingdao" {{ $company->company_location == "Qingdao" ? "selected":""}}>Qingdao</option>
 												<option value="Others" {{ $company->company_location == "Others" ? "selected":""}}>Others</option>
-												<option value="">All</option>
+												<option value="">Can not tell</option>
 											</select>
 
 											@if ($errors->has('company_location'))
@@ -490,7 +489,7 @@
 
 									<div class="form-group{{ $errors->has('company_address') ? ' has-error' : '' }}">
 										<label for="company_address" class="col-md-4 control-label">Company Address
-											{{--<i class="glyphicon glyphicon-asterisk required-item"></i>--}}
+											<i class="glyphicon glyphicon-asterisk required-item"></i>
 										</label>
 
 										<div class="col-md-6">

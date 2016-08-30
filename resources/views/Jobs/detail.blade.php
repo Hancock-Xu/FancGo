@@ -111,22 +111,23 @@
 								</div>
 							</div>
 						</li>
-						<li>
-							<div class="basic_info_container">
-								<div class="basic_info_item">
-									<span>Founded</span>
-									{{--<label for="">Industry</label>--}}
+
+						@if($job->founder_time)
+							<li>
+								<div class="basic_info_container">
+									<div class="basic_info_item">
+										<span>Founded</span>
+										{{--<label for="">Industry</label>--}}
+									</div>
+
+									<div class="basic_info_content">
+
+										<label class="basic_info_label">{{$job->founder_time}}</label>
+
+									</div>
 								</div>
-
-								<div class="basic_info_content">
-
-									<label class="basic_info_label">{{$job->founder_time}}</label>
-
-								</div>
-							</div>
-
-
-						</li>
+							</li>
+						@endif
 						<li>
 							<div class="basic_info_container">
 								<div class="basic_info_item">
@@ -141,20 +142,24 @@
 								</div>
 							</div>
 						</li>
-						<li>
-							<div class="basic_info_container">
-								<div class="basic_info_item">
-									<span>Website</span>
-									{{--<label for="">Industry</label>--}}
+
+						@if($job->website)
+							<li>
+								<div class="basic_info_container">
+									<div class="basic_info_item">
+										<span>Website</span>
+										{{--<label for="">Industry</label>--}}
+									</div>
+
+									<div class="basic_info_content">
+
+										<label class="basic_info_label"><a href="{{$job->website}}" target="_blank ">{{$job->website}}</a></label>
+
+									</div>
 								</div>
+							</li>
+						@endif
 
-								<div class="basic_info_content">
-
-									<label class="basic_info_label"><a href="{{$job->website}}" target="_blank ">{{$job->website}}</a></label>
-
-								</div>
-							</div>
-						</li>
 						<li>
 							<div class="basic_info_container">
 								<div class="basic_info_item">

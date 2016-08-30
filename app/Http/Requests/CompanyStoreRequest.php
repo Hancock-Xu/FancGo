@@ -26,7 +26,8 @@ class CompanyStoreRequest extends Request
 //            'logo_url'=>'required|image',
             'company_description'=>'required',
             'scale'=>'required',
-            'company_location'=>'required',
+//            'company_location'=>'required',
+	        'company_address'=>'required',
             'company_industry'=>'required',
 	        'website'=>'URL'
         ];
@@ -43,7 +44,7 @@ class CompanyStoreRequest extends Request
             'resume_email.email' => 'Resume email is required',
             'company_description.required' => 'Company description is required',
             'scale.required' => 'Company scale is required',
-            'company_location.required' => 'Company address is required',
+            'company_address.required' => 'Company address is required',
             'company_industry.required' => 'Company industry is required',
             'company_email.required' => '需要填写您的企业邮箱联系方式,Enterprise mail is required',
             'company_email.email' => '需要填写您的企业邮箱联系方式,Enterprise mail is required',

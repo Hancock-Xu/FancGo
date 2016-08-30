@@ -73,7 +73,7 @@
 												</label>
 
 												<div class="col-md-6">
-													<input autofocus id="short-name" type="text" class="form-control" name="company_name" value="{{ $company->company_name }}">
+													<input autofocus id="short-name" type="text" class="form-control" name="company_name" value="{{ old('company_name') }}" placeholder="this name will show in public">
 
 													@if ($errors->has('company_name'))
 														<span class="help-block">
@@ -93,7 +93,7 @@
 
 												<div class="col-md-6">
 
-														<input type="text" class="industryInput input-large form-control" name="company_industry" id="selectedIndustry" value="{{ $company->company_industry }}" placeholder="Industry" autocomplete="off" readonly>
+														<input type="text" class="industryInput input-large form-control" name="company_industry" id="selectedIndustry" value="{{ old('company_industry') }}" placeholder="Industry" autocomplete="off" readonly>
 
 													@if ($errors->has('company_industry'))
 														<span class="help-block">
@@ -456,14 +456,13 @@
 
 											<div class="form-group{{ $errors->has('company_location') ? ' has-error' : '' }}">
 												<label for="company_location" class="col-md-4 control-label">Location City
-													<i class="glyphicon glyphicon-asterisk required-item"></i>
+													{{--<i class="glyphicon glyphicon-asterisk required-item"></i>--}}
 												</label>
 
 												<div class="col-md-6">
 
 													<select class="cityselect form-control" name="company_location" id="company_location">
 														<option disabled {{$company->company_location == null ? 'selected' : ''}}>Choose</option>
-														<option value="Work City" {{ $company->company_location == "Work City" ? "selected":""}}>Work City</option>
 														<option value="Hongkong" {{ $company->company_location == "Hongkong" ? "selected":""}}>Hongkong</option>
 														<option value="Shenzhen" {{ $company->company_location == "Shenzhen" ? "selected":""}}>Shenzhen</option>
 														<option value="Beijing" {{ $company->company_location == "Beijing" ? "selected":""}}>Beijing</option>
@@ -486,7 +485,7 @@
 														<option value="Dalian" {{ $company->company_location == "Dalian" ? "selected":""}}>Dalian</option>
 														<option value="Qingdao" {{ $company->company_location == "Qingdao" ? "selected":""}}>Qingdao</option>
 														<option value="Others" {{ $company->company_location == "Others" ? "selected":""}}>Others</option>
-														<option value="">All</option>
+														<option value="">Can not tell</option>
 													</select>
 
 													@if ($errors->has('company_location'))
@@ -500,11 +499,11 @@
 
 											<div class="form-group{{ $errors->has('company_address') ? ' has-error' : '' }}">
 												<label for="company_address" class="col-md-4 control-label">Company Address
-													{{--<i class="glyphicon glyphicon-asterisk required-item"></i>--}}
+													<i class="glyphicon glyphicon-asterisk required-item"></i>
 												</label>
 
 												<div class="col-md-6">
-													<input id="company_address" type="text" class="form-control" name="company_address" value="{{ $company->company_address }}">
+													<input id="company_address" type="text" class="form-control" name="company_address" value="{{ old('company_address') }}">
 
 													@if ($errors->has('company_address'))
 														<span class="help-block">
@@ -521,7 +520,7 @@
 												</label>
 
 												<div class="col-md-6">
-													<input id="company_website" type="url" class="form-control" name="website" value="{{ $company->website }}">
+													<input id="company_website" type="url" class="form-control" name="website" value="{{ old('website') }}">
 
 													@if ($errors->has('website'))
 														<span class="help-block">
@@ -545,7 +544,7 @@
 
 											<div class="col-md-6">
 
-												<textarea name="company_description" id="company_description" cols="20" rows="15" spellcheck="true" class="form-control">{{$company->company_description}}</textarea>
+												<textarea name="company_description" id="company_description" cols="20" rows="15" spellcheck="true" class="form-control">{{old('company_description')}}</textarea>
 
 											@if ($errors->has('company_description'))
 													<span class="help-block">
