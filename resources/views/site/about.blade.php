@@ -39,6 +39,10 @@
 					<p>In order to help enterprise find middle and senior manager(foreign talents) more efficicently and make smarter decision,  We've designed an integrated solution,  tailor made for your company to search the most suitable candidate who can meet all your job requirements.</p>
 
 					<p>We work with you throughout the process to define the talents, skills, knowledge and abilities of top performers and manage the process for you from start to finish. </p>
+					<p>
+						TEL: 0755-61597364   Email: service@jobleadchina.com
+					</p>
+
 				</div>
 			</div>
 		</div>
