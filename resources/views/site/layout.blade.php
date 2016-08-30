@@ -5,7 +5,7 @@
 	<!-- saved from url=(0014)about:internet -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="_token" content="{!! csrf_token() !!}"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	{{--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">--}}
 	<meta name="keyword" content="JobLead China, Joblead, Job in China, Job in Shenzhen, Working in China, Life in China, Living in China, Work Visa in China">
 	<meta name="baidu-site-verification" content="MMDWlmfM47" />
 	<meta name="description" content="JobLead China provide a set of job solution for enterises and forein talents.">
