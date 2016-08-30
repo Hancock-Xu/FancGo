@@ -8,7 +8,7 @@
 	{{--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">--}}
 	<meta name="keyword" content="JobLead China, Joblead, Job in China, Job in Shenzhen, Working in China, Life in China, Living in China, Work Visa in China">
 	<meta name="baidu-site-verification" content="MMDWlmfM47" />
-	<meta name="description" content="JobLead China provide a set of job solution for enterises and forein talents.">
+	<meta name="description" content="JobLeadChina is a recruitment platform in connecting job opportunities in China with foreign talents. Through JobLeadChina, enterprises can post jobs, evaluate resumes, communicate with candidates directly. All things become easy.">
 	<link rel="stylesheet" href="">
 	<link rel="shortcut icon" type="image/x-icon">
 	<link rel="icon" type="image/x-icon">
