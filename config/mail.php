@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'support@jobleadchina.com', 'name' => 'JobleadChina'],
+    'from' => ['address' => 'support@jobleadchina.com', 'name' => 'JobLeadChina'],
 
     /*
     |--------------------------------------------------------------------------
