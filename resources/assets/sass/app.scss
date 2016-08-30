@@ -1194,7 +1194,7 @@ img {
 .jobThumbnail {
   display: flex;
   display: -webkit-flex;
-  width: 980px;
+  width: 980px !important;
   margin: 0 auto;
 }
 
