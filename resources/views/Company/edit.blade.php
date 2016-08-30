@@ -450,9 +450,8 @@
 										</label>
 
 										<div class="col-md-6">
-
 											<select class="cityselect form-control" name="company_location" id="company_location">
-												<option disabled {{$company->company_location == null ? 'selected' : ''}}>Choose</option>
+												<option disabled {{$company->company_location == null ? 'selected' : ''}}>choose</option>
 												<option value="Hongkong" {{ $company->company_location == "Hongkong" ? "selected":""}}>Hongkong</option>
 												<option value="Shenzhen" {{ $company->company_location == "Shenzhen" ? "selected":""}}>Shenzhen</option>
 												<option value="Beijing" {{ $company->company_location == "Beijing" ? "selected":""}}>Beijing</option>

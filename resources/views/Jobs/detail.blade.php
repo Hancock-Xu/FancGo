@@ -20,9 +20,9 @@
 						</li>
 						<li>
 							<span>Master</span>
-							<span class="seperate-line "></span>
+							<span class="seperate-line"></span>
 							<span>Experience:&nbsp;{{$job->position_experience}}</span>
-							<span class="seperate-line "></span>
+							<span class="seperate-line"></span>
 							<span>{{$job->job_status_type}}</span>
 						</li>
 						{{--<li class="benefit ">--}}
