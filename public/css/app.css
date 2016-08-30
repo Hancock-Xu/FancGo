@@ -880,9 +880,8 @@ img {
   display: -webkit-box;
   display: flex;
   display: -webkit-flex;
-  max-width: 980px;
-  margin: 0 auto;
-  /*border: 1px solid #ccc;*/ }
+  width: 980px;
+  margin: 0 auto; }
 
 .jobThumbnailCompanyLogo, .companyThumbnailCompanyLogo {
   -webkit-box-flex: 1;

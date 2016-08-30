@@ -1194,10 +1194,8 @@ img {
 .jobThumbnail {
   display: flex;
   display: -webkit-flex;
-  max-width: 980px;
+  width: 980px;
   margin: 0 auto;
-  //margin-top:50px;
-  /*border: 1px solid #ccc;*/
 }
 
 .jobThumbnailCompanyLogo {
