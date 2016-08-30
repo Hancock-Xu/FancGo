@@ -19,8 +19,8 @@ $link-hover-color:      darken($link-color, 15%);
 $link-hover-decoration: underline;
 
 //== Typography
-$font-size-base:          16px;
-//$font-size-large:         ceil(($font-size-base * 1.75)); // ~28px
+$font-size-base:          14px;
+$font-size-large:         ceil(($font-size-base * 1.75)); // ~28px
 $font-size-small:         ceil(($font-size-base * 0.875)); // ~14x
 
 $font-size-h1:            floor(($font-size-base * 1.75)); // ~28x
