@@ -17,8 +17,8 @@
 			<h4 class="mail-applyPostion">Apply Position:&nbsp;{{$job->job_title}}</h4>
 			<hr/>
 			<h4>Hello</h4>
-			</br>
-			<p>A candidate has applied for your position on JobleadChina! You can preview or download the resume in attachment directly.</p>
+			<p>A candidate has applied for your position on JobLeadChina! You can preview or download the resume in attachment directly.</p>
+			<p>有一个应聘者在JobLeadChina申请了您的岗位! 您可以直接在附件中下载或者预览该简历。</p>
 			<hr/>
 			<table style="width: 600px; box-shadow: 1px 1px 5px #dedede;">
 				<tbody>

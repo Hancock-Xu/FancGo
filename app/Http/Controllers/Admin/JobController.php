@@ -209,7 +209,7 @@ class JobController extends Controller
 
 			$response = VerifyEmail::broker()->sendJobApplyEmail($job, function(Message $message) use ($job, $user){
 				$to = $job->resume_email;
-				$message->to($to)->subject('A candidate has applied for your position on JobleadChina!');
+				$message->to($to)->subject('A candidate has applied for your position on JobLeadChina!');
 				$message->attach(public_path($user->resume_url), ['as'=>"=?UTF-8?B?".base64_encode('resume')."?=.pdf"]);
 			});
 
