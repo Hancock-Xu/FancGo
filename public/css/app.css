@@ -1251,7 +1251,8 @@ div.refine-position-item:nth-child(odd) {
 .moreInformation {
   width: 1140px;
   margin: 0 auto;
-  padding: 20px 50px; }
+  padding: 20px 50px;
+  font-family: "Microsoft YaHei"; }
 
 .moreInformation h2, .information-intro-en h3, .information-intro-en h4,
 .information-intro-ch-HR h4, .information-intro-ch-rent h4 {

@@ -31,7 +31,7 @@
 							<li>
 								<a href="{{action('Admin\BasicSiteInfoController@recruitmentGuidance')}}">Recruitment Guidance<span class="sr-only">(current)</span></a>
 							</li>
-							<li><a href="{{action('Admin\BasicSiteInfoController@about')}}">Head Hunting<span class="sr-only">(current)</span></a></li>
+							<li><a href="{{action('Admin\BasicSiteInfoController@about')}}">Consulting Services<span class="sr-only">(current)</span></a></li>
 							{{--<li><a href="#">Guidence <span class="sr-only">(current)</span></a></li>--}}
 						</ul>
 
