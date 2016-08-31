@@ -19,7 +19,7 @@
 							<span>{{$job->work_city}}</span>
 						</li>
 						<li>
-							<span>Master</span>
+							<span>{{$job->education_degree}}</span>
 							<span class="seperate-line"></span>
 							<span>Experience:&nbsp;{{$job->position_experience}}</span>
 							<span class="seperate-line"></span>
