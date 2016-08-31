@@ -17,7 +17,7 @@
 
 					<div class="center-home">
 
-						<ul class="nav navbar-nav">
+						<ul class="nav navbar-nav" style="width: 550px">
 							<li @if(Request::is('job')) class="active" @endif>
 								<a href="{{url('/job')}}">Jobs <span class="sr-only">(current)</span></a>
 							</li>
