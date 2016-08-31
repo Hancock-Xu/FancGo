@@ -13,6 +13,7 @@
 
 Route::get('/', 'Admin\BasicSiteInfoController@index');
 Route::get('/about', 'Admin\BasicSiteInfoController@about');
+Route::get('/recruitment_guidance', 'Admin\BasicSiteInfoController@recruitmentGuidance');
 
 Route::resource('job','Admin\JobController');
 Route::resource('company','Admin\CompanyController');

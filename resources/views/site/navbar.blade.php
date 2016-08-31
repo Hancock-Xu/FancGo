@@ -17,7 +17,7 @@
 
 					<div class="center-home">
 
-						<ul class="nav navbar-nav" style="margin-left: 100px">
+						<ul class="nav navbar-nav">
 							<li @if(Request::is('job')) class="active" @endif>
 								<a href="{{url('/job')}}">Jobs <span class="sr-only">(current)</span></a>
 							</li>
@@ -27,6 +27,9 @@
 							{{--</li>--}}
 							<li @if(Request::is('job/create')) class="active" @endif>
 								<a href="{{url('/job/create')}}">Post Job <span class="sr-only">(current)</span></a>
+							</li>
+							<li>
+								<a href="{{action('Admin\BasicSiteInfoController@recruitmentGuidance')}}">Recruitment Guidance<span class="sr-only">(current)</span></a>
 							</li>
 							<li><a href="{{action('Admin\BasicSiteInfoController@about')}}">Head Hunting<span class="sr-only">(current)</span></a></li>
 							{{--<li><a href="#">Guidence <span class="sr-only">(current)</span></a></li>--}}

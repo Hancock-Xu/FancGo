@@ -91,4 +91,9 @@ class BasicSiteInfoController extends Controller
     {
         return view('site.about');
     }
+
+    public function recruitmentGuidance()
+    {
+    	return view('site.recruitment_guidance');
+    }
 }
