@@ -1,5 +1,9 @@
 @extends('site.layout')
 
+@section('linked_script')
+	{!! Html::script('js/select_input_file.js') !!}
+@endsection
+
 
 @section('content')
 
@@ -28,31 +32,36 @@
 								@else
 									<label for="logo_url">UpLoad your Resume</label>
 								@endif
-								<input type="file" id="resume_chooser" accept="application/pdf">
+								<input class="resume_chooser" type="file" id="resume_chooser" accept="application/pdf">
 								<label for="">Upper Limit 2M</label>
 								<label for="">Only Accept PDF</label>
 
+								<br/>
+
+
+
+								@if($user->resume_url)
+									<label for="" class="showFileName">PDF: resume.pdf</label>
+								@else
+									<label for="" class="showFileName"></label>
+								@endif
 
 								<script type="text/javascript">
-									$(".a-upload").on("change", "input[type='file']", function() {
-										var filePath = $(this).val();
-										if (filePath.indexOf("jpg") != -1 || filePath.indexOf("png") != -1) {
+
+									$(".resume_chooser").change(function () {
+										var filePath=$(this).val();
+										if(filePath.indexOf("pdf")!=-1 || filePath.indexOf("PDF")!=-1){
 											$(".fileerrorTip").html("").hide();
-											var arr = filePath.split('\\');
-											var fileName = arr[arr.length - 1];
+											var arr=filePath.split('\\');
+											var fileName=arr[arr.length-1];
 											$(".showFileName").html(fileName);
-										} else {
+										}else{
 											$(".showFileName").html("");
 											$(".fileerrorTip").html("您未上传文件，或者您上传文件类型有误！").show();
 											return false
 										}
 									})
 								</script>
-
-
-								@if($user->resume_url)
-									<label for="" id="pdf_name">PDF: resume.pdf</label>
-								@endif
 							</div>
 							<i class="glyphicon glyphicon-asterisk required-item"></i>
 						</div>
