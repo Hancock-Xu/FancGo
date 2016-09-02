@@ -28,14 +28,20 @@
 								@else
 									<label for="logo_url">UpLoad your Resume</label>
 								@endif
-								<input type="file" id="resume_chooser" accept="application/pdf" name="resume_url">
+								<input type="file" class="resume_chooser" id="resume_chooser" accept="application/pdf" name="resume_url">
 								<label for="">Upper Limit 2M</label>
 								<label for="">Only Accept PDF</label>
+
 								@if($user->resume_url)
-									<label for="" id="pdf_name">PDF: resume.pdf</label>
+									<label for="" class="showFileName">PDF: resume.pdf</label>
+								@else
+									<label for="" class="showFileName"></label>
 								@endif
+
 							</div>
 							<i class="glyphicon glyphicon-asterisk required-item"></i>
+
+
 						</div>
 
 						@if ($errors->has('resume_url'))
@@ -43,6 +49,29 @@
                             <strong>{{ $errors->first('resume_url') }}</strong>
                         </span>
 						@endif
+
+						<div class="previewSelectFile">
+							<object class="pdfViewer" data="{{$user->resume_url}}" type="application/pdf" width="100%" height="100%"></object>
+						</div>
+
+						<script type="text/javascript">
+
+							$(".resume_chooser").change(function () {
+								var filePath=$(this).val();
+								if(filePath.indexOf("pdf")!=-1 || filePath.indexOf("PDF")!=-1){
+									$(".fileerrorTip").html("").hide();
+									var arr=filePath.split('\\');
+									var fileName=arr[arr.length-1];
+									$(".pdfViewer").attr('data', filePath);
+									$(".showFileName").html(fileName);
+								}else{
+									$(".showFileName").html("");
+									$(".fileerrorTip").html("您未上传文件，或者您上传文件类型有误！").show();
+									return false;
+								}
+							})
+
+						</script>
 
 					</div>
 

@@ -64,6 +64,9 @@
 								</script>
 							</div>
 							<i class="glyphicon glyphicon-asterisk required-item"></i>
+
+
+
 						</div>
 
 						@if ($errors->has('resume_url'))
