@@ -38,6 +38,8 @@
 
 								<br/>
 
+
+
 								@if($user->resume_url)
 									<label for="" class="showFileName">PDF: resume.pdf</label>
 								@else
@@ -56,13 +58,13 @@
 										}else{
 											$(".showFileName").html("");
 											$(".fileerrorTip").html("您未上传文件，或者您上传文件类型有误！").show();
-											return false;
+											return false
 										}
 									})
 								</script>
 							</div>
-
 							<i class="glyphicon glyphicon-asterisk required-item"></i>
+
 
 
 						</div>
