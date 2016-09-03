@@ -50,9 +50,13 @@
                         </span>
 						@endif
 
+						@if($user->resume_url)
 						<div class="previewSelectFile">
+
 							<object class="pdfViewer" data="{{$user->resume_url}}" type="application/pdf" width="100%" height="100%"></object>
 						</div>
+
+						@endif
 
 						<script type="text/javascript">
 

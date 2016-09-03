@@ -38,8 +38,6 @@
 
 								<br/>
 
-
-
 								@if($user->resume_url)
 									<label for="" class="showFileName">PDF: resume.pdf</label>
 								@else
@@ -58,13 +56,13 @@
 										}else{
 											$(".showFileName").html("");
 											$(".fileerrorTip").html("您未上传文件，或者您上传文件类型有误！").show();
-											return false
+											return false;
 										}
 									})
 								</script>
 							</div>
-							<i class="glyphicon glyphicon-asterisk required-item"></i>
 
+							<i class="glyphicon glyphicon-asterisk required-item"></i>
 
 
 						</div>
@@ -123,7 +121,7 @@
 							</label>
 
 							<div class="col-md-6">
-								<input id="short-name" type="text" class="form-control" name="phone_number" value="{{ $user->phone_number }}">
+								<input id="short-name" type="text" class="form-control" name="phone_number" value="{{ old('phone_number') }}">
 
 								@if ($errors->has('phone_number'))
 									<span class="help-block">
@@ -166,7 +164,7 @@
 							</label>
 
 							<div class="col-md-6">
-								<input id="date_of_birth" type="date" class="form-control" name="date_of_birth" value="{{ $user->date_of_birth}}">
+								<input id="date_of_birth" type="date" class="form-control" name="date_of_birth" value="{{ old('date_of_birth')}}">
 
 								@if ($errors->has('date_of_birth'))
 									<span class="help-block">
