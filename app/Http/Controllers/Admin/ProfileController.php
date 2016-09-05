@@ -70,12 +70,32 @@ class ProfileController extends Controller
 
 	    $this->correctImgPath($request);
 
-	    $user->finish_basic_info = true;
-	    $user->save();
+	    if (Session::has('backUrl')) {
+		    Session::keep('backUrl');
+	    }
 
-	    return ($url = Session::get('backUrl'))
-		    ? Redirect::to($url)
-		    : redirect('/job');
+	    if ($user->resume_url){
+		    $user->finish_basic_info = true;
+		    $user->save();
+
+		    return ($url = Session::get('backUrl'))
+			    ? Redirect::to($url)
+			    : redirect('/job');
+	    } else {
+
+		    $validator = Validator::make($request->all(), [
+			    'resume_url' => 'required'
+		    ]);
+
+		    if ($validator->fails()) {
+			    return redirect()->back()
+				    ->withErrors($validator)
+				    ->withInput();
+		    }
+
+	    }
+
+
     }
 
     public function correctImgPath(Request $request)
@@ -122,6 +142,11 @@ class ProfileController extends Controller
 	    }
 
 	    $this->correctImgPath($request);
+
+
+	    if (Session::has('backUrl')) {
+		    Session::keep('backUrl');
+	    }
 
 	    return Response::json(
 		    [

@@ -31,7 +31,6 @@ class ProfileStoreRequest extends Request
 			'native_language'=>'required',
 			'chinese_level'=>'required',
 			'current_residence'=>'required',
-			'resume_url'=>'required'
 		];
 	}
 
