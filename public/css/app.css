@@ -522,11 +522,12 @@ img {
 #company-website {
   width: 350px; }
 
-#company-submit {
-  margin: 30px 50px; }
-
 .company-size {
   margin-left: 20px; }
+
+.company_property_form {
+  -webkit-box-flex: 3;
+  flex: 3; }
 
 /*上传职位信息*/
 /*salary*/
@@ -577,6 +578,11 @@ img {
   width: 440px;
   margin: 0 auto;
   margin-bottom: 40px !important; }
+
+.upload_resume-btn {
+  width: 300px;
+  margin: 20px;
+  margin-top: 0; }
 
 .min-salary .form-control,
 .max-salary .form-control {

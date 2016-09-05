@@ -10,6 +10,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProfileStoreRequest;
 use App\Http\Requests\ProfileUpdateRequest;
 use Storage;
+use Validator;
+use Response;
 
 class ProfileController extends Controller
 {
@@ -103,6 +105,45 @@ class ProfileController extends Controller
 
 	    }
     }
+
+    public function uploadResume(Request $request)
+    {
+	    $this->wrongTokenAjax();
+
+	    $validator = Validator::make($request->all(), [
+		    'resume_url' => 'required',
+	    ]);
+
+	    if ( $validator->fails() ) {
+		    return Response::json([
+			    'success' => false,
+			    'errors' => $validator->getMessageBag()->toArray()
+		    ]);
+	    }
+
+	    $this->correctImgPath($request);
+
+	    return Response::json(
+		    [
+			    'success' => true,
+			    'resume_url' => asset(Auth::user()->resume_url),
+		    ]
+	    );
+    }
+
+	public function wrongTokenAjax()
+	{
+		if ( Session::token() !== \Request::get('_token') ) {
+			$response = [
+				'status' => false,
+				'errors' => 'Wrong Token',
+			];
+
+			return \Response::json($response);
+		}
+
+	}
+
 
     public function company()
     {

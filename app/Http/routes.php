@@ -45,6 +45,7 @@ Route::group([
 	Route::get('/company/delete/{id}','CompanyController@deleteJob');
 
 	Route::get('/profile/edit', 'ProfileController@edit');
+	Route::post('/profile/upload_resume', 'ProfileController@uploadResume');
 	Route::get('/profile/create', 'ProfileController@create');
 	Route::post('/profile/storeprofile', 'ProfileController@storeProfile');
 	Route::post('/profile/updateprofile','ProfileController@updateProfile');
