@@ -12,7 +12,6 @@ use App\VerifyEmailService\VerifyBroker;
 
 class emailIssuesController extends Controller
 {
-	use EmailVerifier;
 
     public function emailControllPanel()
     {

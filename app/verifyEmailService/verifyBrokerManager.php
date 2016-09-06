@@ -55,7 +55,9 @@ class VerifyBrokerManager implements FactoryContract
 			$this->app['mailer'],
 			$config['baseURL'],
 			$config['email'],
-			$config['apply_job_email_view']
+			$config['apply_job_email_view'],
+			$config['promote_to_company_email_view'],
+			$config['promote_to_user_email_view']
 		);
 	} 
 
