@@ -39,7 +39,7 @@ $(document).ready(function () {
             data: fd,
             success: function success(data) {
                 // do something...
-                alert('Resume Uploaded');
+                $('#progress').html('Upload Succeed');
             }
         });
     });

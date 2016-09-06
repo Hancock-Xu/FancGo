@@ -34,7 +34,7 @@ $(document).ready(function() {
             data: fd,
             success: function(data) {
                 // do something...
-                alert('Resume Uploaded');
+                $('#progress').html('Upload Succeed');
             }
         });
     });

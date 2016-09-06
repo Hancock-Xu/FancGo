@@ -34,15 +34,15 @@
 									@endif
 
 										<input class="resume_chooser" type="file" id="files" accept="application/pdf" name="resume_url">
-										<label for="">Upper Limit 2M</label>
+										<label for="">Upper Limit 5M</label>
 										<label for="">Only Accept PDF</label>
 
 										<br/>
 
 										@if($user->resume_url)
-											<label for="" class="showFileName">PDF: resume.pdf</label>
+											<label for="" class="upload_info" style="color: red">PDF: resume.pdf</label>
 										@else
-											<label id="progress" for="" class="showFileName"></label>
+											<label id="progress" for="" class="upload_info" style="color: red"></label>
 										@endif
 
 
@@ -56,9 +56,9 @@
 												$(".fileerrorTip").html("").hide();
 												var arr=filePath.split('\\');
 												var fileName=arr[arr.length-1];
-												$(".showFileName").html(fileName);
+												$(".upload_info").html(fileName);
 											}else{
-												$(".showFileName").html("");
+												$(".upload_info").html("");
 												$(".fileerrorTip").html("您未上传文件，或者您上传文件类型有误！").show();
 												return false;
 											}
