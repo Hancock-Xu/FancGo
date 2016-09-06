@@ -30,13 +30,19 @@ class VerifyBroker implements verifyEmailContract
 
 	protected $applyJobEmailView;
 
+	protected $promote_to_company_email_view;
+
+	protected $promote_to_user_email_view;
+
 	public function __construct(
 		TokenRepository $tokenRepository,
 		UserProvider $user,
 		MailerContract $mailer,
 		$baseURL,
 		$emailView,
-		$applyJobEmailView
+		$applyJobEmailView,
+		$promote_to_company_email_view,
+		$promote_to_user_email_view
 	)
 	{
 		$this->tokens = $tokenRepository;
@@ -45,6 +51,8 @@ class VerifyBroker implements verifyEmailContract
 		$this->baseURL = $baseURL;
 		$this->emailView = $emailView;
 		$this->applyJobEmailView = $applyJobEmailView;
+		$this->promote_to_company_email_view = $promote_to_company_email_view;
+		$this->promote_to_user_email_view = $promote_to_user_email_view;
 	}
 
 	public function sendVerifyEmail($email, array $credentials = null, Closure $callback = null)
@@ -78,6 +86,24 @@ class VerifyBroker implements verifyEmailContract
 		});
 
 		return static::VERIFY_EMAIL_SENT;
+	}
+	
+	public function sendCompanyPromoteEmail($email, Closure $callback = null)
+	{
+		$this->mailer->send($this->promote_to_company_email_view, null, function ($message) use ($callback){
+			if (!is_null($callback)){
+				call_user_func($callback, $message);
+			}
+		});
+	}
+
+	public function sendUserPromoteEmail($email, Closure $callback = null)
+	{
+		$this->mailer->send($this->promote_to_company_email_view, null, function ($message) use ($callback){
+			if (!is_null($callback)){
+				call_user_func($callback, $message);
+			}
+		});
 	}
 	
 	public function verifyEmail($token)
