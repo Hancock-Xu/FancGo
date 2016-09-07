@@ -12,9 +12,9 @@
 
 					<input id="email" type="email" class="form-control" name="company_email" value="{{ old('email') }}">
 
-					@if ($errors->has('email'))
+					@if ($errors->has('company_email'))
 						<span class="help-block">
-                            <strong>{{ $errors->first('email') }}</strong>
+                            <strong>{{ $errors->first('company_email') }}</strong>
                         </span>
 					@endif
 				</div>
@@ -33,16 +33,16 @@
 	<div>
 		<form class="form-horizontal" method="post" role="form" action="{{action('Admin\EmailIssuesController@userPromote')}}">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
-			<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+			<div class="form-group{{ $errors->has('user_email') ? ' has-error' : '' }}">
 				<label for="email" class="col-md-4 control-label">User E-Mail Address</label>
 
 				<div class="col-md-6">
 
-					<input id="email" type="email" class="form-control" name="company_email" value="{{ old('email') }}">
+					<input id="email" type="email" class="form-control" name="user_email" value="{{ old('user_email') }}">
 
-					@if ($errors->has('email'))
+					@if ($errors->has('user_email'))
 						<span class="help-block">
-                            <strong>{{ $errors->first('email') }}</strong>
+                            <strong>{{ $errors->first('user_email') }}</strong>
                         </span>
 					@endif
 				</div>
