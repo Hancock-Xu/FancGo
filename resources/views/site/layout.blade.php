@@ -21,8 +21,6 @@
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
 	<!-- polyfiller file to detect and load polyfills -->
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
-	<script src="http://malsup.github.com/jquery.form.js"></script>
 
 
 	<script>
