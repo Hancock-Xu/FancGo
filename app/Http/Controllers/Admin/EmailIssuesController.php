@@ -50,9 +50,7 @@ class EmailIssuesController extends Controller
 		$input = $request->all();
 		$email = $input['user_email'];
 
-		return VerifyEmail::broker()->sendCompanyPromoteEmail($email, function (Message $message) use ($email){
-			$message->to($email)->subject('JobLeadChina Introduction');
-		});
+		return VerifyEmail::broker()->sendUserPromoteEmail($email);
 
 	}
 
