@@ -3,6 +3,10 @@
 @section('content')
 
 	<div>
+		@include('Jobs.index_partial.jobIndexHeader')
+	</div>
+
+	<div>
 		@include('Jobs.index_partial.searchbar')
 	</div>
 

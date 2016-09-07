@@ -90,7 +90,8 @@ class VerifyBroker implements verifyEmailContract
 	
 	public function sendCompanyPromoteEmail($email, Closure $callback = null)
 	{
-		$this->mailer->send($this->promote_to_company_email_view, null, function ($message) use ($callback){
+		$this->mailer->send($this->promote_to_company_email_view, [], function (Message $message) use ($callback, $email){
+			$message->to($email)->subject('JobLeadChina Introduction');
 			if (!is_null($callback)){
 				call_user_func($callback, $message);
 			}
@@ -99,7 +100,7 @@ class VerifyBroker implements verifyEmailContract
 
 	public function sendUserPromoteEmail($email, Closure $callback = null)
 	{
-		$this->mailer->send($this->promote_to_company_email_view, null, function ($message) use ($callback){
+		$this->mailer->send($this->promote_to_company_email_view, [], function ($message) use ($callback){
 			if (!is_null($callback)){
 				call_user_func($callback, $message);
 			}

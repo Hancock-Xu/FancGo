@@ -3,7 +3,7 @@
 @section('content')
 
 	<div>
-		<form class="form-horizontal" method="post" role="form" action="{{action('Admin\emailIssuesController@companyPromote')}}">
+		<form class="form-horizontal" method="post" role="form" action="{{action('Admin\EmailIssuesController@companyPromote')}}">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 				<label for="email" class="col-md-4 control-label">Company E-Mail Address</label>
@@ -31,7 +31,7 @@
 
 
 	<div>
-		<form class="form-horizontal" method="post" role="form" action="{{action('Admin\emailIssuesController@userPromote')}}">
+		<form class="form-horizontal" method="post" role="form" action="{{action('Admin\EmailIssuesController@userPromote')}}">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 				<label for="email" class="col-md-4 control-label">User E-Mail Address</label>

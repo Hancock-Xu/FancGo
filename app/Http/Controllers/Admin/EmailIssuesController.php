@@ -6,11 +6,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Illuminate\Mail\Message;
-use Illuminate\Validation\Validator;
-use App\VerifyEmailService\Protocol\VerifyEmail;
-use App\VerifyEmailService\VerifyBroker;
+use Validator;
+use App\VerifyEmailService\VerifyEmail;
 
-class emailIssuesController extends Controller
+class EmailIssuesController extends Controller
 {
 
     public function emailControllPanel()
@@ -33,9 +32,7 @@ class emailIssuesController extends Controller
 	    $input = $request->all();
 	    $email = $input['company_email'];
 
-	    return VerifyEmail::broker()->sendCompanyPromoteEmail($email, function (Message $message) use ($email){
-	    	$message->to($email)->subject('JobLeadChina Introduction');
-	    });
+	    return VerifyEmail::broker()->sendCompanyPromoteEmail($email);
 
     }
 

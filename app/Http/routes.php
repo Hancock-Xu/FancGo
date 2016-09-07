@@ -52,8 +52,8 @@ Route::group([
 	Route::get('/profile/company', 'ProfileController@company');
 	Route::post('/profile/company/delete', 'ProfileController@deleteCompany');
 
-	Route::get('/promote_jobleadchina', 'emailIssuesController@emailControllPanel');
-	Route::post('/promote_to_company_jobleadchina', 'emailIssuesController@companyPromote');
-	Route::post('/promote_to_user_jobleadchina', 'emailIssuesController@userPromote');
+	Route::get('/promote_jobleadchina', 'EmailIssuesController@emailControllPanel');
+	Route::post('/promote_to_company_jobleadchina', 'EmailIssuesController@companyPromote');
+	Route::post('/promote_to_user_jobleadchina', 'EmailIssuesController@userPromote');
 });
 
