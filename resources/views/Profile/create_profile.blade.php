@@ -40,7 +40,7 @@
 										<br/>
 
 										@if($user->resume_url)
-											<label for="" class="upload_info" style="color: red">PDF: resume.pdf</label>
+											<label id="progress" for="" class="upload_info" style="color: red">PDF: resume.pdf</label>
 										@else
 											<label id="progress" for="" class="upload_info" style="color: red"></label>
 										@endif
