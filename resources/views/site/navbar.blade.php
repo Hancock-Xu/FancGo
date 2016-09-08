@@ -65,7 +65,7 @@
 										<a href="{{url('/logout')}}">Logout</a>
 									</li>
 									<li>
-										<a href="{{action('Admin\ProfileController@company')}}">Edit Company info</a>
+										<a href="{{action('Admin\ProfileController@company')}}">Edit Company&Position info</a>
 									</li>
 									<li>
 										<a href="{{ action('Admin\ProfileController@edit') }}">Edit Resume/Profile</a>
