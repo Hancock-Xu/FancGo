@@ -24,6 +24,7 @@
 					</br>
 					<a class="backup-enterpriseVerify" href="{{ $validateLink }}">{{ $validateLink }}</a>
 					</br>
+					<h3>发布工作以后, 您可以在个人profile下拉菜单中点击Edit Company&Position info页面中Update您的Position,这样可以将您的Position排在首页。</h3>
 					<hr/>
 				</div>
 				<div class="mail-furtherhelp">
