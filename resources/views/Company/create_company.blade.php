@@ -44,9 +44,9 @@
 
 													<embed src="{{asset('images/upload.svg')}}" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
 
-													<label for="logo_url">UpLoad Company Logo</label>
+													<label for="logo_url">Click to UpLoad Company Logo</label>
 													<input type="file" id="filechooser" accept="image/png,images/jpg,image/gif,image/jpeg" name="logo_url">
-													<label for="">Upper Limit 5M</label>
+													<label for="">Upper Limit 2M</label>
 
 												</div>
 
