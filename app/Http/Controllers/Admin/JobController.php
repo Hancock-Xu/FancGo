@@ -73,7 +73,7 @@ class JobController extends Controller
 				}
 			}
 
-//			$jobs = $jobs->paginate(config('jobs.posts_per_page'));
+			$jobs = $jobs->paginate(config('jobs.posts_per_page'));
 
 			return view('Jobs.index_partial.index', ['jobs'=>$jobs]);
 			
