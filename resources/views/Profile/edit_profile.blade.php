@@ -33,7 +33,7 @@
 									<label for="logo_url">UpLoad your Resume</label>
 								@endif
 
-								<input class="resume_chooser" type="file" id="files" accept="application/pdf" name="resume_url">
+								<input class="resume_chooser" accept="application/pdf" type="file" id="files" name="resume_url">
 								<label for="">Upper Limit 5M</label>
 								<label for="">Only Accept PDF</label>
 
@@ -41,26 +41,28 @@
 
 								@if($user->resume_url)
 									<label id="progress" for="" class="upload_info" style="color: red">PDF: resume.pdf</label>
+									<label class="fileerrorTip" style="color: red"></label>
 								@else
 									<label id="progress" for="" class="upload_info" style="color: red"></label>
+									<label class="fileerrorTip" style="color: red"></label>
 								@endif
 
-								<script type="text/javascript">
+								{{--<script type="text/javascript">--}}
 
-									$(".resume_chooser").change(function () {
-										var filePath=$(this).val();
-										if(filePath.indexOf("pdf")!=-1 || filePath.indexOf("PDF")!=-1){
-											$(".fileerrorTip").html("").hide();
-											var arr=filePath.split('\\');
-											var fileName=arr[arr.length-1];
-											$(".upload_info").html(fileName);
-										}else{
-											$(".upload_info").html("");
-											$(".fileerrorTip").html("您未上传文件，或者您上传文件类型有误！").show();
-											return false;
-										}
-									});
-								</script>
+									{{--$(".resume_chooser").change(function () {--}}
+										{{--var filePath=$(this).val();--}}
+										{{--if(filePath.indexOf("pdf")!=-1 || filePath.indexOf("PDF")!=-1){--}}
+											{{--$(".fileerrorTip").html("").hide();--}}
+											{{--var arr=filePath.split('\\');--}}
+											{{--var fileName=arr[arr.length-1];--}}
+											{{--$(".upload_info").html(fileName);--}}
+										{{--}else{--}}
+											{{--$(".upload_info").html("");--}}
+											{{--$(".fileerrorTip").html("您未上传文件，或者您上传文件类型有误！").show();--}}
+											{{--return false;--}}
+										{{--}--}}
+									{{--});--}}
+								{{--</script>--}}
 							</div>
 							<i class="glyphicon glyphicon-asterisk required-item"></i>
 

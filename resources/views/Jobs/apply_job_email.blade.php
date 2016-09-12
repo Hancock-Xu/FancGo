@@ -50,7 +50,7 @@
 
 				</tbody>
 			</table>
-			<h4>Tips:发布工作以后, 您可以在个人profile下拉菜单中点击Edit Company&Position info页面中Update您的Position,这样可以将您的Position排在首位。</h4>
+			<h4>Tips: 发布工作以后, 您可以在个人profile下拉菜单中点击“Edit Company&Position info”按钮, 在“Edit Company&Position info”页面下半部分的“Position list”中Update您的Position,这样可以将您的Position排在首位。</h4>
 		</div>
 		<div class="mail-furtherhelp">
 			<h4>If you need further assistance, please contact us.</h4>

@@ -45,25 +45,6 @@
 											<label id="progress" for="" class="upload_info" style="color: red"></label>
 										@endif
 
-
-
-
-									<script type="text/javascript">
-
-										$(".resume_chooser").change(function () {
-											var filePath=$(this).val();
-											if(filePath.indexOf("pdf")!=-1 || filePath.indexOf("PDF")!=-1){
-												$(".fileerrorTip").html("").hide();
-												var arr=filePath.split('\\');
-												var fileName=arr[arr.length-1];
-												$(".upload_info").html(fileName);
-											}else{
-												$(".upload_info").html("");
-												$(".fileerrorTip").html("您未上传文件，或者您上传文件类型有误！").show();
-												return false;
-											}
-										});
-									</script>
 								</div>
 								<i class="glyphicon glyphicon-asterisk required-item"></i>
 
