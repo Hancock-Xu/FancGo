@@ -131,7 +131,7 @@ class ProfileController extends Controller
 	    $this->wrongTokenAjax();
 
 	    $validator = Validator::make($request->all(), [
-		    'resume_url' => 'required|mimes:pdf',
+		    'resume_url' => 'required',
 	    ]);
 
 	    if ( $validator->fails() ) {

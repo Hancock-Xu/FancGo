@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Job;
 use App\Http\Requests\JobStoreRequest;
 use App\Http\Controllers\Controller;
+use App\User;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 use Session;
 use Illuminate\Mail\Message;
 use Illuminate\Http\Request;
@@ -210,7 +212,22 @@ class JobController extends Controller
 			$response = VerifyEmail::broker()->sendJobApplyEmail($job, function(Message $message) use ($job, $user){
 				$to = $job->resume_email;
 				$message->to($to)->subject('A candidate has applied for your position on JobLeadChina!');
-				$message->attach(public_path($user->resume_url), ['as'=>"=?UTF-8?B?".base64_encode('resume')."?=.pdf"]);
+
+				$resume_extension = substr(strrchr($user->resume_url, '.'), 1);
+
+				if ($resume_extension == 'pdf' || $resume_extension == 'PDF'){
+					$message->attach(public_path($user->resume_url), ['as'=>"=?UTF-8?B?".base64_encode('resume')."?=.pdf"]);
+
+				}
+				if ($resume_extension == 'docx'){
+					$message->attach(public_path($user->resume_url), ['as'=>"=?UTF-8?B?".base64_encode('resume')."?=.docx"]);
+				}
+				if ($resume_extension == 'doc'){
+					$message->attach(public_path($user->resume_url), ['as'=>"=?UTF-8?B?".base64_encode('resume')."?=.doc"]);
+				}
+
+
+
 			});
 
 			if ($response == 'verify.email.sent'){
@@ -227,6 +244,18 @@ class JobController extends Controller
 		}
 
 	}
+
+	public function interestedInApplicant($id)
+	{
+		$user = User::findOrFail($id);
+//		$response = VerifyEmail::broker()->send
+	}
+
+	public function notInterestedInApplicant($id)
+	{
+
+	}
+
 
 	public function replaceLineFeed(Request $request)
 	{

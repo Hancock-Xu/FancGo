@@ -33,9 +33,10 @@
 										<label for="logo_url">UpLoad your Resume</label>
 									@endif
 
-										<input class="resume_chooser" type="file" id="files" accept="application/pdf" name="resume_url">
+										<input class="resume_chooser" type="file" id="files" accept="application/pdf,application/msword,
+  application/vnd.openxmlformats-officedocument.wordprocessingml.document" name="resume_url">
 										<label for="">Upper Limit 5M</label>
-										<label for="">Only Accept PDF</label>
+										<label for="">Only accept pdf, doc and docx.Recommended use pdf</label>
 
 										<br/>
 
@@ -47,8 +48,6 @@
 
 								</div>
 								<i class="glyphicon glyphicon-asterisk required-item"></i>
-
-
 
 							</div>
 
