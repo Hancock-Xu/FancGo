@@ -53,11 +53,15 @@ class VerifyBrokerManager implements FactoryContract
 			$this->createVerifyEmailTokenRepository($config),
 			$this->app['auth']->createUserProvider($config['provider']),
 			$this->app['mailer'],
+			$config['replayJobApplyInterestedBaseURL'],
+			$config['replayJobApplyNotInterestedBaseURL'],
 			$config['baseURL'],
 			$config['email'],
 			$config['apply_job_email_view'],
 			$config['promote_to_company_email_view'],
-			$config['promote_to_user_email_view']
+			$config['promote_to_user_email_view'],
+			$config['interested_In_Applicant_View'],
+			$config['not_interested_In_Applicant_View']
 		);
 	} 
 

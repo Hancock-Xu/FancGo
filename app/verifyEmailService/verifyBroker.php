@@ -9,6 +9,7 @@
 namespace App\VerifyEmailService;
 
 use App\Job;
+use App\User;
 use Closure;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Mail\Mailer as MailerContract;
@@ -30,6 +31,14 @@ class VerifyBroker implements verifyEmailContract
 
 	protected $applyJobEmailView;
 
+	public $replayJobApplyInterestedBaseURL;
+
+	public $replayJobApplyNotInterestedBaseURL;
+
+	public $interestedInApplicantView;
+
+	public $notInterestedInApplicantView;
+
 	protected $promote_to_company_email_view;
 
 	protected $promote_to_user_email_view;
@@ -38,21 +47,29 @@ class VerifyBroker implements verifyEmailContract
 		TokenRepository $tokenRepository,
 		UserProvider $user,
 		MailerContract $mailer,
+		$replayJobApplyInterestedBaseURL,
+		$replayJobApplyNotInterestedBaseURL,
 		$baseURL,
 		$emailView,
 		$applyJobEmailView,
 		$promote_to_company_email_view,
-		$promote_to_user_email_view
+		$promote_to_user_email_view,
+		$interested_In_Applicant_View,
+		$not_interested_In_Applicant_View
 	)
 	{
 		$this->tokens = $tokenRepository;
 		$this->users = $user;
 		$this->mailer = $mailer;
+		$this->replayJobApplyInterestedBaseURL = $replayJobApplyInterestedBaseURL;
+		$this->replayJobApplyNotInterestedBaseURL = $replayJobApplyNotInterestedBaseURL;
 		$this->baseURL = $baseURL;
 		$this->emailView = $emailView;
 		$this->applyJobEmailView = $applyJobEmailView;
 		$this->promote_to_company_email_view = $promote_to_company_email_view;
 		$this->promote_to_user_email_view = $promote_to_user_email_view;
+		$this->interestedInApplicantView = $interested_In_Applicant_View;
+		$this->notInterestedInApplicantView = $not_interested_In_Applicant_View;
 	}
 
 	public function sendVerifyEmail($email, array $credentials = null, Closure $callback = null)
@@ -71,7 +88,7 @@ class VerifyBroker implements verifyEmailContract
 			}
 		});
 		
-		return static::VERIFY_EMAIL_SENT;
+		return static::EMAIL_SENT;
 	}
 
 	public function sendJobApplyEmail(Job $job, Closure $callback = null)
@@ -79,13 +96,40 @@ class VerifyBroker implements verifyEmailContract
 		$user = \Auth::getUser();
 		$resume = $user->resume_url;
 
-		$this->mailer->send($this->applyJobEmailView, ['job'=>$job, 'user'=>$user], function($message) use ($callback){
+		$interestedLink = \URL::action($this->replayJobApplyInterestedBaseURL, ['user'=>$user->id, 'job'=>$job->id]);
+
+		$notInterestedLink = \URL::action($this->replayJobApplyNotInterestedBaseURL, ['user'=>$user->id, 'job'=>$job->id]);
+
+		$this->mailer->send($this->applyJobEmailView, ['job'=>$job, 'user'=>$user, 'interestedLink'=>$interestedLink, 'notInterestedLink'=>$notInterestedLink], function($message) use ($callback){
 			if (!is_null($callback)){
 				call_user_func($callback, $message);
 			}
 		});
 
-		return static::VERIFY_EMAIL_SENT;
+		return static::SEND_SUCCEED;
+	}
+
+	public function interestedInApplicant(array $parameter, Closure $callback = null)
+	{
+		$this->mailer->send($this->interestedInApplicantView, $parameter, function (Message $message) use ($callback){
+			if (!is_null($callback)){
+				call_user_func($callback, $message);
+			}
+		});
+
+		return static::SEND_SUCCEED;
+	}
+
+
+	public function notInterestedInApplicant(array $parameter, Closure $callback = null)
+	{
+		$this->mailer->send($this->notInterestedInApplicantView, $parameter, function (Message $message) use ($callback){
+			if (!is_null($callback)){
+				call_user_func($callback, $message);
+			}
+		});
+
+		return static::SEND_SUCCEED;
 	}
 	
 	public function sendCompanyPromoteEmail($email, Closure $callback = null)
@@ -96,6 +140,7 @@ class VerifyBroker implements verifyEmailContract
 				call_user_func($callback, $message);
 			}
 		});
+		return static::SEND_SUCCEED;
 	}
 
 	public function sendUserPromoteEmail($email, Closure $callback = null)
@@ -106,15 +151,16 @@ class VerifyBroker implements verifyEmailContract
 				call_user_func($callback, $message);
 			}
 		});
+		return static::SEND_SUCCEED;
 	}
 	
 	public function verifyEmail($token)
 	{
 		if ($this->tokens->exists($token)){
 			$this->tokens->delete($token);
-			return static::VERIFY_SUCCEED;
+			return static::SEND_SUCCEED;
 		}else{
-			return static::VERIFY_FAILED;
+			return static::SEND_FAILED;
 		}
 
 	}

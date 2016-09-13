@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Company;
 use App\Job;
 use App\Http\Requests\JobStoreRequest;
 use App\Http\Controllers\Controller;
@@ -230,7 +231,7 @@ class JobController extends Controller
 
 			});
 
-			if ($response == 'verify.email.sent'){
+			if ($response == 'succeed'){
 				return view('Jobs.apply_job_succeed');
 			}else{
 				return view('Jobs.apply_job_failed');
@@ -245,15 +246,36 @@ class JobController extends Controller
 
 	}
 
-	public function interestedInApplicant($id)
+	public function interestedInApplicant($id, $job)
 	{
 		$user = User::findOrFail($id);
-//		$response = VerifyEmail::broker()->send
+		$applied_job = Job::findOrFail($job);
+		$company = Company::findOrFail($applied_job->company_id);
+		$response = VerifyEmail::broker()->interestedInApplicant(['user'=>$user, 'job'=>$applied_job, 'company'=>$company], function (Message $message) use ($user, $company, $job){
+			$message->to($user->email)->subject($company->company_name.'-'.$job->job_title.' '.'Notification of recruitment feedback');
+		});
+
+		if ($response == 'succeed'){
+			return view('Jobs.replay_succeed');
+		}else{
+			return view('Jobs.replay_failed');
+		}
 	}
 
-	public function notInterestedInApplicant($id)
+	public function notInterestedInApplicant($id, $job)
 	{
+		$user = User::findOrFail($id);
+		$applied_job = Job::findOrFail($job);
+		$company = Company::findOrFail($applied_job->company_id);
+		$response = VerifyEmail::broker()->notInterestedInApplicant(['user'=>$user, 'job'=>$applied_job, 'company'=>$company], function (Message $message) use ($user, $company, $job){
+			$message->to($user->email)->subject($company->company_name.'-'.$job->job_title.' '.'Notification of recruitment feedback');
+		});
 
+		if ($response == 'succeed'){
+			return view('Jobs.replay_succeed');
+		}else{
+			return view('Jobs.replay_failed');
+		}
 	}
 
 

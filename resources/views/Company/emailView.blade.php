@@ -24,7 +24,8 @@
 					</br>
 					<a class="backup-enterpriseVerify" href="{{ $validateLink }}">{{ $validateLink }}</a>
 					</br>
-					<h5>Tips:发布工作以后, 您可以在个人profile下拉菜单中点击Edit Company&Position info页面中Update您的Position,这样可以将您的Position排在首位。</h5>
+					<h5>Tips: 如何刷新您的岗位? How to update you position?</h5>
+					<p>发布工作以后, 您可以在个人profile下拉菜单中点击Edit Company&Position info页面中Update您的Position,这样可以将您的Position排在首位。</p>
 					</br>
 					<h5>有人Apply您的Position, 您会收到提醒邮件, 应聘者简历会作为邮件附件直接发送给您。</h5>
 					<hr/>

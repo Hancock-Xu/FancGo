@@ -8,6 +8,7 @@
 	<meta name="description" content="JobLeadChina provide a set of job solution for enterises and forein talents.">
 	<!--Link-->
 	<!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+
 </head>
 <body>
 <div id="mailContainer" style="margin: 0 auto;width: 600px;overflow: hidden;color: #666;">
@@ -50,12 +51,33 @@
 
 				</tbody>
 			</table>
-			<h4>Tips: 发布工作以后, 您可以在个人profile下拉菜单中点击“Edit Company&Position info”按钮, 在“Edit Company&Position info”页面下半部分的“Position list”中Update您的Position,这样可以将您的Position排在首位。</h4>
+
+		</div>
+		<hr/>
+		<div class="interest_button_area" style="display: flex">
+
+			<div style="display: flex;background: #d0eeff;border: 1px solid #99d3f5;border-radius: 4px;padding: 4px 12px;overflow: hidden;text-indent: 0;line-height: 20px;width: 200px;min-height: 50px;font-size: 20px;margin: 20px">
+				<a href="{{$interestedLink}}" style="text-decoration: none;color: #1e88c7;margin: 0 auto;justify-content: center;align-items: center;height: 20px;top: 50%;margin-top: 15px;">
+					Interested
+				</a>
+			</div>
+
+
+			<div style="display: flex;background: #d0eeff;border: 1px solid #99d3f5;border-radius: 4px;padding: 4px 12px;overflow: hidden;text-indent: 0;line-height: 20px;width: 200px;min-height: 50px;font-size: 20px;margin: 20px">
+
+				<a href="{{$notInterestedLink}}" style="text-decoration: none;color: #c71e28;margin: 0 auto;justify-content: center;align-items: center;height: 20px;top: 50%;margin-top: 15px;">
+					Not Interested
+				</a>
+			</div>
 		</div>
 		<div class="mail-furtherhelp">
+			<h4>Tips: 如何刷新您的岗位?</h4>
+			<p>发布工作以后, 您可以在个人profile下拉菜单中点击Edit Company&Position info页面中Update您的Position,这样可以将您的Position排在首位。</p>
 			<h4>If you need further assistance, please contact us.</h4>
 			<a href="mailto:service@jobleadchina.com?subject=The%20subject%20of%20the%20mail">Email:&nbsp;service@jobleadchina.com</a>
 		</div>
+
+
 	</div>
 </div>
 

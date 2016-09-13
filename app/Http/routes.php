@@ -30,6 +30,8 @@ Route::group([
 	Route::post('/job/{id}', 'JobController@update');
 	Route::get('/job/{id}/delete', 'JobController@destroy');
 	Route::get('/job/apply/{id}', 'JobController@applyJob');
+	Route::get('/job/interested/{user}/{job}', 'JobController@interestedInApplicant');
+	Route::get('/job/notinterested/{user}/{job}', 'JobController@notInterestedInApplicant');
 
 	Route::get('/company/create', 'CompanyController@create');
 	Route::post('/company/storeprecompany', 'CompanyController@storePreCompany');
