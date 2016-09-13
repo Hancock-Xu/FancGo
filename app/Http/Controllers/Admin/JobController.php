@@ -251,8 +251,8 @@ class JobController extends Controller
 		$user = User::findOrFail($id);
 		$applied_job = Job::findOrFail($job);
 		$company = Company::findOrFail($applied_job->company_id);
-		$response = VerifyEmail::broker()->interestedInApplicant(['user'=>$user, 'job'=>$applied_job, 'company'=>$company], function (Message $message) use ($user, $company, $job){
-			$message->to($user->email)->subject($company->company_name.'-'.$job->job_title.' '.'Notification of recruitment feedback');
+		$response = VerifyEmail::broker()->interestedInApplicant(['user'=>$user, 'job'=>$applied_job, 'company'=>$company], function (Message $message) use ($user, $company, $applied_job){
+			$message->to($user->email)->subject($company->company_name.'-'.$applied_job->job_title.' '.'Notification of recruitment feedback');
 		});
 
 		if ($response == 'succeed'){
@@ -267,8 +267,8 @@ class JobController extends Controller
 		$user = User::findOrFail($id);
 		$applied_job = Job::findOrFail($job);
 		$company = Company::findOrFail($applied_job->company_id);
-		$response = VerifyEmail::broker()->notInterestedInApplicant(['user'=>$user, 'job'=>$applied_job, 'company'=>$company], function (Message $message) use ($user, $company, $job){
-			$message->to($user->email)->subject($company->company_name.'-'.$job->job_title.' '.'Notification of recruitment feedback');
+		$response = VerifyEmail::broker()->notInterestedInApplicant(['user'=>$user, 'job'=>$applied_job, 'company'=>$company], function (Message $message) use ($user, $company, $applied_job){
+			$message->to($user->email)->subject($company->company_name.'-'.$applied_job->job_title.' '.'Notification of recruitment feedback');
 		});
 
 		if ($response == 'succeed'){
