@@ -22,9 +22,9 @@
 				<tr >
 					<td valign="top">
 						<div style="margin: 30px 30px 0;">
-							<h5>Apply Position: <a href="{{ action('Admin\JobController@show',[$job->id]) }}" style="text-decoration: underline; color: #694c9c;">{{$job->job_title}}</a></h5>
-							<h5>Apply Company: <a href="{{ action('Admin\JobController@show',[$job->id]) }}" style="text-decoration: underline; color: #694c9c;">{{$company->company_name}}</a></h5>
-							<h5>Result Feedback: Matching</h5>
+							<h5 style="font-size: 16px;">Apply Position: <a href="{{ action('Admin\JobController@show',[$job->id]) }}" style="text-decoration: underline; color: #694c9c;">{{$job->job_title}}</a></h5>
+							<h5 style="font-size: 16px;">Apply Company: <a href="{{ action('Admin\JobController@show',[$job->id]) }}" style="text-decoration: underline; color: #694c9c;">{{$company->company_name}}</a></h5>
+							<h5 style="font-size: 16px;">Result Feedback: Matching</h5>
 						</div>
 					</td>
 				</tr>
@@ -37,7 +37,7 @@
 					<td style="padding-left: 30px; padding-right: 30px;">
 						<div>
 							<p>Hello, {{$user->last_name}}</p>
-							<p style="line-height: 20px;">Thank you for your interest in {{$company->company_name}} position and resume received. After reading your resume carefully, we'd like to inform you that your resume match the position! About further interview, we will contact you soon.</p>
+							<p style="line-height: 20px;">Congratulations! Thank you for your interest in {{$company->company_name}} position and resume received. After reading your resume carefully, we'd like to inform you that your resume match the position! About further interview, we will contact you soon.</p>
 							<p>Thanks again for your trust and support.</p>
 						</div>
 					</td>

@@ -22,9 +22,9 @@
 				<tr >
 					<td valign="top">
 						<div style="margin: 30px 30px 0;">
-							<h5>Apply Position: <a href="{{ action('Admin\JobController@show',[$job->id]) }}" style="text-decoration: underline; color: #694c9c;">{{$job->job_title}}</a></h5>
-							<h5>Apply Company: <a href="{{ action('Admin\JobController@show',[$job->id]) }}" style="text-decoration: underline; color: #694c9c;">{{$company->company_name}}</a></h5>
-							<h5>Result Feedback: Mismatch</h5>
+							<h5 style="font-size: 16px;">Apply Position: <a href="{{ action('Admin\JobController@show',[$job->id]) }}" style="text-decoration: underline; color: #694c9c;">{{$job->job_title}}</a></h5>
+							<h5 style="font-size: 16px;">Apply Company: <a href="{{ action('Admin\JobController@show',[$job->id]) }}" style="text-decoration: underline; color: #694c9c;">{{$company->company_name}}</a></h5>
+							<h5 style="font-size: 16px;">Result Feedback: Mismatch</h5>
 						</div>
 					</td>
 				</tr>

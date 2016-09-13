@@ -7,7 +7,7 @@
 			<embed src="{{asset('images/verify_email.svg')}}" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
 		</div>
 		<div class="content-noresult">
-			<h1>Replay apply succeed~~ </h1>
+			<h1>Feedback has been send successfully~~ </h1>
 		</div>
 	</div>
 
