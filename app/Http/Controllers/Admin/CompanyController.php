@@ -132,7 +132,7 @@ class CompanyController extends Controller
 
 		    $company->logo_url = '/uploads'.$save_path;
 
-	    }else{
+	    }else if ($company->logo_url == null){
 
 	    	$company->logo_url = '/uploads/companies/logo_holder.png';
 
