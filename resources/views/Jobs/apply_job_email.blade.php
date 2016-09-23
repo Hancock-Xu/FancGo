@@ -12,14 +12,15 @@
 </head>
 <body>
 <div id="mailContainer" style="margin: 0 auto;width: 600px;overflow: hidden;color: #666;">
-	<h2>JobLeadChina</h2>
+	<h1>JobLeadChina</h1>
 	<div class="mailContentContainer" style="background-color: #fff;border-top: 20px solid #694c9c;padding: 20px;">
 		<div class="mailContent-enterprise">
-			<h4 class="mail-applyPostion">Apply Position:&nbsp;{{$job->job_title}}</h4>
+			<h3 class="mail-applyPostion">Apply Position:&nbsp;{{$job->job_title}}</h3>
 			<hr/>
 			<h4>Hello</h4>
-			<p>A candidate has applied for your position on JobLeadChina! You can preview or download the resume in attachment directly.</p>
-			<p>有一个应聘者在JobLeadChina申请了您的岗位! 您可以直接在附件中下载或者预览该简历。</p>
+			<p>A candidate has applied for your position on JobLeadChina!</p>
+			<p style="color: #954542;">You can preview or download the resume in attachment directly.</p>
+			<p style="color: #954542">您可以直接在附件中下载或者预览该简历。</p>
 			<hr/>
 			<table style="width: 600px; box-shadow: 1px 1px 5px #dedede;">
 				<tbody>
@@ -54,6 +55,7 @@
 
 		</div>
 		<hr/>
+		<h4>Candidates look forward to your response:</h4>
 		<div class="interest_button_area" style="display: flex">
 
 			<div style="display: flex;background: #d0eeff;border: 1px solid #99d3f5;border-radius: 4px;padding: 4px 12px;overflow: hidden;text-indent: 0;line-height: 20px;width: 200px;min-height: 50px;font-size: 20px;margin: 20px">
