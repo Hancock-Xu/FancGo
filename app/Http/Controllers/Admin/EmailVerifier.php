@@ -73,6 +73,7 @@ trait EmailVerifier
 
 	public function sendValidateLink($verifyEmail, array $credentials = null)
 	{
+		$company = Company::findOrFail($credentials['id']);
 		$response = VerifyEmail::broker()->sendVerifyEmail($verifyEmail, $credentials, function (Message $message){
 			$message->subject('Verify business email');
 		});
@@ -80,7 +81,7 @@ trait EmailVerifier
 		switch ($response) {
 
 			case VerifyEmail::VERIFY_EMAIL_SENT:
-				return $this->getSendResetLinkEmailSuccessResponse();
+				return $this->getSendResetLinkEmailSuccessResponse($company);
 			default:
 				return $this->getSendResetLinkEmailFailureResponse();
 		}
@@ -113,12 +114,12 @@ trait EmailVerifier
 
 	}
 
-	public function getSendResetLinkEmailSuccessResponse()
+	public function getSendResetLinkEmailSuccessResponse($company)
 	{
 		/**
 		 * 返回验证邮件发送成功之后的提示视图
 		 */
-		return view('Company.succeed_send_email');
+		return view('Company.succeed_send_email', ['company'=>$company]);
 	}
 
 	public function getSendResetLinkEmailFailureResponse()
