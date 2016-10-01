@@ -40,6 +40,8 @@ class CreateJobsTable extends Migration
         
         Schema::table('jobs', function (Blueprint $table){
             $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
+	        $table->integer('page_view')->default(0);
+	        $table->integer('application_amount')->default(0);
         });
     }
 
