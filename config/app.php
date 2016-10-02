@@ -161,7 +161,7 @@ return [
         
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
-
+	    BackupManager\Laravel\Laravel5ServiceProvider::class,
         App\Providers\VerifyEmailProvider::class,
         Collective\Html\HtmlServiceProvider::class
     ],

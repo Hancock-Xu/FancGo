@@ -18,7 +18,9 @@
         "filp/whoops": "^2.1",
         "dflydev/apache-mime-types": "^1.0",
         "graham-campbell/exceptions": "^8.6",
-        "laravelcollective/html": ">=5.2"
+        "laravelcollective/html": ">=5.2",
+        "backup-manager/laravel": "^1.1",
+        "league/flysystem-sftp": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
