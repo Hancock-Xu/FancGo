@@ -13,7 +13,7 @@ class AddViewApplicationAmountToJobsTable extends Migration
     public function up()
     {
         Schema::table('jobs', function (Blueprint $table) {
-	        $table->integer('page_view')->default(0);
+	        $table->integer('pageView_amount')->default(0);
 	        $table->integer('application_amount')->default(0);
         });
     }
@@ -26,7 +26,7 @@ class AddViewApplicationAmountToJobsTable extends Migration
     public function down()
     {
         Schema::table('jobs', function (Blueprint $table) {
-	        $table->dropColumn('page_view');
+	        $table->dropColumn('pageView_amount');
 	        $table->dropColumn('application_amount');
         });
     }
