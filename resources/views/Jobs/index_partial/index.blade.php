@@ -77,7 +77,11 @@
 	</div>
 
 	<nav class="pagination_container">
-		{!! $jobs->render() !!}
+		@if($condition_search)
+			{!! $jobs->appends(['work_city'=>$work_city, 'job_status_type'=>$job_status_type, 'job_industry'=>$job_industry, 'salary_range'=>$salary_range, 'company_name'=>$company_name])->render() !!}
+		@else
+			{!! $jobs->render() !!}
+		@endif
 	</nav>
 
 

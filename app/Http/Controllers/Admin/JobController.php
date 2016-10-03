@@ -27,6 +27,14 @@ class JobController extends Controller
 		 * 查询参数数组
 		 */
 		$parameters = $request->query->all();
+		$job_status_type = null;
+		if ($parameters){
+			$work_city = !isset($parameters['work_city']) ? null : $parameters['work_city'];
+			$job_status_type = !isset($parameters['job_status_type']) ? null : $parameters['job_status_type'];
+			$job_industry = !isset($parameters['job_industry']) ? null : $parameters['job_industry'];
+			$salary_range = !isset($parameters['salary_range']) ? null : $parameters['salary_range'];
+			$company_name = !isset($parameters['company_name']) ? null : $parameters['company_name'];
+		}
 
 		$jobs = \DB::table('jobs')
 			->where('jobs.updated_at','<=',Carbon::now())
@@ -38,7 +46,7 @@ class JobController extends Controller
 
 			$jobs = $jobs->paginate(config('jobs.posts_per_page'));
 
-			return view('Jobs.index_partial.index',compact('jobs'));
+			return view('Jobs.index_partial.index',['jobs'=>$jobs, 'condition_search'=>0]);
 
 		}else{
 
@@ -78,7 +86,7 @@ class JobController extends Controller
 
 			$jobs = $jobs->paginate(config('jobs.posts_per_page'));
 
-			return view('Jobs.index_partial.index', ['jobs'=>$jobs]);
+			return view('Jobs.index_partial.index', ['jobs'=>$jobs, 'work_city'=>$work_city, 'job_status_type'=>$job_status_type, 'job_industry'=>$job_industry, 'salary_range'=>$salary_range, 'company_name'=>$company_name, 'condition_search'=>1]);
 			
 		}
 		

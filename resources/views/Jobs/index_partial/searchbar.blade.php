@@ -6,29 +6,56 @@
 				<label class="industryinputlabel" for="">
 					<select class="cityselect" name="work_city">
 						<option selected disabled>City</option>
-						<option value="Shenzhen">Shenzhen</option>
-						<option value="Shanghai">Shanghai</option>
-						<option value="Guangzhou">Guangzhou</option>
-						<option value="Beijing">Beijing</option>
-						<option value="Chengdu">Chengdu</option>
-						<option value="Hangzhou">Hangzhou</option>
-						<option value="Nanjing">Nanjing</option>
-						<option value="Xi'an">Xi'an</option>
-						<option value="Haikou">Haikou</option>
-						<option value="Tianjin">Tianjin</option>
-						<option value="Wuhan">Wuhan</option>
-						<option value="Chongqing">Chongqing</option>
-						<option value="Kunming">Kunming</option>
-						<option value="Shenyang">Shenyang</option>
-						<option value="Dongguan">Dongguan</option>
-						<option value="Ningbo">Ningbo</option>
-						<option value="Zhuhai">Zhuhai</option>
-						<option value="Dalian">Dalian</option>
-						<option value="Qingdao">Qingdao</option>
-						<option value="Hongkong">Hongkong</option>
-						<option value="Macao">Macao</option>
-						<option value="Taiwan">Taiwan</option>
-						<option value="Others">Others</option>
+						@if($condition_search)
+
+							<option value="Shenzhen" {{ $work_city == "Shenzhen" ? "selected":""}}>Shenzhen</option>
+							<option value="Beijing" {{ $work_city == "Beijing" ? "selected":""}}>Beijing</option>
+							<option value="Shanghai" {{ $work_city == "Shanghai" ? "selected":""}}>Shanghai</option>
+							<option value="Guangzhou" {{ $work_city == "Guangzhou" ? "selected":""}}>Guangzhou</option>
+							<option value="Chengdu" {{ $work_city == "Chengdu" ? "selected":""}}>Chengdu</option>
+							<option value="Hangzhou" {{ $work_city == "Hangzhou" ? "selected":""}}>Hangzhou</option>
+							<option value="Nanjing" {{ $work_city == "Nanjing" ? "selected":""}}>Nanjing</option>
+							<option value="Xi'an" {{ $work_city == "Xi'an" ? "selected":""}}>Xi'an</option>
+							<option value="Haikou" {{ $work_city == "Haikou" ? "selected":""}}>Haikou</option>
+							<option value="Tianjin" {{ $work_city == "Tianjin" ? "selected":""}}>Tianjin</option>
+							<option value="Wuhan" {{ $work_city == "Wuhan" ? "selected":""}}>Wuhan</option>
+							<option value="Chongqing" {{ $work_city == "Chongqing" ? "selected":""}}>Chongqing</option>
+							<option value="Kunming" {{ $work_city == "Kunming" ? "selected":""}}>Kunming</option>
+							<option value="Shenyang" {{ $work_city == "Shenyang" ? "selected":""}}>Shenyang</option>
+							<option value="Dongguan" {{ $work_city == "Dongguan" ? "selected":""}}>Dongguan</option>
+							<option value="Ningbo" {{ $work_city == "Ningbo" ? "selected":""}}>Ningbo</option>
+							<option value="Zhuhai" {{ $work_city == "Zhuhai" ? "selected":""}}>Zhuhai</option>
+							<option value="Dalian" {{ $work_city == "Dalian" ? "selected":""}}>Dalian</option>
+							<option value="Qingdao" {{ $work_city == "Qingdao" ? "selected":""}}>Qingdao</option>
+							<option value="Hongkong" {{ $work_city == "Hongkong" ? "selected":""}}>Hongkong</option>
+							<option value="Macao" {{ $work_city == "Macao" ? "selected":""}}>Macao</option>
+							<option value="Taiwan" {{ $work_city == "Taiwan" ? "selected":""}}>Taiwan</option>
+							<option value="Others" {{ $work_city == "Others" ? "selected":""}}>Others</option>
+						@else
+							<option value="Shenzhen">Shenzhen</option>
+							<option value="Beijing">Beijing</option>
+							<option value="Shanghai">Shanghai</option>
+							<option value="Guangzhou">Guangzhou</option>
+							<option value="Chengdu">Chengdu</option>
+							<option value="Hangzhou">Hangzhou</option>
+							<option value="Nanjing">Nanjing</option>
+							<option value="Xi'an">Xi'an</option>
+							<option value="Haikou">Haikou</option>
+							<option value="Tianjin">Tianjin</option>
+							<option value="Wuhan">Wuhan</option>
+							<option value="Chongqing">Chongqing</option>
+							<option value="Kunming">Kunming</option>
+							<option value="Shenyang">Shenyang</option>
+							<option value="Dongguan">Dongguan</option>
+							<option value="Ningbo">Ningbo</option>
+							<option value="Zhuhai">Zhuhai</option>
+							<option value="Dalian">Dalian</option>
+							<option value="Qingdao">Qingdao</option>
+							<option value="Hongkong">Hongkong</option>
+							<option value="Macao">Macao</option>
+							<option value="Taiwan">Taiwan</option>
+							<option value="Others">Others</option>
+						@endif
 						<option value="">All</option>
 					</select>
 				</label>
@@ -39,9 +66,15 @@
 				<label class="industryinputlabel" for="">
 				<select class="jobtypeselect" name="job_status_type">
 					<option selected disabled>Job Type</option>
-					<option value="full-time">Full-time</option>
-					<option value="part-time">Part-time</option>
-					<option value="intership">Intership</option>
+					@if($condition_search)
+						<option value="full-time" {{$job_status_type == "full-time"?"selected":""}}>Full-time</option>
+						<option value="part-time" {{$job_status_type == "part-time"?"selected":""}}>Part-time</option>
+						<option value="intership" {{$job_status_type == "intership"?"selected":""}}>Internship</option>
+					@else
+						<option value="full-time">Full-time</option>
+						<option value="part-time">Part-time</option>
+						<option value="intership">Internship</option>
+					@endif
 					<option value="">All</option>
 				</select>
 				</label>
@@ -54,7 +87,11 @@
 					<div class="industryCell">
 						<label class="industryinputlabel" for="job_industry">
 							<!--<span class="inputplaceholderlabel">Industry</span>-->
-							<input type="text" class="industryInput input-large" name="job_industry" id="selectedIndustry" value="" placeholder="Industry" autocomplete="off" readonly>
+							@if($condition_search)
+								<input type="text" class="industryInput input-large" name="job_industry" id="selectedIndustry" value="{{$job_industry}}" placeholder="Industry" autocomplete="off" readonly>
+							@else
+								<input type="text" class="industryInput input-large" name="job_industry" id="selectedIndustry" value="" placeholder="Industry" autocomplete="off" readonly>
+							@endif
 						{{--<i id="industryselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
 						<!--<span class="caret"></span>-->
 						</label>
@@ -304,13 +341,23 @@
 				<label class="industryinputlabel" for="">
 					<select class="salaryselect" name="salary_range" title="Salary Range">
 						<option selected disabled>Salary Range</option>
-						<option value="1">Under 8K/MTH</option>
-						<option value="2">8K-10KMTH</option>
-						<option value="3">10K-15K/MTH</option>
-						<option value="4">15K-20K/MTH</option>
-						<option value="5">20K-30K/MTK</option>
-						<option value="6">30K-50K/MTH</option>
-						<option value="7">Above 50K/MTH</option>
+						@if($condition_search)
+							<option value="1" {{$salary_range == "1" ? "selected" : ""}}>Under 8K/MTH</option>
+							<option value="2" {{$salary_range == "2" ? "selected" : ""}}>8K-10KMTH</option>
+							<option value="3" {{$salary_range == "3" ? "selected" : ""}}>10K-15K/MTH</option>
+							<option value="4" {{$salary_range == "4" ? "selected" : ""}}>15K-20K/MTH</option>
+							<option value="5" {{$salary_range == "5" ? "selected" : ""}}>20K-30K/MTK</option>
+							<option value="6" {{$salary_range == "6" ? "selected" : ""}}>30K-50K/MTH</option>
+							<option value="7" {{$salary_range == "7" ? "selected" : ""}}>Above 50K/MTH</option>
+						@else
+							<option value="1">Under 8K/MTH</option>
+							<option value="2">8K-10KMTH</option>
+							<option value="3">10K-15K/MTH</option>
+							<option value="4">15K-20K/MTH</option>
+							<option value="5">20K-30K/MTK</option>
+							<option value="6">30K-50K/MTH</option>
+							<option value="7">Above 50K/MTH</option>
+						@endif
 						<option value="">All</option>
 					</select>
 				</label>
