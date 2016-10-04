@@ -11,6 +11,13 @@
 |
 */
 
+
+Route::get('example', function () {
+	return view('example');
+});
+
+
+
 Route::get('/', 'Admin\BasicSiteInfoController@index');
 Route::get('/about', 'Admin\BasicSiteInfoController@about');
 Route::get('/recruitment_guidance', 'Admin\BasicSiteInfoController@recruitmentGuidance');
