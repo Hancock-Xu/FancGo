@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2016-08-03.
+    * Generated on 2016-10-04.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -117,8 +117,6 @@ namespace PHPSTORM_META {
             'IlluminateQueueClosure' instanceof \IlluminateQueueClosure,
             'auth.password' instanceof \Illuminate\Auth\Passwords\PasswordBrokerManager,
             'auth.password.broker' instanceof \Illuminate\Auth\Passwords\PasswordBroker,
-            'html' instanceof \Collective\Html\HtmlBuilder,
-            'form' instanceof \Collective\Html\FormBuilder,
             'EasyWeChat\Foundation\Application' instanceof \EasyWeChat\Foundation\Application,
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
             'command.ide-helper.models' instanceof \Barryvdh\LaravelIdeHelper\Console\ModelsCommand,
@@ -126,6 +124,12 @@ namespace PHPSTORM_META {
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'verifyEmail' instanceof \App\VerifyEmailService\VerifyBrokerManager,
             'verifyEmail.broker' instanceof \App\VerifyEmailService\VerifyBroker,
+            'BackupManager\Filesystems\FilesystemProvider' instanceof \BackupManager\Filesystems\FilesystemProvider,
+            'BackupManager\Databases\DatabaseProvider' instanceof \BackupManager\Databases\DatabaseProvider,
+            'BackupManager\Compressors\CompressorProvider' instanceof \BackupManager\Compressors\CompressorProvider,
+            'BackupManager\ShellProcessing\ShellProcessor' instanceof \BackupManager\ShellProcessing\ShellProcessor,
+            'html' instanceof \Collective\Html\HtmlBuilder,
+            'form' instanceof \Collective\Html\FormBuilder,
         ],
         \Illuminate\Contracts\Container\Container::make('') => [
             '' == '@',
@@ -235,8 +239,6 @@ namespace PHPSTORM_META {
             'IlluminateQueueClosure' instanceof \IlluminateQueueClosure,
             'auth.password' instanceof \Illuminate\Auth\Passwords\PasswordBrokerManager,
             'auth.password.broker' instanceof \Illuminate\Auth\Passwords\PasswordBroker,
-            'html' instanceof \Collective\Html\HtmlBuilder,
-            'form' instanceof \Collective\Html\FormBuilder,
             'EasyWeChat\Foundation\Application' instanceof \EasyWeChat\Foundation\Application,
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
             'command.ide-helper.models' instanceof \Barryvdh\LaravelIdeHelper\Console\ModelsCommand,
@@ -244,6 +246,12 @@ namespace PHPSTORM_META {
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'verifyEmail' instanceof \App\VerifyEmailService\VerifyBrokerManager,
             'verifyEmail.broker' instanceof \App\VerifyEmailService\VerifyBroker,
+            'BackupManager\Filesystems\FilesystemProvider' instanceof \BackupManager\Filesystems\FilesystemProvider,
+            'BackupManager\Databases\DatabaseProvider' instanceof \BackupManager\Databases\DatabaseProvider,
+            'BackupManager\Compressors\CompressorProvider' instanceof \BackupManager\Compressors\CompressorProvider,
+            'BackupManager\ShellProcessing\ShellProcessor' instanceof \BackupManager\ShellProcessing\ShellProcessor,
+            'html' instanceof \Collective\Html\HtmlBuilder,
+            'form' instanceof \Collective\Html\FormBuilder,
         ],
         \App::make('') => [
             '' == '@',
@@ -353,8 +361,6 @@ namespace PHPSTORM_META {
             'IlluminateQueueClosure' instanceof \IlluminateQueueClosure,
             'auth.password' instanceof \Illuminate\Auth\Passwords\PasswordBrokerManager,
             'auth.password.broker' instanceof \Illuminate\Auth\Passwords\PasswordBroker,
-            'html' instanceof \Collective\Html\HtmlBuilder,
-            'form' instanceof \Collective\Html\FormBuilder,
             'EasyWeChat\Foundation\Application' instanceof \EasyWeChat\Foundation\Application,
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
             'command.ide-helper.models' instanceof \Barryvdh\LaravelIdeHelper\Console\ModelsCommand,
@@ -362,6 +368,12 @@ namespace PHPSTORM_META {
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'verifyEmail' instanceof \App\VerifyEmailService\VerifyBrokerManager,
             'verifyEmail.broker' instanceof \App\VerifyEmailService\VerifyBroker,
+            'BackupManager\Filesystems\FilesystemProvider' instanceof \BackupManager\Filesystems\FilesystemProvider,
+            'BackupManager\Databases\DatabaseProvider' instanceof \BackupManager\Databases\DatabaseProvider,
+            'BackupManager\Compressors\CompressorProvider' instanceof \BackupManager\Compressors\CompressorProvider,
+            'BackupManager\ShellProcessing\ShellProcessor' instanceof \BackupManager\ShellProcessing\ShellProcessor,
+            'html' instanceof \Collective\Html\HtmlBuilder,
+            'form' instanceof \Collective\Html\FormBuilder,
         ],
         \app('') => [
             '' == '@',
@@ -471,8 +483,6 @@ namespace PHPSTORM_META {
             'IlluminateQueueClosure' instanceof \IlluminateQueueClosure,
             'auth.password' instanceof \Illuminate\Auth\Passwords\PasswordBrokerManager,
             'auth.password.broker' instanceof \Illuminate\Auth\Passwords\PasswordBroker,
-            'html' instanceof \Collective\Html\HtmlBuilder,
-            'form' instanceof \Collective\Html\FormBuilder,
             'EasyWeChat\Foundation\Application' instanceof \EasyWeChat\Foundation\Application,
             'command.ide-helper.generate' instanceof \Barryvdh\LaravelIdeHelper\Console\GeneratorCommand,
             'command.ide-helper.models' instanceof \Barryvdh\LaravelIdeHelper\Console\ModelsCommand,
@@ -480,6 +490,12 @@ namespace PHPSTORM_META {
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'verifyEmail' instanceof \App\VerifyEmailService\VerifyBrokerManager,
             'verifyEmail.broker' instanceof \App\VerifyEmailService\VerifyBroker,
+            'BackupManager\Filesystems\FilesystemProvider' instanceof \BackupManager\Filesystems\FilesystemProvider,
+            'BackupManager\Databases\DatabaseProvider' instanceof \BackupManager\Databases\DatabaseProvider,
+            'BackupManager\Compressors\CompressorProvider' instanceof \BackupManager\Compressors\CompressorProvider,
+            'BackupManager\ShellProcessing\ShellProcessor' instanceof \BackupManager\ShellProcessing\ShellProcessor,
+            'html' instanceof \Collective\Html\HtmlBuilder,
+            'form' instanceof \Collective\Html\FormBuilder,
         ],
     ];
 }
