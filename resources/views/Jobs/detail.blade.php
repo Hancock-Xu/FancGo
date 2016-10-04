@@ -12,7 +12,18 @@
 				<div class="job_basic_info">
 
 					<ul class="detail-position-item list-unstyled ">
-						<li><h2>{{$job->job_title}}</h2></li>
+						<li>
+							<div class="position_title_amount">
+								<div class="position_title">
+									<h2>{{$job->job_title}}</h2>
+								</div>
+								<div class="position_apply_amount">
+									<h2>V/A: {{$job->pageView_amount}}/{{$job->application_amount}}</h2>
+								</div>
+							</div>
+						</li>
+
+
 						<li><h4>{{$job->company_name}}</h4></li>
 						<li class="detail-position-item-point ">
 							<span>{{$job->min_salary}}K/MTH - {{$job->max_salary}}K/MTH</span>
