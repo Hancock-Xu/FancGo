@@ -8,9 +8,7 @@ use App\Job;
 use App\Http\Requests\CompanyStoreRequest;
 use Carbon\Carbon;
 use App\Company;
-use Auth;
 use App\Http\Requests\PreCompanyStoreRequest;
-use League\Flysystem\File;
 use Storage;
 
 class CompanyController extends Controller

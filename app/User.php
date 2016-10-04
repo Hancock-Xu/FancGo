@@ -11,41 +11,11 @@ use Carbon\Carbon;
  * @property integer $id
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ * @property string $first_name
+ * @property string $last_name
  * @property string $email
  * @property string $password
  * @property string $remember_token
- * @property string $passportNumber
- * @property string $phoneNumber
- * @property string $openid
- * @property string $name
- * @property string $gender
- * @property string $city
- * @property string $country
- * @property string $headimgurl
- * @property string $province
- * @property string $unionid
- * @method static \Illuminate\Database\Query\Builder|\App\User whereId($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereCreatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereUpdatedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereEmail($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User wherePassword($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereRememberToken($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User wherePassportNumber($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereOpenid($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereName($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereGender($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereCity($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereCountry($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereHeadimgurl($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereProvince($value)
- * @method static \Illuminate\Database\Query\Builder|\App\User whereUnionid($value)
- * @mixin \Eloquent
- * @property-read \App\Company $company
- * @method static \Illuminate\Database\Query\Builder|\App\User wherePhoneNumber($value)
- * @property string $resume_url
- * @method static \Illuminate\Database\Query\Builder|\App\User whereResumeUrl($value)
- * @property string $first_name
- * @property string $last_name
  * @property string $sex
  * @property string $date_of_birth
  * @property string $nationality
@@ -54,16 +24,40 @@ use Carbon\Carbon;
  * @property string $current_residence
  * @property string $phone_number
  * @property string $passport_number
+ * @property string $resume_url
  * @property boolean $finish_basic_info
+ * @property string $openid
+ * @property string $city
+ * @property string $country
+ * @property string $headimgurl
+ * @property string $unionid
+ * @property string $education_degree
+ * @property-read \App\Company $company
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereId($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereUpdatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereFirstName($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereLastName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereEmail($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User wherePassword($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereRememberToken($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereSex($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereDateOfBirth($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereNationality($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereNativeLanguage($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereChineseLevel($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereCurrentResidence($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User wherePhoneNumber($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User wherePassportNumber($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereResumeUrl($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereFinishBasicInfo($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereOpenid($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereCity($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereCountry($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereHeadimgurl($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereUnionid($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereEducationDegree($value)
+ * @mixin \Eloquent
  */
 class User extends Authenticatable
 {
@@ -83,6 +77,7 @@ class User extends Authenticatable
 		'finish_basic_info',
 		'passportNumber',
 		'resume_url',
+		'education_degree'
 		];
 	
 	protected $hidden = [
