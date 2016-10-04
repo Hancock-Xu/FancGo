@@ -8,7 +8,6 @@ use App\Http\Requests\JobStoreRequest;
 use App\Http\Controllers\Controller;
 use App\User;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Auth;
 use Session;
 use Illuminate\Mail\Message;
 use Illuminate\Http\Request;
@@ -147,15 +146,19 @@ class JobController extends Controller
 	public function show($id)
 	{
 
-		$job = \DB::table('jobs')
+		$job = Job::findOrFail($id);
+		++$job->pageView_amount;
+		$job->save();
+
+		$job_mix_companyInfo = \DB::table('jobs')
 			->where('jobs.id','=', $id)
 			->join('companies', 'jobs.company_id', '=', 'companies.id')
 			->select('jobs.*', 'companies.user_id', 'companies.company_name','companies.business_license_name','companies.logo_url','companies.website','companies.company_description','companies.scale','companies.company_location','companies.company_industry','companies.company_email','companies.company_phone_number', 'companies.founder_time', 'companies.company_address')
 			->first();
 
 		$user = \Auth::getUser();
-		if ($job) {
-			return view('Jobs.detail', ['job'=>$job, 'user'=>$user]);
+		if ($job_mix_companyInfo) {
+			return view('Jobs.detail', ['job'=>$job_mix_companyInfo, 'user'=>$user]);
 		}else{
 			return view('not_found');
 		}
@@ -235,11 +238,11 @@ class JobController extends Controller
 					$message->attach(public_path($user->resume_url), ['as'=>"=?UTF-8?B?".base64_encode('resume')."?=.doc"]);
 				}
 
-
-
 			});
 
 			if ($response == 'succeed'){
+				++$job->application_amount;
+				$job->save();
 				return view('Jobs.apply_job_succeed');
 			}else{
 				return view('Jobs.apply_job_failed');
