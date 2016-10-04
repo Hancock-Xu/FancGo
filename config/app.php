@@ -208,9 +208,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Form' => Illuminate\Html\FormFacade::class,
+//        'Form' => Illuminate\Html\FormFacade::class,
         'Wechat' => Overtrue\LaravelWechat\Facade::class,
-//        'Form' => Collective\Html\FormFacade::class,
+        'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
 
         'VerifyEmail' => App\VerifyEmailService\VerifyEmail::class
