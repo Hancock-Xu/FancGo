@@ -213,6 +213,18 @@ img {
   text-decoration: underline; }
 
 /*job detail页面*/
+.position_title_amount {
+  display: -webkit-box;
+  display: flex; }
+
+.position_title {
+  -webkit-box-flex: 4;
+  flex: 4; }
+
+.position_apply_amount {
+  -webkit-box-flex: 1;
+  flex: 1; }
+
 /*left position info*/
 .left-position {
   width: 600px;
