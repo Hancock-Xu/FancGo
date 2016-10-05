@@ -18,7 +18,7 @@
 									<h2>{{$job->job_title}}</h2>
 								</div>
 								<div class="position_apply_amount">
-									<h2>V/A: {{$job->pageView_amount}}/{{$job->application_amount}}</h2>
+{{--									<h2>V/A: {{$job->pageView_amount}}/{{$job->application_amount}}</h2>--}}
 								</div>
 							</div>
 						</li>
