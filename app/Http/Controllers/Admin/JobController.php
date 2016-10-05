@@ -145,11 +145,6 @@ class JobController extends Controller
 	 */
 	public function show($id)
 	{
-
-		$job = Job::findOrFail($id);
-		++$job->pageView_amount;
-		$job->save();
-
 		$job_mix_companyInfo = \DB::table('jobs')
 			->where('jobs.id','=', $id)
 			->join('companies', 'jobs.company_id', '=', 'companies.id')
@@ -241,8 +236,6 @@ class JobController extends Controller
 			});
 
 			if ($response == 'succeed'){
-				++$job->application_amount;
-				$job->save();
 				return view('Jobs.apply_job_succeed');
 			}else{
 				return view('Jobs.apply_job_failed');
