@@ -236,8 +236,6 @@ class JobController extends Controller
 			});
 
 			if ($response == 'succeed'){
-				++$job->application_amount;
-				$job->save();
 				return view('Jobs.apply_job_succeed');
 			}else{
 				return view('Jobs.apply_job_failed');
