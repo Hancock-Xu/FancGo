@@ -52,7 +52,7 @@
 									<option disabled selected>Choose</option>
 									<option value=1>Full-time</option>
 									<option value=2>Part-time</option>
-									<option value=3>Intership</option>
+									<option value=3>Internship</option>
 								</select>
 								@if ($errors->has('job_status_type'))
 									<span class="help-block">
@@ -370,7 +370,7 @@
 									<option value=4>Mid-Senior Level</option>
 									<option value=3>Associate</option>
 									<option value=2>Entry Level</option>
-									<option value=1>Intership</option>
+									<option value=1>Internship</option>
 								</select>
 								@if ($errors->has('position_experience'))
 									<span class="help-block">
