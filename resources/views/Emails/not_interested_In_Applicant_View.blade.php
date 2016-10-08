@@ -36,7 +36,7 @@
 				<tr>
 					<td style="padding-left: 30px; padding-right: 30px;">
 						<div>
-							<p>Hello, Ivy</p>
+							<p>Hello, {{$user->last_name}}</p>
 							<p style="line-height: 20px;">Thank you for your interest in {{$company->company_name}} position and resume received. After reading your resume carefully, we are very sorry to inform you that there is mismatch between your resume and the position, so you can not attend the interview.</p>
 
 							<p>Thanks again for your trust and support. And we truly wish you would find a suitable job sooner.</p>
