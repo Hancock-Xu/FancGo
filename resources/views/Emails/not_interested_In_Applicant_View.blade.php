@@ -4,7 +4,7 @@
 
 	</head>
 	<body>
-		<table style="width:100%; background-color:#f5f5f5; font-family: Helvetica, Serif,'Times New Roman';" border="0" ; cellspacing="0"; cellpadding="0"; >
+		<table style="width:100%; background-color:#f5f5f5; font-family: Helvetica, Serif,'Times New Roman'; border:0 ; cellspacing:0; cellpadding:0; ">
 			<tbody>
 			<tr>
 				<td style="padding: 20px;">
