@@ -213,6 +213,18 @@ img {
   text-decoration: underline; }
 
 /*job detail页面*/
+.position_title_amount {
+  display: -webkit-box;
+  display: flex; }
+
+.position_title {
+  -webkit-box-flex: 4;
+  flex: 4; }
+
+.position_apply_amount {
+  -webkit-box-flex: 1;
+  flex: 1; }
+
 /*left position info*/
 .left-position {
   width: 600px;
@@ -735,7 +747,7 @@ img {
   box-shadow: 0 1px 5px rgba(50, 50, 50, 0.2);
   border-top: 0;
   top: 100%;
-  width: 762px;
+  width: 760px;
   display: none;
   background: #fff;
   overflow: auto;

@@ -1,7 +1,9 @@
-// var elixir = require('laravel-elixir');
-const elixir = require('laravel-elixir');
+var elixir = require('laravel-elixir');
+// const elixir = require('laravel-elixir');
 
-require('laravel-elixir-vue');
+// require('laravel-elixir-vue');
+// require('jquery');
+// require('bootstrap-sass');
 
 // elixir(mix => {
 //     mix.webpack('main.js');
@@ -21,13 +23,13 @@ require('laravel-elixir-vue');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
-        // .browserify('app.js')
-        // .browserify('searchbar.js')
-        // .browserify('previewUploadFile.js')
-        // .browserify('upload_resume.js');
+    mix.sass('app.scss')
+    .browserify('app.js')
+        .browserify('search_bar.js')
+        .browserify('previewUploadFile.js')
+        .browserify('upload_resume.js');
     // mix.phpUnit();
-    mix.webpack('main.js');
+    // mix.webpack('main.js');
 
     mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/fonts/bootstrap');
 });
