@@ -37,4 +37,4 @@ $(document).ready(function () {
 
 },{}]},{},[1]);
 
-//# sourceMappingURL=searchbar.js.map
+//# sourceMappingURL=search_bar.js.map
