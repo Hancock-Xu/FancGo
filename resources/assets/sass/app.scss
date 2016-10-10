@@ -181,6 +181,7 @@ body {
   padding: 0;
   word-wrap: break-word;
   position: relative;
+  padding-top: 60px;
 }
 
 hr {
@@ -630,6 +631,7 @@ img {
 .head-verifyEmail {
   text-align: center;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .head-verifyEmail h3 {
@@ -1628,7 +1630,6 @@ div.refine-position-item:nth-child(odd) {
 
 .navbar_container{
   width: 100%;
-  margin-bottom: 60px;
 }
 
 .content_container{
@@ -1641,12 +1642,14 @@ div.refine-position-item:nth-child(odd) {
   @extend .navbar;
   @extend .navbar-default;
   @extend .navbar-fixed-top;
-  position: relative !important;
-  margin-bottom: 0px !important;
+  //position: relative !important;
+  //margin-bottom: 0px !important;
+  //margin-bottom: 50px;
   font-size: 16px;
 }
 
 .jb_content{
+  //margin-top: 60px;
   //padding-bottom: 100px;
   //margin-bottom: 100px;
 }
@@ -1719,6 +1722,7 @@ div.refine-position-item:nth-child(odd) {
 
 
 .container{
+  margin-top: 60px;
   width: 1140px !important;
 }
 //$icon-font-path: 'node_modules/bootstrap-sass/assets/fonts/';

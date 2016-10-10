@@ -62,7 +62,8 @@ body {
   margin: 0;
   padding: 0;
   word-wrap: break-word;
-  position: relative; }
+  position: relative;
+  padding-top: 60px; }
 
 hr {
   border-top: 1px solid #c9c9c9; }
@@ -408,7 +409,8 @@ img {
 /*post job 验证邮箱页面*/
 .head-verifyEmail {
   text-align: center;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  margin-top: 50px; }
 
 .head-verifyEmail h3 {
   margin: 0 auto 50px; }
@@ -1253,8 +1255,7 @@ div.refine-position-item:nth-child(odd) {
   text-decoration: underline; }
 
 .navbar_container {
-  width: 100%;
-  margin-bottom: 60px; }
+  width: 100%; }
 
 .content_container {
   min-height: 100%;
@@ -1262,8 +1263,6 @@ div.refine-position-item:nth-child(odd) {
   padding-bottom: 200px; }
 
 .jb_navbar {
-  position: relative !important;
-  margin-bottom: 0px !important;
   font-size: 16px; }
 
 .moreInformation {
@@ -1321,6 +1320,7 @@ div.refine-position-item:nth-child(odd) {
   color: #694c9c; }
 
 .container {
+  margin-top: 60px;
   width: 1140px !important; }
 
 /*!

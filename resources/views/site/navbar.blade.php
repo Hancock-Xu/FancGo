@@ -1,4 +1,4 @@
-<nav class="jb_navbar">
+<nav class="jb_navbar ">
 	<div class="container-fluid">
 
 		<div class="navbar-header">

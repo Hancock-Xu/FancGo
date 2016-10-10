@@ -3,7 +3,7 @@
 @section('content')
 
 	<div>
-{{--		@include('Jobs.index_partial.jobIndexHeader')--}}
+		@include('Jobs.index_partial.jobIndexHeader')
 	</div>
 
 	<div>
