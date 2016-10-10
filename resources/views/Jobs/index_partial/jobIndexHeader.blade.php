@@ -1,4 +1,4 @@
-<div class="jumbotron" style="background-image: url(http://www.jobleadchina.com/uploads/index_img.png); background-attachment:fixed;background-position:top center;background-repeat:no-repeat; width: 100%; height: 350px; margin-bottom: 50px">
+<div class="jumbotron" style="background-image: url(http://www.jobleadchina.com/uploads/index_img.png); background-attachment:fixed;background-position:top center;background-repeat:repeat; width: 100%; height: 350px; margin-bottom: 50px">
 	{{--<img src="http://localhost:8000/uploads/index_img.png" alt="">--}}
 	<h1 style="color: #fefefe;margin-left: 70px;width: 600px;">Post Job For Free !</h1>
 	<p style="color: #fefefe;margin-left: 70px;width: 600px;padding-top: 40px;">Make recruiting foreign talents more easier</p>
