@@ -73,7 +73,7 @@
 		</div>
 		
 		<div class="wechat_qrcode" style="width: 100px; display: block">
-			<img src="http://www.jobleadchina.com/uploads/wechat_qrcode.png" alt="" style="width: 100px">
+			<img src="http://www.jobleadchina.com/uploads/wechat_qrcode.jpg" alt="" style="width: 100px">
 			<label>Wechat</label>
 		</div>
 
