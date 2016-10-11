@@ -64,11 +64,19 @@
 </div>
 
 <div id="footer">
-	<div class="container ">
-		<h3>JobLeadChina</h3>
-		<p>A Set of Job Solution for Enterprises and Foreign Talents</p>
-		<span class="more-about"><a  href="{{action('Admin\BasicSiteInfoController@about')}}">More about us</a></span>
-		<span class="contact-email"><a href="mailto:service@jobleadchina.com?subject=The%20subject%20of%20the%20mail">TEL: 0755-61597364 / Email:&nbsp;service@jobleadchina.com</a> We will reply you in one day</span>
+	<div class="container" style="display: flex; margin-top: 20px">
+		<div class="contact_information" style="flex: 1;">
+			<h3>JobLeadChina</h3>
+			<p>A Set of Job Solution for Enterprises and Foreign Talents</p>
+			<span class="more-about"><a  href="{{action('Admin\BasicSiteInfoController@about')}}">More about us</a></span>
+			<span class="contact-email"><a href="mailto:service@jobleadchina.com?subject=The%20subject%20of%20the%20mail">TEL: 0755-61597364 / Email:&nbsp;service@jobleadchina.com</a> We will reply you in one day</span>
+		</div>
+		
+		<div class="wechat_qrcode" style="width: 100px; display: block">
+			<img src="http://www.jobleadchina.com/uploads/wechat_qrcode.png" alt="" style="width: 100px">
+			<label>Wechat</label>
+		</div>
+
 	</div>
 </div>
 

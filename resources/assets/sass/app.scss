@@ -359,7 +359,10 @@ img {
 #footer {
   background-color: #fff;
   text-align: center;
-  height: 130px;
+  height: 150px;
+  margin-top: -100px;
+  position: absolute;
+  width: 100%;
 }
 
 #footer span {
