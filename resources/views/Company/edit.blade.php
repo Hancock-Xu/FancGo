@@ -2,10 +2,10 @@
 
 @section('content')
 
-	<div class="container">
+	<div>
 
 		<div id="page-container">
-			<div class="container">
+			<div>
 
 				<!-- 上传公司信息 -->
 				<div class="container">
