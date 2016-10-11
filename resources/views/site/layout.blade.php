@@ -72,9 +72,9 @@
 			<span class="contact-email"><a href="mailto:service@jobleadchina.com?subject=The%20subject%20of%20the%20mail">TEL: 0755-61597364 / Email:&nbsp;service@jobleadchina.com</a> We will reply you in one day</span>
 		</div>
 		
-		<div class="wechat_qrcode" style="width: 100px; display: block">
+		<div class="wechat_qrcode" style="width: 180px; display: block">
 			<img src="http://www.jobleadchina.com/uploads/wechat_qrcode.jpg" alt="" style="width: 100px">
-			<label>Wechat</label>
+			<label>Join our wechat group</label>
 		</div>
 
 	</div>
