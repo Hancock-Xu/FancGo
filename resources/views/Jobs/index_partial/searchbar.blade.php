@@ -69,7 +69,7 @@
 					@if($condition_search)
 						<option value="full-time" {{$job_status_type == "full-time"?"selected":""}}>Full-time</option>
 						<option value="part-time" {{$job_status_type == "part-time"?"selected":""}}>Part-time</option>
-						<option value="intership" {{$job_status_type == "intership"?"selected":""}}>Internship</option>
+						<option value="internship" {{$job_status_type == "internship"?"selected":""}}>Internship</option>
 					@else
 						<option value="full-time">Full-time</option>
 						<option value="part-time">Part-time</option>
