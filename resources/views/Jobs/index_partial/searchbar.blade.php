@@ -73,7 +73,7 @@
 					@else
 						<option value="full-time">Full-time</option>
 						<option value="part-time">Part-time</option>
-						<option value="intership">Internship</option>
+						<option value="internship">Internship</option>
 					@endif
 					<option value="">All</option>
 				</select>
