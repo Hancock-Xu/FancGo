@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\User;
+use App\Services\SiteMap;
 
 class BasicSiteInfoController extends Controller
 {
@@ -20,6 +21,14 @@ class BasicSiteInfoController extends Controller
     	return redirect('/job');
 //        return view('site.welcome');
     }
+
+	public function siteMap(SiteMap $siteMap)
+	{
+		$map = $siteMap->getSiteMap();
+
+		return response($map)
+			->header('Content-type', 'text/xml');
+	}
 
     /**
      * Show the form for creating a new resource.

@@ -16,6 +16,7 @@ Route::get('example', function () {
 	return view('example');
 });
 
+Route::get('sitemap.xml', 'Admin\BasicSiteInfoController@siteMap');
 
 
 Route::get('/', 'Admin\BasicSiteInfoController@index');
@@ -23,6 +24,7 @@ Route::get('/about', 'Admin\BasicSiteInfoController@about');
 Route::get('/recruitment_guidance', 'Admin\BasicSiteInfoController@recruitmentGuidance');
 
 Route::resource('job','Admin\JobController');
+Route::get('/job_paginate', 'Admin\JobController@paginationJobsIndex');
 Route::resource('company','Admin\CompanyController');
 
 Route::auth();

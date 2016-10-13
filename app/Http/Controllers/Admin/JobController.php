@@ -12,31 +12,18 @@ use Session;
 use Illuminate\Mail\Message;
 use Illuminate\Http\Request;
 use App\VerifyEmailService\VerifyEmail;
+use Illuminate\Database\Query\Builder;
 
 class JobController extends Controller
 {
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
+
 	public function index(Request $request)
 	{
-		/**
-		 * 查询参数数组
-		 */
 		$parameters = $request->query->all();
-		$job_status_type = null;
-		if ($parameters){
-			$work_city = !isset($parameters['work_city']) ? null : $parameters['work_city'];
-			$job_status_type = !isset($parameters['job_status_type']) ? null : $parameters['job_status_type'];
-			$job_industry = !isset($parameters['job_industry']) ? null : $parameters['job_industry'];
-			$salary_range = !isset($parameters['salary_range']) ? null : $parameters['salary_range'];
-			$company_name = !isset($parameters['company_name']) ? null : $parameters['company_name'];
-		}
 
 		$jobs = \DB::table('jobs')
 			->where('jobs.updated_at','<=',Carbon::now())
+			->limit(10)
 			->join('companies', 'jobs.company_id', '=', 'companies.id')
 			->select('jobs.*', 'companies.user_id', 'companies.company_name','companies.business_license_name','companies.logo_url','companies.website','companies.company_description','companies.scale','companies.company_location','companies.company_industry','companies.company_email','companies.company_phone_number')
 			->orderBy('jobs.updated_at','desc');
@@ -49,47 +36,89 @@ class JobController extends Controller
 
 		}else{
 
-			foreach ($parameters as $key => $value)
-			{
-				if ($key == 'work_city' && $value != null){
-					$jobs = $jobs->where($key, '=', $value);
-				}elseif ($key == 'job_status_type' && $value != null){
-					$jobs = $jobs->where($key, '=', $value);
-				}elseif ($key == 'job_industry' && $value != null){
-					$jobs = $jobs->where($key, '=', $value);
-				}elseif ($key == 'salary_range' && $value != null){
-					if ($value == 1){
-						$jobs = $jobs->where('max_salary', '<=', 8);
-					}elseif ($value == 2){
-						$jobs = $jobs->where('max_salary', '<=', 10);
-						$jobs = $jobs->where('min_salary', '>=', 8);
-					}elseif ($value == 3){
-						$jobs = $jobs->where('max_salary', '<=', 15);
-						$jobs = $jobs->where('min_salary', '>=', 10);
-					}elseif ($value == 4){
-						$jobs = $jobs->where('max_salary', '<=', 20);
-						$jobs = $jobs->where('min_salary', '>=', 15);
-					}elseif ($value == 5){
-						$jobs = $jobs->where('max_salary', '<=', 30);
-						$jobs = $jobs->where('min_salary', '>=', 20);
-					}elseif ($value == 6){
-						$jobs = $jobs->where('max_salary', '<=', 50);
-						$jobs = $jobs->where('min_salary', '>=', 30);
-					}else{
-						$jobs = $jobs->where('max_salary', '>', 50);
-					}
-				}elseif ($key == 'company_name' && $value != null){
-					$jobs = $jobs->where($key, 'like', $value);
-				}
-			}
+			return $this->conditionalSearch($jobs, $parameters);
+
+		}
+	}
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function paginationJobsIndex(Request $request)
+	{
+		/**
+		 * 查询参数数组
+		 */
+		$parameters = $request->query->all();
+
+		$jobs = \DB::table('jobs')
+			->where('jobs.updated_at','<=',Carbon::now())
+			->join('companies', 'jobs.company_id', '=', 'companies.id')
+			->select('jobs.*', 'companies.user_id', 'companies.company_name','companies.business_license_name','companies.logo_url','companies.website','companies.company_description','companies.scale','companies.company_location','companies.company_industry','companies.company_email','companies.company_phone_number')
+			->orderBy('jobs.updated_at','desc');
+
+		if (!$parameters){
 
 			$jobs = $jobs->paginate(config('jobs.posts_per_page'));
 
-			return view('Jobs.index_partial.index', ['jobs'=>$jobs, 'work_city'=>$work_city, 'job_status_type'=>$job_status_type, 'job_industry'=>$job_industry, 'salary_range'=>$salary_range, 'company_name'=>$company_name, 'condition_search'=>1]);
-			
+			return view('Jobs.index_partial.pagination_jobs',['jobs'=>$jobs, 'condition_search'=>0]);
+
+		}else{
+
+			return $this->conditionalSearch($jobs, $parameters);
+
 		}
-		
-		/**/
+
+	}
+
+	public function conditionalSearch(Builder $jobs, array  $parameters)
+	{
+		if ($parameters){
+			$work_city = !isset($parameters['work_city']) ? null : $parameters['work_city'];
+			$job_status_type = !isset($parameters['job_status_type']) ? null : $parameters['job_status_type'];
+			$job_industry = !isset($parameters['job_industry']) ? null : $parameters['job_industry'];
+			$salary_range = !isset($parameters['salary_range']) ? null : $parameters['salary_range'];
+			$company_name = !isset($parameters['company_name']) ? null : $parameters['company_name'];
+		}
+
+		foreach ($parameters as $key => $value) {
+			if ($key == 'work_city' && $value != null) {
+				$jobs = $jobs->where($key, '=', $value);
+			} elseif ($key == 'job_status_type' && $value != null) {
+				$jobs = $jobs->where($key, '=', $value);
+			} elseif ($key == 'job_industry' && $value != null) {
+				$jobs = $jobs->where($key, '=', $value);
+			} elseif ($key == 'salary_range' && $value != null) {
+				if ($value == 1) {
+					$jobs = $jobs->where('max_salary', '<=', 8);
+				} elseif ($value == 2) {
+					$jobs = $jobs->where('max_salary', '<=', 10);
+					$jobs = $jobs->where('min_salary', '>=', 8);
+				} elseif ($value == 3) {
+					$jobs = $jobs->where('max_salary', '<=', 15);
+					$jobs = $jobs->where('min_salary', '>=', 10);
+				} elseif ($value == 4) {
+					$jobs = $jobs->where('max_salary', '<=', 20);
+					$jobs = $jobs->where('min_salary', '>=', 15);
+				} elseif ($value == 5) {
+					$jobs = $jobs->where('max_salary', '<=', 30);
+					$jobs = $jobs->where('min_salary', '>=', 20);
+				} elseif ($value == 6) {
+					$jobs = $jobs->where('max_salary', '<=', 50);
+					$jobs = $jobs->where('min_salary', '>=', 30);
+				} else {
+					$jobs = $jobs->where('max_salary', '>', 50);
+				}
+			} elseif ($key == 'company_name' && $value != null) {
+				$jobs = $jobs->where($key, 'like', $value);
+			}
+		}
+
+		$jobs = $jobs->paginate(config('jobs.posts_per_page'));
+
+		return view('Jobs.index_partial.pagination_jobs', ['jobs'=>$jobs, 'work_city'=>$work_city, 'job_status_type'=>$job_status_type, 'job_industry'=>$job_industry, 'salary_range'=>$salary_range, 'company_name'=>$company_name, 'condition_search'=>1]);
+
 	}
 
 	/**

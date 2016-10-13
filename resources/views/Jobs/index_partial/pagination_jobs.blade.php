@@ -2,15 +2,13 @@
 
 @section('content')
 
-	<div>
-		@include('Jobs.index_partial.jobIndexHeader')
-	</div>
+	<div class="paginate_jobs_container">
 
-	<div>
-		@include('Jobs.index_partial.searchbar')
-	</div>
+		<div>
+			@include('Jobs.index_partial.searchbar')
+		</div>
 
-	<div class="joblist">
+		<div class="joblist">
 
 			@foreach ($jobs as $job)
 
@@ -74,13 +72,16 @@
 			<hr>
 
 
-	</div>
+		</div>
 
-	<div class="joblead_btn">
-		<form action="{{action('Admin\JobController@paginationJobsIndex')}}">
-			<input class="btn company-btn btn-primary" type="submit" value="More Jobs >>>" />
-		</form>
-	</div>
+		<nav class="pagination_container">
+			@if($condition_search)
+				{!! $jobs->appends(['work_city'=>$work_city, 'job_status_type'=>$job_status_type, 'job_industry'=>$job_industry, 'salary_range'=>$salary_range, 'company_name'=>$company_name])->render() !!}
+			@else
+				{!! $jobs->render() !!}
+			@endif
+		</nav>
 
+	</div>
 
 @stop

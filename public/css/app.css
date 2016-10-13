@@ -896,6 +896,9 @@ img {
     color: #fff;
     background: #5a4186; }
 
+.paginate_jobs_container {
+  margin-top: 60px; }
+
 .joblist {
   margin-top: 50px; }
 
