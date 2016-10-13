@@ -16,7 +16,7 @@ Route::get('example', function () {
 	return view('example');
 });
 
-Route::get('sitemap.xml', 'Admin\BasicSiteInfoController@siteMap');
+//Route::get('sitemap.xml', 'Admin\BasicSiteInfoController@siteMap');
 
 
 Route::get('/', 'Admin\BasicSiteInfoController@index');
