@@ -34,7 +34,7 @@ class PreCompanyStoreRequest extends Request
 //            'company_location'=>'required',
 //            'company_industry'=>'required',
 			'company_email'=>'required|email|business_email',/*企业邮箱*/
-//			'company_phone_number'=>'required'
+			'company_phone_number'=>'required'
 		];
 	}
 
@@ -52,10 +52,10 @@ class PreCompanyStoreRequest extends Request
 //            'scale.required' => '需要填写公司规模',
 //            'company_location.required' => '需要填写公司地址',
 //            'company_industry.required' => '需要填写公司行业',
-			'company_email.required' => '需要填写您的企业邮箱联系方式,Enterprise mail is required',
-			'company_email.email' => '需要填写您的企业邮箱联系方式,Enterprise mail is required',
-			'business_email' => '需要填写您的企业邮箱,Enterprise mail is required',
-			'company_phone_number.required' => 'Phone number is required'
+			'company_email.required' => '需要填写您的企业邮箱联系方式, Enterprise mail is required',
+			'company_email.email' => '需要填写您的企业邮箱联系方式, Enterprise mail is required',
+			'business_email' => '需要填写您的企业邮箱, Enterprise mail is required',
+			'company_phone_number.required' => '需要填写能联系到您的电话, Phone number is required'
 		];
 	}
 

@@ -200,7 +200,8 @@ class CompanyController extends Controller
 		$this->validate($request, [
 			'user_id'=>'required',
 			'business_license_name'=>'required',
-			'company_email'=>'required|email|business_email'
+			'company_email'=>'required|email|business_email',
+			'company_phone_number'=>'required'
 		]);
 
 		$company = Company::findOrFail($id);

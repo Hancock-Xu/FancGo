@@ -73,8 +73,8 @@
 
 
 								<div class="form-group {{ $errors->has('company_phone_number') ? ' has-error' : '' }}">
-									<label for="company_phone_number" class="control-label col-md-4">TEL
-										{{--<i class="glyphicon glyphicon-asterisk required-item"></i>--}}
+									<label for="company_phone_number" class="control-label col-md-4">TEL(能联系到您的电话)
+										<i class="glyphicon glyphicon-asterisk required-item"></i>
 									</label>
 
 									<div class="col-md-6">
