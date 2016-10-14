@@ -1,7 +1,7 @@
 @extends('site.layout')
 
-@section('title,FancyGo')
-	{{config('job.title')}}
+@section('page_title')
+	{{$job->job_title}}
 @stop
 
 @section('content')

@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="_token" content="{!! csrf_token() !!}"/>
 	{{--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">--}}
-	<meta name="keyword" content="JobLead China, Joblead, Job in China, Job in Shenzhen, Working in China, Life in China, Living in China, Work Visa in China">
-	<meta name="keyword" content="招聘, 外国人, 招聘外国人, 招聘老外, 外籍人才, 英语, 外籍人才求职, 招聘外教, 国际人才, 上海外国人, 北京外国人, 深圳外国人, 广州外国人, 专门从事外国人外籍人才招聘的网站, 外国人找工作, http://www.jobleadchina.com">
-	<meta name="keyword" content="find job in shenzhen, find job in shanghai, find job in beijing, find job in china, find job in guangzhou, find job in nanjing, find job in sichuan, find job in hangzhou, find job in guangxi, find jon in chengdu, hired foreigners, hired foreigner, hired American">
+	<meta name="keywords" content="JobLead China, Joblead, find Job in China, find Job in Shenzhen, Working in China, Life in China, Living in China, Work Visa in China">
+	<meta name="keywords" content="招聘, 外国人, 招聘外国人, 招聘老外, 外籍人才, 英语, 外籍人才求职, 招聘外教, 国际人才, 上海外国人, 北京外国人, 深圳外国人, 广州外国人, 专门从事外国人外籍人才招聘的网站, 外国人找工作, http://www.jobleadchina.com">
+	<meta name="keywords" content="find job in shenzhen, find job in shanghai, find job in beijing, find job in china, find job in guangzhou, find job in nanjing, find job in sichuan, find job in hangzhou, find job in guangxi, find jon in chengdu, hired foreigners, hired foreigner, hired American">
 	<meta name="baidu-site-verification" content="MMDWlmfM47" />
 	<meta name="description" content="JobLeadChina 是一家专业的外籍人才招聘平台。企业能快速通过平台，发布、更新招聘信息，与求职者直接沟通。同时，平台上所有发布职位企业均是通过认证企业，大大提高外籍人才就业安全性。">
 	<meta name="description" content="JobLeadChina is a recruitment platform in connecting job opportunities in China with foreign talents. Through JobLeadChina, enterprises can post jobs, evaluate resumes, communicate with candidates directly. All things become easy.">
@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="">
 	<link rel="shortcut icon" type="image/x-icon">
 	<link rel="icon" type="image/x-icon">
-	<title>JobLeadChina | Find job in China | 招聘外籍人才, 招聘外国人, 人事代理</title>
+	<title>JobLeadChina |@yield('page_title')| Find job in China | 招聘外籍人才, 招聘外国人, 人事代理 </title>
 
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
 	<!-- polyfiller file to detect and load polyfills -->
