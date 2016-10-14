@@ -75,6 +75,7 @@
 		<div class="mail-furtherhelp">
 			<h4>Tips: 如何刷新您的岗位?</h4>
 			<p>发布工作以后, 您可以在个人profile下拉菜单中点击Edit Company&Position info页面中Update您的Position,这样可以将您的Position排在首位。</p>
+			<h4 style="color:red" >Don't reply this email directly 请勿直接回复此邮件</h4>
 			<h4>If you need further assistance, please contact us.</h4>
 			<a href="mailto:service@jobleadchina.com?subject=The%20subject%20of%20the%20mail">Email:&nbsp;service@jobleadchina.com</a>
 		</div>
