@@ -201,17 +201,6 @@ img {
   margin: 25px; }
 
 /*footer*/
-#footer {
-  background-color: #fff;
-  text-align: center;
-  height: 150px;
-  margin-top: -100px;
-  position: absolute;
-  width: 100%; }
-
-#footer span {
-  padding: 20px; }
-
 .more-about,
 .contact-email a {
   text-decoration: underline; }
@@ -1245,17 +1234,13 @@ div.refine-position-item:nth-child(odd) {
   padding-top: 13px;
   padding-bottom: 13px; }
 
-/*footer*/
 #footer {
   background-color: #fff;
   text-align: center;
-  height: 150px;
-  margin-top: -150px;
+  padding-bottom: 50px;
   position: absolute;
-  width: 100%; }
-
-#footer span {
-  padding: 20px; }
+  width: 100%;
+  box-shadow: inset 0px 15px 10px -15px #000; }
 
 .more-about, .contact-email a {
   text-decoration: underline; }

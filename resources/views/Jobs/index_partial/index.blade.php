@@ -78,7 +78,7 @@
 
 	<div class="joblead_btn">
 		<form action="{{action('Admin\JobController@paginationJobsIndex')}}">
-			<input class="btn company-btn btn-primary" type="submit" value="More Jobs >>>" />
+			<input class="btn company-btn btn-primary" type="submit" value="More Jobs »" />
 		</form>
 	</div>
 
