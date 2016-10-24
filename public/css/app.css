@@ -1251,7 +1251,7 @@ div.refine-position-item:nth-child(odd) {
 .content_container {
   min-height: 100%;
   width: 100%;
-  padding-bottom: 200px; }
+  padding-bottom: 50px; }
 
 .jb_navbar {
   font-size: 16px; }
