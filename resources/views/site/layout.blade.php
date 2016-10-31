@@ -6,13 +6,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="_token" content="{!! csrf_token() !!}"/>
 
-	<meta name="keywords" content="JobLead China, Joblead, find Job in China, find Job in Shenzhen, Working in China, Life in China, Living in China, Work Visa in China">
-	<meta name="keywords" content="招聘, 外国人, 招聘外国人, 招聘老外, 外籍人才, 英语, 外籍人才求职, 招聘外教, 国际人才, 上海外国人, 北京外国人, 深圳外国人, 广州外国人, 专门从事外国人外籍人才招聘的网站, 外国人找工作, http://www.jobleadchina.com">
-	<meta name="keywords" content="find job in shenzhen, find job in shanghai, find job in beijing, find job in china, find job in guangzhou, find job in nanjing, find job in sichuan, find job in hangzhou, find job in guangxi, find jon in chengdu, hired foreigners, hired foreigner, hired American">
+	<meta name="keywords" content="招聘外国人,招聘老外,外籍人才,招聘外籍人才,外籍人才求职,招聘外教,国际人才,上海外国人,北京外国人,深圳外国人,广州外国人,外国人就业,外籍人才招聘网站,外国人找工作,http://www.jobleadchina.com">
 
+	<meta name="keywords" content="Job Lead China,Job lead,find Job in China,Working in China,Life in China,Living in China,Work Visa in China,find job in Shenzhen, find job in shanghai, find job in beijing, find job in china, find job in Guangzhou, find job in nanjing, find job in Sichuan, find job in hangzhou, find job in Guangxi, find jon in Chengdu, hired foreigners, hired foreigner, hired American,jobs in China">
 
-	<meta name="description" content="JobLeadChina 是一家专业的外籍人才招聘平台。企业能快速通过平台，发布、更新招聘信息，与求职者直接沟通。同时，平台上所有发布职位企业均是通过认证企业，大大提高外籍人才就业安全性。"/>
-	<meta name="description" content="JobLeadChina is a recruitment platform in connecting job opportunities in China with foreign talents. Through JobLeadChina, enterprises can post jobs, evaluate resumes, communicate with candidates directly. All things become easy."/>
+	<meta name="description" content="JobLeadChina 是一家专业的外籍人才招聘平台。企业能快速通过平台，发布、更新招聘信息，与求职者直接沟通。同时，平台上所有发布职位企业均是通过认证企业，大大提高外籍人才就业安全性。JobLeadChina is a recruitment platform in connecting job opportunities in China with foreign talents. Through JobLeadChina, enterprises can post jobs, evaluate resumes, communicate with candidates directly. All things become easy">
 
 	<meta name="robots" content="index,follow,noodp"/>
 	<meta name="googlebot" content="index,follow,noodp" />
