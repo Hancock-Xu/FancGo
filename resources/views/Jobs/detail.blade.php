@@ -162,7 +162,7 @@
 
 									<div class="basic_info_content">
 
-										<label class="basic_info_label"><a href="{{$job->website}}" target="_blank ">{{$job->website}}</a></label>
+										<label class="basic_info_label"><a href="{{$job->website}}" target="_blank " rel="nofollow">{{$job->website}}</a></label>
 
 									</div>
 								</div>
