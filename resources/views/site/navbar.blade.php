@@ -9,7 +9,7 @@
 				{{--<span class="icon-bar"></span>--}}
 			{{--</button>--}}
 			<a id="brand-jobleadchina" class="brand" href="/">
-				<img src="{{asset('images/logo.png')}}" alt="">
+				<img src="{{asset('images/logo.png')}}" alt="brand logo" title="JobLeadChina logo">
 			</a>
 		</div>
 
