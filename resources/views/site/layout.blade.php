@@ -28,7 +28,7 @@
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 
 
-	<title>JobLeadChina | @yield('page_title') | Finding jobs in China | 招聘外籍人才, 外国人找工作, 外国人求职, 外籍猎头服务 </title>
+	<title>JobLeadChina @yield('page_title') | Finding jobs in China | 招聘外籍人才, 外国人找工作, 外国人求职, 外籍猎头服务 </title>
 
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
 	<!-- polyfiller file to detect and load polyfills -->
