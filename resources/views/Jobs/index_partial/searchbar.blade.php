@@ -3,7 +3,7 @@
 		<div class="searchbarWapper">
 
 			<div class="searchbarCitySelect">
-				<label class="industryinputlabel" for="">
+				<label class="industryinputlabel" for="work_city">
 					<select class="cityselect" name="work_city">
 						<option selected disabled>City</option>
 						@if($condition_search)
