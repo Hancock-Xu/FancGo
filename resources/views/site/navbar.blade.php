@@ -13,7 +13,8 @@
 			</a>
 		</div>
 
-		<div class="collapse navbar-collapse" id="navbar-menu" aria-expanded="false">
+		<div class="collapse navbar-collapse" id="navbar-menu" aria-expanded="false" role="navigation">
+
 
 					<div class="center-home">
 

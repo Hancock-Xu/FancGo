@@ -17,7 +17,7 @@
 				<div class="jobThumbnail">
 					<div class="jobThumbnailCompanyLogo">
 						<figure class="jobThumbnailCompanyLogo_figure">
-							<img class="jobThumbnailCompanyLogoImg" src="{{$job->logo_url}}" alt="{{$job->company_name}}">
+							<img class="jobThumbnailCompanyLogoImg" src="{{$job->logo_url}}" title="{{$job->company_name}}" alt="{{$job->company_name}} Company logo">
 						</figure>
 					</div>
 					<div class="jobThumbnailPosition">

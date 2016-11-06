@@ -1,7 +1,7 @@
 @extends('site.layout')
 
 @section('page_title')
-	{{$job->job_title}}
+	Finding {{$job->job_industry}} jobs in China
 @stop
 
 @section('content')
@@ -97,7 +97,7 @@
 				<div class="company_logo">
 					<div class="companyThumbnailCompanyLogo">
 						<figure class="companyThumbnailCompanyLogo_figure">
-							<img class="companyThumbnailCompanyLogoImg" src="{{$job->logo_url}}" alt="{{$job->company_name}}">
+							<img class="companyThumbnailCompanyLogoImg" src="{{$job->logo_url}}" title="{{$job->company_name}}" alt="{{$job->company_name}} Company logo">
 
 						</figure>
 
