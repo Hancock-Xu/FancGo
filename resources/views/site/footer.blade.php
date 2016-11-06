@@ -10,7 +10,7 @@
 						<li style="margin-bottom: 5px">
 							<label>邮件 Email : </label>
 							<a href="mailto:service@jobleadchina.com?subject=The%20subject%20of%20the%20mail" style="color: #fefefe">&nbsp;service@jobleadchina.com</a>
-							<label for=""> We will reply you in one day</label>
+							<label> We will reply you in one day</label>
 						</li>
 						<li style="margin-bottom: 5px">
 							<label>电话 Tel : </label>
