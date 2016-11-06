@@ -26,7 +26,7 @@
 			</div>
 
 			<div class="wechat_qrcode" style="width: 180px; flex: 1; color: #fefefe;">
-				<img src="http://www.jobleadchina.com/uploads/wechat_qrcode.jpg" alt="" style="width: 100px">
+				<img src="http://www.jobleadchina.com/uploads/wechat_qrcode.jpg" alt="JobLeadChina wechat code" style="width: 100px">
 				<label>Join our wechat group</label>
 			</div>
 
