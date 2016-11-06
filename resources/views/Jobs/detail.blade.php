@@ -1,7 +1,7 @@
 @extends('site.layout')
 
 @section('page_title')
-	| Finding {{$job->job_industry}} jobs in China | {{$job->job_title}} job in China
+| Finding {{$job->job_industry}} jobs in China | {{$job->job_title}} job in China
 @stop
 
 @section('content')
