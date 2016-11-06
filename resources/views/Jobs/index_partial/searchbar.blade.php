@@ -4,7 +4,7 @@
 
 			<div class="searchbarCitySelect">
 				<label class="industryinputlabel" for="work_city">
-					<select class="cityselect" name="work_city">
+					<select class="cityselect" name="work_city" id="work_city">
 						<option selected disabled>City</option>
 						@if($condition_search)
 
@@ -64,7 +64,7 @@
 
 			<div class="searchbarJobTypeSelect" >
 				<label class="industryinputlabel" for="job_status_type">
-				<select class="jobtypeselect" name="job_status_type">
+				<select class="jobtypeselect" name="job_status_type" id="job_status_type">
 					<option selected disabled>Job Type</option>
 					@if($condition_search)
 						<option value="full-time" {{$job_status_type == "full-time"?"selected":""}}>Full-time</option>
@@ -339,7 +339,7 @@
 
 			<div class="searchbarSalarySelect">
 				<label class="industryinputlabel" for="salary_range">
-					<select class="salaryselect" name="salary_range" title="Salary Range">
+					<select class="salaryselect" name="salary_range" id="salary_range" title="Salary Range">
 						<option selected disabled>Salary Range</option>
 						@if($condition_search)
 							<option value="1" {{$salary_range == "1" ? "selected" : ""}}>Under 8K/MTH</option>
@@ -369,7 +369,7 @@
 				<div class="industryCell">
 					<label class="companyNameInputLabel" for="company_name">
 
-						<input type="text" class="companyNameInput input-large" name="company_name" id="companyname" value="" placeholder="Company name" autocomplete="off">
+						<input type="text" class="companyNameInput input-large" name="company_name" id="company_name" value="" placeholder="Company name" autocomplete="off">
 
 					</label>
 				</div>
