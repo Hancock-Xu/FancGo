@@ -88,9 +88,9 @@
 						<label class="industryinputlabel" for="job_industry">
 							<!--<span class="inputplaceholderlabel">Industry</span>-->
 							@if($condition_search)
-								<input type="text" class="industryInput input-large" name="job_industry" id="selectedIndustry" value="{{$job_industry}}" placeholder="Industry" autocomplete="off" readonly>
+								<input type="text" class="industryInput input-large" name="job_industry" id="job_industry" value="{{$job_industry}}" placeholder="Industry" autocomplete="off" readonly>
 							@else
-								<input type="text" class="industryInput input-large" name="job_industry" id="selectedIndustry" value="" placeholder="Industry" autocomplete="off" readonly>
+								<input type="text" class="industryInput input-large" name="job_industry" id="job_industry" value="" placeholder="Industry" autocomplete="off" readonly>
 							@endif
 						{{--<i id="industryselecticon" class="glyphicon glyphicon-chevron-down"></i>--}}
 						<!--<span class="caret"></span>-->
