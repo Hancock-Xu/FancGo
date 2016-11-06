@@ -63,7 +63,7 @@
 			</div>
 
 			<div class="searchbarJobTypeSelect" >
-				<label class="industryinputlabel" for="">
+				<label class="industryinputlabel" for="job_status_type">
 				<select class="jobtypeselect" name="job_status_type">
 					<option selected disabled>Job Type</option>
 					@if($condition_search)
@@ -338,7 +338,7 @@
 			</div>
 
 			<div class="searchbarSalarySelect">
-				<label class="industryinputlabel" for="">
+				<label class="industryinputlabel" for="salary_range">
 					<select class="salaryselect" name="salary_range" title="Salary Range">
 						<option selected disabled>Salary Range</option>
 						@if($condition_search)
@@ -367,7 +367,7 @@
 			<div class="searchbarCompanyNameInput">
 
 				<div class="industryCell">
-					<label class="companyNameInputLabel" for="">
+					<label class="companyNameInputLabel" for="company_name">
 
 						<input type="text" class="companyNameInput input-large" name="company_name" id="companyname" value="" placeholder="Company name" autocomplete="off">
 
