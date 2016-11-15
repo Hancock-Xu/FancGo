@@ -10,7 +10,7 @@
 
 	<meta name="keywords" content="find Job in China,Working in China,find job in Shenzhen, find job in shanghai, find job in beijing, find job in china, find job in Guangzhou">
 
-	<meta name="description" content="JobLeadChina 是一家专业的外籍人才招聘平台。企业能快速通过平台，发布、更新招聘信息，与求职者直接沟通。同时，平台上所有发布职位企业均是通过认证企业，大大提高外籍人才就业安全性。JobLeadChina is a recruitment platform in connecting job opportunities in China with foreign talents. Through JobLeadChina, enterprises can post jobs, evaluate resumes, communicate with candidates directly. All things become easy">
+	<meta name="description" content="JobLeadChina 是一家专业的外籍人才招聘平台。企业能快速通过平台，发布、更新招聘信息，与求职者直接沟通。同时，平台上所有发布职位企业均是通过认证企业，大大提高外籍人才就业安全性。JobLeadChina is a recruitment platform in connecting job opportunities in China with foreign talents.">
 
 	<meta name="author" content="JobLeadChina">
 
