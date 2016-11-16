@@ -28,7 +28,7 @@
 	<link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
 
 
-	<title>JobLeadChina |  @yield('page_title')</title>
+	<title>JobLeadChina | @yield('page_title')</title>
 
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
 	<!-- polyfiller file to detect and load polyfills -->
