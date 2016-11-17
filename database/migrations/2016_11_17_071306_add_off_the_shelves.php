@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DropAmountColumnInJobs extends Migration
+class AddOffTheShelves extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class DropAmountColumnInJobs extends Migration
     public function up()
     {
         Schema::table('jobs', function (Blueprint $table) {
-	        $table->dropColumn(['pageView_amount', 'application_amount']);
+            $table->enum('shelves', [0,1])->index();
         });
     }
 
@@ -25,7 +25,7 @@ class DropAmountColumnInJobs extends Migration
     public function down()
     {
         Schema::table('jobs', function (Blueprint $table) {
-            //
+            $table->dropColumn('shelves');
         });
     }
 }

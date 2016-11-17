@@ -58,6 +58,20 @@ use Carbon\Carbon;
  * @method static \Illuminate\Database\Query\Builder|\App\User whereUnionid($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereEducationDegree($value)
  * @mixin \Eloquent
+ * @property string $prefer_industry
+ * @property string $position_experience
+ * @property string $english_level
+ * @property string $major
+ * @property string $desired_city
+ * @property string $other_considerations
+ * @property string $main_interests
+ * @method static \Illuminate\Database\Query\Builder|\App\User wherePreferIndustry($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User wherePositionExperience($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereEnglishLevel($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereMajor($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereDesiredCity($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereOtherConsiderations($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\User whereMainInterests($value)
  */
 class User extends Authenticatable
 {

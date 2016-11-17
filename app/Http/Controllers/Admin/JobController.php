@@ -22,7 +22,10 @@ class JobController extends Controller
 		$parameters = $request->query->all();
 
 		$jobs = \DB::table('jobs')
-			->where('jobs.updated_at','<=',Carbon::now())
+			->where([
+				['jobs.updated_at','<=',Carbon::now()],
+				['jobs.shelves', '=', 0],
+			])
 			->limit(10)
 			->join('companies', 'jobs.company_id', '=', 'companies.id')
 			->select('jobs.*', 'companies.user_id', 'companies.company_name','companies.business_license_name','companies.logo_url','companies.website','companies.company_description','companies.scale','companies.company_location','companies.company_industry','companies.company_email','companies.company_phone_number')
@@ -53,7 +56,10 @@ class JobController extends Controller
 		$parameters = $request->query->all();
 
 		$jobs = \DB::table('jobs')
-			->where('jobs.updated_at','<=',Carbon::now())
+			->where([
+				['jobs.updated_at','<=',Carbon::now()],
+				['jobs.shelves', '=', 0],
+			])
 			->join('companies', 'jobs.company_id', '=', 'companies.id')
 			->select('jobs.*', 'companies.user_id', 'companies.company_name','companies.business_license_name','companies.logo_url','companies.website','companies.company_description','companies.scale','companies.company_location','companies.company_industry','companies.company_email','companies.company_phone_number')
 			->orderBy('jobs.updated_at','desc');
@@ -234,7 +240,23 @@ class JobController extends Controller
 		$job->delete();
 
 		return redirect()->back();
+	}
 
+	public function off_the_shelves($id)
+	{
+		$job = Job::findOrFail($id);
+		switch ($job->shelves)
+		{
+			case 0:
+				$job->shelves = 1;
+				break;
+			case 1;
+				$job->shelves = 0;
+				break;
+		}
+		$job->save();
+
+		return redirect()->back();
 	}
 
 	public function applyJob($id){

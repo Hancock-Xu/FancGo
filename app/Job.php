@@ -5,6 +5,7 @@ namespace App;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
+
 /**
  * App\Job
  *
@@ -27,8 +28,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $work_city
  * @property string $position_points
  * @property \Carbon\Carbon $published_at
- * @property integer $pageView_amount
- * @property integer $application_amount
+ * @property string $off_the_shelves
  * @property-read \App\Company $companies
  * @method static \Illuminate\Database\Query\Builder|\App\Job whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Job whereCreatedAt($value)
@@ -49,8 +49,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\Job whereWorkCity($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Job wherePositionPoints($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Job wherePublishedAt($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Job wherePageViewAmount($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Job whereApplicationAmount($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Job whereOffTheShelves($value)
  * @mixin \Eloquent
  */
 class Job extends Model
@@ -76,7 +75,8 @@ class Job extends Model
 		'company_id',
 		'pageView_amount',
 		'application_amount',
-		'resume_email'
+		'resume_email',
+		'off_the_shelves'
 	];
 
 	protected function setPublishedAtAttribute($date)

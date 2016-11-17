@@ -585,7 +585,12 @@
 											<span class="updated-time" >Updated time:&nbsp;{{ date('F d, Y', strtotime($job->updated_at)) }}</span>
 											<div class="refine-links pull-right">
 												<a href="{{action('Admin\JobController@edit', $job->id)}}" class="job-edit" target="_blank">Update</a>
-												<a href="{{action('Admin\JobController@destroy', $job->id)}}">Delete</a>
+
+												@if($job->shelves)
+													<a href="{{action('Admin\JobController@off_the_shelves', $job->id)}}">On the shelves</a>
+												@else
+													<a href="{{action('Admin\JobController@off_the_shelves', $job->id)}}">Off the shelves</a>
+												@endif
 											</div>
 										</div>
 									</div>
