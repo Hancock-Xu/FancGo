@@ -28,15 +28,15 @@
 								<embed src="{{asset('images/upload.svg')}}" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
 
 								@if($user->resume_url)
-									<label for="logo_url">Update your Resume</label>
+									<label for="logo_url">Click Here to Update Your Resume</label>
 								@else
-									<label for="logo_url">UpLoad your Resume</label>
+									<label for="logo_url">Click Here to UpLoad Your Resume</label>
 								@endif
 
 								<input class="resume_chooser" accept="application/pdf,application/msword,
   application/vnd.openxmlformats-officedocument.wordprocessingml.document" type="file" id="files" name="resume_url">
 								<label for="">Upper Limit 5M</label>
-								<label for="">Only accept pdf, doc or docx.Recommended use pdf</label>
+								{{--<label for="">Only accept pdf, doc or docx. Recommended use pdf</label>--}}
 
 								<br/>
 
