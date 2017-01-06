@@ -27,13 +27,11 @@
 	<link rel="shortcut icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
 	<link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
 
-
-	<title>JobLeadChina | @yield('page_title')</title>
+	<title>JobLeadChina @yield('page_title') | Find Job in China | 专业的外籍人才招聘网站, 外籍人才猎头</title>
 
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
 	<!-- polyfiller file to detect and load polyfills -->
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
-
 
 	<script>
 		webshims.setOptions('waitReady', false);
