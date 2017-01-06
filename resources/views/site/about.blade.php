@@ -17,8 +17,8 @@
 			<div class="information-intro-ch">
 				<p>JobLeadChina 是一家专业的外籍人才招聘平台。企业能快速通过平台，发布、更新招聘信息，与求职者直接沟通。同时，平台上所有发布职位企业均是通过认证企业，大大提高外籍人才就业安全性。</p>
 				<div class="information-intro-ch-HR">
-					<h4>人事外包服务</h4>
-					<p>此外，为帮助企业能更高效招聘到中高端外籍人才，我们提供一站式招聘解决方案，从分析企业真实需求，评估项目可行性，到进行人才搜索、筛选、背景调查，从初试、客户面试，到确定候选人，候选人入职及试用跟进。通过完整的定制化的方案，帮助企业在最快的时间内找到最合适的人才。</p>
+					<h4>猎头服务</h4>
+					<p>此外，为帮助企业能更高效招聘到中高端外籍人才，我们提供一站式猎头服务，从分析企业真实需求，进行人才搜索、筛选、背景调查，从初试、客户面试，到确定候选人，候选人入职及试用跟进。通过完整的定制化的方案，帮助企业在最快的时间内找到最合适的人才。</p>
 				</div>
 				<div class="information-intro-ch-rent">
 					<h4>租房和工作签证<span>（目前仅限深圳本地）</span></h4>
@@ -48,7 +48,7 @@
 		</div>
 		<div class="information-pic">
 			<img class="information-picList " src="images/intro-01.png" alt="服务项目">
-			<img class="information-picList " src="images/intro-02.png" alt="人事外包流程">
+			<img class="information-picList " src="images/intro-02.png" alt="猎头流程">
 			<img class="information-picList " src="images/intro-03.png" alt="每周人才推荐如何产生">
 			{{--<img class="information-picList " src="images/intro-04.png" alt="人才评估报告">--}}
 			<img class="information-picList " src="images/intro-05.png" alt="租房">
