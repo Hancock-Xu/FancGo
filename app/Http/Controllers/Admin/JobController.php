@@ -190,7 +190,9 @@ class JobController extends Controller
 		if ($job_mix_companyInfo) {
 			return view('Jobs.detail', ['job'=>$job_mix_companyInfo, 'user'=>$user]);
 		}else{
-			return view('not_found');
+//			return view('not_found');
+
+			return redirect(action('Admin\JobController@index'));
 		}
 	}
 
