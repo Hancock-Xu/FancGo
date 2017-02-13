@@ -1,0 +1,22 @@
+/**
+ * Created by Xuhanyu on 17/2/1.
+ */
+import Vue from 'vue/dist/vue'
+import App from './App.vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter);
+
+import Example from './components/Example.vue'
+
+const router = new VueRouter(
+    {
+        mode:'history',
+        base:__dirname,
+        routes:[
+            {path:'/example', component: Example}
+        ]
+    }
+);
+
+new  Vue(Vue.util.extend({router}, App)).$mount('#app');
