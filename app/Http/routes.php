@@ -28,8 +28,7 @@ Route::get('/job_paginate', 'Admin\JobController@paginationJobsIndex');
 Route::resource('company','Admin\CompanyController');
 
 Route::auth();
-Route::get('/logout', 'Auth\LoginController@logout');
-
+/**/
 Route::group([
 	'namespace'=>'Admin',
 	'middleware'=>'auth'], function(){

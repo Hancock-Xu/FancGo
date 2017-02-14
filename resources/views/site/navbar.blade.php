@@ -63,7 +63,17 @@
 										{{--					<a href="{{action('Admin\ApartmentController@create')}}">Post apartment</a>--}}
 									</li>
 									<li>
-										<a href="{{url('/logout')}}">Logout</a>
+										<a href="{{ url('/logout') }}"
+										   onclick="event.preventDefault();
+										   document.getElementById('logout-form').submit();">
+											Logout
+										</a>
+										<form id="logout-form"
+										      action="{{ url('/logout') }}"
+										      method="POST"
+										      style="display: none;">
+											{{ csrf_field() }}
+										</form>
 									</li>
 									<li>
 										<a href="{{action('Admin\ProfileController@company')}}">Edit Company&Position info</a>
