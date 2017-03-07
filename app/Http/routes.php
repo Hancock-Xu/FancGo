@@ -12,6 +12,8 @@
 */
 
 
+use Carbon\Carbon;
+
 Route::get('example', function () {
 	return view('example');
 });
@@ -69,3 +71,4 @@ Route::group([
 	Route::post('/promote_to_user_jobleadchina', 'EmailIssuesController@userPromote');
 });
 
+Route::get('sitemap.xml', 'Admin\BasicSiteInfoController@siteMap');

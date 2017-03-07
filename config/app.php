@@ -150,6 +150,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 	    Illuminate\Notifications\NotificationServiceProvider::class,
         Overtrue\LaravelWechat\ServiceProvider::class,
+	    Roumen\Sitemap\SitemapServiceProvider::class,
 
         /*
          * Application Service Providers...
