@@ -1,0 +1,359 @@
+//== Colors
+$brand-primary:    #694c9c;
+$brand-normal:     #f0f6ed;
+$border-color:	   #aeaeae;
+
+//== Scaffolding
+//## Settings for some of the most global styles.
+
+//Background color for `<body>`.
+$body-bg:               #f5f5f5;
+//Global text color on `<body>`.
+$text-color:            #333;
+
+// Global textual link color.
+$link-color:            $brand-primary;
+// Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%);
+// Link hover decoration.
+$link-hover-decoration: underline;
+
+//== Typography
+$font-size-base:          14px;
+$font-size-large:         ceil(($font-size-base * 1.75)); // ~28px
+$font-size-small:         ceil(($font-size-base * 0.875)); // ~14x
+
+$font-size-h1:            floor(($font-size-base * 1.75)); // ~28x
+$font-size-h2:            floor(($font-size-base * 1.5)); // ~24px
+$font-size-h3:            ceil(($font-size-base * 1.25)); // ~20px
+$font-size-h4:            ceil(($font-size-base * 1.125)); // ~18px
+$font-size-h5:            $font-size-base;
+$font-size-h6:            ceil(($font-size-base * 0.875)); // ~14px
+
+//## Define common padding and border radius sizes
+$padding-base-vertical:     10px;
+$padding-base-horizontal:   10px;
+$border-radius-base:        0px;
+
+// Padding for `<th>`s and `<td>`s.
+$table-cell-padding:            10px;
+
+// Default background color used for all tables.
+$table-bg:                      #fff;
+
+
+//== Forms
+.form-group {
+    .form-city,.form-jobtype{
+      border-color: $border-color;
+      &:focus {
+        border-color: darken($border-color, 6.5%)
+      }
+      &:active {
+        border-color: $brand-primary;
+      }
+    }
+}
+
+.form-control {
+  width: 370px;
+  padding-right: 30px;
+//margin-left:10px;
+}
+
+.control-label{
+  @extend .control-label;
+  padding-right: 10px !important;
+}
+
+.form-group {
+  position: relative;
+}
+
+$input-border-focus:             $brand-primary;
+$input-height-base:  40px;
+
+//== Nav-tab
+
+
+// `.form-group` margin
+$form-group-margin-bottom:       20px;
+
+//== Dropdowns
+//Background for the dropdown menu.
+$dropdown-bg:                    #fff;
+
+//== Navbar
+$navbar-height:                    60px;
+$navbar-default-color:             #fff;
+$navbar-default-bg:                $brand-primary;
+$navbar-default-link-color:        #fff;
+$navbar-default-link-hover-color:  darken($navbar-default-link-color, 30%);
+$navbar-default-link-hover-bg:     $brand-primary;
+$navbar-default-link-active-color: #fff;
+$navbar-default-link-active-bg:    #9681B9;
+
+
+
+
+//== Buttons
+.btn {
+  padding: 0;
+  font-size: 20px;
+  height: 40px;
+  color: $brand-normal;
+  background-color: $brand-primary;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active
+  &.active {
+    color: #fff;
+    background: darken($brand-primary,6.5%)
+  }
+}
+
+
+//==Background color used for `.table-striped`.
+$table-bg-accent-odd:               #fff;
+$table-bg-accent-even:             #fafafa;
+$table-border-color:            #fafafa;
+.table-striped {
+  > tbody > tr:nth-of-type(odd) {
+    background-color: $table-bg-accent-odd;
+  }
+}
+
+.table-striped {
+  > tbody > tr:nth-of-type(even) {
+    background-color: $table-bg-accent-even;
+  }
+}
+
+//Padding for `<th>`s and `<td>`s.
+$table-cell-padding:            0px;
+
+//== Grid system
+$grid-gutter-width:         0px;
+
+// Background color for textual input addons
+//$input-group-addon-bg:           $gray-lighter;
+//Border color for textual input addons
+//$input-group-addon-border-color: $input-border;
+
+
+
+/*注册页面*/
+.signup-signin {
+  display: inline-block;
+  margin: 15px 40px;
+  float: right;
+
+  .form-control {
+    //@extend .form-control;
+    height: 30px;
+    width: 200px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+  .btn {
+    background-color: #fff;
+    color: $brand-primary;
+    height: 30px;
+    width: 80px;
+    margin-left: 40px;
+    margin-right: 10px;
+
+}
+  a {
+    color: $brand-normal;
+  }
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  min-width: 1140px;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  position: relative;
+  padding-top: 60px;
+}
+
+img {
+  display: inline-block;
+  overflow: hidden;
+}
+
+hr {
+  border-top: 1px solid #c9c9c9;
+}
+
+.center-home {
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  margin: 0 auto;
+  width: 500px;
+}
+
+.position-btn, .company-btn {
+  width: 440px;
+  margin: 0 auto;
+  margin-bottom: 40px !important;
+}
+
+#sidebar-company-logo {
+  display: inline-block;
+}
+
+#brand-jobleadchina {
+  margin-left: 40px;
+}
+
+.navbar-right {
+  margin-right: 30px;
+}
+
+/*图标插入*/
+.arrow-down {
+  font-size: 16px;
+  color: #999;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  font-weight: normal;
+  cursor: default;
+}
+.left-arrow-down {
+  font-size: 16px;
+  color: #999;
+  position: absolute;
+  left: 344px;
+  top: 40px;
+  font-weight: normal;
+  cursor: default;
+}
+
+.required-item {
+  font-size: 10px;
+  color: #ce1c1c;
+}
+
+.icon-post-time {
+  color: #999;
+}
+
+.icon-phone, .icon-enterpriseMail{
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  color: #999;
+}
+
+.container{
+  margin-top: 60px;
+  width: 1140px !important;
+}
+
+//navbar
+
+.navbar_container{
+  width: 100%;
+}
+
+.content_container{
+  min-height: 100%;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.jb_navbar{
+  @extend .navbar;
+  @extend .navbar-default;
+  @extend .navbar-fixed-top;
+  //position: relative !important;
+  //margin-bottom: 0px !important;
+  //margin-bottom: 50px;
+  font-size: 16px;
+}
+
+.jb_content{
+  //margin-top: 60px;
+  //padding-bottom: 100px;
+  //margin-bottom: 100px;
+}
+
+.information-intro-ch-rent span {
+  font-size: 14px;
+  color: #999;
+}
+.information-pic {
+  text-align: center;
+}
+.information-picList {
+  box-shadow: 1px 1px 5px #c9c9c9;
+  margin: 10px auto;
+}
+
+.pagination_container{
+  display: flex;
+  justify-content: center;
+}
+
+.joblead_btn{
+  margin: 0 auto;
+  max-width: 440px;
+}
+
+//================================
+
+.paginate_jobs_container{
+  margin-top: 60px;
+}
+
+.updated-time {
+  color: #999;
+  margin: 20px;
+}
+.refine-links{
+  margin-right: 20px;
+}
+.refine-links a {
+  margin-left: 20px;
+  cursor: pointer;
+}
+.refine-position-item{
+  padding: 10px;
+}
+.refine-position-item-title {
+  color: #694c9c;
+  margin: 20px;
+}
+
+.refine-position-item-point {
+  margin: 20px;
+}
+.refine-position-item li:nth-child(odd) {
+  background-color: #fff;
+}
+.refine-position-item li:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.refine-position-item-edit{
+  margin-bottom: 20px;
+}
+
+div.refine-position-item:nth-child(even) {
+  background-color: #fafafa;
+}
+
+div.refine-position-item:nth-child(odd) {
+  background-color: #fefefe;
+}
+
+/*home页面*/

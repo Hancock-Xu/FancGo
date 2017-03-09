@@ -1,0 +1,397 @@
+/*首页搜索框*/
+
+.search {
+  margin: 0 auto;
+  width: 980px;
+}
+
+.form-city,
+.form-jobtype,
+.form-salary {
+  width: 130px;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.form-industry {
+  width: 285px;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.form-companyname {
+  width: 190px;
+  height: 40px;
+  text-align: center;
+}
+
+.search .form-group {
+  margin: -3px;
+}
+
+#button-search {
+  width: 120px;
+  height: 40px;
+}
+
+/*JobPosition块*/
+
+#positionTab {
+  width: 980px;
+  margin: 67px auto 10px;
+}
+
+#positionTab ul li {
+  margin: 0;
+}
+
+.change-position-line {
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  background-color: #694c9c;
+}
+
+/*Search Bar*/
+
+.searchbar {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.searchbarForm {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.searchbarWapper {
+  position: relative;
+  width: 100%;
+  flex: 9;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.searchbarCitySelect {
+  position: relative;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.cityselect{
+  outline: none;
+}
+
+.searchbarCitySelect select {
+  width: 100%;
+  height: 44px;
+  transition: border-color 0.2s;
+  border-radius: 0;
+  border-right-width: 0;
+  border-right-color: initial;
+  border-right-style: initial;
+  color: #333;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.searchbarJobTypeSelect {
+  position: relative;
+  /*display: inline-block;*/
+  -webkit-flex: 1;
+  flex: 1;
+  margin-left: -1px;
+}
+
+.jobtypeselect{
+  outline: none;
+}
+
+.searchbarJobTypeSelect select {
+  height: 44px;
+  width: 100%;
+  transition: border-color 0.2s;
+  border-radius: 0;
+  border-right-width: 0;
+  border-right-color: initial;
+  border-right-style: initial;
+  color: #333;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.searchbarIndustrySelect {
+  position: relative;
+  /*height: 44px;*/
+  -webkit-flex: 3;
+  flex: 3;
+  //width: 300px;
+  height: 44px;
+  margin-left: -1px;
+}
+
+.industryinputlabel {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+
+/*.searchbar input {
+    display: block;
+}*/
+
+.industryInput {
+  width: 100%;
+  height: 44px;
+  /*-moz-appearance: none;
+  -ms-progress-appearance: none;
+  -webkit-appearance: none;*/
+}
+
+.input-large {
+  height: 44px;
+  /*font-size: 16px;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+[type="text"] {
+  /*transition: border-color 0.2s;*/
+  /*border-radius: 2px;*/
+  /*background-color: #fff;*/
+  /*background-color: rgb(248, 248, 248);*/
+  //color: #999;
+  border: 1px solid #ccc;
+  font-weight: normal;
+  //padding: 0;
+  width: 100%;
+  //height: 100%;
+  //float: left;
+}
+
+.industrylist {
+  position: absolute;
+  z-index: 99;
+  text-align: left;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 0px 10px rgba(50, 50, 50, 0.6);
+  border-top: 0;
+  top: 100%;
+  width: 755px;
+  display: none;
+  background: #fff;
+  overflow: auto;
+  border: 1px solid #c4c4c4;
+}
+
+.company_industrylist{
+  //@extend .industrylist;
+  left: -251px;
+}
+
+.job_industrylist{
+  //@extend .company_industrylist;
+  left: -311px;
+}
+
+.industrylist_row {
+  color: #484848;
+  border-bottom: 1px solid #c4c4c4;
+  margin: 0;
+  position: relative;
+  display: flex;
+}
+
+.industrylist_row_name {
+  text-align: center;
+  float: left;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 17%;
+  min-width: 230px;
+  word-wrap:break-word;
+  position: relative;
+  min-height: 1px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-weight: bold;
+}
+
+.industrylist_row_content {
+  width: 77%;
+  float: left;
+  position: relative;
+  /*margin-left: 23%;*/
+}
+
+.industrylist_row_1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.industrylist_row_1 li {
+  display: inline-block;
+  cursor: pointer;
+  text-align: left;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+.searchbarSalarySelect {
+  flex: 1.4;
+  -webkit-box-flex: 1.4;
+  position: relative;
+  margin-left: -1px;
+}
+
+.salaryselect{
+  outline: none;
+}
+
+.searchbarSalarySelect select {
+  height: 44px;
+  width: 100%;
+  transition: border-color 0.2s;
+  border-radius: 0;
+  border-right-width: 0;
+  border-right-color: initial;
+  border-right-style: initial;
+  color: #333;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+}
+
+.searchbarCompanyNameInput {
+  /*width: 300px;*/
+  height: 44px;
+  margin-left: -1px;
+}
+
+.companyNameInputLabel {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.companyNameInput {
+  width: 100%;
+  height: 44px;
+  /*display: inline-block;*/
+  /*margin-bottom: 0;*/
+}
+
+#cityselecticon,
+#jobtypeselecticon,
+#industryselecticon,
+#salaryselecticon {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.searchbarSearchButton {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 44px;
+  top: 0;
+  right: 0;
+  flex: 1;
+  margin-left: -1px;
+}
+
+.searchbarButton {
+  width: 100%;
+  height: 100%;
+}
+
+
+.btn-searchbar {
+
+
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 1.428571429;
+  border-radius: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  color: $brand-normal;
+  background-color: $brand-primary;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active
+  &.active {
+    color: #fff;
+    background: darken($brand-primary,6.5%)
+  }
+}
+
+//*footer*/
+#footer {
+  background-color: #fff;
+  text-align: center;
+  padding-bottom: 50px;
+  position: absolute;
+  width: 100%;
+  box-shadow: inset 0px 15px 10px -15px #000;
+}
+
+//#footer span {
+//  padding: 20px;
+//}
+
+.more-about, .contact-email a {
+  text-decoration: underline;
+}
+
+
+
+//about us
+.moreInformation{
+  width: 980px;
+  margin: 0 auto;
+  padding: 20px 50px;
+  font-family: "Microsoft YaHei";
+}
+
+.moreInformation h2,.information-intro-en h3 ,.information-intro-en h4,
+.information-intro-ch-HR h4, .information-intro-ch-rent h4 {
+  color: #694c9c;
+}
+
+
+.head-hunter, .information-intro-ch-HR, .information-intro-ch-rent{
+  margin-top: 30px;
+}

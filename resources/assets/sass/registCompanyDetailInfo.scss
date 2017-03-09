@@ -1,0 +1,94 @@
+/*注册公司-上传公司信息*/
+
+.upload-company-logo,
+.upload-resume {
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid #c9c9c9;
+  background-color: #fff;
+  width: 350px;
+  height: 250px;
+  padding-top: 30px;
+}
+
+#short-name,
+#company-industry,
+#company-address {
+  //width: 420px;
+}
+
+#company-size,
+#company-founded {
+  width: 160px;
+}
+
+#company-website {
+  width: 350px;
+}
+
+#company-des-content {
+  //width: 880px;
+}
+
+.company-size {
+  margin-left: 20px;
+}
+
+.company_property_form{
+  flex: 3;
+}
+
+//==========================
+
+.previewSelectFile{
+  flex: 2;
+  border: 1px solid #ccc;
+  margin: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+}
+
+#previewer{
+  width: 100%;
+  height: 100%;
+}
+
+.company-property-container{
+
+  padding: 50px 30px 30px 30px;
+  flex: 2;
+
+}
+
+#company_scale,
+#company_founder_time,
+#company_location {
+
+  width: 100%;
+  height: 44px;
+  transition: border-color 0.2s;
+  border-radius: 0;
+  border-right-width: 0;
+  border-right-color: initial;
+  border-right-style: initial;
+  color: #333;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.company_business_license_name{
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.form-submit-button{
+  display: flex;
+}

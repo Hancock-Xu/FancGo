@@ -1,0 +1,72 @@
+.resend_verify_email{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.job_property_part1{
+  display: flex;
+}
+
+.job_property_part1_left_part{
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+}
+
+.job_property_part1_right_part{
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+}
+
+.choose-salary{
+  display: flex;
+  justify-content: space-between;
+}
+
+.max_salary_input,
+.min_salary_input{
+  position: relative;
+}
+.min-salary, .max-salary {
+  width: 140px;
+}
+
+.salary-k {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  color: #999;
+  margin-left: 10px;
+}
+
+.salary-to {
+  position: relative;
+  top: 9px;
+}
+
+.job_status_type,
+.job_industry,
+.position_experience,
+.education_degree_select,
+.work_city_select,
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.job_label{
+  //margin-left: 10px;
+}
+
+.job_description_area,
+.desired_skill_experience_area,
+.position_benefit_input,
+.position_point_input{
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  margin-bottom: 20px;
+}
