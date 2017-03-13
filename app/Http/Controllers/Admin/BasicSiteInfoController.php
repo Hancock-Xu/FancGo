@@ -55,6 +55,7 @@ class BasicSiteInfoController extends Controller
 
     public function recruitmentGuidance()
     {
-    	return view('site.recruitment_guidance');
+//    	return view('site.recruitment_guidance');
+	    return view('headhunter.headhunter');
     }
 }
