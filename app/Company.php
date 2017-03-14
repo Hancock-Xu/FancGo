@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * App\Company
@@ -51,7 +51,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Query\Builder|\App\Company wherePassCertificateVerify($value)
  * @mixin \Eloquent
  */
-class Company extends Authenticatable
+class Company extends Model
 {
     //
 
