@@ -1,10 +1,81 @@
+.slogan{
+  width: 100%;
+  background-color: #004771;
+  box-shadow: inset 0px 15px 10px -15px #000;
+}
+
+.partnersLogoCollection{
+  display: flex;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 70px;
+  padding-right: 70px
+}
+
+.partnersLogoCollectionContainer{
+  display: flex;
+}
+
+.partnerLogo{
+  display: inline-block;
+  width: 100px;
+  margin: 2em;
+  flex: 1;
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.partnerLogoFigure{
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.partnerLogoFigureImg{
+  width: 100%;
+  height: 100%;
+}
+
+.experienceContainer{
+  background-color: #f5f5f5;
+  background-size: 100%;
+  background-position: 25% 35%;
+  height: 650px;
+  position: relative;
+}
+
 .specificExperience{
   z-index: 1;
   display: flex;
-  margin: 0 auto;
   width: 980px;
   padding-top: 40px;
-  padding-bottom: 40px
+  padding-bottom: 40px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  box-shadow:0 15px 10px -15px #000;
+
+  background-position: center top;
+  background-size: cover;
+
+  overflow: hidden;
+  border: 1px;
+  border-radius: 5px;
+
 }
 
 .specificExperience:after{
@@ -16,4 +87,95 @@
   bottom: 0;
   background-color: rgba(255,255,255,0.8);
   z-index: -1;
+
+  background-position: -90px -140px;
+  background-size: 115%;;
+  //background-attachment: fixed;
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -ms-filter: blur(20px);
+  -o-filter: blur(20px);
+  filter: blur(20px);
+
+  margin: -30px;
+
+}
+
+.specificExperience-sany{
+  @extend .specificExperience
+}
+
+.specificExperience-sany:after{
+
+  @extend .specificExperience:after;
+  background-image: url(http://localhost:8000/uploads/fengche.jpg);
+}
+
+.specificExperience-celec{
+  @extend .specificExperience
+}
+
+.specificExperience-celec:after{
+
+  @extend .specificExperience:after;
+  background-image: url(http://localhost:8000/uploads/shejitu.jpg);
+
+}
+
+.specificExperiencePrincipal{
+  flex: 1;
+  //padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.principalBoard{
+  background-color: #ffffff;
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  border-radius: 5px;
+}
+
+.principalAvatar{
+  width: 100px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.principalName{
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 15px;
+  font-weight: normal;
+
+  text-align: center;
+  width: 100%;
+}
+
+.specificExperience_desc{
+  flex: 1;
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-right: 20px;
+  //color: whitesmoke;
+}
+
+.principalAvatar{
+  width: 100px;
+}
+
+.avatar{
+  width: 100%;
+  border: 5px solid rgba(0, 0, 0, 0.075);;
+}
+
+.avatarImg{
+  width:100%;
 }
