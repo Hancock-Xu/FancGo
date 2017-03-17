@@ -418,8 +418,58 @@
 
 	</div>
 
-	<div class="material">
+	<div class="materials">
+		<h2 class="color-line" style="margin-left: 20px;">合作企业:</h2>
+		<div class="business_materials">
+			<ul>
+				<li>
 
+				</li>
+				<li>
+
+				</li>
+				<li>
+
+				</li>
+				<li>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="visa_materials">
+			<ul>
+				<li>
+
+				</li>
+				<li>
+
+				</li>
+				<li>
+
+				</li>
+				<li>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="other_materials">
+			<ul>
+				<li>
+
+				</li>
+				<li>
+
+				</li>
+				<li>
+
+				</li>
+				<li>
+
+				</li>
+			</ul>
+		</div>
 	</div>
 
 
