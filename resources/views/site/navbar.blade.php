@@ -30,9 +30,9 @@
 								<a href="{{url('/job/create')}}">Post Job <span class="sr-only">(current)</span></a>
 							</li>
 							<li>
-								<a href="{{action('Admin\BasicSiteInfoController@recruitmentGuidance')}}">Recruitment Guidance<span class="sr-only">(current)</span></a>
+								<a href="{{action('Admin\BasicSiteInfoController@recruitmentGuidance')}}">Headhunter(猎头服务)<span class="sr-only">(current)</span></a>
 							</li>
-							<li><a href="{{action('Admin\BasicSiteInfoController@about')}}">Consulting Services<span class="sr-only">(current)</span></a></li>
+							{{--<li><a href="{{action('Admin\BasicSiteInfoController@about')}}">Consulting Services<span class="sr-only">(current)</span></a></li>--}}
 							{{--<li><a href="#">Guidence <span class="sr-only">(current)</span></a></li>--}}
 						</ul>
 

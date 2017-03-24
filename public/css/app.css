@@ -139,6 +139,12 @@ hr {
 .jb_navbar {
   font-size: 16px; }
 
+.brand {
+  display: -webkit-box;
+  display: flex;
+  padding-top: 13px;
+  padding-bottom: 13px; }
+
 .information-intro-ch-rent span {
   font-size: 14px;
   color: #999; }
@@ -1155,7 +1161,7 @@ select {
   height: 100%; }
 
 .experience {
-  margin-top: 40px;
+  background-color: whitesmoke;
   margin-bottom: 40px; }
 
 .experienceContainer {

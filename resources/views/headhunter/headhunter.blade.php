@@ -104,7 +104,7 @@
 
 			<div class="partnerLogo">
 				<figure class="partnerLogoFigure">
-					<img class="partnerLogoFigureImg" src="/uploads/SANY.png" alt="">
+					<img class="partnerLogoFigureImg" src="/uploads/haihang.png" alt="">
 				</figure>
 			</div>
 		</div>
