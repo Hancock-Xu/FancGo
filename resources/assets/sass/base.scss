@@ -194,10 +194,17 @@ hr {
 }
 
 .center-home {
+  position: absolute;
+  max-width: 350px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   /*margin-left: auto;*/
   /*margin-right: auto;*/
-  margin: 0 auto;
-  width: 500px;
+  //margin: 0 auto;
+  //width: 500px;
 }
 
 .position-btn, .company-btn {
@@ -211,7 +218,7 @@ hr {
 }
 
 #brand-jobleadchina {
-  margin-left: 40px;
+  margin-left: 15px;
 }
 
 .navbar-right {
