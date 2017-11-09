@@ -22,7 +22,7 @@
 						</li>
 						<li style="margin-bottom: 5px">
 							<label>地址 Address : </label>
-							深圳市南山区西海明珠F栋11楼A25
+							深圳市宝安中心区龙光世纪大厦A座15楼
 						</li>
 					</ul>
 				</div>
