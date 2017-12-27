@@ -11,3 +11,4 @@ composer.lock
 _ide_helper.php
 Vagrantfile
 package-lock.json
+.phpstorm.meta.php
