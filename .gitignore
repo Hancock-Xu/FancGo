@@ -7,6 +7,6 @@
 Homestead.yaml
 Homestead.json
 .env
-Vagrantfile
 _ide_helper.php
 package-lock.json
+Vagrantfile
