@@ -1,46 +1,66 @@
-.slogan{
-  width: 100%;
-  background-color: #004771;
-  box-shadow: inset 0px 15px 10px -15px #000;
-}
-
-.partnersLogoCollection{
+.blogThumbnailsCollection{
   display: inline-block;
   width: 100%;
   background-color: #FFFFFF;
-  padding-top: 20px;
+  //padding-top: 20px;
 }
 
-.partnersLogoCollectionContainer{
+.blogThumbnailsCollectionContainer{
   display: flex;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 70px;
-  padding-right: 70px
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1700px;
+  margin: 0 auto;
 }
 
-.partnerLogo{
-  display: inline-block;
-  width: 100px;
-  margin: 2em;
-  flex: 1;
-  -webkit-box-flex: 1;
-  display: -webkit-box;
+.blogThumbnailContainer{
   display: flex;
+
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  margin-top: -4em;
+
+  flex: 1;
+  height: 500px;
+  -webkit-box-flex: 1;
+
   -webkit-box-align: center;
   align-items: center;
   position: relative;
 }
 
-.partnerLogoFigure{
+.blogThumbnail{
+  z-index: 1;
+  //display: flex;
+  height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  align-items: center;
-  margin: 0 auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  box-shadow:0 15px 10px -15px #000;
+
+  background-position: center top;
+  background-size: cover;
+
+  overflow: hidden;
+  border: 1px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+
+.blogThumbnailTitle{
+  margin: 30px 40px 30px 20px;
+}
+
+.partnerLogoFigure{
+  margin: 20px 10px 20px 10px;
+  height: 200px;
 }
 
 .partnerLogoFigureImg{
@@ -48,9 +68,13 @@
   height: 100%;
 }
 
+.blogIntroduction{
+  margin: 20px 10px 30px 10px;
+}
+
 .experience{
 
-  @extend .partnersLogoCollection;
+  @extend .blogThumbnailsCollection;
   background-color: whitesmoke;
   margin-bottom: 40px;
 }
@@ -197,9 +221,50 @@
 
 .avatar{
   width: 100%;
-  border: 5px solid rgba(0, 0, 0, 0.075);;
+  border: 5px solid rgba(0, 0, 0, 0.075);
 }
 
 .avatarImg{
   width:100%;
+}
+
+//=================
+
+.welcome_page_container{
+  background-image: url("http://localhost:8000/images/headhunter/7.jpg");
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: repeat;
+  background-size: contain;
+  margin-bottom: 0;
+  width: 100%;
+  height: 700px;
+}
+
+.slogan_container{
+  display: inline-block;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+.slogan_p{
+  font-size: 45px;
+  background-color: white;
+  padding: 35px;
+  color: #5b6b7b;
+}
+
+.sub_header_container{
+  //display: inline-block;
+}
+
+.sub_head_p{
+  background-color: white;
+  color: #5b6b7b;
+  font-size: 25px;
+  margin-left: 100px;
+  width: 30%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 45px;
 }

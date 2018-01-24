@@ -1,0 +1,16 @@
+//== Buttons
+
+.loadMoreBtn-container{
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 440px;
+}
+
+.loadMore-btn{
+  @include btn-template(16px, 40px, $brand-normal, $brand-primary);
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid transparent;
+}
+

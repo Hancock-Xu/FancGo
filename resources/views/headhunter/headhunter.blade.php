@@ -6,107 +6,108 @@
 
 @section('content')
 
-	<div>
-
-		<div id="myCarousel" class="carousel slide">
-			<!-- 轮播（Carousel）指标 -->
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				{{--<li data-target="#myCarousel" data-slide-to="2"></li>--}}
-			</ol>
-			<!-- 轮播（Carousel）项目 -->
-			<div class="carousel-inner">
-				{{--<div class="item active">--}}
-					{{--<img src="/images/intro-01.png" alt="First slide">--}}
-					{{--<div class="jumbotron" style="background-color: #694c9c; width: 100%; height: 350px; margin-bottom: 0px">--}}
-						{{--<h1 style="color: #fefefe;margin-left: 70px;">Post Job For Free !</h1>--}}
-						{{--<p style="color: #fefefe;margin-left: 70px;width: 600px;padding-top: 40px;">Make recruiting foreign talents more easier</p>--}}
-						{{--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>--}}
-					{{--</div>--}}
-				{{--</div>--}}
-				<div class="item active">
-					{{--<img src="/images/intro-02.png" alt="Second slide">--}}
-					<div class="jumbotron" style="background-image: url(http://localhost:8000/uploads/Partnership-UK-1.jpg); background-attachment: fixed;background-position: top; background-repeat: no-repeat; background-size: 100%; width: 100%; height: 400px; margin-bottom: 0;">
-						{{--<h1 style="color: #fefefe;margin-left: 70px;">用世界的力量,助力企业成长</h1>--}}
-						{{--<p style="color: #fefefe;margin-left: 70px;width: 600px;padding-top: 40px;">Make recruiting foreign talents more easier</p>--}}
-						{{--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>--}}
-					</div>
-				</div>
-				<div class="item">
-					{{--<img src="/images/intro-03.png" alt="Third slide">--}}
-					<div class="jumbotron" style="background-image: url(http://localhost:8000/uploads/Aviation-UK-1.jpg); background-attachment:scroll;background-position: top;background-repeat:no-repeat; width: 100%; background-size: 100%; height: 400px; margin-bottom: 0px">
-						<h1 style="color: #fefefe;margin-left: 70px;">Post Job For Free !</h1>
-						<p style="color: #fefefe;margin-left: 70px;width: 600px;padding-top: 40px;">Make recruiting foreign talents more easier</p>
-						{{--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>--}}
-					</div>
-				</div>
-			</div>
-			<!-- 轮播（Carousel）导航 -->
-
-			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-				<span class="icon-prev" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-				<span class="icon-next" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-
-
+	<div class="welcome_page_container">
+        <div class="slogan_container" id="test_1">
+            <p class="slogan_p">致力于为客户引进专业领域外籍人才!</p>
+        </div>
+        <div class="sub_header_container">
+            <p class="sub_head_p">Make recruiting foreign talents more easier</p>
+        </div>
 	</div>
 
-	<div class="slogan">
-		<h2 style="padding: 20px 20px; width: 500px; margin: 0 auto; color: #b5e3fe"> JobLeadChina 是最高效的外籍人才招聘猎头</h2>
-	</div>
 
-	<div class="partnersLogoCollection">
+	<div class="blogThumbnailsCollection">
 
-		{{--<h2 style="padding-top: 14px; padding-left:  14px; color: #5b6b7b; margin: 0px">合作商代表</h2>--}}
+		<div class="blogThumbnailsCollectionContainer">
 
-		<h2 class="color-line" style="margin-left: 20px;">合作企业:</h2>
+			<div class="blogThumbnailContainer">
 
-		<div class="partnersLogoCollectionContainer">
+				<div class="blogThumbnail">
+					<h3 class="blogThumbnailTitle color-line">
+						猎头在人才招聘中的作用以及如何选择靠谱的猎头公司
+					</h3>
+					<figure class="partnerLogoFigure">
+						<img class="partnerLogoFigureImg" src="http://localhost:8000/images/headhunter/people_comes_and_go.jpg" alt="">
+					</figure>
+					<p class="blogIntroduction">
+                        background-attachment: fixed;
+                        background-position: top center;
+                        background-repeat: repeat;
+                        background-size: contain;    background-attachment: fixed;
+                        background-position: top center;
+                        background-repeat: repeat;
+                        background-size: contain;
+					</p>
+				</div>
 
-			<div class="partnerLogo">
-				<figure class="partnerLogoFigure">
-					<img class="partnerLogoFigureImg" src="/uploads/NetEaseGames.png" alt="">
-				</figure>
-			</div>
-			<div class="partnerLogo">
-				<figure class="partnerLogoFigure">
-					<img class="partnerLogoFigureImg" style="width: 50px;" src="/uploads/SANYZG.png" alt="">
-
-				</figure>
-			</div>
-			<div class="partnerLogo">
-				<figure class="partnerLogoFigure">
-					<img class="partnerLogoFigureImg" src="/uploads/SFExpress.svg.png" alt="">
-				</figure>
-			</div>
-			<div class="partnerLogo">
-				<figure class="partnerLogoFigure">
-					<img class="partnerLogoFigureImg" src="/uploads/shclearing.png" alt="">
-				</figure>
-			</div>
-			<div class="partnerLogo">
-				<figure class="partnerLogoFigure">
-					<img class="partnerLogoFigureImg" style="width: 70px;" src="/uploads/TAETEA.jpg" alt="">
-				</figure>
 			</div>
 
-			<div class="partnerLogo">
-				<figure class="partnerLogoFigure">
-					<img class="partnerLogoFigureImg" src="/uploads/CELEC.jpg" alt="">
-				</figure>
-			</div>
+            <div class="blogThumbnailContainer">
 
-			<div class="partnerLogo">
-				<figure class="partnerLogoFigure">
-					<img class="partnerLogoFigureImg" src="/uploads/haihang.png" alt="">
-				</figure>
-			</div>
+                <div class="blogThumbnail">
+                    <h3 class="blogThumbnailTitle color-line">
+                        猎头在人才招聘中的作用以及如何选择靠谱的猎头公司
+                    </h3>
+                    <figure class="partnerLogoFigure">
+                        <img class="partnerLogoFigureImg" src="http://localhost:8000/images/headhunter/1.jpg" alt="">
+                    </figure>
+                    <p class="blogIntroduction">
+                        background-attachment: fixed;
+                        background-position: top center;
+                        background-repeat: repeat;
+                        background-size: contain;    background-attachment: fixed;
+                        background-position: top center;
+                        background-repeat: repeat;
+                        background-size: contain;
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="blogThumbnailContainer">
+
+                <div class="blogThumbnail">
+                    <h3 class="blogThumbnailTitle color-line">
+                        猎头在人才招聘中的作用以及如何选择靠谱的猎头公司
+                    </h3>
+                    <figure class="partnerLogoFigure">
+                        <img class="partnerLogoFigureImg" src="http://localhost:8000/images/headhunter/5.jpg" alt="">
+                    </figure>
+                    <p class="blogIntroduction">
+                        background-attachment: fixed;
+                        background-position: top center;
+                        background-repeat: repeat;
+                        background-size: contain;    background-attachment: fixed;
+                        background-position: top center;
+                        background-repeat: repeat;
+                        background-size: contain;
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="blogThumbnailContainer">
+
+                <div class="blogThumbnail">
+                    <h3 class="blogThumbnailTitle color-line">
+                        猎头在人才招聘中的作用以及如何选择靠谱的猎头公司
+                    </h3>
+                    <figure class="partnerLogoFigure">
+                        <img class="partnerLogoFigureImg" src="http://localhost:8000/images/headhunter/business_building.jpg" alt="">
+                    </figure>
+                    <p class="blogIntroduction">
+                        background-attachment: fixed;
+                        background-position: top center;
+                        background-repeat: repeat;
+                        background-size: contain;    background-attachment: fixed;
+                        background-position: top center;
+                        background-repeat: repeat;
+                        background-size: contain;
+                    </p>
+                </div>
+
+            </div>
 		</div>
 
 	</div>

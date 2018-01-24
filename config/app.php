@@ -149,7 +149,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 	    Illuminate\Notifications\NotificationServiceProvider::class,
-        Overtrue\LaravelWechat\ServiceProvider::class,
 	    Roumen\Sitemap\SitemapServiceProvider::class,
 
         /*
@@ -163,7 +162,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
         App\Providers\VerifyEmailProvider::class,
-	    BackupManager\Laravel\Laravel5ServiceProvider::class,
+	    BackupManager\Laravel\Laravel55ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class
     ],
 

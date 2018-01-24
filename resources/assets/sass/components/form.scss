@@ -1,0 +1,28 @@
+//== Forms
+.form-group {
+  .form-city,.form-jobtype{
+    border-color: $border-color;
+    &:focus {
+      border-color: darken($border-color, 6.5%)
+    }
+    &:active {
+      border-color: $brand-primary;
+    }
+  }
+}
+
+.form-control {
+  width: 370px;
+  padding-right: 30px;
+  //margin-left:10px;
+}
+
+.control-label{
+  @extend .control-label;
+  padding-right: 10px !important;
+}
+
+.form-group {
+  position: relative;
+}
+

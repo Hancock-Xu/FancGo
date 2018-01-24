@@ -1,7 +1,7 @@
 // var elixir = require('laravel-elixir');
 const elixir = require('laravel-elixir');
 
-require('laravel-elixir-vue');
+//require('laravel-elixir-vue');
 // require('jquery');
 // require('bootstrap-sass');
 
@@ -29,7 +29,7 @@ elixir(function(mix) {
         .browserify('previewUploadFile.js')
         .browserify('upload_resume.js');
     // mix.phpUnit();
-    mix.webpack('main.js');
+    // mix.webpack('main.js');
 
     mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap/','public/fonts/bootstrap');
 });
