@@ -479,7 +479,7 @@ div.refine-position-item:nth-child(odd) {
   width: 100%;
   height: 3px;
   overflow: hidden;
-  background-color: #694c9c;
+  background-color: #004785;
 }
 
 /*Search Bar*/
@@ -799,7 +799,7 @@ div.refine-position-item:nth-child(odd) {
 
 .moreInformation h2, .information-intro-en h3, .information-intro-en h4,
 .information-intro-ch-HR h4, .information-intro-ch-rent h4 {
-  color: #694c9c;
+  color: #004785;
 }
 
 .head-hunter, .information-intro-ch-HR, .information-intro-ch-rent {
@@ -897,7 +897,7 @@ div.jobThumbnail:nth-child(odd) {
 }
 
 .color-line {
-  border-left: 5px solid #694c9c;
+  border-left: 5px solid #004785;
   padding-left: 10px;
 }
 
@@ -925,7 +925,7 @@ div.jobThumbnail:nth-child(odd) {
 }
 
 .company-info-title P {
-  color: #694c9c;
+  color: #004785;
   font-size: 18px;
   margin-top: 10px;
 }
@@ -996,7 +996,7 @@ div.jobThumbnail:nth-child(odd) {
   width: 200px;
   min-width: 100px;
   margin: 0;
-  background-color: #694c9c;
+  background-color: #004785;
   float: left;
 }
 
@@ -1117,7 +1117,7 @@ post job 验证邮箱页面验证企业邮箱,并上传企业营业执照
 
 /*邮箱验证和营业执照验证*/
 .verify-info h4 {
-  color: #694c9c;
+  color: #004785;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -1362,13 +1362,13 @@ select {
 
 .second-subtitle {
   color: #fff;
-  background: #694c9c;
+  background: #004785;
   padding: 10px 20px;
   margin-top: 30px;
 }
 
 .extra-instruction {
-  color: #694c9c;
+  color: #004785;
 }
 
 /*设置*/
