@@ -6,6 +6,13 @@
 }
 
 
+div.jobThumbnail:nth-child(even) {
+  background-color: #fafafa;
+}
+
+div.jobThumbnail:nth-child(odd) {
+  background-color: #fefefe;
+}
 
 
 

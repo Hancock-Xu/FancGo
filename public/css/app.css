@@ -133,13 +133,24 @@
 }
 
 .jobThumbnail {
+  display: -webkit-flex;
+  width: 980px !important;
   margin: 0 auto;
 }
 
 .jobThumbnailCompanyLogo, .companyThumbnailCompanyLogo {
+  -webkit-box-flex: 1;
+  flex: 1;
   margin: 10px;
+  display: -webkit-box;
+  display: flex;
   -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 150px;
+  position: relative;
+  height: 150px;
 }
 
 .jobThumbnailCompanyLogo_figure, .companyThumbnailCompanyLogo_figure {
@@ -159,10 +170,14 @@
 }
 
 .jobThumbnailPosition {
+  -webkit-box-flex: 3;
+  flex: 3;
   margin: 10px;
 }
 
 .jobThumbnailCompany {
+  -webkit-box-flex: 2;
+  flex: 2;
   margin: 10px;
   margin-left: 30px;
 }
@@ -317,6 +332,11 @@ hr {
   top: 40px;
   right: 10px;
   color: #999;
+}
+
+.container {
+  margin-top: 60px;
+  width: 1140px !important;
 }
 
 .content_container {
@@ -791,6 +811,14 @@ div.refine-position-item:nth-child(odd) {
   max-width: 980px;
   margin: 0 auto;
   margin-top: 50px;
+}
+
+div.jobThumbnail:nth-child(even) {
+  background-color: #fafafa;
+}
+
+div.jobThumbnail:nth-child(odd) {
+  background-color: #fefefe;
 }
 
 /*job detail页面*/

@@ -1,12 +1,12 @@
 <div class="jobThumbnail">
 
-    <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2, jobThumbnailCompanyLogo">
+    <div class="jobThumbnailCompanyLogo">
         <figure class="jobThumbnailCompanyLogo_figure">
             <img class="jobThumbnailCompanyLogoImg" src="{{$job->logo_url}}" title="{{$job->company_name}}" alt="{{$job->company_name}} Company logo">
         </figure>
     </div>
 
-    <div class="col-xs-9 col-sm-9 col-md-6 col-lg-6, jobThumbnailPosition">
+    <div class="jobThumbnailPosition">
         <div class="jobThumbnailPositionName">
             <h3 class="positionTitle">
                 <a href="{{ action('Admin\JobController@show',[$job->id]) }}">{{$job->job_title}}</a>
@@ -34,7 +34,7 @@
 
     </div>
 
-    <div class="col-md-4 col-lg-4, jobThumbnailCompany">
+    <div class="jobThumbnailCompany">
         <div class="jobThumbnailCompanyName">
             <h3 class="companyName">
                 <a href="{{ action('Admin\JobController@show',[$job->id]) }}">{{$job->company_name}}</a>

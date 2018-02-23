@@ -10,28 +10,11 @@
 
 		@include('Jobs.index_partial.searchbar')
 
-		{{--<ul class="nav nav-tabs">--}}
-			{{--<li class="active" data-toggle="tab">--}}
-				{{--<a href="#jobs">Jobs</a>--}}
-			{{--</li>--}}
-			{{--<li>--}}
-				{{--<a href="" data-toggle="tab">others</a>--}}
-			{{--</li>--}}
-		{{--</ul>--}}
-
-
-
-
-
 		<div id="jobs" class="joblist">
 
 			@foreach ($jobs as $job)
 
-				<div class="row">
-
-					@include('Jobs.index_partial.jobListCell')
-
-				</div>
+				@include('Jobs.index_partial.jobListCell')
 
 			@endforeach
 
