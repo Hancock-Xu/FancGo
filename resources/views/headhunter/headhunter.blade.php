@@ -87,27 +87,27 @@
             </div>
 
 
-            <div class="blogThumbnailContainer">
+            {{--<div class="blogThumbnailContainer">--}}
 
-                <div class="blogThumbnail">
-                    <h3 class="blogThumbnailTitle color-line">
-                        猎头在人才招聘中的作用以及如何选择靠谱的猎头公司
-                    </h3>
-                    <figure class="partnerLogoFigure">
-                        <img class="partnerLogoFigureImg" src="http://localhost:8000/images/headhunter/business_building.jpg" alt="">
-                    </figure>
-                    <p class="blogIntroduction">
-                        background-attachment: fixed;
-                        background-position: top center;
-                        background-repeat: repeat;
-                        background-size: contain;    background-attachment: fixed;
-                        background-position: top center;
-                        background-repeat: repeat;
-                        background-size: contain;
-                    </p>
-                </div>
+                {{--<div class="blogThumbnail">--}}
+                    {{--<h3 class="blogThumbnailTitle color-line">--}}
+                        {{--猎头在人才招聘中的作用以及如何选择靠谱的猎头公司--}}
+                    {{--</h3>--}}
+                    {{--<figure class="partnerLogoFigure">--}}
+                        {{--<img class="partnerLogoFigureImg" src="http://localhost:8000/images/headhunter/business_building.jpg" alt="">--}}
+                    {{--</figure>--}}
+                    {{--<p class="blogIntroduction">--}}
+                        {{--background-attachment: fixed;--}}
+                        {{--background-position: top center;--}}
+                        {{--background-repeat: repeat;--}}
+                        {{--background-size: contain;    background-attachment: fixed;--}}
+                        {{--background-position: top center;--}}
+                        {{--background-repeat: repeat;--}}
+                        {{--background-size: contain;--}}
+                    {{--</p>--}}
+                {{--</div>--}}
 
-            </div>
+            {{--</div>--}}
 		</div>
 
 	</div>
@@ -419,58 +419,80 @@
 
 	</div>
 
-	<div class="materials">
+	<div class="partnersLogoCollection">
 		<h2 class="color-line" style="margin-left: 20px;">合作企业:</h2>
-		<div class="business_materials">
-			<ul>
-				<li>
 
-				</li>
-				<li>
+		<div class="partnersLogoCollectionContainer">
 
-				</li>
-				<li>
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img class="partnerLogoFigureImg" src="/images/customers/shunfeng.png" alt="">
+				</figure>
+			</div>
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img style="height: 80px;" class="partnerLogoFigureImg" src="/images/customers/sany.png" alt="">
 
-				</li>
-				<li>
+				</figure>
+			</div>
 
-				</li>
-			</ul>
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img style="height: 80px" class="partnerLogoFigureImg" src="/images/customers/netease_games.png" alt="">
+				</figure>
+			</div>
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img class="partnerLogoFigureImg" src="/images/customers/zhongguoshiyou.png" alt="">
+				</figure>
+			</div>
+
+
+
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img class="partnerLogoFigureImg" src="/images/customers/tencent.png" alt="">
+				</figure>
+			</div>
+
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img style="height: 80px;" class="partnerLogoFigureImg" src="/images/customers/pactera.png" alt="">
+				</figure>
+			</div>
+
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img class="partnerLogoFigureImg" src="/images/customers/celec.png" alt="">
+				</figure>
+			</div>
+
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img class="partnerLogoFigureImg" src="/images/customers/zhongjia.png" alt="">
+				</figure>
+			</div>
+
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img style="height: 110px;" class="partnerLogoFigureImg" src="/images/customers/opera.png" alt="">
+				</figure>
+			</div>
+
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img class="partnerLogoFigureImg" src="/images/customers/360.png" alt="">
+				</figure>
+			</div>
+
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img style="height: 70px" class="partnerLogoFigureImg" src="/images/customers/hna.png" alt="">
+				</figure>
+			</div>
+
 		</div>
 
-		<div class="visa_materials">
-			<ul>
-				<li>
-
-				</li>
-				<li>
-
-				</li>
-				<li>
-
-				</li>
-				<li>
-
-				</li>
-			</ul>
-		</div>
-
-		<div class="other_materials">
-			<ul>
-				<li>
-
-				</li>
-				<li>
-
-				</li>
-				<li>
-
-				</li>
-				<li>
-
-				</li>
-			</ul>
-		</div>
 	</div>
 
 

@@ -1437,16 +1437,6 @@ select {
   margin: 30px 40px 30px 20px;
 }
 
-.partnerLogoFigure {
-  margin: 20px 10px 20px 10px;
-  height: 200px;
-}
-
-.partnerLogoFigureImg {
-  width: 100%;
-  height: 100%;
-}
-
 .blogIntroduction {
   margin: 20px 10px 30px 10px;
 }
@@ -1573,38 +1563,71 @@ select {
 }
 
 .welcome_page_container {
-  background-image: url("http://localhost:8000/images/headhunter/7.jpg");
+  background-image: url("http://localhost:8000/images/headhunter/recruitment_guidance_banner.jpg");
   background-attachment: fixed;
-  background-position: top center;
-  background-repeat: repeat;
-  background-size: contain;
-  margin-bottom: 0;
+  background-repeat: no-repeat;
+  background-position: top,center;
   width: 100%;
-  height: 700px;
+  margin-bottom: 0;
+  height: 430px;
 }
 
 .slogan_container {
   display: inline-block;
-  margin-left: 100px;
+  margin-left: 80px;
   margin-top: 100px;
 }
 
 .slogan_p {
-  font-size: 45px;
-  background-color: white;
-  padding: 35px;
-  color: #5b6b7b;
+  font-size: 50px;
+  padding: 10px;
+  color: white;
 }
 
 .sub_head_p {
-  background-color: white;
-  color: #5b6b7b;
+  color: white;
   font-size: 25px;
-  margin-left: 100px;
-  width: 30%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 45px;
+  margin-left: 80px;
+  width: 100%;
+  padding: 10px;
+}
+
+.partnersLogoCollection {
+  display: inline-block;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding-top: 20px;
+}
+
+.partnersLogoCollectionContainer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.partnerLogo {
+  display: inline-block;
+  margin: 2em;
+  float: left;
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.partnerLogoFigure {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.partnerLogoFigureImg {
+  height: 100px;
 }
 
 /*!
