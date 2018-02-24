@@ -26,8 +26,8 @@
 					<h3 class="blogThumbnailTitle color-line">
 						猎头在人才招聘中的作用以及如何选择靠谱的猎头公司
 					</h3>
-					<figure class="partnerLogoFigure">
-						<img class="partnerLogoFigureImg" src="http://localhost:8000/images/headhunter/people_comes_and_go.jpg" alt="">
+					<figure class="blogFigure">
+						<img class="blogFigureImg" src="http://localhost:8000/images/headhunter/people_comes_and_go.jpg" alt="">
 					</figure>
 					<p class="blogIntroduction">
                         background-attachment: fixed;
@@ -48,8 +48,8 @@
                     <h3 class="blogThumbnailTitle color-line">
                         猎头在人才招聘中的作用以及如何选择靠谱的猎头公司
                     </h3>
-                    <figure class="partnerLogoFigure">
-                        <img class="partnerLogoFigureImg" src="http://localhost:8000/images/headhunter/1.jpg" alt="">
+                    <figure class="blogFigure">
+                        <img class="blogFigureImg" src="http://localhost:8000/images/headhunter/1.jpg" alt="">
                     </figure>
                     <p class="blogIntroduction">
                         background-attachment: fixed;
@@ -70,8 +70,8 @@
                     <h3 class="blogThumbnailTitle color-line">
                         猎头在人才招聘中的作用以及如何选择靠谱的猎头公司
                     </h3>
-                    <figure class="partnerLogoFigure">
-                        <img class="partnerLogoFigureImg" src="http://localhost:8000/images/headhunter/5.jpg" alt="">
+                    <figure class="blogFigure">
+                        <img class="blogFigureImg" src="http://localhost:8000/images/headhunter/5.jpg" alt="">
                     </figure>
                     <p class="blogIntroduction">
                         background-attachment: fixed;
@@ -415,7 +415,55 @@
 
 		</div>
 
+	</div>
 
+	<div class="feature_wrap">
+
+		<div class="feature_row">
+
+			<div class="feature">
+				
+			</div>
+
+			<div class="feature">
+
+			</div>
+
+		</div>
+
+		<div class="feature_row">
+
+			<div class="feature">
+
+			</div>
+
+			<div class="feature">
+
+			</div>
+
+		</div>
+
+		<div class="feature_row">
+
+			<div class="feature">
+
+			</div>
+
+			<div class="feature">
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="customer-feedback-container">
+		<div class="customer-feedback-wrap">
+
+			<h2 class="customer-feedback"><span>“ </span>在我们用过的猎头中，很多都是面对难度大的岗位推了三四份简历就没有下文了。你们对岗位需求能够短时间把握，长期坚持，推荐的人也越来越适合我们。就沟通方式来说我更喜欢你们松紧有度的方式。海外招聘的猎头中，你们是非常给力的！<span> ”</span></h2>
+			<p class="customer">————国内某知名互联网游戏公司HR</p>
+
+		</div>
 
 	</div>
 
@@ -429,6 +477,7 @@
 					<img class="partnerLogoFigureImg" src="/images/customers/shunfeng.png" alt="">
 				</figure>
 			</div>
+
 			<div class="partnerLogo">
 				<figure class="partnerLogoFigure">
 					<img style="height: 80px;" class="partnerLogoFigureImg" src="/images/customers/sany.png" alt="">
@@ -441,12 +490,12 @@
 					<img style="height: 80px" class="partnerLogoFigureImg" src="/images/customers/netease_games.png" alt="">
 				</figure>
 			</div>
+
 			<div class="partnerLogo">
 				<figure class="partnerLogoFigure">
-					<img class="partnerLogoFigureImg" src="/images/customers/zhongguoshiyou.png" alt="">
+					<img style="height: 110px;" class="partnerLogoFigureImg" src="/images/customers/opera.png" alt="">
 				</figure>
 			</div>
-
 
 
 			<div class="partnerLogo">
@@ -461,6 +510,27 @@
 				</figure>
 			</div>
 
+
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img class="partnerLogoFigureImg" src="/images/customers/360.png" alt="">
+				</figure>
+			</div>
+
+
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img class="partnerLogoFigureImg" src="/images/customers/zhongjia.png" alt="">
+				</figure>
+			</div>
+
+
+			<div class="partnerLogo">
+				<figure class="partnerLogoFigure">
+					<img class="partnerLogoFigureImg" src="/images/customers/zhongguoshiyou.png" alt="">
+				</figure>
+			</div>
+
 			<div class="partnerLogo">
 				<figure class="partnerLogoFigure">
 					<img class="partnerLogoFigureImg" src="/images/customers/celec.png" alt="">
@@ -469,25 +539,7 @@
 
 			<div class="partnerLogo">
 				<figure class="partnerLogoFigure">
-					<img class="partnerLogoFigureImg" src="/images/customers/zhongjia.png" alt="">
-				</figure>
-			</div>
-
-			<div class="partnerLogo">
-				<figure class="partnerLogoFigure">
-					<img style="height: 110px;" class="partnerLogoFigureImg" src="/images/customers/opera.png" alt="">
-				</figure>
-			</div>
-
-			<div class="partnerLogo">
-				<figure class="partnerLogoFigure">
-					<img class="partnerLogoFigureImg" src="/images/customers/360.png" alt="">
-				</figure>
-			</div>
-
-			<div class="partnerLogo">
-				<figure class="partnerLogoFigure">
-					<img style="height: 70px" class="partnerLogoFigureImg" src="/images/customers/hna.png" alt="">
+					<img style="height: 65px" class="partnerLogoFigureImg" src="/images/customers/hna.png" alt="">
 				</figure>
 			</div>
 
