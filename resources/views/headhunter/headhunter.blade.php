@@ -15,7 +15,6 @@
         </div>
 	</div>
 
-
 	<div class="blogThumbnailsCollection">
 
 		<div class="blogThumbnailsCollectionContainer">
@@ -24,19 +23,12 @@
 
 				<div class="blogThumbnail">
 					<h3 class="blogThumbnailTitle color-line">
-						猎头在人才招聘中的作用以及如何选择靠谱的猎头公司
+						猎头在人才招聘中的作用，如何选择靠谱的猎头公司？
 					</h3>
 					<figure class="blogFigure">
 						<img class="blogFigureImg" src="http://localhost:8000/images/headhunter/people_comes_and_go.jpg" alt="">
 					</figure>
 					<p class="blogIntroduction">
-                        background-attachment: fixed;
-                        background-position: top center;
-                        background-repeat: repeat;
-                        background-size: contain;    background-attachment: fixed;
-                        background-position: top center;
-                        background-repeat: repeat;
-                        background-size: contain;
 					</p>
 				</div>
 
@@ -46,19 +38,12 @@
 
                 <div class="blogThumbnail">
                     <h3 class="blogThumbnailTitle color-line">
-                        猎头在人才招聘中的作用以及如何选择靠谱的猎头公司
+                        对海外人才市场不了解，如何设定合理的薪资福利？
                     </h3>
                     <figure class="blogFigure">
                         <img class="blogFigureImg" src="http://localhost:8000/images/headhunter/1.jpg" alt="">
                     </figure>
                     <p class="blogIntroduction">
-                        background-attachment: fixed;
-                        background-position: top center;
-                        background-repeat: repeat;
-                        background-size: contain;    background-attachment: fixed;
-                        background-position: top center;
-                        background-repeat: repeat;
-                        background-size: contain;
                     </p>
                 </div>
 
@@ -68,19 +53,12 @@
 
                 <div class="blogThumbnail">
                     <h3 class="blogThumbnailTitle color-line">
-                        猎头在人才招聘中的作用以及如何选择靠谱的猎头公司
+                        外籍候选人入职后如何办理工作签证和工作许可等证件？
                     </h3>
                     <figure class="blogFigure">
                         <img class="blogFigureImg" src="http://localhost:8000/images/headhunter/5.jpg" alt="">
                     </figure>
                     <p class="blogIntroduction">
-                        background-attachment: fixed;
-                        background-position: top center;
-                        background-repeat: repeat;
-                        background-size: contain;    background-attachment: fixed;
-                        background-position: top center;
-                        background-repeat: repeat;
-                        background-size: contain;
                     </p>
                 </div>
 
@@ -88,6 +66,75 @@
 
 		</div>
 
+	</div>
+
+	<div class="features">
+		<p class="why-choose-us">海外招聘遇到这些难题？</p>
+		<ul class="features-ul">
+			<li class="feature">
+				<div class="feature-image-container">
+					<img class="feature-image" src="http://localhost:8000/images/headhunter/zhaopinqudao.jpg" alt="">
+				</div>
+				<div class="feature-title-container">
+					<div class="feature-title">
+						海外招聘如何选择招聘渠道？
+					</div>
+				</div>
+			</li>
+			<li class="feature">
+				<div class="feature-image-container">
+					<img class="feature-image" src="http://localhost:8000/images/headhunter/xiyinlaihua.jpg" alt="">
+				</div>
+				<div class="feature-title-container">
+					<div class="">
+
+					</div>
+				</div>
+			</li>
+			<li class="feature">
+				<div class="feature-image-container">
+					<img class="feature-image" src="http://localhost:8000/images/headhunter/xinchou.jpg" alt="">
+				</div>
+				<div class="feature-title-container">
+					<div class="">
+
+					</div>
+				</div>
+			</li>
+			<li class="feature">
+				<div class="feature-image-container">
+					<img class="feature-image" src="http://localhost:8000/images/headhunter/gongzuoqianzheng.png" alt="">
+				</div>
+				<div class="feature-title-container">
+					<div class="">
+
+					</div>
+				</div>
+			</li>
+			<li class="feature">
+				<div class="feature-image-container">
+					<img class="feature-image" src="http://localhost:8000/images/headhunter/qiyewenhua.jpg" alt="">
+				</div>
+				<div class="feature-title-container">
+					<div class="">
+
+					</div>
+				</div>
+			</li>
+			<li class="feature">
+				<div class="feature-image-container">
+					<img class="feature-image" src="http://localhost:8000/images/headhunter/5.jpg" alt="">
+				</div>
+				<div class="feature-title-container">
+					<div class="">
+
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="clear">
+
+		</div>
 	</div>
 
 	<div class="customer-feedback-container">
@@ -168,46 +215,38 @@
 
 	</div>
 
-	<div class="features">
+	<div class="advantages">
+		<p class="why-choose-us">为什么选择我们</p>
+		<div class="advantages-wrap">
+			<ul class="">
+						<li class="advantage">
+							<h1 class="advantage-title">行业细分，定位清晰</h1>
+							<p class="advantage-detail">专注于专业领域外籍人才招聘，解决企业引进外籍人才招聘痛点</p>
+						</li>
 
-		<div class="features-container">
-
-			<p class="why-choose-us">为什么选择我们</p>
-
-			<div class="features-wrap">
-
-				<div class="features-bag">
-
-					<div class="specificExperiencePrincipal">
-
-						<h1 class="features-title">行业细分，定位清晰</h1>
-						<p class="feature-detail">专注于专业领域外籍人才招聘，解决企业引进外籍人才招聘痛点</p>
-
-						<h1 class="features-title">信誉优良</h1>
-						<p class="feature-detail">公司90%的业务都来自于长期合作及客户推荐，我们深耕每一个项目，和客户保持长期的合作关系</p>
-						<h1 class="features-title">优秀的顾问团队</h1>
-						<p class="feature-detail">顾问团队英语优秀，和外籍候选人沟通顺畅。丰富的从业经验，善于把握岗位需求，对候选人质量精益求精</p>
-					</div>
-
-					<div class="specificExperience_desc">
-						<h1 class="features-title">善于攻坚难度大的岗位</h1>
-						<p class="feature-detail">我们采用高底薪低提成的激励机制，顾问团队专业稳定。能自始自终长期跟进完成招聘项目</p>
-						<h1 class="features-title">提供优质的附加服务</h1>
-						<p class="feature-detail">我们为企业提供薪酬谈判和行业薪酬报告，帮助企业制定出合理的薪资水平</p>
-						<h1 class="features-title">提供长达半年的保证期</h1>
-						<p class="feature-detail">为企业提供长达6个月的保证期，候选人保证期内离职，我们免费提供候补候选人</p>
-					</div>
-
-				</div>
-
-
-
-			</div>
-
+						<li class="advantage">
+							<h1 class="advantage-title">信誉优良</h1>
+							<p class="advantage-detail">公司90%的业务都来自于长期合作及客户推荐，我们深耕每一个项目，和客户保持长期的合作关系</p>
+						</li>
+						<li class="advantage">
+							<h1 class="advantage-title">优秀的顾问团队</h1>
+							<p class="advantage-detail">顾问团队英语优秀，和外籍候选人沟通顺畅。丰富的从业经验，善于把握岗位需求，对候选人质量精益求精</p>
+						</li>
+						<li class="advantage">
+							<h1 class="advantage-title">善于攻坚难度大的岗位</h1>
+							<p class="advantage-detail">我们采用高底薪低提成的激励机制，顾问团队专业稳定。能自始自终长期跟进完成招聘项目</p>
+						</li>
+						<li class="advantage">
+							<h1 class="advantage-title">提供优质的附加服务</h1>
+							<p class="advantage-detail">我们为企业提供薪酬谈判和行业薪酬报告，帮助企业制定出合理的薪资水平</p>
+						</li>
+						<li class="advantage">
+							<h1 class="advantage-title">提供长达半年的保证期</h1>
+							<p class="advantage-detail">为企业提供长达6个月的保证期，候选人保证期内离职，我们免费提供候补候选人</p>
+						</li>
+					</ul>
 		</div>
-
 	</div>
-
 
 	<div class="customer-feedback-container">
 		<div class="customer-feedback-wrap">
@@ -308,6 +347,5 @@
 		</div>
 
 	</div>
-
 
 @stop
