@@ -475,3 +475,70 @@
   margin: 0 auto;
   padding: 10px;
 }
+
+//===============
+
+.description_package{
+
+  height: 350px;
+}
+
+//===============
+
+.features{
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.feature{
+  float: left;
+  width: 300px;
+  height: 300px;
+  list-style: none;
+  position: relative;
+  margin: 10px;
+  background-color: white;
+}
+
+.feature-image-container{
+  //background-image: url("http://localhost:8000/images/headhunter/recruitment_guidance_banner.jpg");
+
+}
+
+.feature-image{
+  width: 100%;
+  height: 100%;
+}
+
+.feature-title-container{
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 150px;
+  background: #e5ba2e;
+}
+
+.feature-title{
+  font-weight: 400;
+  text-align: center;
+  padding-top: 58px;
+  padding-bottom: 58px;
+  height: 92px;
+  color: #FFFFFF;
+  font-size: 16px;
+  transition: height 0.5s;
+}
+
+.features-ul{
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.clear{
+  clear: both;
+}
