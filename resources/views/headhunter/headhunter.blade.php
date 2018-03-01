@@ -86,8 +86,8 @@
 					<img class="feature-image" src="http://localhost:8000/images/headhunter/xiyinlaihua.jpg" alt="">
 				</div>
 				<div class="feature-title-container">
-					<div class="">
-
+					<div class="feature-title">
+						如何吸引外籍人才来华工作？
 					</div>
 				</div>
 			</li>
@@ -96,8 +96,8 @@
 					<img class="feature-image" src="http://localhost:8000/images/headhunter/xinchou.jpg" alt="">
 				</div>
 				<div class="feature-title-container">
-					<div class="">
-
+					<div class="feature-title">
+						海外招聘如何确定岗位薪酬？
 					</div>
 				</div>
 			</li>
@@ -106,8 +106,8 @@
 					<img class="feature-image" src="http://localhost:8000/images/headhunter/gongzuoqianzheng.png" alt="">
 				</div>
 				<div class="feature-title-container">
-					<div class="">
-
+					<div class="feature-title">
+						如何给外籍候选人办理工作签证，就业许可？
 					</div>
 				</div>
 			</li>
@@ -116,8 +116,8 @@
 					<img class="feature-image" src="http://localhost:8000/images/headhunter/qiyewenhua.jpg" alt="">
 				</div>
 				<div class="feature-title-container">
-					<div class="">
-
+					<div class="feature-title">
+						如何让候选人更加适应企业文化？
 					</div>
 				</div>
 			</li>
@@ -126,7 +126,7 @@
 					<img class="feature-image" src="http://localhost:8000/images/headhunter/5.jpg" alt="">
 				</div>
 				<div class="feature-title-container">
-					<div class="">
+					<div class="feature-title">
 
 					</div>
 				</div>
