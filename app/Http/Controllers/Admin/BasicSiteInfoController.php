@@ -58,4 +58,17 @@ class BasicSiteInfoController extends Controller
 //    	return view('site.recruitment_guidance');
 	    return view('headhunter.headhunter');
     }
+
+    public function recruitmentGuidanceBlog1(){
+        return view('headhunter.blog1');
+    }
+
+    public function recruitmentGuidanceBlog2(){
+        return view('headhunter.blog2');
+    }
+
+    public function recruitmentGuidanceBlog3(){
+        return view('headhunter.blog3');
+    }
+
 }

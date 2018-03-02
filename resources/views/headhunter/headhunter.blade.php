@@ -21,16 +21,20 @@
 
 			<div class="blogThumbnailContainer">
 
-				<div class="blogThumbnail">
-					<h3 class="blogThumbnailTitle color-line">
-						猎头在人才招聘中的作用，如何选择靠谱的猎头公司？
-					</h3>
-					<figure class="blogFigure">
-						<img class="blogFigureImg" src="http://localhost:8000/images/headhunter/people_comes_and_go.jpg" alt="">
-					</figure>
-					<p class="blogIntroduction">
-					</p>
-				</div>
+				<a href="headhunter1">
+
+					<div class="blogThumbnail">
+						<h3 class="blogThumbnailTitle color-line">
+							猎头在人才招聘中的作用，如何选择靠谱的猎头公司？
+						</h3>
+						<figure class="blogFigure">
+							<img class="blogFigureImg" src="http://localhost:8000/images/headhunter/people_comes_and_go.jpg" alt="">
+						</figure>
+						<p class="blogIntroduction">
+						</p>
+					</div>
+
+				</a>
 
 			</div>
 
@@ -71,66 +75,63 @@
 	<div class="features">
 		<p class="why-choose-us">海外招聘遇到这些难题？</p>
 		<ul class="features-ul">
-			<li class="feature">
-				<div class="feature-image-container">
-					<img class="feature-image" src="http://localhost:8000/images/headhunter/zhaopinqudao.jpg" alt="">
-				</div>
-				<div class="feature-title-container">
+			<li class="feature-channel">
+
+				<div class="feature-title-container"  onmouseover="this.style.height=300px" onmouseout="" >
 					<div class="feature-title">
 						海外招聘如何选择招聘渠道？
 					</div>
 				</div>
-			</li>
-			<li class="feature">
-				<div class="feature-image-container">
-					<img class="feature-image" src="http://localhost:8000/images/headhunter/xiyinlaihua.jpg" alt="">
-				</div>
-				<div class="feature-title-container">
-					<div class="feature-title">
-						如何吸引外籍人才来华工作？
-					</div>
-				</div>
-			</li>
-			<li class="feature">
-				<div class="feature-image-container">
-					<img class="feature-image" src="http://localhost:8000/images/headhunter/xinchou.jpg" alt="">
-				</div>
-				<div class="feature-title-container">
-					<div class="feature-title">
-						海外招聘如何确定岗位薪酬？
-					</div>
-				</div>
-			</li>
-			<li class="feature">
-				<div class="feature-image-container">
-					<img class="feature-image" src="http://localhost:8000/images/headhunter/gongzuoqianzheng.png" alt="">
-				</div>
-				<div class="feature-title-container">
-					<div class="feature-title">
-						如何给外籍候选人办理工作签证，就业许可？
-					</div>
-				</div>
-			</li>
-			<li class="feature">
-				<div class="feature-image-container">
-					<img class="feature-image" src="http://localhost:8000/images/headhunter/qiyewenhua.jpg" alt="">
-				</div>
-				<div class="feature-title-container">
-					<div class="feature-title">
-						如何让候选人更加适应企业文化？
-					</div>
-				</div>
-			</li>
-			<li class="feature">
-				<div class="feature-image-container">
-					<img class="feature-image" src="http://localhost:8000/images/headhunter/5.jpg" alt="">
-				</div>
-				<div class="feature-title-container">
-					<div class="feature-title">
 
+			</li>
+			<li class="feature-salary">
+
+				<div class="feature-title-container">
+					<div class="feature-title">
+						如何为外籍岗位确定薪酬福利？
 					</div>
 				</div>
+
 			</li>
+			<li class="feature-visa">
+
+				<div class="feature-title-container">
+					<div class="feature-title">
+						如何为外籍员工办理工作签证？
+					</div>
+				</div>
+
+			</li>
+			{{--<li class="feature">--}}
+				{{--<div class="feature-image-container">--}}
+					{{--<img class="feature-image" src="http://localhost:8000/images/headhunter/gongzuoqianzheng.png" alt="">--}}
+				{{--</div>--}}
+				{{--<div class="feature-title-container">--}}
+					{{--<div class="feature-title">--}}
+						{{--如何给外籍候选人办理工作签证，就业许可？--}}
+					{{--</div>--}}
+				{{--</div>--}}
+			{{--</li>--}}
+			{{--<li class="feature">--}}
+				{{--<div class="feature-image-container">--}}
+					{{--<img class="feature-image" src="http://localhost:8000/images/headhunter/qiyewenhua.jpg" alt="">--}}
+				{{--</div>--}}
+				{{--<div class="feature-title-container">--}}
+					{{--<div class="feature-title">--}}
+						{{--如何让候选人更加适应企业文化？--}}
+					{{--</div>--}}
+				{{--</div>--}}
+			{{--</li>--}}
+			{{--<li class="feature">--}}
+				{{--<div class="feature-image-container">--}}
+					{{--<img class="feature-image" src="http://localhost:8000/images/headhunter/5.jpg" alt="">--}}
+				{{--</div>--}}
+				{{--<div class="feature-title-container">--}}
+					{{--<div class="feature-title">--}}
+
+					{{--</div>--}}
+				{{--</div>--}}
+			{{--</li>--}}
 		</ul>
 		<div class="clear">
 

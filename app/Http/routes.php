@@ -24,6 +24,10 @@ Route::get('example', function () {
 Route::get('/', 'Admin\BasicSiteInfoController@index');
 Route::get('/about', 'Admin\BasicSiteInfoController@about');
 Route::get('/recruitment_guidance', 'Admin\BasicSiteInfoController@recruitmentGuidance');
+Route::get('/headhunter1', 'Admin\BasicSiteInfoController@recruitmentGuidanceBlog1');
+Route::get('/headhunter2', 'Admin\BasicSiteInfoController@recruitmentGuidanceBlog2');
+Route::get('/headhunter3', 'Admin\BasicSiteInfoController@recruitmentGuidanceBlog3');
+
 
 Route::resource('job','Admin\JobController');
 Route::get('/job_paginate', 'Admin\JobController@paginationJobsIndex');
