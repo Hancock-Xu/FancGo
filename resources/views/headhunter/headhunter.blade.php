@@ -75,32 +75,32 @@
 	<div class="features">
 		<p class="why-choose-us">海外招聘遇到这些难题？</p>
 		<ul class="features-ul">
+
 			<li class="feature-channel">
-
-				<div class="feature-title-container"  onmouseover="this.style.height=300px" onmouseout="" >
-					<div class="feature-title">
-						<p>海外招聘如何选择招聘渠道？</p>
-					</div>
-				</div>
-
-			</li>
-			<li class="feature-salary">
-
 				<div class="feature-title-container">
 					<div class="feature-title">
-						如何为外籍岗位确定薪酬福利？
+						<p class="feature">海外招聘如何选择招聘渠道？</p>
+						<span>拥有自己的招聘平台，丰富的简历和人才储备。并根据不同行业建立多种招聘渠道</span>
+					</div>
+				</div>
+			</li>
+
+			<li class="feature-salary">
+				<div class="feature-title-container">
+					<div class="feature-title">
+						<p class="feature">如何为外籍岗位定薪？</p>
+						<span>提供岗位定薪咨询服务，我们将根据海外行业薪资水平、我们的项目经验和储备人才薪资水平，并结合岗位要求，给您一个合理的薪资参考范围。</span>
 					</div>
 				</div>
 
 			</li>
 			<li class="feature-visa">
-
 				<div class="feature-title-container">
 					<div class="feature-title">
-						如何为外籍员工办理工作签证？
+						<p class="feature">如何为外籍员工办理工作签证？</p>
+						<span>提供候选人办理工作签证咨询服务，帮助您更快更好的为外籍员工办理工作签证。</span>
 					</div>
 				</div>
-
 			</li>
 			{{--<li class="feature">--}}
 				{{--<div class="feature-image-container">--}}
