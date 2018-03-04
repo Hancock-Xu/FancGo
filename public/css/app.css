@@ -244,6 +244,36 @@ div.jobThumbnail:nth-child(odd) {
   background-color: #fefefe;
 }
 
+.blog-container {
+  display: -webkit-box;
+  display: flex;
+}
+
+.catalogue {
+  -webkit-box-flex: 1;
+  flex: 1;
+  margin: 20px;
+  margin-top: 100px;
+  background-color: #e5ba2e;
+  height: 100%;
+}
+
+.catalogue-list {
+  padding: 30px;
+}
+
+.catalogue-li {
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.article {
+  -webkit-box-flex: 3;
+  flex: 3;
+  margin: 20px;
+}
+
 html {
   height: 100%;
 }
@@ -1451,7 +1481,10 @@ select {
 }
 
 .blogIntroduction {
-  margin: 20px 10px 30px 10px;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
 }
 
 .advantages {

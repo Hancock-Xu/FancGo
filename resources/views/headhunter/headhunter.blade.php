@@ -31,26 +31,25 @@
 							<img class="blogFigureImg" src="http://localhost:8000/images/headhunter/people_comes_and_go.jpg" alt="">
 						</figure>
 						<p class="blogIntroduction">
+							猎头熟悉招聘和人才引进流程的各个环节。和猎头合作，不仅拓宽了招聘渠道，保证人才供应。还能够大大提升招聘效率，有效降低了企业的招聘成本。
 						</p>
 					</div>
-
 				</a>
-
 			</div>
 
             <div class="blogThumbnailContainer">
-
-                <div class="blogThumbnail">
-                    <h3 class="blogThumbnailTitle color-line">
-                        对海外人才市场不了解，如何设定合理的薪资福利？
-                    </h3>
-                    <figure class="blogFigure">
-                        <img class="blogFigureImg" src="http://localhost:8000/images/headhunter/1.jpg" alt="">
-                    </figure>
-                    <p class="blogIntroduction">
-                    </p>
-                </div>
-
+				<a href="headhunter2">
+					<div class="blogThumbnail">
+						<h3 class="blogThumbnailTitle color-line">
+							对海外人才市场不了解，如何设定合理的薪资福利？
+						</h3>
+						<figure class="blogFigure">
+							<img class="blogFigureImg" src="http://localhost:8000/images/headhunter/1.jpg" alt="">
+						</figure>
+						<p class="blogIntroduction">
+						</p>
+					</div>
+				</a>
             </div>
 
             <div class="blogThumbnailContainer">

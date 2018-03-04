@@ -2,16 +2,61 @@
 
 @section('content')
 
+    <div class="jumbotron" style="  background-image: url(http://www.jobleadchina.com/uploads/index_img.jpg);
+  background-attachment:fixed;
+  background-position:top center;
+  background-repeat:repeat;
+  width: 100%;
+  height: 350px;
+  margin-bottom: 50px">
+        <h1 style="  color: #fefefe !important;
+  margin-left: 80px;margin-top: 60px">猎头在外籍人才招聘中的作用</h1>
+
+        {{--<p style="  color: #fefefe !important;--}}
+  {{--margin-left: 80px;--}}
+  {{--width: 100px;--}}
+  {{--padding-top: 20px;"><a class="btn btn-primary" href="recruitment_guidance" role="button">Learn more</a></p>--}}
+    </div>
+
+
     <div class="blog-container">
 
         <div class="catalogue">
+
+            <ul class="catalogue-list">
+                <li class="catalogue-li">
+                    <a href="">
+                        <strong>猎头在外籍人才招聘中的作用</strong>
+                    </a>
+
+                </li>
+
+                <li class="catalogue-li">
+                    <a href="">
+                        <strong>如何挑选靠谱猎头公司</strong>
+                    </a>
+
+                </li>
+
+                <li class="catalogue-li">
+                    <a href="">
+                        <strong>对海外人才市场不了解，如何设定合理的岗位薪资水平？</strong>
+                    </a>
+                </li>
+                <li class="catalogue-li">
+                    <a href="">
+                        <strong>在华外籍人才概况</strong>
+                    </a>
+
+                </li>
+            </ul>
 
         </div>
 
         <div class="article">
             <article class="article-recruitment01">
 
-                <h2>猎头在外籍人才招聘中的作用</h2>
+                {{--<h2>猎头在外籍人才招聘中的作用</h2>--}}
                 <p>伴随着企业发展和业务拓展，越来越多企业产生招聘外籍人才的需求，有的是需要引进专业的技术人才，有的是需要拓展海外市场，有的是位了打造国际化团队。在企业明确好需求开始启动招聘后，除了内部HR们招聘外，很多企业会通过与猎头公司合作完成招聘项目，那么具体到外籍人才招聘上，与猎头合作有哪些优势呢？</p>
 
                 <p>首先，企业在招聘中最关注的事莫过于能不能招聘到合适的人，多久时间能招到。猎头公司一般有专门擅长的行业领域，主动将岗位推荐给匹配岗位需求的候选人，能在短时间内提供更多优质的人才资源。外籍岗位也是如此，针对于企业需求（如国籍要求、语言要求等），专业招聘外籍人才的猎头公司能够快速把握岗位特征，制定招聘计划，推荐匹配候选人。</p>
