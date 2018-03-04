@@ -79,7 +79,7 @@
 
 				<div class="feature-title-container"  onmouseover="this.style.height=300px" onmouseout="" >
 					<div class="feature-title">
-						海外招聘如何选择招聘渠道？
+						<p>海外招聘如何选择招聘渠道？</p>
 					</div>
 				</div>
 
@@ -221,28 +221,41 @@
 		<div class="advantages-wrap">
 			<ul class="">
 						<li class="advantage">
-							<h1 class="advantage-title">行业细分，定位清晰</h1>
+							<div class="advantage-title-wrap">
+								<h1 class="advantage-title">行业细分，定位清晰</h1>
+							</div>
+
 							<p class="advantage-detail">专注于专业领域外籍人才招聘，解决企业引进外籍人才招聘痛点</p>
 						</li>
 
 						<li class="advantage">
-							<h1 class="advantage-title">信誉优良</h1>
+							<div class="advantage-title-wrap">
+								<h1 class="advantage-title">信誉优良</h1>
+							</div>
 							<p class="advantage-detail">公司90%的业务都来自于长期合作及客户推荐，我们深耕每一个项目，和客户保持长期的合作关系</p>
 						</li>
 						<li class="advantage">
-							<h1 class="advantage-title">优秀的顾问团队</h1>
+							<div class="advantage-title-wrap">
+								<h1 class="advantage-title">优秀的顾问团队</h1>
+							</div>
 							<p class="advantage-detail">顾问团队英语优秀，和外籍候选人沟通顺畅。丰富的从业经验，善于把握岗位需求，对候选人质量精益求精</p>
 						</li>
 						<li class="advantage">
-							<h1 class="advantage-title">善于攻坚难度大的岗位</h1>
+							<div class="advantage-title-wrap">
+								<h1 class="advantage-title">善于攻坚难度大的岗位</h1>
+							</div>
 							<p class="advantage-detail">我们采用高底薪低提成的激励机制，顾问团队专业稳定。能自始自终长期跟进完成招聘项目</p>
 						</li>
 						<li class="advantage">
-							<h1 class="advantage-title">提供优质的附加服务</h1>
+							<div class="advantage-title-wrap">
+								<h1 class="advantage-title">提供优质的附加服务</h1>
+							</div>
 							<p class="advantage-detail">我们为企业提供薪酬谈判和行业薪酬报告，帮助企业制定出合理的薪资水平</p>
 						</li>
 						<li class="advantage">
-							<h1 class="advantage-title">提供长达半年的保证期</h1>
+							<div class="advantage-title-wrap">
+								<h1 class="advantage-title">提供长达半年的保证期</h1>
+							</div>
 							<p class="advantage-detail">为企业提供长达6个月的保证期，候选人保证期内离职，我们免费提供候补候选人</p>
 						</li>
 					</ul>

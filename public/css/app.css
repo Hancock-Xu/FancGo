@@ -1706,12 +1706,18 @@ select {
   height: 150px;
 }
 
-.advantage-title {
-  color: #004785;
-  margin-left: 60px;
-  margin-top: 60px;
+.advantage-title-wrap {
+  background: #e5ba2e;
+  color: white;
+  margin-left: 40px;
+  margin-right: 40px;
   margin-bottom: 20px;
-  margin-right: 20px;
+}
+
+.advantage-title {
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
 
 .advantage-detail {
@@ -1841,11 +1847,8 @@ select {
   z-index: 1;
   position: absolute;
   bottom: 0;
-  right: 0;
-  left: 0;
-  height: 100px;
+  width: 100%;
   background: #e5ba2ede;
-  transition: all 0.5s ease-out;
 }
 
 .feature-title {
@@ -1853,10 +1856,15 @@ select {
   text-align: center;
   padding-top: auto;
   padding-bottom: auto;
-  height: 92px;
+  height: 100px;
   color: #FFFFFF;
   font-size: 16px;
   transition: height 0.5s;
+  -webkit-transition: height 0.5s;
+}
+
+.feature-title:hover {
+  height: 300px;
 }
 
 .features-ul {
