@@ -247,6 +247,8 @@ div.jobThumbnail:nth-child(odd) {
 .blog-container {
   display: -webkit-box;
   display: flex;
+  width: 980px;
+  margin: 0 auto;
 }
 
 .catalogue {
@@ -269,8 +271,8 @@ div.jobThumbnail:nth-child(odd) {
 }
 
 .article {
-  -webkit-box-flex: 3;
-  flex: 3;
+  -webkit-box-flex: 2;
+  flex: 2;
   margin: 20px;
 }
 
@@ -1373,7 +1375,6 @@ select {
 }
 
 .article-recruitment01 {
-  width: 980px;
   margin: 0 auto;
   padding: 20px 50px;
   line-height: 40px;
@@ -1464,6 +1465,7 @@ select {
 
 .blogThumbnailTitle {
   margin: 30px 40px 30px 20px;
+  text-align: center;
 }
 
 .blogFigure {
@@ -1482,6 +1484,8 @@ select {
   margin-top: 40px;
   margin-left: 40px;
   margin-right: 40px;
+  height: 100px;
+  padding-left: 0;
 }
 
 .blogButton {

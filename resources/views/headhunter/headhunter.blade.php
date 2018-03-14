@@ -20,52 +20,65 @@
 		<div class="blogThumbnailsCollectionContainer">
 
 			<div class="blogThumbnailContainer">
+				<div class="blogThumbnail">
+					<h3 class="blogThumbnailTitle color-line">
+						猎头在人才招聘中的作用
+					</h3>
+					<figure class="blogFigure">
+						<img class="blogFigureImg" src="http://localhost:8000/images/headhunter/people_comes_and_go.jpg" alt="">
+					</figure>
+					<p class="blogIntroduction">
+						猎头熟悉招聘和人才引进流程的各个环节。和猎头合作，不仅拓宽了招聘渠道，保证人才供应。还能够大大提升招聘效率，有效降低了企业的招聘成本。
+					</p>
 
-				{{--<a href="headhunter1">--}}
-
-					<div class="blogThumbnail">
-						<h3 class="blogThumbnailTitle color-line">
-							猎头在人才招聘中的作用，如何选择靠谱的猎头公司？
-						</h3>
-						<figure class="blogFigure">
-							<img class="blogFigureImg" src="http://localhost:8000/images/headhunter/people_comes_and_go.jpg" alt="">
-						</figure>
-						<p class="blogIntroduction">
-							猎头熟悉招聘和人才引进流程的各个环节。和猎头合作，不仅拓宽了招聘渠道，保证人才供应。还能够大大提升招聘效率，有效降低了企业的招聘成本。
-						</p>
-
-						<input type="button" class="blogButton" value="Learn More" onclick="location.href='{{action('Admin\BasicSiteInfoController@recruitmentGuidanceBlog1')}}'">
-
-					</div>
+					<input type="button" class="blogButton" value="Learn More" onclick="location.href='{{action('Admin\BasicSiteInfoController@recruitmentGuidanceBlog1')}}'">
+				</div>
 			</div>
 
             <div class="blogThumbnailContainer">
-				<a href="headhunter2">
-					<div class="blogThumbnail">
-						<h3 class="blogThumbnailTitle color-line">
-							对海外人才市场不了解，如何设定合理的薪资福利？
-						</h3>
-						<figure class="blogFigure">
-							<img class="blogFigureImg" src="http://localhost:8000/images/headhunter/1.jpg" alt="">
-						</figure>
-						<p class="blogIntroduction">
-						</p>
-						<input type="button" class="blogButton" value="Learn More" onclick="location.href='{{action('Admin\BasicSiteInfoController@recruitmentGuidanceBlog2')}}'">
-					</div>
-				</a>
+				<div class="blogThumbnail">
+					<h3 class="blogThumbnailTitle color-line">
+						招聘外籍人才中需要注意的问题
+					</h3>
+					<figure class="blogFigure">
+						<img class="blogFigureImg" src="http://localhost:8000/images/headhunter/1.jpg" alt="">
+					</figure>
+					<ul class="blogIntroduction" style="list-style: none">
+						<li>1、明确招聘需求</li>
+						<li>2、预留充足的招聘时间</li>
+						<li>3、在引进外籍人才时请确保该人才能顺利办理工作签证</li>
+						<li>4、提供有竞争力的工作时长和假期</li>
+					</ul>
+					{{--<p class="blogIntroduction"></p>--}}
+					<input type="button" class="blogButton" value="Learn More" onclick="location.href='{{action('Admin\BasicSiteInfoController@recruitmentGuidanceBlog2')}}'">
+				</div>
             </div>
 
             <div class="blogThumbnailContainer">
 
                 <div class="blogThumbnail">
                     <h3 class="blogThumbnailTitle color-line">
-                        外籍候选人入职后如何办理工作签证和工作许可等证件？
+                        在华外籍人才就业概况
                     </h3>
                     <figure class="blogFigure">
                         <img class="blogFigureImg" src="http://localhost:8000/images/headhunter/5.jpg" alt="">
                     </figure>
-                    <p class="blogIntroduction">
-                    </p>
+                    {{--<p class="blogIntroduction">--}}
+                    {{--</p>--}}
+					<ul class="blogIntroduction" style="list-style: none">
+						<li>
+							1、在华外籍人才各个国家占比
+						</li>
+						<li>
+							2、在华外籍人才性别和年龄分布
+						</li>
+						<li>
+							3、在华外籍人才就业行业占比
+						</li>
+						<li>
+							4、在华外籍人才流动率情况
+						</li>
+					</ul>
 					<input type="button" class="blogButton" value="Learn More" onclick="location.href='{{action('Admin\BasicSiteInfoController@recruitmentGuidanceBlog3')}}'">
                 </div>
 

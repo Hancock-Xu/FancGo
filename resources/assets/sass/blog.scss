@@ -1,5 +1,7 @@
 .blog-container{
   display: flex;
+  width: 980px;
+  margin: 0 auto;
 }
 
 .catalogue{
@@ -21,6 +23,6 @@
 }
 
 .article{
-  flex: 3;
+  flex: 2;
   margin: 20px;
 }

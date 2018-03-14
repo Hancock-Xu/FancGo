@@ -9,8 +9,8 @@
   width: 100%;
   height: 350px;
   margin-bottom: 50px">
-        <h1 style="  color: #fefefe !important;
-  margin-left: 80px;margin-top: 60px">猎头在外籍人才招聘中的作用</h1>
+        <h1 style="color: #fefefe !important;
+  text-align: center;margin-top: 60px">猎头在外籍人才招聘中的作用</h1>
 
         {{--<p style="  color: #fefefe !important;--}}
   {{--margin-left: 80px;--}}
