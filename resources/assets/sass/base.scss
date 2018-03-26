@@ -1,0 +1,192 @@
+html{
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  min-width: 1140px;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  position: relative;
+  padding-top: 60px;
+}
+
+img {
+  display: inline-block;
+  overflow: hidden;
+}
+
+hr {
+  border-top: 1px solid #c9c9c9;
+}
+
+.center-home {
+  position: absolute;
+  max-width: 350px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  //margin: 0 auto;
+  //width: 500px;
+}
+
+.position-btn, .company-btn {
+  width: 440px;
+  margin: 0 auto;
+  margin-bottom: 40px !important;
+}
+
+#sidebar-company-logo {
+  display: inline-block;
+}
+
+#brand-jobleadchina {
+  margin-left: 15px;
+}
+
+.navbar-right {
+  margin-right: 30px;
+}
+
+/*图标插入*/
+.arrow-down {
+  font-size: 16px;
+  color: #999;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  font-weight: normal;
+  cursor: default;
+}
+.left-arrow-down {
+  font-size: 16px;
+  color: #999;
+  position: absolute;
+  left: 344px;
+  top: 40px;
+  font-weight: normal;
+  cursor: default;
+}
+
+.required-item {
+  font-size: 10px;
+  color: #ce1c1c;
+}
+
+.icon-post-time {
+  color: #999;
+}
+
+.icon-phone, .icon-enterpriseMail{
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  color: #999;
+}
+
+.container{
+  margin-top: 60px;
+  width: 1140px !important;
+}
+
+//navbar
+
+.content_container{
+  min-height: 100%;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.jb_navbar{
+  @extend .navbar;
+  @extend .navbar-default;
+  @extend .navbar-fixed-top;
+  //position: relative !important;
+  //margin-bottom: 0px !important;
+  //margin-bottom: 50px;
+  font-size: 16px;
+  margin-bottom: 0 !important;
+}
+
+.brand {
+  display: flex;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.jb_content{
+  //margin-top: 60px;
+  //padding-bottom: 100px;
+  //margin-bottom: 100px;
+}
+
+.information-intro-ch-rent span {
+  font-size: 14px;
+  color: #999;
+}
+.information-pic {
+  text-align: center;
+}
+.information-picList {
+  box-shadow: 1px 1px 5px #c9c9c9;
+  margin: 10px auto;
+}
+
+.pagination_container{
+  display: flex;
+  justify-content: center;
+}
+
+//================================
+
+.paginate_jobs_container{
+  margin-top: 60px;
+}
+
+.updated-time {
+  color: #999;
+  margin: 20px;
+}
+.refine-links{
+  margin-right: 20px;
+}
+.refine-links a {
+  margin-left: 20px;
+  cursor: pointer;
+}
+.refine-position-item{
+  padding: 10px;
+}
+.refine-position-item-title {
+  color: $brand-primary;
+  margin: 20px;
+}
+
+.refine-position-item-point {
+  margin: 20px;
+}
+.refine-position-item li:nth-child(odd) {
+  background-color: #fff;
+}
+.refine-position-item li:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.refine-position-item-edit{
+  margin-bottom: 20px;
+}
+
+div.refine-position-item:nth-child(even) {
+  background-color: #fafafa;
+}
+
+div.refine-position-item:nth-child(odd) {
+  background-color: #fefefe;
+}
+
+/*home页面*/

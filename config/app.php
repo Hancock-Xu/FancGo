@@ -148,7 +148,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Overtrue\LaravelWechat\ServiceProvider::class,
+	    Illuminate\Notifications\NotificationServiceProvider::class,
+	    Roumen\Sitemap\SitemapServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -157,11 +158,12 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+//        App\Providers\BroadcastServiceProvider::class,
         
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
         App\Providers\VerifyEmailProvider::class,
-	    BackupManager\Laravel\Laravel5ServiceProvider::class,
+	    BackupManager\Laravel\Laravel55ServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class
     ],
 

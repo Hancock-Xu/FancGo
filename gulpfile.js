@@ -1,7 +1,7 @@
-var elixir = require('laravel-elixir');
-// const elixir = require('laravel-elixir');
+// var elixir = require('laravel-elixir');
+const elixir = require('laravel-elixir');
 
-// require('laravel-elixir-vue');
+//require('laravel-elixir-vue');
 // require('jquery');
 // require('bootstrap-sass');
 

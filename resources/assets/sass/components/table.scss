@@ -1,0 +1,26 @@
+//==Background color used for `.table-striped`.
+$table-bg-accent-odd:               #fff;
+$table-bg-accent-even:             #fafafa;
+$table-border-color:            #fafafa;
+.table-striped {
+  > tbody > tr:nth-of-type(odd) {
+    background-color: $table-bg-accent-odd;
+  }
+}
+
+.table-striped {
+  > tbody > tr:nth-of-type(even) {
+    background-color: $table-bg-accent-even;
+  }
+}
+
+//Padding for `<th>`s and `<td>`s.
+$table-cell-padding:            0px;
+
+//== Grid system
+$grid-gutter-width:         0px;
+
+// Background color for textual input addons
+//$input-group-addon-bg:           $gray-lighter;
+//Border color for textual input addons
+//$input-group-addon-border-color: $input-border;

@@ -1,0 +1,249 @@
+
+/*job detail页面*/
+
+.position_title_amount{
+  display: flex;
+}
+
+.position_title{
+  flex: 4;
+}
+
+.position_apply_amount{
+  flex: 1;
+}
+
+
+/*left position info*/
+
+.left-position {
+  width: 600px;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+
+.detail-position-item {
+  padding-top: 10px;
+}
+
+.detail-position-item li {
+  margin: 20px;
+  //margin-top: 20px;
+  //margin-bottom: 20px;
+}
+
+.detail-position-item-point span {
+  font-size: 18px;
+  padding-right: 50px;
+}
+
+.detail-position-item h2,
+.detail-position-item h4 {
+  color: $brand-primary;
+}
+
+.detail-position-item .benefit span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+
+/*职位信息与公司信息切换；申请该岗位*/
+
+#button-apply {
+  padding: 6px 85px;
+  margin-right: 20px;
+  float: right;
+}
+
+.nav-pills li {
+  margin: 0 0 0 20px;
+}
+
+
+/*岗位、公司描述*/
+
+.item-content {
+  margin: 20px;
+  font-size: 14px;
+  overflow: hidden;
+  width: 680px;
+}
+
+.company_item-content{
+  @extend .item-content;
+  width: 280px;
+}
+
+.item-content p {
+  color: #666;
+  word-wrap: break-word;
+  word-break: normal;
+}
+
+.color-line {
+  border-left: 5px solid $brand-primary;
+  padding-left: 10px;
+}
+
+
+/*公司信息概览*/
+
+#sidebar {
+  width: 330px;
+}
+
+.company-info {
+  background-color: #fff;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.company-info-logo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.company-info-title {
+  text-align: center;
+  padding: 20px;
+}
+
+.company-info-title P {
+  color: $brand-primary;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.company-info-content {
+  padding: 0 0 30px 0;
+  margin: 0 20px;
+  margin-right: 0;
+  list-style: none;
+}
+
+.company-info-content li span {
+  padding-right: 8px;
+  display: inline-block;
+  width: 80px;
+  margin-bottom: 5px;
+  color: #999;
+}
+
+.company-info-content li {
+  overflow: hidden;
+}
+
+
+//========job detail======
+
+.job_company_info{
+  display: flex;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.job_info{
+  background-color: white;
+  //flex: 3;
+  padding: 20px;
+  margin: 20px;
+  width: 760px;
+  margin-left: 0;
+  //max-width: 760px;
+}
+
+.company_info{
+  flex: 1;
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  width: 360px;
+  margin-left: 0;
+  //max-width: 380px;
+}
+
+.companyThumbnailCompanyLogo{
+  @extend .jobThumbnailCompanyLogo;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.companyThumbnailCompanyLogo_figure{
+  @extend .jobThumbnailCompanyLogo_figure;
+  width: 250px;
+  height: 250px;
+}
+
+.companyThumbnailCompanyLogoImg{
+  @extend .jobThumbnailCompanyLogoImg;
+}
+
+
+//========job apply bar=======
+
+.job_apply_bar_url{
+  display: flex;
+}
+
+.job_apply_bar_title{
+  flex: initial;
+  width: 200px;
+  min-width: 100px;
+  margin: 0;
+  background-color: $brand-primary;
+  float: left;
+  //flex: 1;
+}
+
+.job_apply_btn{
+  float: right;
+  width: 200px;
+  min-width: 100px;
+  flex: initial;
+  margin: 0;
+  font-size: 28px;
+  //flex: 1;
+}
+
+.job_apply_placeholder{
+  flex: 1;
+  height: 10px;
+  margin: 0;
+}
+
+.company_info_name{
+  display: inline-block;
+  margin: 10px;
+  font-size: 25px;
+  font-weight: normal;
+}
+.basic_info_container{
+  position: relative;
+}
+.basic_info_content{
+  display: inline-block;
+  width: 200px;
+  margin-left: 80px;
+}
+.basic_info_item{
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 100px;
+}
+.basic_info_label{
+  width: 100%;
+  font-weight: normal;
+}
+
+//refine company info position info
+.refine-position {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  //padding-left: 20px;
+  //padding-right: 20px;
+  margin-bottom: 20px;
+}

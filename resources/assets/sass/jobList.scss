@@ -1,0 +1,21 @@
+.joblist{
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+
+div.jobThumbnail:nth-child(even) {
+  background-color: #fafafa;
+}
+
+div.jobThumbnail:nth-child(odd) {
+  background-color: #fefefe;
+}
+
+
+
+
+
+

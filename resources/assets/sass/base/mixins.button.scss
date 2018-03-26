@@ -1,0 +1,13 @@
+@mixin btn-template($font-size, $height, $color, $background-color) {
+  padding: 0;
+  font-size: $font-size;
+  height: $height;
+  color: $color;
+  background-color: $background-color;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $brand-normal;
+    background: darken($brand-primary, 6.5%)
+  }
+}

@@ -3,10 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 use App\Http\Controllers\Controller;
+use DB;
+use Illuminate\Support\Facades\URL;
 use App\Http\Requests;
 use App\User;
-use App\Services\SiteMap;
+use App\Job;
+use Roumen\Sitemap\Sitemap;
+
+use App;
 
 class BasicSiteInfoController extends Controller
 {
@@ -22,78 +28,24 @@ class BasicSiteInfoController extends Controller
 //        return view('site.welcome');
     }
 
-	public function siteMap(SiteMap $siteMap)
-	{
-		$map = $siteMap->getSiteMap();
-
-		return response($map)
-			->header('Content-type', 'text/xml');
-	}
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function siteMap()
     {
-        //
-    }
+	    // create new sitemap object
+	    $siteMap = App::make("sitemap");
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+	    // add items to the sitemap (url, date, priority, freq)
+	    $siteMap->add(URL::to('/'), '2016-03-06T09:33:00+00:00', '1.0', 'daily');
+	    $siteMap->add(URL::to('recruitment_guidance'), '2016-03-06T09:33:00+00:00', '1.0', 'daily');
+	    $siteMap->add(URL::to('about'), '2016-03-06T09:33:00+00:00', '1.0', 'daily');
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+	    $jobs = DB::table('jobs')->orderBy('created_at', 'desc')->get();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+	    foreach ($jobs as $job)
+	    {
+		    $siteMap->add(URL::to('job', $job->id), $job->updated_at, '0.5', 'never');
+	    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+	    $siteMap->store('xml', 'sitemap');
     }
 
     public function about()
@@ -103,6 +55,20 @@ class BasicSiteInfoController extends Controller
 
     public function recruitmentGuidance()
     {
-    	return view('site.recruitment_guidance');
+//    	return view('site.recruitment_guidance');
+	    return view('headhunter.headhunter');
     }
+
+    public function recruitmentGuidanceBlog1(){
+        return view('headhunter.blog1');
+    }
+
+    public function recruitmentGuidanceBlog2(){
+        return view('headhunter.blog2');
+    }
+
+    public function recruitmentGuidanceBlog3(){
+        return view('headhunter.blog3');
+    }
+
 }

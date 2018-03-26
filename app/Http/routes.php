@@ -12,6 +12,8 @@
 */
 
 
+use Carbon\Carbon;
+
 Route::get('example', function () {
 	return view('example');
 });
@@ -22,13 +24,17 @@ Route::get('example', function () {
 Route::get('/', 'Admin\BasicSiteInfoController@index');
 Route::get('/about', 'Admin\BasicSiteInfoController@about');
 Route::get('/recruitment_guidance', 'Admin\BasicSiteInfoController@recruitmentGuidance');
+Route::get('/headhunter1', 'Admin\BasicSiteInfoController@recruitmentGuidanceBlog1');
+Route::get('/headhunter2', 'Admin\BasicSiteInfoController@recruitmentGuidanceBlog2');
+Route::get('/headhunter3', 'Admin\BasicSiteInfoController@recruitmentGuidanceBlog3');
+
 
 Route::resource('job','Admin\JobController');
 Route::get('/job_paginate', 'Admin\JobController@paginationJobsIndex');
 Route::resource('company','Admin\CompanyController');
 
 Route::auth();
-
+/**/
 Route::group([
 	'namespace'=>'Admin',
 	'middleware'=>'auth'], function(){
@@ -69,3 +75,4 @@ Route::group([
 	Route::post('/promote_to_user_jobleadchina', 'EmailIssuesController@userPromote');
 });
 
+Route::get('sitemap.xml', 'Admin\BasicSiteInfoController@siteMap');

@@ -11,6 +11,7 @@ use Carbon\Carbon;
 use Session;
 use Illuminate\Mail\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\VerifyEmailService\VerifyEmail;
 use Illuminate\Database\Query\Builder;
 
@@ -24,7 +25,7 @@ class JobController extends Controller
 		$jobs = \DB::table('jobs')
 			->where([
 				['jobs.updated_at','<=',Carbon::now()],
-				['jobs.shelves', '=', 0],
+				['jobs.shelves', '=', '0'],
 			])
 			->limit(10)
 			->join('companies', 'jobs.company_id', '=', 'companies.id')
@@ -58,7 +59,7 @@ class JobController extends Controller
 		$jobs = \DB::table('jobs')
 			->where([
 				['jobs.updated_at','<=',Carbon::now()],
-				['jobs.shelves', '=', 0],
+				['jobs.shelves', '=', '0'],
 			])
 			->join('companies', 'jobs.company_id', '=', 'companies.id')
 			->select('jobs.*', 'companies.user_id', 'companies.company_name','companies.business_license_name','companies.logo_url','companies.website','companies.company_description','companies.scale','companies.company_location','companies.company_industry','companies.company_email','companies.company_phone_number')
@@ -190,7 +191,6 @@ class JobController extends Controller
 		if ($job_mix_companyInfo) {
 			return view('Jobs.detail', ['job'=>$job_mix_companyInfo, 'user'=>$user]);
 		}else{
-//			return view('not_found');
 
 			return redirect(action('Admin\JobController@index'));
 		}
