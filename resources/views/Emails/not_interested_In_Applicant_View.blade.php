@@ -12,7 +12,7 @@
 						<tbody>
 
 						<tr style="background-color:#f5f5f5;">
-							<td valign="top" style="border-bottom: 20px solid #694c9c; padding-top: 10px; padding-bottom: 10px;">
+							<td valign="top" style="border-bottom: 20px solid #003564; padding-top: 10px; padding-bottom: 10px;">
 								<a href="http://www.jobleadchina.com" target="_blank" style="text-decoration: none; font-size: 28px; color: #666">
 									JobLeadChina
 								</a>
@@ -21,8 +21,8 @@
 						<tr >
 							<td valign="top">
 								<div style="margin: 30px 30px 0;">
-									<h5 style="font-size: 16px;">Apply Position: <a href="{{ action('Admin\JobController@show',[$job->id]) }}" style="text-decoration: underline; color: #694c9c;">{{$job->job_title}}</a></h5>
-									<h5 style="font-size: 16px;">Apply Company: <a href="{{ action('Admin\JobController@show',[$job->id]) }}" style="text-decoration: underline; color: #694c9c;">{{$company->company_name}}</a></h5>
+									<h5 style="font-size: 16px;">Apply Position: <a href="{{ action('Admin\JobController@show',[$job->id]) }}" style="text-decoration: underline; color: #003564;">{{$job->job_title}}</a></h5>
+									<h5 style="font-size: 16px;">Apply Company: <a href="{{ action('Admin\JobController@show',[$job->id]) }}" style="text-decoration: underline; color: #003564;">{{$company->company_name}}</a></h5>
 									<h5 style="font-size: 16px;">Result Feedback: Mismatch</h5>
 								</div>
 							</td>

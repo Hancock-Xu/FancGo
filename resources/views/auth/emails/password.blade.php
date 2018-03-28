@@ -10,7 +10,7 @@
 	<h2>JobLeadChina</h2>
 	<div class="mailContentContainer" style="
   background-color: #fff;
-  border-top: 20px solid #694c9c;
+  border-top: 20px solid #003564;
   padding: 20px;">
 		<div class="mailContent-enterprise">
 			<h4>JobLeadChina Password Reset Email</h4>
