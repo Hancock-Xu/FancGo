@@ -25,7 +25,7 @@
 						猎头在人才招聘中的作用
 					</h3>
 					<figure class="blogFigure">
-						<img class="blogFigureImg" src="http://localhost:8000/images/headhunter/people_comes_and_go.jpg" alt="">
+						<img class="blogFigureImg" src="http://www.jobleadchina.com/images/headhunter/people_comes_and_go.jpg" alt="">
 					</figure>
 					<p class="blogIntroduction">
 						猎头熟悉招聘和人才引进流程的各个环节。和猎头合作，不仅拓宽了招聘渠道，保证人才供应。还能够大大提升招聘效率，有效降低了企业的招聘成本。
@@ -41,7 +41,7 @@
 						招聘外籍人才中需要注意的问题
 					</h3>
 					<figure class="blogFigure">
-						<img class="blogFigureImg" src="http://localhost:8000/images/headhunter/1.jpg" alt="">
+						<img class="blogFigureImg" src="http://www.jobleadchina.com/images/headhunter/1.jpg" alt="">
 					</figure>
 					<ul class="blogIntroduction" style="list-style: none">
 						<li>1、明确招聘需求</li>
@@ -61,7 +61,7 @@
                         在华外籍人才就业概况
                     </h3>
                     <figure class="blogFigure">
-                        <img class="blogFigureImg" src="http://localhost:8000/images/headhunter/5.jpg" alt="">
+                        <img class="blogFigureImg" src="http://www.jobleadchina.com/images/headhunter/5.jpg" alt="">
                     </figure>
                     {{--<p class="blogIntroduction">--}}
                     {{--</p>--}}
@@ -118,36 +118,6 @@
 					</div>
 				</div>
 			</li>
-			{{--<li class="feature">--}}
-				{{--<div class="feature-image-container">--}}
-					{{--<img class="feature-image" src="http://localhost:8000/images/headhunter/gongzuoqianzheng.png" alt="">--}}
-				{{--</div>--}}
-				{{--<div class="feature-title-container">--}}
-					{{--<div class="feature-title">--}}
-						{{--如何给外籍候选人办理工作签证，就业许可？--}}
-					{{--</div>--}}
-				{{--</div>--}}
-			{{--</li>--}}
-			{{--<li class="feature">--}}
-				{{--<div class="feature-image-container">--}}
-					{{--<img class="feature-image" src="http://localhost:8000/images/headhunter/qiyewenhua.jpg" alt="">--}}
-				{{--</div>--}}
-				{{--<div class="feature-title-container">--}}
-					{{--<div class="feature-title">--}}
-						{{--如何让候选人更加适应企业文化？--}}
-					{{--</div>--}}
-				{{--</div>--}}
-			{{--</li>--}}
-			{{--<li class="feature">--}}
-				{{--<div class="feature-image-container">--}}
-					{{--<img class="feature-image" src="http://localhost:8000/images/headhunter/5.jpg" alt="">--}}
-				{{--</div>--}}
-				{{--<div class="feature-title-container">--}}
-					{{--<div class="feature-title">--}}
-
-					{{--</div>--}}
-				{{--</div>--}}
-			{{--</li>--}}
 		</ul>
 		<div class="clear">
 
