@@ -30,9 +30,13 @@
 
 	<title>JobLeadChina @yield('page_title') | Find Job in China | 专业的外籍人才招聘网站, 外籍人才猎头</title>
 
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
 	<!-- polyfiller file to detect and load polyfills -->
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+
+
+
 
 	<script>
 		webshims.setOptions('waitReady', false);
@@ -72,12 +76,6 @@
 		})();
 	</script>
 
-	{!! Html::style('css/app.css') !!}
-	{!! Html::script('js/app.js') !!}
-	{!! Html::script('js/search_bar.js') !!}
-	{!! Html::script('js/previewUploadFile.js') !!}
-	{!! Html::script('js/upload_resume.js') !!}
-
 
 </head>
 
@@ -98,12 +96,24 @@
 		</div>
 
 
-			@include('site.footer')
+		@include('site.footer')
 
-			<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-			{{--<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>--}}
 
-			@yield('scripts')
+
+
+		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+		{!! Html::style('css/app.css') !!}
+		{!! Html::script('js/app.js') !!}
+		{!! Html::script('js/search_bar.js') !!}
+		{!! Html::script('js/previewUploadFile.js') !!}
+		{!! Html::script('js/upload_resume.js') !!}
+
+
+		@yield('scripts')
+
+
 
 
 

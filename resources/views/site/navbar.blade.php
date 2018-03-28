@@ -64,7 +64,7 @@
 										      action="{{ url('/logout') }}"
 										      method="POST"
 										      style="display: none;">
-										{{ csrf_field() }}
+											{{ csrf_field() }}
 										</form>
 									</li>
 									<li>

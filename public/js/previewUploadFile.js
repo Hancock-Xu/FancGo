@@ -5,6 +5,13 @@
  * Created by Xuhanyu on 8/3/16.
  */
 
+// $(document).ready(function () {
+//     var filechooser = document.getElementById('filechooser');
+//     filechooser.onclick = function () {
+//         alert('test')
+//     }
+// });
+
 $(document).ready(function () {
     var filechooser = document.getElementById('filechooser');
     var previewer = document.getElementById('previewer');
