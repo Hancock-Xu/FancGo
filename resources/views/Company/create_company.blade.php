@@ -561,7 +561,7 @@
 								</div>
 
 							<div class="form-group form-submit-button">
-								<div class="col-md-6 col-md-offset-4">
+								<div class="company_detail_submit_btn">
 									<button type="submit" class="btn company-btn btn-primary">
 										<i class="fa fa-btn fa-envelope"></i> Save
 									</button>
