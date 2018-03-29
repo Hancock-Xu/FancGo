@@ -27,9 +27,7 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
-
 
             <div class="col-sm-9 col-md-3 col-lg-3, qrcode-container">
                 <div class="row, qrcode">
