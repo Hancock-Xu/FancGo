@@ -1,4 +1,15 @@
-<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="100" height="100" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"><![CDATA[
-@font-face { font-family: ifont; src: url("http://at.alicdn.com/t/font_1442373896_4754455.eot?#iefix") format("embedded-opentype"), url("http://at.alicdn.com/t/font_1442373896_4754455.woff") format("woff"), url("http://at.alicdn.com/t/font_1442373896_4754455.ttf") format("truetype"), url("http://at.alicdn.com/t/font_1442373896_4754455.svg#ifont") format("svg"); }
-
-]]></style></defs><g class="transform-group"><g transform="scale(0.09765625, 0.09765625)"><path d="M705.574997 152.085814c0-48.174186 39.038684-87.231737 87.257825-87.231737 48.174113 0 87.214844 39.057551 87.214844 87.231737 0 48.195675-39.039708 87.255273-87.214844 87.255273C744.613681 239.341087 705.574997 200.281489 705.574997 152.085814L705.574997 152.085814zM714.098463 284.213064l0-0.021489L531.71429 466.570321l34.183921 34.184567 148.199229-148.192134L714.09744 606.588285 571.144917 606.588285l0 0.151449L316.543066 939.910836l-69.903887 0 0 20.218484 189.904759 0 0-20.218484 176.920518-230.375901 266.582187 0.763386 0-107.559715L880.046642 284.192597 714.098463 284.192597 714.098463 284.213064zM146.398136 507.027755l0 453.101565 385.578131-453.101565L146.398136 507.027755zM531.976267 476.011344 154.267683 166.381401l73.136644 309.629943L531.976267 476.011344z" fill="#694c9c"></path></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g>
+	<g transform="scale(0.09765625, 0.09765625)">
+		<path fill="#003564" d="M705.582,152.085c0-48.175,39.04-87.23,87.26-87.23c48.16,0,87.21,39.055,87.21,87.23
+			c0,48.195-39.04,87.255-87.21,87.255C744.622,239.341,705.582,200.281,705.582,152.085L705.582,152.085z M714.102,284.216v-0.025
+			l-182.38,182.38l34.18,34.185l148.2-148.195v254.031h-142.96v0.15L316.546,939.912h-69.905v20.22h189.905v-20.22l176.915-230.371
+			l266.581,0.76v-107.56V284.191h-165.94V284.216z M146.4,507.031v453.101l385.581-453.101H146.4z M531.981,476.011L154.27,166.38
+			l73.135,309.631H531.981z"/>
+	</g>
+</g>
+</svg>
