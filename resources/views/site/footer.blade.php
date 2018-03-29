@@ -34,13 +34,11 @@
             <div class="col-sm-9 col-md-3 col-lg-3, qrcode-container">
                 <div class="row, qrcode">
                     <img src="http://www.jobleadchina.com/uploads/wechat_qrcode.jpg" alt="JobLeadChina wechat code" style="width: 100px">
-                {{--</div>--}}
-                {{--<div class="row">--}}
-                    {{--<label>Join our wechat group</label>--}}
                 </div>
-
+                <div class="row" style="text-align: center; margin-top: 10px">
+                    <label>请添加JobLeadChina客服微信</label>
+                </div>
             </div>
-
         </div>
 
         <hr>
