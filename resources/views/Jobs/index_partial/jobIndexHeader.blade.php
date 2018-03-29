@@ -6,7 +6,7 @@
   height: 350px;
   margin-bottom: 50px">
 	<h1 style="  color: #fefefe !important;
-  margin-left: 80px;">Post Job For Free !</h1>
+  margin-left: 80px;">致力于为中国企业引进专业领域外籍人才 !</h1>
 	<p style="  color: #fefefe !important;
   margin-left: 80px;
   width: 600px;
