@@ -36,7 +36,7 @@
 	<script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
 
 
-
+	{!! Html::style('css/app.css') !!}
 
 	<script>
 		webshims.setOptions('waitReady', false);
@@ -104,7 +104,7 @@
 		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 
-		{!! Html::style('css/app.css') !!}
+
 		{!! Html::script('js/app.js') !!}
 		{!! Html::script('js/search_bar.js') !!}
 		{!! Html::script('js/previewUploadFile.js') !!}
