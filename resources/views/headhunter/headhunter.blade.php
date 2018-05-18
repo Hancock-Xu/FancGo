@@ -293,11 +293,11 @@
 				</div>
 
 
-				<div class="partnerLogo">
-					<figure class="partnerLogoFigure">
-						<img class="partnerLogoFigureImg" src="/images/customers/tencent.jpg" alt="">
-					</figure>
-				</div>
+				{{--<div class="partnerLogo">--}}
+					{{--<figure class="partnerLogoFigure">--}}
+						{{--<img class="partnerLogoFigureImg" src="/images/customers/tencent.jpg" alt="">--}}
+					{{--</figure>--}}
+				{{--</div>--}}
 
 			</div>
 
