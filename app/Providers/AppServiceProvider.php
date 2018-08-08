@@ -31,7 +31,9 @@ class AppServiceProvider extends ServiceProvider
                 '126.com',
                 '188.com',
                 'foxmail.com',
-                'icloud.com'
+                'icloud.com',
+                'matra.top',
+                'mailinator.com'
             ];
 
             foreach ($personalEmailDomain as $emailDomain){
