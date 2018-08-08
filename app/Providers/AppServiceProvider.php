@@ -30,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
                 'vip.126.com',
                 '126.com',
                 '188.com',
+                '136.com',
                 'foxmail.com',
                 'icloud.com',
                 'matra.top',
