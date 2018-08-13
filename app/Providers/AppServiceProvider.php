@@ -22,6 +22,7 @@ class AppServiceProvider extends ServiceProvider
                 'qq.com',
                 '163.com',
                 'sina.com',
+                'sina.cn',
                 'gmail.com',
                 'hotmail.com',
                 'outlook.com',
@@ -34,6 +35,7 @@ class AppServiceProvider extends ServiceProvider
                 'foxmail.com',
                 'icloud.com',
                 'matra.top',
+                'wemel.top',
                 'mailinator.com'
             ];
 
