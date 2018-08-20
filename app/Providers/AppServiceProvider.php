@@ -36,7 +36,8 @@ class AppServiceProvider extends ServiceProvider
                 'icloud.com',
                 'matra.top',
                 'wemel.top',
-                'mailinator.com'
+                'mailinator.com',
+                'memsg.site'
             ];
 
             foreach ($personalEmailDomain as $emailDomain){
