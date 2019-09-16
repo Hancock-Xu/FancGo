@@ -14,8 +14,8 @@
                             <label> <strong>We will reply you in one day</strong></label>
                         </li>
                         <li class="contactInfo">
-                            <label>电话 Tel : </label>
-                            0755-36553093 请拨分机 0
+{{--                            <label>电话 Tel : </label>--}}
+{{--                            0755-36553093 请拨分机 0--}}
                         </li>
                         <li class="contactInfo">
                             <label>商务合作 Tel : </label>
