@@ -3,16 +3,22 @@
   background-position:top center;
   background-repeat:repeat;
   width: 100%;
-  height: 350px;
+  height: 400px;
   margin-bottom: 50px">
 	<h1 style="  color: #fefefe !important;
-  margin-left: 80px;">致力于为中国企业引进专业领域外籍人才 !</h1>
-	<p style="  color: #fefefe !important;
+  margin-left: 80px;">WEBSITE UPGRADE NOTICE</h1>
+	<div style="  color: #fefefe;
   margin-left: 80px;
-  width: 600px;
-  padding-top: 10px;">Make recruiting foreign talents more easier</p>
+  width: 900px;
+  padding-top: 10px;">
+        <p>JobLeadChina.com has now been ungraded to CareerInsights.net for better services and user experience. Weclome to click on for more information: <a href="https://www.careerinsights.net" style="color:#fefefe !important" >https://www.careerinsights.net/</a>.
+        </p>
+        <p>
+            为进一步优化网站建设和提供更优质的服务，JobLeadChina.com现已升级为<a href="https://www.careerinsights.net" style="color:#fefefe !important" >CareerInsights.net</a>，希望给各位用户带来更好的体验！
+        </p>
+    </div>
 	<p style="  color: #fefefe !important;
   margin-left: 80px;
   width: 100px;
-  padding-top: 20px;"><a class="btn btn-primary" href="recruitment_guidance" role="button">Learn more</a></p>
+  padding-top: 20px;"><a class="btn btn-primary" href="https://www.careerinsights.net" role="button">Learn more</a></p>
 </div>
