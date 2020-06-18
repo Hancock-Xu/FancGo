@@ -11,10 +11,10 @@
   margin-left: 80px;
   width: 900px;
   padding-top: 10px;">
-        <p>JobLeadChina.com has now been ungraded to CareerInsights.net for better services and user experience. Weclome to click on for more information: <a href="https://www.careerinsights.net" style="color:#fefefe !important" >https://www.careerinsights.net/</a>.
+        <p>JobLeadChina.com has now been ungraded to CareerInsights.net for better services and user experience. Weclome to click on for more information: <a href="https://www.careerinsights.net" style="color:sandybrown !important; text-decoration:underline;" >CareerInsights.net</a>.
         </p>
         <p>
-            为进一步优化网站建设和提供更优质的服务，JobLeadChina.com现已升级为<a href="https://www.careerinsights.net" style="color:#fefefe !important" >CareerInsights.net</a>，希望给各位用户带来更好的体验！
+            为进一步优化网站建设和提供更优质的服务，JobLeadChina.com现已升级为<a href="https://www.careerinsights.net" style="color:sandybrown !important; text-decoration:underline;" >CareerInsights.net</a>，希望给各位用户带来更好的体验！
         </p>
     </div>
 	<p style="  color: #fefefe !important;
